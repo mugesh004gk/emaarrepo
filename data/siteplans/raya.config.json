@@ -1,0 +1,96 @@
+{
+ "project": "raya",
+ "community": "arabian-ranches-3",
+ "pdf": "../emaarcommunity/research/arabian-ranches-3/properties/raya/brochures/Raya_brochure.pdf",
+ "page": 18,
+ "image_index": 1,
+ "note": "Emaar Raya brochure, page 18: cluster site plan with plots 1-240 drawn over imagery.",
+ "boundary_px": [
+  [
+   476,
+   204
+  ],
+  [
+   939,
+   184
+  ],
+  [
+   1000,
+   259
+  ],
+  [
+   1021,
+   449
+  ],
+  [
+   1007,
+   735
+  ],
+  [
+   953,
+   871
+  ],
+  [
+   762,
+   1116
+  ],
+  [
+   667,
+   1211
+  ],
+  [
+   599,
+   1130
+  ],
+  [
+   347,
+   762
+  ],
+  [
+   408,
+   572
+  ],
+  [
+   449,
+   408
+  ]
+ ],
+ "control_points": [
+  [
+   449,
+   129,
+   25.0704298,
+   55.3347334
+  ],
+  [
+   925,
+   279,
+   25.0699589,
+   55.3366661
+  ],
+  [
+   646,
+   1089,
+   25.0668822,
+   55.3356914
+  ]
+ ],
+ "units_by_length_m": [
+  [
+   38,
+   4
+  ],
+  [
+   51,
+   6
+  ],
+  [
+   999,
+   8
+  ]
+ ],
+ "end_unit_m": 9.0,
+ "kind": "townhouse",
+ "footpath_m": 1.5,
+ "carriageway_m": 7.3
+}

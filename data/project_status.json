@@ -1,0 +1,559 @@
+{
+"avelia-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 48,
+"centroid": [
+25.005951,
+55.462341
+]
+},
+"ovelle-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 48,
+"centroid": [
+25.005951,
+55.461152
+]
+},
+"vindera-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 70,
+"centroid": [
+25.005854,
+55.46353
+]
+},
+"rivera-at-the-valley-phase-2": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 48,
+"centroid": [
+25.002063,
+55.440172
+]
+},
+"elva-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.00109,
+55.45835
+]
+},
+"elea-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.005951,
+55.459863
+]
+},
+"kaia-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.012213,
+55.45835
+]
+},
+"velora-2-at-the-valley-phase-2": {
+"built": true,
+"homesNearPin": 35,
+"homes": 458,
+"centroid": [
+25.002919,
+55.434708
+]
+},
+"venera-at-the-valley": {
+"built": true,
+"homesNearPin": 140,
+"homes": 668,
+"centroid": [
+24.997329,
+55.44347
+]
+},
+"velora-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.008599,
+55.433841
+]
+},
+"avena-2-at-the-valley": {
+"built": false,
+"homesNearPin": 3,
+"homes": 0,
+"planned": 36,
+"centroid": [
+25.00368,
+55.443319
+]
+},
+"avena-at-the-valley": {
+"built": false,
+"homesNearPin": 2,
+"homes": 0,
+"planned": 48,
+"centroid": [
+25.00626,
+55.441631
+]
+},
+"lillia": {
+"built": true,
+"homesNearPin": 165,
+"homes": 756,
+"centroid": [
+25.006403,
+55.447814
+]
+},
+"farm-grove-at-the-valley": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 36,
+"centroid": [
+25.017997,
+55.440169
+]
+},
+"farm-gardens-2": {
+"built": false,
+"homesNearPin": 8,
+"homes": 0,
+"planned": 36,
+"centroid": [
+25.012459,
+55.438929
+]
+},
+"the-farm-gardens": {
+"built": true,
+"homesNearPin": 45,
+"homes": 387,
+"centroid": [
+25.01583,
+55.442571
+]
+},
+"alana": {
+"built": true,
+"homesNearPin": 43,
+"homes": 265,
+"centroid": [
+25.002905,
+55.452673
+]
+},
+"orania-at-the-valley": {
+"built": true,
+"homesNearPin": 83,
+"homes": 332,
+"centroid": [
+25.012287,
+55.445933
+]
+},
+"eden": {
+"built": true,
+"homesNearPin": 51,
+"homes": 843,
+"centroid": [
+25.011031,
+55.452021
+]
+},
+"nima": {
+"built": true,
+"homesNearPin": 45,
+"homes": 526,
+"centroid": [
+25.003803,
+55.452117
+]
+},
+"rivana": {
+"built": true,
+"homesNearPin": 65,
+"homes": 400,
+"centroid": [
+25.00794,
+55.455916
+]
+},
+"elora": {
+"built": true,
+"homesNearPin": 156,
+"homes": 392,
+"centroid": [
+25.009678,
+55.446691
+]
+},
+"talia": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0
+},
+"nara": {
+"built": true,
+"homesNearPin": 0,
+"homes": 372
+},
+"may": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.060012,
+55.313847
+]
+},
+"anya-2": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.060012,
+55.31464
+]
+},
+"anya": {
+"built": true,
+"homesNearPin": 121,
+"homes": 431,
+"centroid": [
+25.074718,
+55.335843
+]
+},
+"raya": {
+"built": true,
+"homesNearPin": 86,
+"homes": 330,
+"centroid": [
+25.0681,
+55.33479
+]
+},
+"elie-saab-at-arabian-ranches-iii": {
+"built": true,
+"homesNearPin": 43,
+"homes": 628,
+"centroid": [
+25.069442,
+55.3288
+]
+},
+"june": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 80,
+"centroid": [
+25.060012,
+55.313054
+]
+},
+"caya-2": {
+"built": true,
+"homesNearPin": 73,
+"homes": 1582,
+"centroid": [
+25.064356,
+55.322059
+]
+},
+"ruba": {
+"built": true,
+"homesNearPin": 69,
+"homes": 621,
+"centroid": [
+25.07304,
+55.333048
+]
+},
+"joy": {
+"built": true,
+"homesNearPin": 73,
+"homes": 0
+},
+"spring": {
+"built": true,
+"homesNearPin": 73,
+"homes": 0
+},
+"sun": {
+"built": true,
+"homesNearPin": 73,
+"homes": 0
+},
+"bliss-2": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0
+},
+"bliss": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0
+},
+"golf-trails-at-emaar-south": {
+"built": false,
+"homesNearPin": 6,
+"homes": 0,
+"planned": 60,
+"centroid": [
+24.864378,
+55.13757
+]
+},
+"golf-fields-at-emaar-south": {
+"built": true,
+"homesNearPin": 13,
+"homes": 378,
+"centroid": [
+24.86599,
+55.138127
+]
+},
+"golf-vale-at-emaar-south": {
+"built": false,
+"homesNearPin": 4,
+"homes": 0,
+"planned": 60,
+"centroid": [
+24.862995,
+55.140392
+]
+},
+"vista-ridge-at-emaar-south": {
+"built": true,
+"homesNearPin": 26,
+"homes": 814,
+"centroid": [
+24.860932,
+55.133763
+]
+},
+"grove-ridge-at-emaar-south": {
+"built": true,
+"homesNearPin": 26,
+"homes": 0
+},
+"golf-hills-2-at-emaar-south": {
+"built": true,
+"homesNearPin": 26,
+"homes": 0
+},
+"golf-hills-at-emaar-south": {
+"built": true,
+"homesNearPin": 26,
+"homes": 0
+},
+"golf-verge-at-emaar-south": {
+"built": true,
+"homesNearPin": 26,
+"homes": 0
+},
+"golf-meadow-at-emaar-south": {
+"built": true,
+"homesNearPin": 26,
+"homes": 0
+},
+"greenspoint-at-emaar-south": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 60,
+"centroid": [
+24.852712,
+55.133844
+]
+},
+"golf-edge-at-emaar-south": {
+"built": true,
+"homesNearPin": 20,
+"homes": 84,
+"centroid": [
+24.860069,
+55.146226
+]
+},
+"golf-acres-at-emaar-south": {
+"built": false,
+"homesNearPin": 9,
+"homes": 0,
+"planned": 50,
+"centroid": [
+24.865242,
+55.141248
+]
+},
+"golf-dale-at-emaar-south": {
+"built": false,
+"homesNearPin": 11,
+"homes": 0,
+"planned": 50,
+"centroid": [
+24.864775,
+55.138336
+]
+},
+"golf-point-at-emaar-south": {
+"built": true,
+"homesNearPin": 15,
+"homes": 105,
+"centroid": [
+24.859724,
+55.141148
+]
+},
+"greenway-2-at-emaar-south": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 0
+},
+"golf-lane-at-emaar-south": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0,
+"planned": 42,
+"centroid": [
+24.853408,
+55.133106
+]
+},
+"greenway-at-emaar-south": {
+"built": true,
+"homesNearPin": 31,
+"homes": 892,
+"centroid": [
+24.850019,
+55.156424
+]
+},
+"fairway-villas-3": {
+"built": true,
+"homesNearPin": 53,
+"homes": 680,
+"centroid": [
+24.849151,
+55.146169
+]
+},
+"fairway-villas-2": {
+"built": true,
+"homesNearPin": 64,
+"homes": 595,
+"centroid": [
+24.853789,
+55.139701
+]
+},
+"fairway-villas": {
+"built": true,
+"homesNearPin": 38,
+"homes": 110,
+"centroid": [
+24.856145,
+55.14624
+]
+},
+"expo-golf-villas-6": {
+"built": true,
+"homesNearPin": 116,
+"homes": 645,
+"centroid": [
+24.856625,
+55.157112
+]
+},
+"urbana": {
+"built": true,
+"homesNearPin": 80,
+"homes": 286,
+"centroid": [
+24.860385,
+55.150286
+]
+},
+"urbana-iii": {
+"built": true,
+"homesNearPin": 52,
+"homes": 240,
+"centroid": [
+24.862903,
+55.147346
+]
+},
+"golf-links": {
+"built": true,
+"homesNearPin": 46,
+"homes": 208,
+"centroid": [
+24.868024,
+55.137222
+]
+},
+"expo-golf-villas-phase-v": {
+"built": true,
+"homesNearPin": 110,
+"homes": 76,
+"centroid": [
+24.858794,
+55.153702
+]
+},
+"expo-golf-villas-phase-iv": {
+"built": true,
+"homesNearPin": 110,
+"homes": 0
+},
+"expo-golf-villas-phase-iii": {
+"built": true,
+"homesNearPin": 110,
+"homes": 0
+},
+"golf-views": {
+"built": true,
+"homesNearPin": 36,
+"homes": 200,
+"centroid": [
+24.86307,
+55.14246
+]
+},
+"greenville-at-emaar-south": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0
+},
+"greenridge-at-emaar-south": {
+"built": false,
+"homesNearPin": 0,
+"homes": 0
+}
+}

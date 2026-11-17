@@ -1,0 +1,34 @@
+{
+ "the-valley": {
+  "homes_by_placement": {
+   "estimated-satellite": 5303,
+   "estimated-planned": 690
+  },
+  "streets_by_source": {
+   "osm": 198,
+   "derived": 422
+  }
+ },
+ "arabian-ranches-3": {
+  "homes_by_placement": {
+   "estimated-satellite": 3274,
+   "estimated-planned": 240,
+   "verified-siteplan": 240
+  },
+  "streets_by_source": {
+   "osm": 623,
+   "derived": 65,
+   "siteplan": 11
+  }
+ },
+ "emaar-south": {
+  "homes_by_placement": {
+   "estimated-satellite": 5436,
+   "estimated-planned": 322
+  },
+  "streets_by_source": {
+   "osm": 638,
+   "derived": 220
+  }
+ }
+}

@@ -1,0 +1,11 @@
+node_modules/
+scripts/.cache/
+scripts/satellite/.cache/
+# generated: brochure / floor-plan page images (python3 scripts/render_docs.py)
+media/docs/
+# detection review images (debug output)
+data/homes_detected_check/
+__pycache__/
+*.pyc
+.DS_Store
+.vercel
