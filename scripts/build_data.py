@@ -269,6 +269,14 @@ def main():
                 d = os.path.join(pdir, sub)
                 return [{"src": f"{MEDIA}/{c['folder']}/properties/{slug}/{sub}/{fn}", "pages": pdf_pages(os.path.join(d, fn)),
                          "mb": round(os.path.getsize(os.path.join(d, fn)) / 1e6, 1)} for fn in sorted(os.listdir(d))] if os.path.isdir(d) else []
+            # no separate floor-plan file, but floor-plan pages inside the brochure (checked by hand)
+            BROCHURE_PLANS = {"urbana-iii": 11}
+            def floorplan_files():
+                fl = files("floorplans")
+                if not fl and slug in BROCHURE_PLANS and files("brochures"):
+                    b = dict(files("brochures")[0]); b["startPage"] = BROCHURE_PLANS[slug]; b["inBrochure"] = True
+                    fl = [b]
+                return fl
             text = " ".join(info["keyFacts"] + info["about"] + [p.get("hallmark") or ""])
             community["projects"].append({
                 "id": slug, "name": p["name"], "tagline": p.get("hallmark"), "url": pj["url"],
@@ -277,7 +285,7 @@ def main():
                 "priceFrom": p.get("priceFrom") or None, "unitsLeft": p.get("unitsLeft") or 0,
                 "available": bool(p.get("isAvailable")), "isNew": bool(p.get("isNew")),
                 "types": property_type(text), **info,
-                "images": imgs, "brochures": files("brochures"), "floorplans": files("floorplans"),
+                "images": imgs, "brochures": files("brochures"), "floorplans": floorplan_files(),
                 "distances": dist.get(p["name"], []),
                 "modelled": slug == "nara",
             })

@@ -33,11 +33,13 @@ export async function startLite(reason) {
     loadLeaflet(), getJSON('data/projects.json'), getJSON('data/floorplans.json'), getJSON('data/homes_detected.json'),
     getJSON('data/project_status.json'), getJSON('data/compounds.json'), getJSON('data/nara_data.json'),
   ]);
+  const unitCounts = await getJSON('data/unit_counts.json').catch(() => null);
   const communities = projectsData.communities;
   const byId = new Map(communities.flatMap((c) => c.projects.map((p) => [p.id, p])));
   for (const c of communities) for (const p of c.projects) {
     p.communityId = c.id;
     p.buildStatus = status?.[p.id] || null;
+    p.unitCount = unitCounts?.projects?.[p.id] || null;
   }
   for (const rows of Object.values(homes?.communities || {})) for (const r of rows) {
     const p = byId.get(r.project);

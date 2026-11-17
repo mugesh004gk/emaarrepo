@@ -69,6 +69,9 @@ async function boot() {
   const greensData = await fetch('data/greens.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   const projectStatus = await fetch('data/project_status.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
   for (const c of projectsData.communities) for (const p of c.projects) p.buildStatus = projectStatus[p.id] || null;
+  // official number of homes per project (only where a developer document states it)
+  const unitCounts = await fetch('data/unit_counts.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  for (const c of projectsData.communities) for (const p of c.projects) p.unitCount = unitCounts?.projects?.[p.id] || null;
   if (homesDetected) {
     const byId = new Map(projectsData.communities.flatMap((c) => c.projects.map((p) => [p.id, p])));
     for (const rows of Object.values(homesDetected.communities)) for (const r of rows) {
@@ -250,6 +253,12 @@ async function boot() {
     get stats() { return details.map((d) => d.stats); },
   } : null;
   if (valleyDetail) tlog(`community detail ${JSON.stringify(valleyDetail.stats)}`);
+  // homes actually standing in 3D per project (after the road / overlap checks), for the project panel
+  if (valleyDetail) {
+    const placed = new Map();
+    for (const u of valleyDetail.units) placed.set(u.project, (placed.get(u.project) || 0) + 1);
+    for (const c of communities) for (const p of c.projects) if (!p.modelled && placed.has(p.id)) p.homesPlaced = placed.get(p.id);
+  }
   // official unit numbers (from the developer's cluster map) on the houses when close
   if (valleyDetail) {
     const ov = new THREE.Vector3();
@@ -1444,7 +1453,7 @@ async function boot() {
   projectsUI.apply();
   picker = createCommunityPicker(communities, {
     onPick: (id) => selectCommunity(id),
-    homesIn3D: (c) => c.projects.reduce((n, p) => n + (p.modelled ? 372 : p.detectedHomes || 0), 0),
+    homesIn3D: (c) => c.projects.reduce((n, p) => n + (p.modelled ? 372 : p.homesPlaced ?? p.detectedHomes ?? 0), 0),
   });
   routing = startCommunityRouting(communities, { enter: (id, o) => selectCommunity(id, o), home: (o) => goToLevel(null, o) });
   const startCommunity = routing.initial;
