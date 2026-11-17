@@ -1,0 +1,41 @@
+{
+ "15": {
+  "first": 233,
+  "dir": 1,
+  "n": 8,
+  "why": "OCR read no digits in this terrace; position between 225-232 and 241-250 columns, 233 at the north end (checked on the plan)"
+ },
+ "16": {
+  "first": 283,
+  "dir": -1,
+  "n": 8,
+  "why": "OCR read no digits; column between 266-275 and 284-291, numbered 276 (south) to 283 (north) on the plan"
+ },
+ "4": {
+  "first": 362,
+  "dir": -1,
+  "n": 10,
+  "why": "narrower homes made the length count 9; plan shows 362..353 (10 homes)"
+ },
+ "5": {
+  "first": 352,
+  "dir": -1,
+  "n": 10,
+  "why": "narrower homes made the length count 9; plan shows 352..343 (10 homes)"
+ },
+ "18": {
+  "drop": true,
+  "why": "not a home terrace (building beside the main road)"
+ },
+ "38": {
+  "drop": true,
+  "why": "not a home terrace (landscape feature)"
+ },
+ "35": {
+  "first": 292,
+  "dir": 1,
+  "n": 10,
+  "extend_back": true,
+  "why": "upper half (292-296) of this 10-home terrace was not detected; the half below holds 297-301"
+ }
+}

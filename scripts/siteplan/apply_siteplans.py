@@ -48,7 +48,19 @@ def main():
         cid, pid, bnd = sp['community'], sp['project'], sp['boundary']  # boundary [[lng, lat]]
         rows = hd['communities'][cid]
         before = len(rows)
-        rows = [r for r in rows if r.get('project') != pid and not (r.get('kind') != 'apartment' and inside((r['lng'], r['lat']), bnd))]
+        kept_rows, untagged = [], 0
+        for r in rows:
+            if r.get('source') == 'siteplan' and r.get('project') == pid:
+                continue  # re-applied below
+            if r.get('kind') != 'apartment' and inside((r['lng'], r['lat']), bnd):
+                continue  # replaced by the plan
+            if r.get('project') == pid:
+                # tagged with this project by distance to its pin, but outside its official plan: a home of
+                # a neighbouring cluster - kept where it is, project unknown
+                r = dict(r, project=None, projectNote=f'outside the {pid} site plan')
+                untagged += 1
+            kept_rows.append(r)
+        rows = kept_rows
         removed = before - len(rows)
         for r in sp['rows']:
             rows.append(dict(r))
@@ -65,7 +77,7 @@ def main():
             if s.get('source') == 'derived' and share > 0:
                 dropped_derived += 1
                 continue
-            if s['cls'] != 'path' and s.get('source') != 'derived' and share >= 0.6:
+            if s['cls'] != 'path' and s.get('source') != 'derived' and share >= 0.6 and not sp.get('keep_mapped_streets'):
                 replaced += 1
                 continue
             kept.append(s)
@@ -124,7 +136,7 @@ def main():
                     entr += 1
         joined += entr
         site['communities'][cid]['streets'] = kept + new
-        print(f"{cid}/{pid}: rows {removed} detected -> {len(sp['rows'])} from the site plan ({sum(r['units'] for r in sp['rows'])} homes); "
+        print(f"{cid}/{pid}: rows {removed} detected inside the plan -> {len(sp['rows'])} from the site plan; {untagged} rows outside it untagged (kept) ({sum(r['units'] for r in sp['rows'])} homes); "
               f"streets: {replaced} mapped replaced by {len(new)} plan centre lines ({joined} ends joined), {dropped_derived} derived removed")
     # provenance labels and counts
     prov = {}

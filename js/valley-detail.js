@@ -179,7 +179,8 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
       const ov = m.clone().multiply(new THREE.Matrix4().compose(
         new THREE.Vector3(0.5 * (pd.houseX[0] + pd.houseX[1]) - pd.anchorX, 0, 11.675 - pd.anchorZ), new THREE.Quaternion(), new THREE.Vector3(hw + 0.2, 8.2, 11.3)));
       units.push({ variant, matrix: m, pd, fdir: f.clone(), ls, project: r.project, row: r, cell: cellKey(pos.x, pos.z), pos, kind: villa ? 'villa' : 'townhouse',
-        beds: estimateBeds(projectsById?.get(r.project), villa ? 'villa' : 'townhouse', i, seq.length, slot), width: slot,
+        beds: r.unitPlans?.[i]?.beds ?? estimateBeds(projectsById?.get(r.project), villa ? 'villa' : 'townhouse', i, seq.length, slot), width: slot,
+        unitNo: r.unitPlans?.[i]?.no, unitPlan: r.unitPlans?.[i],
         endUnit: i === 0 || i === seq.length - 1, overlayMatrix: ov });
       x += slot;
     });

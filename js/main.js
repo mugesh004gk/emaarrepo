@@ -250,6 +250,15 @@ async function boot() {
     get stats() { return details.map((d) => d.stats); },
   } : null;
   if (valleyDetail) tlog(`community detail ${JSON.stringify(valleyDetail.stats)}`);
+  // official unit numbers (from the developer's cluster map) on the houses when close
+  if (valleyDetail) {
+    const ov = new THREE.Vector3();
+    for (const u of valleyDetail.units) {
+      if (u.unitNo == null) continue;
+      ov.set(0, 0.5, 0).applyMatrix4(u.overlayMatrix);
+      labels.add({ x: ov.x, y: 9.5, z: ov.z, className: 'lbl-unit', html: `<span>${u.unitNo}</span>`, priority: 4, minDist: 0, maxDist: 150 });
+    }
+  }
   // street names (OpenStreetMap) as labels near the ground
   for (const [cid, v] of Object.entries(siteData?.communities || {})) {
     const seen = new Set();
@@ -1126,6 +1135,10 @@ async function boot() {
       return { title: `Nara · Unit ${e.unitNo}`, line: `${e.beds} bedroom townhouse · ${e.design} ${e.plan}`, short: `Unit ${e.unitNo}`, color: BED_COLORS_JS[e.beds] };
     }
     const h = e.home;
+    if (h.unitPlan) {
+      const up = h.unitPlan;
+      return { title: `${name} · Unit ${up.no}`, line: `${up.beds} bedroom ${up.design} ${up.plan} · ${up.position} unit`, short: `Unit ${up.no}`, color: BED_COLORS_JS[Math.min(6, up.beds)] };
+    }
     if (h.apartment) return { title: name, line: `Apartment building · ${p?.bedsLabel || ''} BR`, short: 'Apartment building', color: '#94a3b8' };
     const n = h.row?.unitWidths?.length || h.row?.units || 1;
     const end = h.endUnit ?? (h.index === 0 || h.index === n - 1);
