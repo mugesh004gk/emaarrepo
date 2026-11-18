@@ -48,7 +48,7 @@ def main():
     pitch = lay['pitch']
     st = json.load(open(os.path.join(APP, 'data', 'project_status.json'))).get(proj, {})
     lat, lng = (float(sys.argv[4]), float(sys.argv[5])) if len(sys.argv) > 5 else st['centroid']
-    unit_w = 7.6 if kind == 'terrace' else None  # metres per pitch for terraces; villas: searched
+    unit_w = float(os.environ.get('UNIT_W', 7.6)) if kind == 'terrace' else None  # metres per pitch for terraces; villas: searched
     img, mpp, (x0, y0), npx = sat(lat, lng, float(os.environ.get('HALF', 650)))
     hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     BLUR = int(os.environ.get('BLUR', 5)) | 1  # villas: match the pattern of homes, not single roofs
@@ -73,9 +73,10 @@ def main():
         for q in M:
             cv2.fillPoly(tp, [np.round(q).astype(np.int32)], 1.0)
         return tp, mn
-    scales = [unit_w / pitch * f for f in (0.9, 0.95, 1.0, 1.05, 1.1)] if unit_w else [m / pitch for m in np.arange(12, 30, 1.5)]
+    scales = [unit_w / pitch * f for f in np.arange(0.8, 1.21, 0.04)] if unit_w else [m / pitch for m in np.arange(12, 30, 1.5)]
+    keep = os.environ.get('KEEP') == '1'
     best = None
-    for bear in np.arange(316.5, 328.6, 1.0):
+    for bear in ([] if keep else np.arange(316.5, 328.6, 1.0)):
         for sc in scales:
             tp, mn = template(sc, bear)
             if tp.shape[0] >= roof.shape[0] or tp.shape[1] >= roof.shape[1]:
@@ -85,8 +86,29 @@ def main():
             r = cv2.matchTemplate(roof, tp, cv2.TM_CCOEFF_NORMED); _, v, _, loc = cv2.minMaxLoc(r)
             if best is None or v > best[0]:
                 best = (v, bear, sc, loc, mn)
-    v, bear, sc, loc, mn = best
-    for bear2 in np.arange(bear - 0.8, bear + 0.81, 0.2):
+    if keep:
+        # re-run with more units read: the earlier placement (scale, map-up, position) is kept exactly, so the
+        # homes already placed do not move; the anchor comes from the rows of the earlier output
+        old = json.load(open(os.path.join(APP, 'data', 'siteplans', f'{proj}.json')))
+        sc, bear = old['georeference']['scale_m_per_pt'], old['georeference']['map_up_bearing_deg']
+        v = old['georeference'].get('correlation', 0)
+        est = []
+        for r in old['rows']:
+            if not all(n in U for n in r['unitNumbers']):
+                continue
+            c = np.mean([U[n]['p'] for n in r['unitNumbers']], 0)
+            q = to_m(np.array([c], float), sc, bear)[0]
+            kx = 111320.0 * math.cos(math.radians(r['lat']))
+            est.append((r['lat'] - q[1] / KY, r['lng'] - q[0] / kx))
+        lat_c, lng_c = float(np.median([e[0] for e in est])), float(np.median([e[1] for e in est]))
+        px = lambda la, lo: ((lo + 180) / 360 * npx, (1 - math.log(math.tan(math.radians(la)) + 1 / math.cos(math.radians(la))) / math.pi) / 2 * npx)
+        gx, gy = px(lat_c, lng_c)
+        spx = np.array([gx - x0, gy - y0])
+        print(f"{proj}: earlier placement kept (scale {sc} m/pt, map-up {bear} deg; anchor from {len(est)} rows)")
+        best = None
+    if best is not None:
+        v, bear, sc, loc, mn = best
+    for bear2 in ([] if keep else np.arange(bear - 0.8, bear + 0.81, 0.2)):
         for sc2 in np.arange(sc * 0.97, sc * 1.031, sc * 0.006):
             tp, mn2 = template(sc2, bear2)
             if tp.shape[0] >= roof.shape[0] or tp.shape[1] >= roof.shape[1]:
@@ -96,10 +118,11 @@ def main():
             r = cv2.matchTemplate(roof, tp, cv2.TM_CCOEFF_NORMED); _, v2, _, loc2 = cv2.minMaxLoc(r)
             if v2 > v:
                 v, bear, sc, loc, mn = v2, bear2, sc2, loc2, mn2
-    spx = np.array(loc) - mn
-    gx, gy = x0 + spx[0], y0 + spx[1]
-    lng_c = gx / npx * 360 - 180; lat_c = math.degrees(math.atan(math.sinh(math.pi * (1 - 2 * gy / npx))))
-    print(f"{proj}: placed with correlation {v:.3f}, map-up {bear:.1f} deg, scale {sc:.4f} m/pt (pitch {pitch * sc:.1f} m)")
+    if not keep:
+        spx = np.array(loc) - mn
+        gx, gy = x0 + spx[0], y0 + spx[1]
+        lng_c = gx / npx * 360 - 180; lat_c = math.degrees(math.atan(math.sinh(math.pi * (1 - 2 * gy / npx))))
+        print(f"{proj}: placed with correlation {v:.3f}, map-up {bear:.1f} deg, scale {sc:.4f} m/pt (pitch {pitch * sc:.1f} m)")
     # debug overlay
     vis = img.copy()
     M = to_m(quads, sc, bear) / mpp; M[..., 1] *= -1; M = M + spx
@@ -131,9 +154,10 @@ def main():
         n = len(r)
         L = pw * n if kind == 'terrace' else pw * 0.72
         D = 12.4 if kind == 'terrace' else min(16.0, pw * 0.75)
-        # model unit 0 sits at -x; x runs to the viewer's left when facing the house from the street
-        left = np.array([f[1], -f[0]])  # image coords (y down): the house's own left seen from the street
-        order = sorted(r, key=lambda m: -np.dot(np.array(U[m]['p']) - c, left))
+        # model unit 0 (js/valley-detail.js) is the LEFT end seen from the street = the house's own right;
+        # TH01 on Emaar's key plans is that same end. (check_order.py tests this against the map.)
+        left = np.array([f[1], -f[0]])  # image coords (y down): the house's own left
+        order = sorted(r, key=lambda m: np.dot(np.array(U[m]['p']) - c, left))
         rows.append({'lat': round(la, 7), 'lng': round(lo, 7), 'L': round(L, 2), 'D': round(D, 2), 'frontBearing': round(fb, 2),
                      'kind': 'townhouse' if kind == 'terrace' else 'villa', 'units': n, 'unitWidths': [round(L / n, 2)] * n,
                      'project': proj, 'source': 'siteplan', 'placement': 'verified-siteplan',
@@ -167,7 +191,9 @@ def main():
            'source': {'document': lay['source']['document'], 'page': lay['source']['page'], 'priority': 2,
                       'note': f"Emaar brochure cluster map: unit numbers 1-{lay['count']}"},
            'georeference': {'scale_m_per_pt': round(sc, 5), 'map_up_bearing_deg': round(bear, 2), 'correlation': round(v, 3),
-                            'method': 'map homes matched to satellite roofs', 'boundary_status': 'homes hull + 20 m; DDA GIS boundary pending'},
+                            'method': 'map homes matched to satellite roofs' + ('; kept from the earlier run (more units read)' if keep else ''),
+                            'anchor': {'plan_pt': [round(float(PM[0]), 2), round(float(PM[1]), 2)], 'lat': round(lat_c, 7), 'lng': round(lng_c, 7)},
+                            'boundary_status': 'homes hull + 20 m; DDA GIS boundary pending'},
            'checks': {'units': sum(r['units'] for r in rows), 'official_count': lay['count'], 'read': lay['read'],
                       'interpolated': lay['interpolated'], 'missing': lay['missing']},
            'boundary': bnd, 'roads': roads, 'keep_mapped_streets': True, 'streets_checked': [], 'rows': rows, 'plots': []}

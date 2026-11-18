@@ -1,0 +1,4 @@
+{"count": 256, "kind": "villa", "pairs": "single",
+ "plot_styles": [{"design": "Horizon", "rgb": [139, 195, 196]}, {"design": "Oren", "rgb": [255, 237, 186]}],
+ "building_beds": {"grey": 4, "white": 5},
+ "note": "Farm Gardens 2 brochure p.25: STYLES legend Horizon (teal plot) / Oren (yellow plot); TYPES legend 4 Bedroom Villa (grey building) / 5 Bedroom Villa (white building). Unit numbers 001-256 are drawn in the map picture; read with OCR where legible, the rest numbered along their row between read numbers (only where the count of buildings matches)."}

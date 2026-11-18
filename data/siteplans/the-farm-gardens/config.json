@@ -1,0 +1,67 @@
+{
+ "count": 146,
+ "kind": "villa",
+ "pairs": "single",
+ "legend": [
+  {
+   "design": "Horizon",
+   "beds": null,
+   "rgb": [
+    239,
+    239,
+    239
+   ]
+  },
+  {
+   "design": "Earth",
+   "beds": null,
+   "rgb": [
+    207,
+    210,
+    209
+   ]
+  }
+ ],
+ "plot_legend": [
+  {
+   "beds": 4,
+   "rgb": [
+    254,
+    234,
+    231
+   ]
+  },
+  {
+   "beds": 5,
+   "rgb": [
+    248,
+    227,
+    156
+   ]
+  }
+ ],
+ "note": "The Farm Gardens brochure p.24: STYLES legend HORIZON (white building) / EARTH (grey building); TYPES legend 4 BR villas (pale pink plot) / 5 BR villas (yellow plot); vector fills of the swatches. Unit numbers 1-146 are PDF text, one per detached villa. Facing: each loop of villas is numbered in one run around its loop street (a U); every villa faces the inside of its run.",
+ "facing_green_weight": 0.0,
+ "facing": "loop_inside",
+ "plans_by_beds": {
+  "4": {
+   "plan": "4 bedroom villa",
+   "page": 2,
+   "pages": "2-3",
+   "sqft": 4950.43,
+   "sqm": 459.91,
+   "suite_sqft": 3842.5,
+   "suite_sqm": 356.98
+  },
+  "5": {
+   "plan": "5 bedroom villa",
+   "page": 4,
+   "pages": "4-5",
+   "sqft": 5656.86,
+   "sqm": 525.54,
+   "suite_sqft": 4520.3,
+   "suite_sqm": 419.95
+  }
+ },
+ "plans_note": "FARM-GARDENS_floorplan.pdf: one plan per bedroom count, each with a mirrored sheet (p.2/3 4 BR, p.4/5 5 BR); TOTAL AREA (suite + garage + balcony) used as built-up area; which villas are mirrored is not published."
+}

@@ -1,0 +1,9 @@
+{"count": 486, "kind": "twin", "pairs": "odd-even",
+ "legend": [
+  {"design": "Clara", "beds": 5, "rgb": [238, 124, 75]},
+  {"design": "Clara", "beds": 4, "rgb": [252, 192, 131]},
+  {"design": "Clara", "beds": 3, "rgb": [255, 236, 215]},
+  {"design": "Kai", "beds": 5, "rgb": [229, 103, 122]},
+  {"design": "Kai", "beds": 4, "rgb": [248, 186, 199]},
+  {"design": "Kai", "beds": 3, "rgb": [247, 237, 237]}],
+ "note": "Rivana brochure p.8 'Styles' legend: vector fills of the six swatches (Clara 5/4/3 BR, Kai 5/4/3 BR). Unit numbers are PDF text; each twin villa block holds the pair (2k-1, 2k)."}

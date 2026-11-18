@@ -165,9 +165,9 @@
   "elora": {
    "community": "the-valley",
    "name": "Elora",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 430,
+   "source": "ELORA_brochure.pdf p.8 cluster map (units 1-430, PDF text)",
+   "clusterMap": "numbered"
   },
   "may": {
    "community": "arabian-ranches-3",

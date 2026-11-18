@@ -1183,7 +1183,10 @@ async function boot() {
     }
     if (h.unitPlan) {
       const up = h.unitPlan;
-      return { title: `${name} · Unit ${up.no}`, line: `${up.beds} bedroom ${up.design} ${up.plan} · ${up.position} unit`, short: `Unit ${up.no}`, color: BED_COLORS_JS[Math.min(6, up.beds)] };
+      // a terrace home has its floor-plan letter; a villa / twin villa its house type from the map legend
+      const what = up.th ? `${up.design} ${up.plan} · ${up.position} unit` : `${up.design} ${up.position === 'twin' ? 'twin villa' : up.position === 'villa' ? 'villa' : 'home'}`;
+      if (up.no == null) return { title: name, line: `${up.beds} bedroom ${what}`, short: `${up.beds} BR villa`, color: BED_COLORS_JS[Math.min(6, up.beds)] };
+      return { title: `${name} · Unit ${up.no}`, line: `${up.beds} bedroom ${what}`, short: `Unit ${up.no}`, color: BED_COLORS_JS[Math.min(6, up.beds)] };
     }
     if (h.apartment) return { title: name, line: `Apartment building · ${p?.bedsLabel || ''} BR`, short: 'Apartment building', color: '#94a3b8' };
     const n = h.row?.unitWidths?.length || h.row?.units || 1;

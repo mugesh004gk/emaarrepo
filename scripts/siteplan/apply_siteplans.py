@@ -52,6 +52,9 @@ def main():
         for r in rows:
             if r.get('source') == 'siteplan' and r.get('project') == pid:
                 continue  # re-applied below
+            if r.get('source') == 'siteplan':
+                kept_rows.append(r)  # a neighbouring project's official plan is never replaced by another's boundary
+                continue
             if r.get('kind') != 'apartment' and inside((r['lng'], r['lat']), bnd):
                 continue  # replaced by the plan
             if r.get('project') == pid:

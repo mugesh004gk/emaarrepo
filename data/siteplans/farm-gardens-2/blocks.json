@@ -1,0 +1,6809 @@
+{
+"project": "farm-gardens-2",
+"kind": "villa",
+"count": 256,
+"pitch": 35.18679272821791,
+"source": {
+"document": "379974_brochure_File_86ddad55b6_prod.pdf",
+"page": 25
+},
+"blocks": [
+{
+"units": [
+1
+],
+"unnumbered": false,
+"c": [
+1297.67,
+639.33
+],
+"axis": [
+-0.0853,
+0.9964
+],
+"front": [
+-0.9964,
+-0.0853
+],
+"L": 22.0,
+"D": 30.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+2
+],
+"unnumbered": false,
+"c": [
+1300.49,
+606.4
+],
+"axis": [
+-0.1166,
+0.9932
+],
+"front": [
+-0.9932,
+-0.1166
+],
+"L": 21.97,
+"D": 30.03,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+3
+],
+"unnumbered": false,
+"c": [
+1305.27,
+574.61
+],
+"axis": [
+-0.151,
+0.9885
+],
+"front": [
+-0.9885,
+-0.151
+],
+"L": 22.51,
+"D": 27.1,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+4
+],
+"unnumbered": false,
+"c": [
+1310.24,
+542.56
+],
+"axis": [
+-0.216,
+0.9764
+],
+"front": [
+-0.9764,
+-0.216
+],
+"L": 23.0,
+"D": 31.27,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+5
+],
+"unnumbered": false,
+"c": [
+1319.22,
+511.54
+],
+"axis": [
+-0.2364,
+0.9717
+],
+"front": [
+-0.9717,
+-0.2364
+],
+"L": 22.68,
+"D": 29.42,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+6
+],
+"unnumbered": false,
+"c": [
+1325.63,
+479.29
+],
+"axis": [
+-0.1716,
+0.9852
+],
+"front": [
+-0.9852,
+-0.1716
+],
+"L": 21.75,
+"D": 30.06,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+7
+],
+"unnumbered": false,
+"c": [
+1330.43,
+447.2
+],
+"axis": [
+-0.1479,
+0.989
+],
+"front": [
+-0.989,
+-0.1479
+],
+"L": 22.4,
+"D": 30.21,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+9
+],
+"unnumbered": false,
+"c": [
+1393.43,
+392.8
+],
+"axis": [
+-0.9987,
+-0.0516
+],
+"front": [
+0.0516,
+-0.9987
+],
+"L": 21.93,
+"D": 26.01,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+10
+],
+"unnumbered": false,
+"c": [
+1426.33,
+394.5
+],
+"axis": [
+-0.9996,
+-0.0282
+],
+"front": [
+0.0282,
+-0.9996
+],
+"L": 21.33,
+"D": 26.33,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+11
+],
+"unnumbered": false,
+"c": [
+1458.71,
+394.64
+],
+"axis": [
+-0.9998,
+0.0216
+],
+"front": [
+-0.0216,
+-0.9998
+],
+"L": 21.99,
+"D": 25.87,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.78
+},
+{
+"units": [
+12
+],
+"unnumbered": false,
+"c": [
+1491.15,
+393.1
+],
+"axis": [
+-0.9993,
+0.0371
+],
+"front": [
+-0.0371,
+-0.9993
+],
+"L": 22.09,
+"D": 25.96,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+13
+],
+"unnumbered": false,
+"c": [
+1526.9,
+392.11
+],
+"axis": [
+-0.9996,
+0.0277
+],
+"front": [
+-0.0277,
+-0.9996
+],
+"L": 24.17,
+"D": 33.79,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.59
+},
+{
+"units": [
+24
+],
+"unnumbered": false,
+"c": [
+1488.82,
+195.45
+],
+"axis": [
+-0.9623,
+-0.2719
+],
+"front": [
+0.2719,
+-0.9623
+],
+"L": 24.02,
+"D": 32.59,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+25
+],
+"unnumbered": false,
+"c": [
+1525.91,
+205.93
+],
+"axis": [
+-0.7957,
+-0.6057
+],
+"front": [
+0.6057,
+-0.7957
+],
+"L": 24.29,
+"D": 33.2,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+26
+],
+"unnumbered": false,
+"c": [
+1546.93,
+239.68
+],
+"axis": [
+-0.3641,
+-0.9313
+],
+"front": [
+0.9313,
+-0.3641
+],
+"L": 24.21,
+"D": 33.05,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.59
+},
+{
+"units": [
+27
+],
+"unnumbered": false,
+"c": [
+1552.9,
+274.96
+],
+"axis": [
+0.0439,
+-0.999
+],
+"front": [
+0.999,
+0.0439
+],
+"L": 24.44,
+"D": 32.57,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+28
+],
+"unnumbered": false,
+"c": [
+1543.6,
+315.51
+],
+"axis": [
+0.5286,
+-0.8489
+],
+"front": [
+0.8489,
+0.5286
+],
+"L": 24.47,
+"D": 33.16,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.78
+},
+{
+"units": [
+29
+],
+"unnumbered": false,
+"c": [
+1513.1,
+338.88
+],
+"axis": [
+0.9219,
+-0.3873
+],
+"front": [
+0.3873,
+0.9219
+],
+"L": 24.41,
+"D": 33.41,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+30
+],
+"unnumbered": false,
+"c": [
+1475.57,
+344.09
+],
+"axis": [
+0.9975,
+-0.0706
+],
+"front": [
+0.0706,
+0.9975
+],
+"L": 24.41,
+"D": 35.63,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+31
+],
+"unnumbered": false,
+"c": [
+1439.17,
+344.11
+],
+"axis": [
+0.9998,
+0.0195
+],
+"front": [
+-0.0195,
+0.9998
+],
+"L": 24.04,
+"D": 35.27,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+32
+],
+"unnumbered": false,
+"c": [
+1402.67,
+342.67
+],
+"axis": [
+0.9992,
+0.0394
+],
+"front": [
+-0.0394,
+0.9992
+],
+"L": 24.0,
+"D": 34.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+35
+],
+"unnumbered": false,
+"c": [
+1314.36,
+255.95
+],
+"axis": [
+0.3752,
+0.9269
+],
+"front": [
+-0.9269,
+0.3752
+],
+"L": 24.27,
+"D": 33.31,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.78
+},
+{
+"units": [
+37
+],
+"unnumbered": false,
+"c": [
+1302.33,
+193.17
+],
+"axis": [
+-1.0,
+0.0
+],
+"front": [
+-0.0,
+-1.0
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+38
+],
+"unnumbered": false,
+"c": [
+1338.83,
+194.33
+],
+"axis": [
+-1.0,
+0.0
+],
+"front": [
+-0.0,
+-1.0
+],
+"L": 24.33,
+"D": 34.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+50
+],
+"unnumbered": false,
+"c": [
+1163.83,
+142.08
+],
+"axis": [
+1.0,
+0.0072
+],
+"front": [
+-0.0072,
+1.0
+],
+"L": 24.03,
+"D": 32.74,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+51
+],
+"unnumbered": false,
+"c": [
+1129.33,
+141.83
+],
+"axis": [
+0.9997,
+-0.0237
+],
+"front": [
+0.0237,
+0.9997
+],
+"L": 24.0,
+"D": 33.0,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+52
+],
+"unnumbered": false,
+"c": [
+1094.18,
+143.73
+],
+"axis": [
+0.9992,
+-0.0389
+],
+"front": [
+0.0389,
+0.9992
+],
+"L": 24.03,
+"D": 35.27,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+53
+],
+"unnumbered": false,
+"c": [
+1060.67,
+144.5
+],
+"axis": [
+1.0,
+-0.0031
+],
+"front": [
+0.0031,
+1.0
+],
+"L": 26.67,
+"D": 36.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+54
+],
+"unnumbered": false,
+"c": [
+1007.5,
+144.0
+],
+"axis": [
+0.9998,
+0.0208
+],
+"front": [
+-0.0208,
+0.9998
+],
+"L": 23.67,
+"D": 35.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+55
+],
+"unnumbered": false,
+"c": [
+972.67,
+142.67
+],
+"axis": [
+0.9997,
+0.0239
+],
+"front": [
+-0.0239,
+0.9997
+],
+"L": 24.0,
+"D": 32.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+56
+],
+"unnumbered": false,
+"c": [
+937.67,
+142.33
+],
+"axis": [
+1.0,
+-0.0023
+],
+"front": [
+0.0023,
+1.0
+],
+"L": 24.0,
+"D": 32.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.89
+},
+{
+"units": [
+57
+],
+"unnumbered": false,
+"c": [
+902.83,
+142.83
+],
+"axis": [
+1.0,
+-0.0096
+],
+"front": [
+0.0096,
+1.0
+],
+"L": 24.33,
+"D": 32.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.96
+},
+{
+"units": [
+58
+],
+"unnumbered": false,
+"c": [
+868.0,
+143.0
+],
+"axis": [
+0.9999,
+0.0126
+],
+"front": [
+-0.0126,
+0.9999
+],
+"L": 24.0,
+"D": 32.0,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.78
+},
+{
+"units": [
+59
+],
+"unnumbered": false,
+"c": [
+833.92,
+141.96
+],
+"axis": [
+0.9945,
+-0.105
+],
+"front": [
+0.105,
+0.9945
+],
+"L": 24.02,
+"D": 33.77,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.67
+},
+{
+"units": [
+60
+],
+"unnumbered": false,
+"c": [
+799.16,
+150.27
+],
+"axis": [
+0.9175,
+-0.3976
+],
+"front": [
+0.3976,
+0.9175
+],
+"L": 24.35,
+"D": 33.33,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.67
+},
+{
+"units": [
+61
+],
+"unnumbered": false,
+"c": [
+768.18,
+170.45
+],
+"axis": [
+0.7412,
+-0.6713
+],
+"front": [
+0.6713,
+0.7412
+],
+"L": 24.43,
+"D": 32.34,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.67
+},
+{
+"units": [
+62
+],
+"unnumbered": false,
+"c": [
+745.76,
+198.64
+],
+"axis": [
+0.4686,
+-0.8834
+],
+"front": [
+0.8834,
+0.4686
+],
+"L": 24.23,
+"D": 33.24,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.74
+},
+{
+"units": [
+63
+],
+"unnumbered": false,
+"c": [
+736.08,
+230.96
+],
+"axis": [
+0.133,
+-0.9911
+],
+"front": [
+0.9911,
+0.133
+],
+"L": 24.53,
+"D": 32.74,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.89
+},
+{
+"units": [
+64
+],
+"unnumbered": false,
+"c": [
+736.83,
+265.17
+],
+"axis": [
+-0.0165,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0165
+],
+"L": 21.67,
+"D": 26.33,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+65
+],
+"unnumbered": false,
+"c": [
+737.17,
+297.17
+],
+"axis": [
+-0.0104,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0104
+],
+"L": 21.67,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+66
+],
+"unnumbered": false,
+"c": [
+737.5,
+329.5
+],
+"axis": [
+-0.0063,
+-1.0
+],
+"front": [
+1.0,
+-0.0063
+],
+"L": 22.33,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+67
+],
+"unnumbered": false,
+"c": [
+737.67,
+376.33
+],
+"axis": [
+-0.0098,
+-1.0
+],
+"front": [
+1.0,
+-0.0098
+],
+"L": 21.33,
+"D": 26.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+68
+],
+"unnumbered": false,
+"c": [
+738.28,
+408.75
+],
+"axis": [
+-0.0102,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0102
+],
+"L": 22.05,
+"D": 26.19,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+69
+],
+"unnumbered": false,
+"c": [
+738.33,
+441.0
+],
+"axis": [
+0.0044,
+-1.0
+],
+"front": [
+1.0,
+0.0044
+],
+"L": 22.0,
+"D": 26.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+70
+],
+"unnumbered": false,
+"c": [
+738.0,
+472.83
+],
+"axis": [
+-0.0026,
+-1.0
+],
+"front": [
+1.0,
+-0.0026
+],
+"L": 21.67,
+"D": 26.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+71
+],
+"unnumbered": false,
+"c": [
+738.5,
+505.17
+],
+"axis": [
+-0.0155,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0155
+],
+"L": 21.67,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+74
+],
+"unnumbered": false,
+"c": [
+788.67,
+503.17
+],
+"axis": [
+0.0986,
+0.9951
+],
+"front": [
+-0.9951,
+0.0986
+],
+"L": 25.0,
+"D": 36.0,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+75
+],
+"unnumbered": false,
+"c": [
+785.5,
+471.17
+],
+"axis": [
+0.0442,
+0.999
+],
+"front": [
+-0.999,
+0.0442
+],
+"L": 25.0,
+"D": 29.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+76
+],
+"unnumbered": false,
+"c": [
+785.89,
+440.28
+],
+"axis": [
+0.0114,
+0.9999
+],
+"front": [
+-0.9999,
+0.0114
+],
+"L": 21.58,
+"D": 28.06,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+77
+],
+"unnumbered": false,
+"c": [
+784.78,
+408.09
+],
+"axis": [
+0.0165,
+0.9999
+],
+"front": [
+-0.9999,
+0.0165
+],
+"L": 21.89,
+"D": 30.29,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+78
+],
+"unnumbered": false,
+"c": [
+784.83,
+376.0
+],
+"axis": [
+-0.0427,
+0.9991
+],
+"front": [
+-0.9991,
+-0.0427
+],
+"L": 22.0,
+"D": 28.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+79
+],
+"unnumbered": false,
+"c": [
+788.13,
+329.67
+],
+"axis": [
+-0.0207,
+0.9998
+],
+"front": [
+-0.9998,
+-0.0207
+],
+"L": 24.39,
+"D": 33.76,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+80
+],
+"unnumbered": false,
+"c": [
+786.51,
+294.86
+],
+"axis": [
+0.0066,
+1.0
+],
+"front": [
+-1.0,
+0.0066
+],
+"L": 24.04,
+"D": 36.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+81
+],
+"unnumbered": false,
+"c": [
+787.67,
+260.0
+],
+"axis": [
+-0.1197,
+0.9928
+],
+"front": [
+-0.9928,
+-0.1197
+],
+"L": 24.0,
+"D": 34.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+82
+],
+"unnumbered": false,
+"c": [
+795.16,
+223.12
+],
+"axis": [
+-0.5401,
+0.8416
+],
+"front": [
+-0.8416,
+-0.5401
+],
+"L": 23.97,
+"D": 36.35,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+83
+],
+"unnumbered": false,
+"c": [
+827.98,
+197.19
+],
+"axis": [
+-0.9232,
+0.3843
+],
+"front": [
+-0.3843,
+-0.9232
+],
+"L": 21.84,
+"D": 26.92,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+84
+],
+"unnumbered": false,
+"c": [
+863.5,
+194.67
+],
+"axis": [
+-0.9992,
+0.0397
+],
+"front": [
+-0.0397,
+-0.9992
+],
+"L": 21.67,
+"D": 26.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+85
+],
+"unnumbered": false,
+"c": [
+895.67,
+194.5
+],
+"axis": [
+-1.0,
+-0.0
+],
+"front": [
+0.0,
+-1.0
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+86
+],
+"unnumbered": false,
+"c": [
+927.67,
+194.67
+],
+"axis": [
+-1.0,
+-0.0
+],
+"front": [
+0.0,
+-1.0
+],
+"L": 21.33,
+"D": 26.0,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+87
+],
+"unnumbered": false,
+"c": [
+960.33,
+194.5
+],
+"axis": [
+-0.9996,
+-0.0287
+],
+"front": [
+0.0287,
+-0.9996
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+88
+],
+"unnumbered": false,
+"c": [
+991.5,
+196.5
+],
+"axis": [
+-0.9979,
+-0.064
+],
+"front": [
+0.064,
+-0.9979
+],
+"L": 24.33,
+"D": 32.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+92
+],
+"unnumbered": false,
+"c": [
+876.2,
+287.44
+],
+"axis": [
+0.53,
+-0.848
+],
+"front": [
+0.848,
+0.53
+],
+"L": 21.87,
+"D": 26.89,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.56
+},
+{
+"units": [
+94
+],
+"unnumbered": false,
+"c": [
+922.9,
+323.6
+],
+"axis": [
+-0.9988,
+-0.0496
+],
+"front": [
+0.0496,
+-0.9988
+],
+"L": 24.08,
+"D": 33.52,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+95
+],
+"unnumbered": false,
+"c": [
+956.9,
+325.29
+],
+"axis": [
+-0.9987,
+-0.0516
+],
+"front": [
+0.0516,
+-0.9987
+],
+"L": 24.05,
+"D": 32.31,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+96
+],
+"unnumbered": false,
+"c": [
+990.68,
+327.1
+],
+"axis": [
+-0.9987,
+-0.0508
+],
+"front": [
+0.0508,
+-0.9987
+],
+"L": 24.26,
+"D": 32.6,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+97
+],
+"unnumbered": false,
+"c": [
+1024.55,
+328.73
+],
+"axis": [
+-0.9994,
+-0.0357
+],
+"front": [
+0.0357,
+-0.9994
+],
+"L": 24.22,
+"D": 33.03,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+98
+],
+"unnumbered": false,
+"c": [
+1058.05,
+329.51
+],
+"axis": [
+-0.9993,
+-0.0367
+],
+"front": [
+0.0367,
+-0.9993
+],
+"L": 24.07,
+"D": 32.76,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+99
+],
+"unnumbered": false,
+"c": [
+1092.27,
+331.22
+],
+"axis": [
+-0.9657,
+-0.2596
+],
+"front": [
+0.2596,
+-0.9657
+],
+"L": 24.34,
+"D": 33.24,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+100
+],
+"unnumbered": false,
+"c": [
+1125.71,
+347.7
+],
+"axis": [
+-0.7066,
+-0.7077
+],
+"front": [
+0.7077,
+-0.7066
+],
+"L": 24.56,
+"D": 33.07,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.59
+},
+{
+"units": [
+101
+],
+"unnumbered": false,
+"c": [
+1143.27,
+382.3
+],
+"axis": [
+-0.1839,
+-0.9829
+],
+"front": [
+0.9829,
+-0.1839
+],
+"L": 24.19,
+"D": 33.2,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+102
+],
+"unnumbered": false,
+"c": [
+1142.41,
+436.96
+],
+"axis": [
+0.1745,
+-0.9847
+],
+"front": [
+0.9847,
+0.1745
+],
+"L": 24.67,
+"D": 34.56,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+103
+],
+"unnumbered": false,
+"c": [
+1127.51,
+471.25
+],
+"axis": [
+0.5243,
+-0.8516
+],
+"front": [
+0.8516,
+0.5243
+],
+"L": 24.35,
+"D": 33.63,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+104
+],
+"unnumbered": false,
+"c": [
+1102.72,
+501.43
+],
+"axis": [
+0.9078,
+-0.4193
+],
+"front": [
+0.4193,
+0.9078
+],
+"L": 24.23,
+"D": 33.28,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.67
+},
+{
+"units": [
+105
+],
+"unnumbered": false,
+"c": [
+1052.4,
+505.94
+],
+"axis": [
+0.9997,
+0.0232
+],
+"front": [
+-0.0232,
+0.9997
+],
+"L": 24.26,
+"D": 33.55,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+106
+],
+"unnumbered": false,
+"c": [
+1020.42,
+499.52
+],
+"axis": [
+0.9804,
+0.1968
+],
+"front": [
+-0.1968,
+0.9804
+],
+"L": 24.47,
+"D": 36.77,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+108
+],
+"unnumbered": false,
+"c": [
+951.08,
+486.75
+],
+"axis": [
+0.9487,
+0.3162
+],
+"front": [
+-0.3162,
+0.9487
+],
+"L": 23.82,
+"D": 39.11,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+109
+],
+"unnumbered": false,
+"c": [
+922.68,
+452.97
+],
+"axis": [
+0.0213,
+0.9998
+],
+"front": [
+-0.9998,
+0.0213
+],
+"L": 23.67,
+"D": 36.42,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+112
+],
+"unnumbered": false,
+"c": [
+869.21,
+372.0
+],
+"axis": [
+-0.0547,
+-0.9985
+],
+"front": [
+0.9985,
+-0.0547
+],
+"L": 21.98,
+"D": 26.8,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+113
+],
+"unnumbered": false,
+"c": [
+871.0,
+404.67
+],
+"axis": [
+-0.0427,
+-0.9991
+],
+"front": [
+0.9991,
+-0.0427
+],
+"L": 22.67,
+"D": 26.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+114
+],
+"unnumbered": false,
+"c": [
+872.0,
+437.33
+],
+"axis": [
+-0.0485,
+-0.9988
+],
+"front": [
+0.9988,
+-0.0485
+],
+"L": 22.0,
+"D": 26.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.81
+},
+{
+"units": [
+115
+],
+"unnumbered": false,
+"c": [
+874.17,
+470.0
+],
+"axis": [
+-0.0948,
+-0.9955
+],
+"front": [
+0.9955,
+-0.0948
+],
+"L": 21.33,
+"D": 23.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+116
+],
+"unnumbered": false,
+"c": [
+878.49,
+505.5
+],
+"axis": [
+-0.4044,
+-0.9146
+],
+"front": [
+0.9146,
+-0.4044
+],
+"L": 21.87,
+"D": 26.57,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.59
+},
+{
+"units": [
+117
+],
+"unnumbered": false,
+"c": [
+901.52,
+531.85
+],
+"axis": [
+-0.8661,
+-0.4999
+],
+"front": [
+0.4999,
+-0.8661
+],
+"L": 24.26,
+"D": 33.27,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.56
+},
+{
+"units": [
+118
+],
+"unnumbered": false,
+"c": [
+936.29,
+538.86
+],
+"axis": [
+-0.988,
+-0.1547
+],
+"front": [
+0.1547,
+-0.988
+],
+"L": 24.51,
+"D": 32.5,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.74
+},
+{
+"units": [
+119
+],
+"unnumbered": false,
+"c": [
+969.4,
+542.48
+],
+"axis": [
+-0.9886,
+-0.1508
+],
+"front": [
+0.1508,
+-0.9886
+],
+"L": 24.48,
+"D": 33.17,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+120
+],
+"unnumbered": false,
+"c": [
+1003.74,
+549.15
+],
+"axis": [
+-0.9753,
+-0.2209
+],
+"front": [
+0.2209,
+-0.9753
+],
+"L": 24.38,
+"D": 32.69,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+121
+],
+"unnumbered": false,
+"c": [
+1037.09,
+557.81
+],
+"axis": [
+-0.9652,
+-0.2616
+],
+"front": [
+0.2616,
+-0.9652
+],
+"L": 24.33,
+"D": 32.74,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+122
+],
+"unnumbered": false,
+"c": [
+1069.59,
+567.0
+],
+"axis": [
+-0.9999,
+-0.0162
+],
+"front": [
+0.0162,
+-0.9999
+],
+"L": 24.55,
+"D": 33.29,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.93
+},
+{
+"units": [
+123
+],
+"unnumbered": false,
+"c": [
+1118.8,
+559.13
+],
+"axis": [
+-0.9203,
+0.3911
+],
+"front": [
+-0.3911,
+-0.9203
+],
+"L": 24.29,
+"D": 33.43,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.96
+},
+{
+"units": [
+124
+],
+"unnumbered": false,
+"c": [
+1146.6,
+534.27
+],
+"axis": [
+-0.7454,
+0.6666
+],
+"front": [
+-0.6666,
+-0.7454
+],
+"L": 23.91,
+"D": 38.77,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+125
+],
+"unnumbered": false,
+"c": [
+1185.09,
+471.66
+],
+"axis": [
+-0.1942,
+0.981
+],
+"front": [
+-0.981,
+-0.1942
+],
+"L": 24.55,
+"D": 38.78,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+127
+],
+"unnumbered": false,
+"c": [
+1195.62,
+438.06
+],
+"axis": [
+-0.0823,
+0.9966
+],
+"front": [
+-0.9966,
+-0.0823
+],
+"L": 24.06,
+"D": 37.59,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+128
+],
+"unnumbered": false,
+"c": [
+1199.7,
+388.66
+],
+"axis": [
+0.0468,
+0.9989
+],
+"front": [
+-0.9989,
+0.0468
+],
+"L": 23.92,
+"D": 35.82,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.93
+},
+{
+"units": [
+129
+],
+"unnumbered": false,
+"c": [
+1191.75,
+355.51
+],
+"axis": [
+0.3142,
+0.9494
+],
+"front": [
+-0.9494,
+0.3142
+],
+"L": 24.71,
+"D": 37.92,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+130
+],
+"unnumbered": false,
+"c": [
+1177.89,
+322.75
+],
+"axis": [
+0.5523,
+0.8337
+],
+"front": [
+-0.8337,
+0.5523
+],
+"L": 24.24,
+"D": 37.06,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+131
+],
+"unnumbered": false,
+"c": [
+1153.73,
+298.12
+],
+"axis": [
+0.7851,
+0.6194
+],
+"front": [
+-0.6194,
+0.7851
+],
+"L": 24.01,
+"D": 37.47,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+132
+],
+"unnumbered": false,
+"c": [
+1124.63,
+280.73
+],
+"axis": [
+0.8584,
+0.513
+],
+"front": [
+-0.513,
+0.8584
+],
+"L": 24.15,
+"D": 33.24,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.59
+},
+{
+"units": [
+135
+],
+"unnumbered": false,
+"c": [
+1051.83,
+196.5
+],
+"axis": [
+-1.0,
+-0.0049
+],
+"front": [
+0.0049,
+-1.0
+],
+"L": 24.33,
+"D": 32.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+136
+],
+"unnumbered": false,
+"c": [
+1086.67,
+196.67
+],
+"axis": [
+-1.0,
+-0.0048
+],
+"front": [
+0.0048,
+-1.0
+],
+"L": 24.0,
+"D": 32.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.59
+},
+{
+"units": [
+137
+],
+"unnumbered": false,
+"c": [
+1122.88,
+196.84
+],
+"axis": [
+-0.9976,
+-0.0687
+],
+"front": [
+0.0687,
+-0.9976
+],
+"L": 24.36,
+"D": 32.6,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+138
+],
+"unnumbered": false,
+"c": [
+1159.17,
+201.66
+],
+"axis": [
+-0.9706,
+-0.2407
+],
+"front": [
+0.2407,
+-0.9706
+],
+"L": 24.68,
+"D": 33.02,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+139
+],
+"unnumbered": false,
+"c": [
+1194.98,
+214.72
+],
+"axis": [
+-0.8927,
+-0.4507
+],
+"front": [
+0.4507,
+-0.8927
+],
+"L": 24.31,
+"D": 33.17,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+140
+],
+"unnumbered": false,
+"c": [
+1226.15,
+235.48
+],
+"axis": [
+-0.7683,
+-0.6401
+],
+"front": [
+0.6401,
+-0.7683
+],
+"L": 24.49,
+"D": 33.14,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+141
+],
+"unnumbered": false,
+"c": [
+1252.04,
+262.26
+],
+"axis": [
+-0.6351,
+-0.7724
+],
+"front": [
+0.7724,
+-0.6351
+],
+"L": 24.44,
+"D": 32.92,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+142
+],
+"unnumbered": false,
+"c": [
+1273.5,
+293.07
+],
+"axis": [
+-0.4632,
+-0.8862
+],
+"front": [
+0.8862,
+-0.4632
+],
+"L": 21.82,
+"D": 26.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+143
+],
+"unnumbered": false,
+"c": [
+1286.04,
+327.31
+],
+"axis": [
+-0.2156,
+-0.9765
+],
+"front": [
+0.9765,
+-0.2156
+],
+"L": 21.86,
+"D": 24.07,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+144
+],
+"unnumbered": false,
+"c": [
+1288.83,
+362.5
+],
+"axis": [
+-0.0236,
+-0.9997
+],
+"front": [
+0.9997,
+-0.0236
+],
+"L": 22.33,
+"D": 26.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+145
+],
+"unnumbered": false,
+"c": [
+1287.67,
+396.5
+],
+"axis": [
+0.0996,
+-0.995
+],
+"front": [
+0.995,
+0.0996
+],
+"L": 22.33,
+"D": 26.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.74
+},
+{
+"units": [
+146
+],
+"unnumbered": false,
+"c": [
+1280.96,
+441.12
+],
+"axis": [
+0.1434,
+-0.9897
+],
+"front": [
+0.9897,
+0.1434
+],
+"L": 24.31,
+"D": 33.45,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+147
+],
+"unnumbered": false,
+"c": [
+1275.67,
+479.33
+],
+"axis": [
+0.1371,
+-0.9906
+],
+"front": [
+0.9906,
+0.1371
+],
+"L": 23.33,
+"D": 35.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+151
+],
+"unnumbered": false,
+"c": [
+1251.67,
+758.83
+],
+"axis": [
+-0.0049,
+-1.0
+],
+"front": [
+1.0,
+-0.0049
+],
+"L": 21.67,
+"D": 26.0,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+152
+],
+"unnumbered": false,
+"c": [
+1251.83,
+791.33
+],
+"axis": [
+-0.0104,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0104
+],
+"L": 21.33,
+"D": 26.33,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+153
+],
+"unnumbered": false,
+"c": [
+1252.5,
+838.67
+],
+"axis": [
+-0.0126,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0126
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.81
+},
+{
+"units": [
+154
+],
+"unnumbered": false,
+"c": [
+1252.83,
+870.67
+],
+"axis": [
+-0.0027,
+-1.0
+],
+"front": [
+1.0,
+-0.0027
+],
+"L": 22.0,
+"D": 26.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+155
+],
+"unnumbered": false,
+"c": [
+1252.67,
+902.67
+],
+"axis": [
+0.0907,
+-0.9959
+],
+"front": [
+0.9959,
+0.0907
+],
+"L": 21.33,
+"D": 26.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+156
+],
+"unnumbered": false,
+"c": [
+1247.0,
+934.67
+],
+"axis": [
+0.3832,
+-0.9236
+],
+"front": [
+0.9236,
+0.3832
+],
+"L": 24.45,
+"D": 33.47,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+157
+],
+"unnumbered": false,
+"c": [
+1226.19,
+966.49
+],
+"axis": [
+0.7597,
+-0.6503
+],
+"front": [
+0.6503,
+0.7597
+],
+"L": 24.23,
+"D": 32.97,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+158
+],
+"unnumbered": false,
+"c": [
+1190.12,
+983.36
+],
+"axis": [
+0.9713,
+-0.2378
+],
+"front": [
+0.2378,
+0.9713
+],
+"L": 24.02,
+"D": 36.45,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+159
+],
+"unnumbered": false,
+"c": [
+1154.67,
+984.0
+],
+"axis": [
+0.9998,
+-0.0181
+],
+"front": [
+0.0181,
+0.9998
+],
+"L": 24.67,
+"D": 34.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+163
+],
+"unnumbered": false,
+"c": [
+1050.04,
+904.22
+],
+"axis": [
+-0.999,
+0.0441
+],
+"front": [
+-0.0441,
+-0.999
+],
+"L": 24.06,
+"D": 32.49,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+164
+],
+"unnumbered": false,
+"c": [
+1081.5,
+902.83
+],
+"axis": [
+-0.9999,
+-0.0135
+],
+"front": [
+0.0135,
+-0.9999
+],
+"L": 21.67,
+"D": 27.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.81
+},
+{
+"units": [
+165
+],
+"unnumbered": false,
+"c": [
+1113.56,
+905.08
+],
+"axis": [
+-0.9995,
+0.0302
+],
+"front": [
+-0.0302,
+-0.9995
+],
+"L": 21.7,
+"D": 26.44,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+166
+],
+"unnumbered": false,
+"c": [
+1150.75,
+900.74
+],
+"axis": [
+-0.8604,
+0.5096
+],
+"front": [
+-0.5096,
+-0.8604
+],
+"L": 24.43,
+"D": 36.35,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.63
+},
+{
+"units": [
+167
+],
+"unnumbered": false,
+"c": [
+1170.06,
+871.62
+],
+"axis": [
+-0.5527,
+0.8334
+],
+"front": [
+-0.8334,
+-0.5527
+],
+"L": 22.79,
+"D": 29.78,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+169
+],
+"unnumbered": false,
+"c": [
+1114.68,
+853.84
+],
+"axis": [
+0.9995,
+0.0322
+],
+"front": [
+-0.0322,
+0.9995
+],
+"L": 24.37,
+"D": 36.37,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+170
+],
+"unnumbered": false,
+"c": [
+1078.72,
+852.68
+],
+"axis": [
+0.9992,
+0.0401
+],
+"front": [
+-0.0401,
+0.9992
+],
+"L": 24.34,
+"D": 35.99,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+171
+],
+"unnumbered": false,
+"c": [
+1043.83,
+851.0
+],
+"axis": [
+1.0,
+0.0085
+],
+"front": [
+-0.0085,
+1.0
+],
+"L": 24.33,
+"D": 34.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+172
+],
+"unnumbered": false,
+"c": [
+998.67,
+852.0
+],
+"axis": [
+0.9997,
+-0.0245
+],
+"front": [
+0.0245,
+0.9997
+],
+"L": 24.0,
+"D": 36.0,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+173
+],
+"unnumbered": false,
+"c": [
+963.82,
+852.96
+],
+"axis": [
+0.9996,
+-0.0275
+],
+"front": [
+0.0275,
+0.9996
+],
+"L": 24.71,
+"D": 35.31,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+175
+],
+"unnumbered": false,
+"c": [
+923.01,
+796.18
+],
+"axis": [
+-0.0193,
+0.9998
+],
+"front": [
+-0.9998,
+-0.0193
+],
+"L": 23.73,
+"D": 36.74,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+176
+],
+"unnumbered": false,
+"c": [
+923.67,
+762.0
+],
+"axis": [
+0.0197,
+0.9998
+],
+"front": [
+-0.9998,
+0.0197
+],
+"L": 24.67,
+"D": 36.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+177
+],
+"unnumbered": false,
+"c": [
+921.67,
+728.33
+],
+"axis": [
+0.0593,
+0.9982
+],
+"front": [
+-0.9982,
+0.0593
+],
+"L": 24.67,
+"D": 28.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+179
+],
+"unnumbered": false,
+"c": [
+986.14,
+689.0
+],
+"axis": [
+-0.9413,
+-0.3377
+],
+"front": [
+0.3377,
+-0.9413
+],
+"L": 24.18,
+"D": 33.13,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+180
+],
+"unnumbered": false,
+"c": [
+1016.3,
+699.82
+],
+"axis": [
+-0.9488,
+-0.3159
+],
+"front": [
+0.3159,
+-0.9488
+],
+"L": 24.56,
+"D": 32.63,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+181
+],
+"unnumbered": false,
+"c": [
+1050.48,
+710.42
+],
+"axis": [
+-0.9645,
+-0.2642
+],
+"front": [
+0.2642,
+-0.9645
+],
+"L": 24.22,
+"D": 32.71,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+182
+],
+"unnumbered": false,
+"c": [
+1097.72,
+722.12
+],
+"axis": [
+-0.8008,
+-0.5989
+],
+"front": [
+0.5989,
+-0.8008
+],
+"L": 22.06,
+"D": 26.61,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.96
+},
+{
+"units": [
+183
+],
+"unnumbered": false,
+"c": [
+1116.87,
+760.07
+],
+"axis": [
+-0.4505,
+-0.8928
+],
+"front": [
+0.8928,
+-0.4505
+],
+"L": 22.06,
+"D": 26.11,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.89
+},
+{
+"units": [
+185
+],
+"unnumbered": false,
+"c": [
+1159.33,
+792.32
+],
+"axis": [
+-0.0932,
+0.9956
+],
+"front": [
+-0.9956,
+-0.0932
+],
+"L": 24.02,
+"D": 42.78,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+186
+],
+"unnumbered": false,
+"c": [
+1162.47,
+758.77
+],
+"axis": [
+-0.0656,
+0.9978
+],
+"front": [
+-0.9978,
+-0.0656
+],
+"L": 22.84,
+"D": 32.16,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+187
+],
+"unnumbered": false,
+"c": [
+1163.77,
+724.75
+],
+"axis": [
+-0.0382,
+0.9993
+],
+"front": [
+-0.9993,
+-0.0382
+],
+"L": 24.02,
+"D": 40.04,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+189
+],
+"unnumbered": false,
+"c": [
+1116.65,
+671.58
+],
+"axis": [
+0.9791,
+0.2032
+],
+"front": [
+-0.2032,
+0.9791
+],
+"L": 24.26,
+"D": 36.69,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+190
+],
+"unnumbered": false,
+"c": [
+1063.75,
+660.6
+],
+"axis": [
+0.9678,
+0.2518
+],
+"front": [
+-0.2518,
+0.9678
+],
+"L": 24.57,
+"D": 37.84,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+191
+],
+"unnumbered": false,
+"c": [
+1029.81,
+648.99
+],
+"axis": [
+0.9325,
+0.3611
+],
+"front": [
+-0.3611,
+0.9325
+],
+"L": 24.34,
+"D": 37.37,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+192
+],
+"unnumbered": false,
+"c": [
+997.57,
+634.97
+],
+"axis": [
+0.9605,
+0.2782
+],
+"front": [
+-0.2782,
+0.9605
+],
+"L": 24.54,
+"D": 35.57,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+193
+],
+"unnumbered": false,
+"c": [
+964.83,
+630.17
+],
+"axis": [
+0.9984,
+-0.0558
+],
+"front": [
+0.0558,
+0.9984
+],
+"L": 23.67,
+"D": 35.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+194
+],
+"unnumbered": false,
+"c": [
+930.46,
+638.72
+],
+"axis": [
+0.9205,
+-0.3907
+],
+"front": [
+0.3907,
+0.9205
+],
+"L": 23.8,
+"D": 38.32,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+195
+],
+"unnumbered": false,
+"c": [
+897.57,
+658.72
+],
+"axis": [
+0.698,
+-0.7161
+],
+"front": [
+0.7161,
+0.698
+],
+"L": 24.39,
+"D": 33.16,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+196
+],
+"unnumbered": false,
+"c": [
+879.83,
+690.66
+],
+"axis": [
+0.3494,
+-0.937
+],
+"front": [
+0.937,
+0.3494
+],
+"L": 24.16,
+"D": 38.79,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+197
+],
+"unnumbered": false,
+"c": [
+871.67,
+728.17
+],
+"axis": [
+0.0794,
+-0.9968
+],
+"front": [
+0.9968,
+0.0794
+],
+"L": 23.67,
+"D": 31.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+198
+],
+"unnumbered": false,
+"c": [
+874.33,
+759.67
+],
+"axis": [
+-0.0062,
+-1.0
+],
+"front": [
+1.0,
+-0.0062
+],
+"L": 22.0,
+"D": 26.0,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+199
+],
+"unnumbered": false,
+"c": [
+872.07,
+792.77
+],
+"axis": [
+0.0559,
+-0.9984
+],
+"front": [
+0.9984,
+0.0559
+],
+"L": 22.19,
+"D": 25.82,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.7
+},
+{
+"units": [
+200
+],
+"unnumbered": false,
+"c": [
+869.83,
+840.0
+],
+"axis": [
+0.0195,
+-0.9998
+],
+"front": [
+0.9998,
+0.0195
+],
+"L": 21.33,
+"D": 26.33,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.81
+},
+{
+"units": [
+201
+],
+"unnumbered": false,
+"c": [
+870.47,
+874.61
+],
+"axis": [
+-0.3577,
+-0.9338
+],
+"front": [
+0.9338,
+-0.3577
+],
+"L": 21.8,
+"D": 26.55,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.48
+},
+{
+"units": [
+202
+],
+"unnumbered": false,
+"c": [
+893.7,
+902.31
+],
+"axis": [
+-0.8431,
+-0.5378
+],
+"front": [
+0.5378,
+-0.8431
+],
+"L": 21.92,
+"D": 26.71,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.52
+},
+{
+"units": [
+203
+],
+"unnumbered": false,
+"c": [
+926.72,
+910.49
+],
+"axis": [
+-0.9999,
+-0.0124
+],
+"front": [
+0.0124,
+-0.9999
+],
+"L": 24.59,
+"D": 32.25,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.59
+},
+{
+"units": [
+204
+],
+"unnumbered": false,
+"c": [
+960.76,
+903.14
+],
+"axis": [
+-0.9961,
+0.0883
+],
+"front": [
+-0.0883,
+-0.9961
+],
+"L": 22.08,
+"D": 26.02,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+205
+],
+"unnumbered": false,
+"c": [
+992.52,
+904.66
+],
+"axis": [
+-0.9989,
+-0.0478
+],
+"front": [
+0.0478,
+-0.9989
+],
+"L": 24.26,
+"D": 32.42,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+207
+],
+"unnumbered": false,
+"c": [
+959.33,
+985.5
+],
+"axis": [
+0.9997,
+-0.0245
+],
+"front": [
+0.0245,
+0.9997
+],
+"L": 24.0,
+"D": 37.0,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+208
+],
+"unnumbered": false,
+"c": [
+925.5,
+986.33
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.33,
+"D": 36.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+209
+],
+"unnumbered": false,
+"c": [
+892.5,
+985.5
+],
+"axis": [
+0.9998,
+0.0188
+],
+"front": [
+-0.0188,
+0.9998
+],
+"L": 23.67,
+"D": 34.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+210
+],
+"unnumbered": false,
+"c": [
+855.76,
+985.02
+],
+"axis": [
+0.9785,
+0.2061
+],
+"front": [
+-0.2061,
+0.9785
+],
+"L": 24.51,
+"D": 35.95,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+211
+],
+"unnumbered": false,
+"c": [
+820.08,
+970.25
+],
+"axis": [
+0.79,
+0.6131
+],
+"front": [
+-0.6131,
+0.79
+],
+"L": 24.04,
+"D": 37.48,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+212
+],
+"unnumbered": false,
+"c": [
+796.04,
+938.67
+],
+"axis": [
+0.4366,
+0.8996
+],
+"front": [
+-0.8996,
+0.4366
+],
+"L": 23.65,
+"D": 38.28,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+213
+],
+"unnumbered": false,
+"c": [
+788.31,
+904.79
+],
+"axis": [
+0.1197,
+0.9928
+],
+"front": [
+-0.9928,
+0.1197
+],
+"L": 22.97,
+"D": 29.78,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+214
+],
+"unnumbered": false,
+"c": [
+788.0,
+872.0
+],
+"axis": [
+0.0164,
+0.9999
+],
+"front": [
+-0.9999,
+0.0164
+],
+"L": 23.33,
+"D": 28.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+215
+],
+"unnumbered": false,
+"c": [
+787.25,
+840.11
+],
+"axis": [
+-0.0213,
+0.9998
+],
+"front": [
+-0.9998,
+-0.0213
+],
+"L": 23.65,
+"D": 31.29,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+216
+],
+"unnumbered": false,
+"c": [
+789.67,
+793.5
+],
+"axis": [
+-0.0019,
+1.0
+],
+"front": [
+-1.0,
+-0.0019
+],
+"L": 21.67,
+"D": 26.0,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+217
+],
+"unnumbered": false,
+"c": [
+787.4,
+761.4
+],
+"axis": [
+0.0465,
+0.9989
+],
+"front": [
+-0.9989,
+0.0465
+],
+"L": 21.61,
+"D": 29.71,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+218
+],
+"unnumbered": false,
+"c": [
+786.67,
+729.0
+],
+"axis": [
+0.0225,
+0.9997
+],
+"front": [
+-0.9997,
+0.0225
+],
+"L": 22.0,
+"D": 29.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+220
+],
+"unnumbered": false,
+"c": [
+789.28,
+666.0
+],
+"axis": [
+0.0213,
+0.9998
+],
+"front": [
+-0.9998,
+0.0213
+],
+"L": 23.73,
+"D": 37.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+223
+],
+"unnumbered": false,
+"c": [
+739.83,
+662.67
+],
+"axis": [
+-0.0104,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0104
+],
+"L": 22.0,
+"D": 26.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+224
+],
+"unnumbered": false,
+"c": [
+740.17,
+695.5
+],
+"axis": [
+-0.0026,
+-1.0
+],
+"front": [
+1.0,
+-0.0026
+],
+"L": 22.33,
+"D": 26.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+225
+],
+"unnumbered": false,
+"c": [
+740.0,
+728.33
+],
+"axis": [
+-0.005,
+-1.0
+],
+"front": [
+1.0,
+-0.005
+],
+"L": 21.33,
+"D": 26.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+226
+],
+"unnumbered": false,
+"c": [
+740.5,
+761.0
+],
+"axis": [
+-0.0077,
+-1.0
+],
+"front": [
+1.0,
+-0.0077
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+227
+],
+"unnumbered": false,
+"c": [
+740.5,
+793.67
+],
+"axis": [
+-0.0041,
+-1.0
+],
+"front": [
+1.0,
+-0.0041
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+228
+],
+"unnumbered": false,
+"c": [
+740.83,
+840.67
+],
+"axis": [
+-0.0063,
+-1.0
+],
+"front": [
+1.0,
+-0.0063
+],
+"L": 21.33,
+"D": 26.33,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+229
+],
+"unnumbered": false,
+"c": [
+741.0,
+872.83
+],
+"axis": [
+-0.0104,
+-0.9999
+],
+"front": [
+0.9999,
+-0.0104
+],
+"L": 21.67,
+"D": 26.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+230
+],
+"unnumbered": false,
+"c": [
+741.5,
+905.17
+],
+"axis": [
+-0.0299,
+-0.9996
+],
+"front": [
+0.9996,
+-0.0299
+],
+"L": 21.67,
+"D": 25.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+231
+],
+"unnumbered": false,
+"c": [
+742.93,
+937.34
+],
+"axis": [
+-0.1537,
+-0.9881
+],
+"front": [
+0.9881,
+-0.1537
+],
+"L": 22.02,
+"D": 26.61,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.63
+},
+{
+"units": [
+232
+],
+"unnumbered": false,
+"c": [
+751.91,
+972.11
+],
+"axis": [
+-0.5081,
+-0.8613
+],
+"front": [
+0.8613,
+-0.5081
+],
+"L": 24.33,
+"D": 33.2,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.52
+},
+{
+"units": [
+233
+],
+"unnumbered": false,
+"c": [
+783.44,
+1006.01
+],
+"axis": [
+-0.7275,
+-0.6861
+],
+"front": [
+0.6861,
+-0.7275
+],
+"L": 22.0,
+"D": 26.72,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.7
+},
+{
+"units": [
+234
+],
+"unnumbered": false,
+"c": [
+809.9,
+1026.8
+],
+"axis": [
+-0.8805,
+-0.4741
+],
+"front": [
+0.4741,
+-0.8805
+],
+"L": 21.82,
+"D": 26.88,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.33
+},
+{
+"units": [
+235
+],
+"unnumbered": false,
+"c": [
+841.53,
+1037.29
+],
+"axis": [
+-0.9834,
+-0.1815
+],
+"front": [
+0.1815,
+-0.9834
+],
+"L": 21.89,
+"D": 26.62,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.37
+},
+{
+"units": [
+236
+],
+"unnumbered": false,
+"c": [
+876.0,
+1039.0
+],
+"axis": [
+-0.9997,
+0.0247
+],
+"front": [
+-0.0247,
+-0.9997
+],
+"L": 24.0,
+"D": 32.0,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+237
+],
+"unnumbered": false,
+"c": [
+907.17,
+1035.67
+],
+"axis": [
+-0.9984,
+0.0565
+],
+"front": [
+-0.0565,
+-0.9984
+],
+"L": 21.67,
+"D": 26.67,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.96
+},
+{
+"units": [
+238
+],
+"unnumbered": false,
+"c": [
+939.44,
+1035.41
+],
+"axis": [
+-0.9998,
+0.0182
+],
+"front": [
+-0.0182,
+-0.9998
+],
+"L": 21.5,
+"D": 26.82,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.78
+},
+{
+"units": [
+239
+],
+"unnumbered": false,
+"c": [
+971.5,
+1034.5
+],
+"axis": [
+-0.9999,
+0.0142
+],
+"front": [
+-0.0142,
+-0.9999
+],
+"L": 21.67,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+240
+],
+"unnumbered": false,
+"c": [
+1003.67,
+1034.5
+],
+"axis": [
+-1.0,
+0.0022
+],
+"front": [
+-0.0022,
+-1.0
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+241
+],
+"unnumbered": false,
+"c": [
+1049.67,
+1034.33
+],
+"axis": [
+-1.0,
+0.0027
+],
+"front": [
+-0.0027,
+-1.0
+],
+"L": 21.33,
+"D": 26.0,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+242
+],
+"unnumbered": false,
+"c": [
+1081.96,
+1034.29
+],
+"axis": [
+-1.0,
+0.0078
+],
+"front": [
+-0.0078,
+-1.0
+],
+"L": 21.21,
+"D": 26.46,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+243
+],
+"unnumbered": false,
+"c": [
+1114.0,
+1033.83
+],
+"axis": [
+-1.0,
+0.0072
+],
+"front": [
+-0.0072,
+-1.0
+],
+"L": 22.0,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+244
+],
+"unnumbered": false,
+"c": [
+1146.17,
+1033.83
+],
+"axis": [
+-0.9981,
+-0.0623
+],
+"front": [
+0.0623,
+-0.9981
+],
+"L": 21.67,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+245
+],
+"unnumbered": false,
+"c": [
+1181.93,
+1038.07
+],
+"axis": [
+-0.9999,
+0.0116
+],
+"front": [
+-0.0116,
+-0.9999
+],
+"L": 23.95,
+"D": 33.42,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+246
+],
+"unnumbered": false,
+"c": [
+1217.6,
+1033.0
+],
+"axis": [
+-0.9592,
+0.2826
+],
+"front": [
+-0.2826,
+-0.9592
+],
+"L": 24.22,
+"D": 32.84,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+247
+],
+"unnumbered": false,
+"c": [
+1248.39,
+1018.49
+],
+"axis": [
+-0.8325,
+0.554
+],
+"front": [
+-0.554,
+-0.8325
+],
+"L": 24.15,
+"D": 35.09,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.59
+},
+{
+"units": [
+248
+],
+"unnumbered": false,
+"c": [
+1273.77,
+995.62
+],
+"axis": [
+-0.6495,
+0.7603
+],
+"front": [
+-0.7603,
+-0.6495
+],
+"L": 24.27,
+"D": 36.98,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.67
+},
+{
+"units": [
+249
+],
+"unnumbered": false,
+"c": [
+1292.48,
+966.88
+],
+"axis": [
+-0.423,
+0.9061
+],
+"front": [
+-0.9061,
+-0.423
+],
+"L": 24.35,
+"D": 35.63,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+250
+],
+"unnumbered": false,
+"c": [
+1302.45,
+934.18
+],
+"axis": [
+-0.1049,
+0.9945
+],
+"front": [
+-0.9945,
+-0.1049
+],
+"L": 24.41,
+"D": 37.31,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 0.67
+},
+{
+"units": [
+251
+],
+"unnumbered": false,
+"c": [
+1299.32,
+902.03
+],
+"axis": [
+0.0486,
+0.9988
+],
+"front": [
+-0.9988,
+0.0486
+],
+"L": 22.89,
+"D": 30.06,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+252
+],
+"unnumbered": false,
+"c": [
+1299.33,
+870.0
+],
+"axis": [
+-0.0123,
+0.9999
+],
+"front": [
+-0.9999,
+-0.0123
+],
+"L": 21.33,
+"D": 31.33,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+253
+],
+"unnumbered": false,
+"c": [
+1300.11,
+837.65
+],
+"axis": [
+0.0091,
+1.0
+],
+"front": [
+-1.0,
+0.0091
+],
+"L": 21.37,
+"D": 28.83,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+254
+],
+"unnumbered": false,
+"c": [
+1298.61,
+791.19
+],
+"axis": [
+0.0246,
+0.9997
+],
+"front": [
+-0.9997,
+0.0246
+],
+"L": 23.31,
+"D": 30.04,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "filled along the row",
+"front_conf": 1.0
+},
+{
+"units": [
+255
+],
+"unnumbered": false,
+"c": [
+1298.17,
+758.83
+],
+"axis": [
+-0.0111,
+0.9999
+],
+"front": [
+-0.9999,
+-0.0111
+],
+"L": 22.33,
+"D": 29.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+256
+],
+"unnumbered": false,
+"c": [
+1299.33,
+726.17
+],
+"axis": [
+-0.0355,
+0.9994
+],
+"front": [
+-0.9994,
+-0.0355
+],
+"L": 21.67,
+"D": 28.0,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1442.83,
+140.67
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.33,
+"D": 32.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1303.67,
+142.0
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.0,
+"D": 34.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1338.33,
+142.83
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.0,
+"D": 36.33,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1373.52,
+142.17
+],
+"axis": [
+0.9998,
+-0.0213
+],
+"front": [
+0.0213,
+0.9998
+],
+"L": 23.97,
+"D": 34.66,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1408.33,
+141.17
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.0,
+"D": 32.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1488.33,
+140.83
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.0,
+"D": 32.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1199.25,
+146.84
+],
+"axis": [
+0.9998,
+-0.0192
+],
+"front": [
+0.0192,
+0.9998
+],
+"L": 24.03,
+"D": 43.22,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1233.83,
+141.67
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.33,
+"D": 32.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1268.83,
+141.67
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.33,
+"D": 32.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1523.09,
+142.89
+],
+"axis": [
+0.9937,
+0.1125
+],
+"front": [
+-0.1125,
+0.9937
+],
+"L": 24.33,
+"D": 33.05,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.56
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1555.3,
+157.02
+],
+"axis": [
+-0.4205,
+0.9073
+],
+"front": [
+-0.9073,
+-0.4205
+],
+"L": 32.6,
+"D": 24.23,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.44
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1582.25,
+181.75
+],
+"axis": [
+0.7071,
+0.7071
+],
+"front": [
+-0.7071,
+0.7071
+],
+"L": 24.51,
+"D": 33.71,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.78
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1373.5,
+195.67
+],
+"axis": [
+-1.0,
+0.0
+],
+"front": [
+-0.0,
+-1.0
+],
+"L": 23.67,
+"D": 32.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.63
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1408.33,
+195.67
+],
+"axis": [
+-1.0,
+0.0
+],
+"front": [
+-0.0,
+-1.0
+],
+"L": 24.0,
+"D": 32.67,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.59
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1443.33,
+195.33
+],
+"axis": [
+-1.0,
+0.0
+],
+"front": [
+-0.0,
+-1.0
+],
+"L": 24.0,
+"D": 32.0,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.93
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1269.79,
+193.43
+],
+"axis": [
+-0.9999,
+0.0172
+],
+"front": [
+-0.0172,
+-0.9999
+],
+"L": 21.53,
+"D": 26.16,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1598.8,
+215.35
+],
+"axis": [
+0.3786,
+0.9255
+],
+"front": [
+-0.9255,
+0.3786
+],
+"L": 24.16,
+"D": 36.62,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1600.47,
+252.35
+],
+"axis": [
+0.0777,
+0.997
+],
+"front": [
+-0.997,
+0.0777
+],
+"L": 22.94,
+"D": 28.88,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+946.78,
+270.44
+],
+"axis": [
+0.9975,
+0.0702
+],
+"front": [
+-0.0702,
+0.9975
+],
+"L": 24.49,
+"D": 32.83,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+987.38,
+274.15
+],
+"axis": [
+0.9977,
+0.068
+],
+"front": [
+-0.068,
+0.9977
+],
+"L": 24.44,
+"D": 35.13,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1089.5,
+274.98
+],
+"axis": [
+0.9899,
+0.1414
+],
+"front": [
+-0.1414,
+0.9899
+],
+"L": 24.65,
+"D": 32.53,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.48
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+910.97,
+271.97
+],
+"axis": [
+0.9884,
+-0.1521
+],
+"front": [
+0.1521,
+0.9884
+],
+"L": 22.0,
+"D": 28.87,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1054.83,
+277.33
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 25.0,
+"D": 36.0,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1606.67,
+284.0
+],
+"axis": [
+0.0,
+1.0
+],
+"front": [
+-1.0,
+0.0
+],
+"L": 23.33,
+"D": 36.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1327.55,
+291.59
+],
+"axis": [
+0.3867,
+0.9222
+],
+"front": [
+-0.9222,
+0.3867
+],
+"L": 24.5,
+"D": 36.47,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1603.09,
+319.36
+],
+"axis": [
+-0.1789,
+0.9839
+],
+"front": [
+-0.9839,
+-0.1789
+],
+"L": 24.66,
+"D": 36.55,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.78
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+863.33,
+325.17
+],
+"axis": [
+-0.0,
+-1.0
+],
+"front": [
+1.0,
+-0.0
+],
+"L": 23.67,
+"D": 34.0,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1336.95,
+330.61
+],
+"axis": [
+0.124,
+0.9923
+],
+"front": [
+-0.9923,
+0.124
+],
+"L": 24.1,
+"D": 37.21,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+921.86,
+381.4
+],
+"axis": [
+-0.0814,
+0.9967
+],
+"front": [
+-0.9967,
+-0.0814
+],
+"L": 24.33,
+"D": 32.75,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 0.81
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1362.0,
+392.59
+],
+"axis": [
+-0.9961,
+-0.0879
+],
+"front": [
+0.0879,
+-0.9961
+],
+"L": 24.44,
+"D": 32.45,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+920.67,
+417.17
+],
+"axis": [
+0.0,
+1.0
+],
+"front": [
+-1.0,
+0.0
+],
+"L": 23.67,
+"D": 36.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+788.83,
+536.17
+],
+"axis": [
+0.0,
+1.0
+],
+"front": [
+-1.0,
+0.0
+],
+"L": 26.33,
+"D": 35.0,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+738.83,
+537.33
+],
+"axis": [
+0.0,
+-1.0
+],
+"front": [
+1.0,
+0.0
+],
+"L": 21.33,
+"D": 25.67,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1258.39,
+549.0
+],
+"axis": [
+0.2234,
+-0.9747
+],
+"front": [
+0.9747,
+0.2234
+],
+"L": 24.28,
+"D": 33.79,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+789.33,
+630.83
+],
+"axis": [
+0.0,
+1.0
+],
+"front": [
+-1.0,
+0.0
+],
+"L": 24.33,
+"D": 35.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+739.33,
+630.17
+],
+"axis": [
+-0.0,
+-1.0
+],
+"front": [
+1.0,
+-0.0
+],
+"L": 21.67,
+"D": 26.0,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+939.58,
+690.92
+],
+"axis": [
+-0.7071,
+0.7071
+],
+"front": [
+-0.7071,
+-0.7071
+],
+"L": 21.68,
+"D": 26.63,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1251.29,
+725.89
+],
+"axis": [
+-0.027,
+-0.9996
+],
+"front": [
+0.9996,
+-0.027
+],
+"L": 22.32,
+"D": 25.83,
+"design": "Oren",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 0.85
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1116.16,
+794.95
+],
+"axis": [
+-0.0712,
+-0.9975
+],
+"front": [
+0.9975,
+-0.0712
+],
+"L": 24.39,
+"D": 32.44,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1170.07,
+837.18
+],
+"axis": [
+0.0651,
+0.9979
+],
+"front": [
+-0.9979,
+0.0651
+],
+"L": 21.77,
+"D": 28.99,
+"design": "Horizon",
+"beds": 4,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+927.57,
+854.72
+],
+"axis": [
+0.998,
+-0.0637
+],
+"front": [
+0.0637,
+0.998
+],
+"L": 24.16,
+"D": 35.45,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1085.88,
+985.04
+],
+"axis": [
+0.9999,
+-0.0161
+],
+"front": [
+0.0161,
+0.9999
+],
+"L": 24.03,
+"D": 37.59,
+"design": "Horizon",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+1051.67,
+984.33
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.0,
+"D": 34.67,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+},
+{
+"units": [
+null
+],
+"unnumbered": true,
+"c": [
+993.0,
+986.0
+],
+"axis": [
+1.0,
+-0.0
+],
+"front": [
+0.0,
+1.0
+],
+"L": 24.0,
+"D": 37.33,
+"design": "Oren",
+"beds": 5,
+"traced": true,
+"number": "read",
+"front_conf": 1.0
+}
+],
+"problems": [
+{
+"pair": [
+8,
+8
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+14,
+14
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+15,
+15
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+16,
+16
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+17,
+17
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+18,
+18
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+19,
+19
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+20,
+20
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+21,
+21
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+22,
+22
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+23,
+23
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+33,
+33
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+34,
+34
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+36,
+36
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+39,
+39
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+40,
+40
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+41,
+41
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+42,
+42
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+43,
+43
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+44,
+44
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+45,
+45
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+46,
+46
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+47,
+47
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+48,
+48
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+49,
+49
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+72,
+72
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+73,
+73
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+89,
+89
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+90,
+90
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+91,
+91
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+93,
+93
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+107,
+107
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+110,
+110
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+111,
+111
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+126,
+126
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+133,
+133
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+134,
+134
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+148,
+148
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+149,
+149
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+150,
+150
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+160,
+160
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+161,
+161
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+162,
+162
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+168,
+168
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+174,
+174
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+178,
+178
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+184,
+184
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+188,
+188
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+206,
+206
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+219,
+219
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+221,
+221
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+},
+{
+"pair": [
+222,
+222
+],
+"why": "number not legible on the map (its building may be among the unnumbered ones)"
+}
+],
+"dropped_readings": [
+149
+],
+"buildings_without_number": [
+[
+1442.8,
+140.7
+],
+[
+1303.7,
+142.0
+],
+[
+1338.3,
+142.8
+],
+[
+1373.5,
+142.2
+],
+[
+1408.3,
+141.2
+],
+[
+1488.3,
+140.8
+],
+[
+1199.2,
+146.8
+],
+[
+1233.8,
+141.7
+],
+[
+1268.8,
+141.7
+],
+[
+1523.1,
+142.9
+],
+[
+1555.3,
+157.0
+],
+[
+1582.3,
+181.8
+],
+[
+1373.5,
+195.7
+],
+[
+1408.3,
+195.7
+],
+[
+1443.3,
+195.3
+],
+[
+1269.8,
+193.4
+],
+[
+1598.8,
+215.3
+],
+[
+1600.5,
+252.4
+],
+[
+946.8,
+270.4
+],
+[
+987.4,
+274.1
+],
+[
+1089.5,
+275.0
+],
+[
+911.0,
+272.0
+],
+[
+1054.8,
+277.3
+],
+[
+1606.7,
+284.0
+],
+[
+1327.5,
+291.6
+],
+[
+1603.1,
+319.4
+],
+[
+863.3,
+325.2
+],
+[
+1337.0,
+330.6
+],
+[
+921.9,
+381.4
+],
+[
+1362.0,
+392.6
+],
+[
+920.7,
+417.2
+],
+[
+788.8,
+536.2
+],
+[
+738.8,
+537.3
+],
+[
+1258.4,
+549.0
+],
+[
+789.3,
+630.8
+],
+[
+739.3,
+630.2
+],
+[
+939.6,
+690.9
+],
+[
+1251.3,
+725.9
+],
+[
+1116.2,
+795.0
+],
+[
+1170.1,
+837.2
+],
+[
+927.6,
+854.7
+],
+[
+1085.9,
+985.0
+],
+[
+1051.7,
+984.3
+],
+[
+993.0,
+986.0
+]
+],
+"numbers_filled_along_row": [
+26,
+27,
+28,
+53,
+54,
+55,
+56,
+57,
+58,
+59,
+60,
+63,
+64,
+75,
+80,
+81,
+95,
+96,
+97,
+98,
+99,
+100,
+101,
+103,
+105,
+119,
+122,
+123,
+124,
+128,
+130,
+136,
+154,
+155,
+156,
+164,
+166,
+171,
+182,
+191,
+196,
+208,
+212,
+225,
+232,
+241,
+250,
+254
+]
+}

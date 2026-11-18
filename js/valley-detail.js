@@ -290,10 +290,13 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
     const gB = new Map(), gP = new Map();
     const g = (x, z) => `${Math.floor(x / 40)},${Math.floor(z / 40)}`;
     const add = (grid, R) => { const k = g(R.cx, R.cz); if (!grid.has(k)) grid.set(k, []); grid.get(k).push(R); };
-    const hits = (grid, R, tol, row) => {
+    // otherRowsOnly: a terrace from an official site plan shares its party walls (2c), so only homes of
+    // other rows count as touching it
+    const hits = (grid, R, tol, row, otherRowsOnly) => {
       const [gx, gz] = g(R.cx, R.cz).split(',').map(Number);
       for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) {
         for (const Q of grid.get(`${gx + a},${gz + b}`) || []) {
+          if (otherRowsOnly && Q.row === row) continue;
           if (Math.hypot(R.cx - Q.cx, R.cz - Q.cz) > R.rad + Q.rad) continue;
           // homes of one terrace share a side wall: they may touch, never slide into each other
           if (overlapArea(R.pts, Q.pts) > (Q.row === row ? Math.max(tol, 2.5) : tol)) return true;
@@ -312,7 +315,7 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
       for (const d of fixedPlot ? [0] : [0, 0.5, -0.5, 1, -1, 1.5, -1.5, 2, -2]) {
         sh.makeTranslation(along.x * d, 0, along.z * d);
         const m = u.matrix.clone().premultiply(sh);
-        if (!hits(gB, rect(m, u.variant.built, 0.05), 0.05, u.row)) { shift = d; break; }
+        if (!hits(gB, rect(m, u.variant.built, 0.05), 0.05, u.row, fixedPlot)) { shift = d; break; }
       }
       if (shift === null && fixedPlot) {
         flagged.push({ why: 'touches', project: u.project, block: u.row.block, pos: [+u.pos.x.toFixed(1), +u.pos.z.toFixed(1)] });

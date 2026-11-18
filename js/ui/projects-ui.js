@@ -486,6 +486,7 @@ export function initProjectsUI(app) {
   // a home with its official unit number and floor plan (traced from the developer's cluster map)
   function showUnit(el, h, d, p, file) {
     const up = h.unitPlan;
+    if (!up.th) { showTypeUnit(el, h, d, p, file); return; } // a villa: no terrace position
     const facts = [
       ['Unit', `${up.no}`, `TH${String(up.th).padStart(2, '0')} of ${up.plex}`],
       ['Bedrooms', `${up.beds}`, 'floor plan'],
@@ -507,6 +508,46 @@ export function initProjectsUI(app) {
       <p class="ph-note">Placed from Emaar's ${esc(p.name)} cluster map: unit number, house type and floor plan as published by the developer.</p>`;
     el.classList.remove('hidden');
     el.querySelector('.ph-clear').onclick = () => app.clearHome?.();
+    el.querySelectorAll('.ph-plan').forEach((b) => (b.onclick = () => openPdf(`${p.name} · Unit ${up.no} · floor plan`, file.src, Number(b.dataset.page))));
+    elContent.scrollTop = 0;
+  }
+
+  // a villa / twin villa with its unit number and house type as coloured on the developer's cluster map;
+  // no floor plan per unit is published for it, so none is shown (the map page or the floor plans open)
+  function showTypeUnit(el, h, d, p, file) {
+    const up = h.unitPlan;
+    const total = p.unitCount?.total;
+    const kind = up.position === 'twin' ? 'twin villa' : 'villa';
+    const map = p.brochures?.[0];
+    el.innerHTML = `
+      <div class="ph-head">
+        <span class="ph-eyebrow"><i style="background:${d.color || '#999'}"></i>Selected home</span>
+        <button type="button" class="btn-text ph-clear" title="Clear the selection (Esc)">Clear</button>
+      </div>
+      <h3 class="ph-title">${up.no == null ? '' : `Unit ${esc(String(up.no))} · `}${esc(up.design)} ${up.beds} BR ${kind}</h3>
+      <p class="ph-sub">in <b>${esc(p.name)}</b> · ${esc(communities.find((c) => c.id === p.communityId)?.name || '')}${up.pair ? ` · shares its twin villa with unit ${esc(String(up.pair))}` : ''}</p>
+      <div class="ph-facts">
+        <div><span>Unit</span><b>${up.no == null ? '—' : esc(String(up.no))}</b><small>${up.no == null ? 'number not legible on the map' : total ? `of ${total}` : 'cluster map'}</small></div>
+        <div><span>Bedrooms</span><b>${up.beds}</b><small>map legend</small></div>
+        ${up.sqft ? `<div><span>Built-up area</span><b>${Math.round(up.sqft).toLocaleString('en-US')} sq ft</b><small>${up.sqm ? `${up.sqm.toFixed(1)} m²` : ''}</small></div>`
+          : `<div><span>Style</span><b>${esc(up.design)}</b><small>map legend</small></div>`}
+      </div>
+      ${file && up.page ? `<div class="ph-plans"><div class="ph-plans-head">Floor plan of this home</div>
+        <button type="button" class="ph-plan" data-page="${up.page}" title="Open the developer sheet, page ${up.page}">
+          <span><b>${esc(up.plan)}</b><small>${esc(up.design)} · pages ${esc(up.pages || String(up.page))} (plan and mirrored plan)</small></span>
+          <span class="ph-area">${Math.round(up.sqft).toLocaleString('en-US')} <small>sq ft</small></span>
+          <svg class="icon"><use href="#i-chevron-right" /></svg></button></div>`
+        : file ? `<button type="button" class="btn btn-primary btn-block ph-open-plans"><svg class="icon"><use href="#i-plan" /></svg>Open the ${esc(p.name)} floor plans</button>`
+        : map && up.map_page ? `<button type="button" class="btn btn-primary btn-block ph-open-map"><svg class="icon"><use href="#i-plan" /></svg>Open the cluster map (brochure page ${up.map_page})</button>` : ''}
+      <p class="ph-note">Placed from Emaar's ${esc(p.name)} cluster map: unit number and house type (style and bedrooms) as coloured on the map. ${up.page
+        ? `Floor plan by bedroom count: Emaar publishes one ${up.beds}-bedroom plan for ${esc(p.name)} (with a mirrored version; which homes are mirrored is not published).`
+        : `Emaar's published documents give no floor plan or area per unit for ${esc(p.name)}.`}</p>`;
+    el.classList.remove('hidden');
+    el.querySelector('.ph-clear').onclick = () => app.clearHome?.();
+    const op = el.querySelector('.ph-open-plans');
+    if (op) op.onclick = () => openPdf(`${p.name} · Floor plans`, file.src, file.startPage);
+    const om = el.querySelector('.ph-open-map');
+    if (om) om.onclick = () => openPdf(`${p.name} · Cluster map`, map.src, up.map_page);
     el.querySelectorAll('.ph-plan').forEach((b) => (b.onclick = () => openPdf(`${p.name} · Unit ${up.no} · floor plan`, file.src, Number(b.dataset.page))));
     elContent.scrollTop = 0;
   }

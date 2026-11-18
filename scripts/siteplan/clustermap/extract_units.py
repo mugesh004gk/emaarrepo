@@ -19,12 +19,31 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 
 def from_text(pdf, page):
     out = subprocess.run(['pdftotext', '-q', '-bbox', '-f', str(page), '-l', str(page), pdf, '-'], capture_output=True, text=True).stdout
-    hits = []
+    words = []
     for m in re.finditer(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">([^<]*)</word>', out):
         t = html.unescape(m.group(5)).strip()
         if re.fullmatch(r'\d{1,3}', t):
-            x0, y0, x1, y1 = map(float, m.group(1, 2, 3, 4))
-            hits.append((int(t), (x0 + x1) / 2, (y0 + y1) / 2))
+            words.append([t, *map(float, m.group(1, 2, 3, 4))])
+    # a number set with wide letter spacing comes out in pieces ('18' '1'): pieces on one line with
+    # (almost) no gap between them are one number
+    # (rows of a map are often slanted: the pieces of one number differ a little in height)
+    words.sort(key=lambda w: w[1])
+    used = set()
+    merged = []
+    for i, p in enumerate(words):
+        if i in used:
+            continue
+        p = list(p)
+        while True:
+            h = p[4] - p[2]
+            j = next((j for j, w in enumerate(words) if j not in used and j != i and abs(w[2] - p[2]) < 0.3 * h
+                      and -0.1 * h <= w[1] - p[3] < 0.35 * h and len(p[0] + w[0]) <= 3), None)
+            if j is None:
+                break
+            used.add(j); p[0] += words[j][0]; p[3] = words[j][3]; p[4] = max(p[4], words[j][4])
+        used.add(i)
+        merged.append(p)
+    hits = [(int(t), (x0 + x1) / 2, (y0 + y1) / 2) for t, x0, y0, x1, y1 in merged]
     pm = re.search(r'<page width="([\d.]+)" height="([\d.]+)"', out)
     return hits, ('pdf-points', [float(pm.group(1)), float(pm.group(2))])
 
@@ -122,6 +141,78 @@ def from_embedded(pdf, page):
     return hits
 
 
+def fill_missing(pdf, page, units, pitch, missing, dpi=400):
+    """second look at the numbers not read: end homes are often printed on a grey fill, where dark text on
+    grey is missed. Around each missing number's neighbours (n-1, n+1) the grey fill is whitened and the
+    crop read again (0 / 90 / -90 deg); a hit counts only if it is that number and lies next to a neighbour.
+    Returns {n: [x, y]} in page points."""
+    from PIL import Image
+    import cv2, math
+    Image.MAX_IMAGE_PIXELS = None
+    td = tempfile.mkdtemp()
+    subprocess.run(['pdftoppm', '-q', '-r', str(dpi), '-png', '-f', str(page), '-l', str(page), pdf, os.path.join(td, 'g')], check=True)
+    im = cv2.imread(os.path.join(td, [x for x in os.listdir(td) if x.endswith('.png')][0]))
+    hsv = cv2.cvtColor(im, cv2.COLOR_BGR2HSV)
+    grey = (hsv[..., 1] < 35) & (hsv[..., 2] > 120) & (hsv[..., 2] < 225)
+    clean_im = im.copy(); clean_im[grey] = 255
+    k = dpi / 72.0
+    found = {}
+    for n in missing:
+        nb = [np.array(units[m]) for m in (n - 1, n + 1) if m in units]
+        if not nb:
+            continue
+        c = np.mean(nb, 0); r = 2.6 * pitch
+        x0, y0 = int(max(0, (c[0] - r) * k)), int(max(0, (c[1] - r) * k))
+        x1, y1 = int(min(im.shape[1], (c[0] + r) * k)), int(min(im.shape[0], (c[1] + r) * k))
+        tile = Image.fromarray(cv2.cvtColor(clean_im[y0:y1, x0:x1], cv2.COLOR_BGR2RGB))
+        best = None
+        for ang in (0, 90, -90):
+            img = tile.rotate(ang, expand=True, resample=Image.BICUBIC, fillcolor=(255, 255, 255)) if ang else tile
+            img = img.resize((img.width * 2, img.height * 2), Image.LANCZOS)
+            a = math.radians(ang); w, h = tile.size; cw, ch = img.size[0] / 2, img.size[1] / 2
+            for m, px, py in ocr_tile(td, img, f'f{n}_{ang}'):
+                if m != n:
+                    continue
+                dx, dy = px / 2 - cw / 2, py / 2 - ch / 2
+                tx = w / 2 + dx * math.cos(a) - dy * math.sin(a); ty = h / 2 + dx * math.sin(a) + dy * math.cos(a)
+                p = np.array([(x0 + tx) / k, (y0 + ty) / k])
+                d = min(np.hypot(*(p - q)) for q in nb)
+                if d < 2.2 * pitch and (best is None or d < best[0]):
+                    best = (d, p)
+        if best is not None:
+            found[n] = [round(float(best[1][0]), 1), round(float(best[1][1]), 1)]
+            continue
+        # a lone digit ('1') is not returned by the reader: the end home on the grey fill that continues the
+        # run (..., n+2, n+1 -> n, or n-2, n-1 -> n) one step on and holds no other number is that unit
+        for a, b in ((n + 1, n + 2), (n - 1, n - 2)):
+            if a not in units or b not in units:
+                continue
+            pa, pb = np.array(units[a]), np.array(units[b])
+            step = pa - pb
+            if not (0.6 * pitch < np.hypot(*step) < 1.4 * pitch):
+                continue
+            g8 = grey.astype(np.uint8)
+            cnt, lab, stats, cents = cv2.connectedComponentsWithStats(g8, 8)
+            want = pa + step * 1.15
+            best = None
+            for i in range(1, cnt):
+                if stats[i, cv2.CC_STAT_AREA] < (0.3 * pitch * k) ** 2:
+                    continue
+                c = cents[i] / k
+                d = np.hypot(*(c - want))
+                taken = any(np.hypot(*(np.array(v) - c)) < 0.45 * pitch for v in units.values())
+                if d < 0.8 * pitch and not taken and (best is None or d < best[0]):
+                    best = (d, c)
+            if best is not None:
+                found[n] = [round(float(best[1][0]), 1), round(float(best[1][1]), 1)]
+                GREY_CELL.add(n)
+                break
+    return found
+
+
+GREY_CELL = set()  # numbers placed on their grey end cell (not read as text)
+
+
 def clean(hits):
     cand = {}
     for n, x, y in hits:
@@ -159,12 +250,54 @@ def clean(hits):
 
 def main():
     proj, pdf, page = sys.argv[1], sys.argv[2], int(sys.argv[3])
+    if '--fill' in sys.argv:
+        # keep the earlier reading; only look again for the numbers it missed (recorded as 'filled')
+        path = os.path.join(APP, 'data', 'siteplans', proj, 'units_raw.json')
+        raw = json.load(open(path))
+        units = {int(k): v for k, v in raw['units'].items()}
+        # two numbers recorded on one home (< 0.45 pitch apart): the one that does not continue its own
+        # sequence (n-1 / n+1 about one pitch away) is a misplaced reading; it is dropped and read again
+        P = {n: np.array(v) for n, v in units.items()}
+        def fits(n):
+            return any(0.6 * raw['pitch'] < np.hypot(*(P[n] - P[m])) < 1.6 * raw['pitch'] for m in (n - 1, n + 1) if m in P)
+        bad = set()
+        for a in P:
+            for b in P:
+                if a < b and np.hypot(*(P[a] - P[b])) < 0.45 * raw['pitch']:
+                    fa, fb = fits(a), fits(b)
+                    bad |= {b} if fa and not fb else {a} if fb and not fa else {a, b}
+        for n in bad:
+            units.pop(n); raw['units'].pop(str(n))
+        raw['misplaced_dropped'] = sorted(set(raw.get('misplaced_dropped', [])) | bad)
+        raw['missing'] = sorted(set(raw['missing']) | bad)
+        if bad:
+            print(f'{proj}: misplaced readings dropped {sorted(bad)}')
+        found = fill_missing(pdf, page, units, raw['pitch'], raw['missing'])
+        for n, p in found.items():
+            raw['units'][str(n)] = p
+        raw['units'] = {str(k): raw['units'][str(k)] for k in sorted(int(x) for x in raw['units'])}
+        raw['filled'] = sorted(set(raw.get('filled', [])) | set(found))
+        raw['grey_end_cell'] = sorted(set(raw.get('grey_end_cell', [])) | GREY_CELL)
+        raw['missing'] = [n for n in raw['missing'] if n not in found]
+        raw['read'] = len(raw['units'])
+        json.dump(raw, open(path, 'w'))
+        print(f"{proj}: second look found {sorted(found)}; still missing {raw['missing']}")
+        return
     index = int(sys.argv[sys.argv.index('--image') + 1]) if '--image' in sys.argv else None
     hits, frame = from_text(pdf, page)
     if len([h for h in hits if h[0] > 0]) < 20:
-        hits, frame = from_image(pdf, page, index)
-        hits += from_embedded(pdf, page)
+        # OCR_PASSES="400:0;600:0" reads upright labels only (rotated passes invent numbers on maps
+        # whose labels are all upright, e.g. Alana)
+        ps = os.environ.get('OCR_PASSES')
+        passes = tuple((int(a), tuple(int(x) for x in b.split(','))) for a, b in (q.split(':') for q in ps.split(';'))) if ps else None
+        hits, frame = from_image(pdf, page, index, passes) if passes else from_image(pdf, page, index)
+        if not ps:
+            hits += from_embedded(pdf, page)
     units, pitch = clean(hits)
+    cfgp = os.path.join(APP, 'data', 'siteplans', proj, 'config.json')
+    if os.path.exists(cfgp) and json.load(open(cfgp)).get('count'):
+        cnt = json.load(open(cfgp))['count']
+        units = {n: v for n, v in units.items() if n <= cnt}
     top = max(units) if units else 0
     # the total: the highest number that is part of the sequence
     missing = [k for k in range(1, top + 1) if k not in units]

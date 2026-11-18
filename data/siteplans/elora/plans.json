@@ -1,0 +1,273 @@
+{
+ "Moon": {
+  "4.1-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2179.8,
+   "sqm": 202.51
+  },
+  "4.1-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 3,
+   "sqft": 2179.8,
+   "sqm": 202.51
+  },
+  "4.1-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2607.99,
+   "sqm": 242.29
+  },
+  "6-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2607.99,
+   "sqm": 242.29
+  },
+  "8-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2607.99,
+   "sqm": 242.29
+  },
+  "4.1-4": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 7,
+   "sqft": 2607.99,
+   "sqm": 242.29
+  },
+  "6-6": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 7,
+   "sqft": 2607.99,
+   "sqm": 242.29
+  },
+  "8-8": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 7,
+   "sqft": 2607.99,
+   "sqm": 242.29
+  }
+ },
+ "Mysk": {
+  "4.2-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2111.02,
+   "sqm": 196.12
+  },
+  "6-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2111.55,
+   "sqm": 196.17
+  },
+  "6-4": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2094.76,
+   "sqm": 194.61
+  },
+  "8-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2111.45,
+   "sqm": 196.16
+  },
+  "8-4": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2094.76,
+   "sqm": 194.61
+  },
+  "8-6": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2094.65,
+   "sqm": 194.6
+  },
+  "4.2-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 5,
+   "sqft": 2111.02,
+   "sqm": 196.12
+  },
+  "6-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 5,
+   "sqft": 2094.98,
+   "sqm": 194.63
+  },
+  "8-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 5,
+   "sqft": 2094.98,
+   "sqm": 194.63
+  },
+  "8-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 5,
+   "sqft": 2094.76,
+   "sqm": 194.61
+  },
+  "8-7": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 5,
+   "sqft": 2111.45,
+   "sqm": 196.16
+  },
+  "6-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 5,
+   "sqft": 2111.55,
+   "sqm": 196.17
+  },
+  "4.2-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 8,
+   "sqft": 2586.13,
+   "sqm": 240.26
+  },
+  "4.2-4": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 9,
+   "sqft": 2586.13,
+   "sqm": 240.26
+  }
+ },
+ "_pages": {
+  "2": {
+   "design": "Moon",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4.1-2"
+   ]
+  },
+  "3": {
+   "design": "Moon",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "4.1-3"
+   ]
+  },
+  "4": {
+   "design": "Mysk",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4.2-2",
+    "6-2",
+    "6-4",
+    "8-2",
+    "8-4",
+    "8-6"
+   ]
+  },
+  "5": {
+   "design": "Mysk",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "4.2-3",
+    "6-3",
+    "6-5",
+    "8-3",
+    "8-5",
+    "8-7"
+   ]
+  },
+  "6": {
+   "design": "Moon",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4.1-1",
+    "6-1",
+    "8-1"
+   ]
+  },
+  "7": {
+   "design": "Moon",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "4.1-4",
+    "6-6",
+    "8-8"
+   ]
+  },
+  "8": {
+   "design": "Mysk",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4.2-1"
+   ]
+  },
+  "9": {
+   "design": "Mysk",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "4.2-4"
+   ]
+  }
+ },
+ "_source": {
+  "document": "ELORA_floorplan.pdf"
+ }
+}

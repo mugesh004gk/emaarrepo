@@ -1,0 +1,3 @@
+{"styles": {"Mysk": "MYSK", "Moon": "MOON"}, "design_per_unit": true, "cell_beds": {"grey": 4, "white": 3},
+ "plex_alias": {"4": ["4.1", "4.2"]},
+ "note": "Elora brochure p.8: STYLES legend MYSK (olive plots) / MOON (lilac plots), per home (6- and 8-home terraces have MOON ends and MYSK middles); TYPES legend white = 3 BR towns, grey = 4 BR towns. Floor plans ELORA_floorplan.pdf: pages 2-3 and 6-7 MOON, 4-5 and 8-9 MYSK; '4 PLEX 1' = MOON 4-home terrace, '4 PLEX 2' = MYSK 4-home terrace."}

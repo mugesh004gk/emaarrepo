@@ -125,6 +125,36 @@ def main():
                             break
                 if changed:
                     break
+    # terrace sizes on the project's floor plans (env PLEX=4,6,8): neighbouring runs with consecutive numbers
+    # on one line, where either run is not a valid terrace and together they are, are one terrace whose
+    # facing was misread on some homes; its facing = the confidence-weighted vote of its homes
+    plex = [int(x) for x in os.environ.get('PLEX', '').split(',') if x]
+    if kind == 'terrace' and plex:
+        changed = True
+        while changed:
+            changed = False
+            for i in range(len(rows) - 1):
+                # a window of up to 4 neighbouring runs: consecutive numbers, adjacent, on one line
+                for j in range(i + 1, min(len(rows), i + 4)):
+                    win = rows[i:j + 1]
+                    tot = sum(len(x) for x in win)
+                    if tot > max(plex):
+                        break
+                    ok = all(win[q + 1][0] == win[q][-1] + 1 and np.hypot(*(np.array(units[win[q][-1]]['p']) - units[win[q + 1][0]]['p'])) <= 1.6 * pitch
+                             and np.dot(units[win[q][-1]]['axis'], units[win[q + 1][0]]['axis']) ** 2 >= 0.9 for q in range(len(win) - 1))
+                    if not ok:
+                        break
+                    if tot in plex and any(len(x) not in plex for x in win):
+                        r = [n for x in win for n in x]
+                        ref = np.array(units[r[0]]['front'])
+                        vote = sum((units[n]['conf'] + 0.01) * (1 if np.dot(units[n]['front'], ref) > 0 else -1) for n in r)
+                        f = (ref if vote >= 0 else -ref).tolist()
+                        for n in r:
+                            units[n]['front'] = f
+                        rows[i:j + 1] = [r]; changed = True
+                        break
+                if changed:
+                    break
     out = dict(project=proj, kind=kind, count=N, pitch=pitch, read=raw['read'], interpolated=interp,
                missing=[n for n in range(1, N + 1) if n not in units], units={str(k): v for k, v in units.items()}, rows=rows,
                source=raw['source'])

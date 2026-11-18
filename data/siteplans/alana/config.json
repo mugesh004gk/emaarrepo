@@ -1,0 +1,113 @@
+{
+ "count": 322,
+ "kind": "twin",
+ "pairs": "odd-even",
+ "legend": [
+  {
+   "design": "Sierra",
+   "beds": 5,
+   "rgb": [
+    194,
+    107,
+    158
+   ]
+  },
+  {
+   "design": "Sierra",
+   "beds": 4,
+   "rgb": [
+    211,
+    167,
+    192
+   ]
+  },
+  {
+   "design": "Sierra",
+   "beds": 3,
+   "rgb": [
+    243,
+    219,
+    230
+   ]
+  },
+  {
+   "design": "Lilac",
+   "beds": 5,
+   "rgb": [
+    212,
+    146,
+    52
+   ]
+  },
+  {
+   "design": "Lilac",
+   "beds": 4,
+   "rgb": [
+    235,
+    191,
+    122
+   ]
+  },
+  {
+   "design": "Lilac",
+   "beds": 3,
+   "rgb": [
+    252,
+    242,
+    227
+   ]
+  }
+ ],
+ "note": "Alana brochure p.16 legend: Sierra - 5/4/3 Bedroom (purple, mid pink, pale pink), Lilac - 5/4/3 Bedroom (orange, light orange, cream); vector fills of the swatches paired with the legend lines by position. Unit numbers 001-322 are drawn in the map picture (upright); each twin villa holds (2k-1, 2k).",
+ "position_fixes": {
+  "61": {
+   "p": [
+    838.3,
+    668.0
+   ],
+   "why": "label read by eye on the brochure map (p.16, 3x crop); the text reader did not read it; twin 061/062 is below 059/060"
+  },
+  "62": {
+   "p": [
+    836.7,
+    679.7
+   ],
+   "why": "label read by eye on the brochure map (p.16, 3x crop); the text reader did not read it; twin 061/062 is below 059/060"
+  },
+  "183": {
+   "p": [
+    438.3,
+    444.0
+   ],
+   "why": "the text reader placed '183' beside 182 (wrong twin); on the map twin 183/184 stands directly above 181/182"
+  },
+  "295": {
+   "p": [
+    298.3,
+    358.3
+   ],
+   "why": "label read by eye on the brochure map (p.16, 3x crop); the text reader did not read it; twin 295/296 is below 293/294"
+  },
+  "296": {
+   "p": [
+    298.3,
+    371.0
+   ],
+   "why": "label read by eye on the brochure map (p.16, 3x crop); the text reader did not read it; twin 295/296 is below 293/294"
+  },
+  "205": {
+   "p": [
+    825.7,
+    336.7
+   ],
+   "why": "the text reader took the '295'/'296' labels for 205/206; read by eye on the map: twin 205/206 is the orange twin below the yellow utility marker, after 203/204"
+  },
+  "206": {
+   "p": [
+    830.0,
+    350.0
+   ],
+   "why": "the text reader took the '295'/'296' labels for 205/206; read by eye on the map: twin 205/206 is the orange twin below the yellow utility marker, after 203/204"
+  }
+ }
+}

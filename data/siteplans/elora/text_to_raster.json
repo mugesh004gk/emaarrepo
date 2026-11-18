@@ -1,0 +1,18 @@
+{
+ "A": [
+  [
+   1.081074,
+   0.00036,
+   -33.850744
+  ],
+  [
+   -0.000124,
+   1.10995,
+   -78.89165
+  ]
+ ],
+ "matched": 204,
+ "read": 232,
+ "residual_median_pt": 0.63,
+ "note": "picture = A @ [x_text, y_text, 1] (page points)"
+}
