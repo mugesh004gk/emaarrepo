@@ -1,0 +1,31 @@
+{
+ "count": 156,
+ "styles": {
+  "Ava": "AVA",
+  "Vina": "VINA",
+  "Luna": "LUNA"
+ },
+ "swatches": {
+  "Ava": [
+   525,
+   819
+  ],
+  "Vina": [
+   525,
+   848
+  ],
+  "Luna": [
+   525,
+   876
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "note": "Kaia cluster map (client image): STYLES Ava / Vina / Luna, TYPES white = 3 BR, grey = 4 BR. The KAIA_floorplan.pdf in our documents carries the Elea sheets (Terra Slate / Oakley, 4-plex only), so no floor plan is linked per Kaia unit.",
+ "cell_offset": [
+  0,
+  7
+ ]
+}

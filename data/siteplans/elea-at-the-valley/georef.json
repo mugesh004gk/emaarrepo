@@ -1,0 +1,21 @@
+{
+ "image": "elea-at-the-valley",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   0.069291,
+   0.474973,
+   881.859169
+  ],
+  [
+   0.474973,
+   -0.069291,
+   17.733438
+  ]
+ ],
+ "scale_m_per_px": 0.48,
+ "method": "anchored on the S-roundabout shared with the Valley masterplan (masterplan fitted to the placed homes, corr 0.32); scale from the strip length on the masterplan, checked by the roundabout diameter (29 m on both maps); moved with Kaia (100 m across the strip in all) (+72 m east, +54 m north) so the two keep their shared roundabout",
+ "why_rotation": "Elea map: the 001-028 arm ends at the roundabout shared with Kaia, so it turns 45 deg onto the masterplan strip",
+ "accuracy": "provisional: Elea is not built yet; position from the masterplan and the roundabout it shares with Kaia, estimated within about 30-50 m"
+}

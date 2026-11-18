@@ -1,0 +1,21 @@
+{
+ "image": "kaia-at-the-valley",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   -0.257577,
+   0.345566,
+   987.873174
+  ],
+  [
+   0.345566,
+   0.257577,
+   337.135039
+  ]
+ ],
+ "scale_m_per_px": 0.431,
+ "method": "anchored on the S-roundabout shared with the Valley masterplan (masterplan fitted to the placed homes, corr 0.32); scale from the strip length on the masterplan, checked by the roundabout diameter (29 m on both maps); then moved 100 m across the strip (toward the desert): the smallest move that takes every Kaia home off the existing homes and the mapped roads; it puts Kaia on the graded strip east of the boundary road seen in the satellite photo",
+ "why_rotation": "Kaia map: its left end (roundabout, community centre) meets Elea, so the map turns 90 deg onto the masterplan strip",
+ "accuracy": "provisional: Kaia is not built yet; position from the masterplan and the free land beside the community, estimated within about 30-50 m"
+}

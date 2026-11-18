@@ -25,9 +25,9 @@
   "rivera-at-the-valley-phase-2": {
    "community": "the-valley",
    "name": "Rivera",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 378,
+   "source": "Rivera cluster map (client image, units 001-378)",
+   "clusterMap": "numbered (partly legible)"
   },
   "elva-at-the-valley": {
    "community": "the-valley",
@@ -39,16 +39,16 @@
   "elea-at-the-valley": {
    "community": "the-valley",
    "name": "Elea",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 128,
+   "source": "Elea cluster map (client image, units 001-128)",
+   "clusterMap": "numbered"
   },
   "kaia-at-the-valley": {
    "community": "the-valley",
    "name": "Kaia",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 156,
+   "source": "Kaia cluster map (client image, units 001-156)",
+   "clusterMap": "numbered"
   },
   "velora-2-at-the-valley-phase-2": {
    "community": "the-valley",

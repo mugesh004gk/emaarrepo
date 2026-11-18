@@ -57,6 +57,9 @@ def main():
                 continue
             if r.get('kind') != 'apartment' and inside((r['lng'], r['lat']), bnd):
                 continue  # replaced by the plan
+            if r.get('project') == pid and r.get('placement') == 'estimated-planned':
+                untagged_planned = True
+                continue  # the sample layout of an unbuilt project is replaced by its real plan
             if r.get('project') == pid:
                 # tagged with this project by distance to its pin, but outside its official plan: a home of
                 # a neighbouring cluster - kept where it is, project unknown

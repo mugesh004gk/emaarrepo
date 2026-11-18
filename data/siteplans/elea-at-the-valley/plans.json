@@ -1,0 +1,74 @@
+{
+ "Slate": {
+  "4-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2833.81,
+   "sqm": 263.27
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 3,
+   "sqft": 2452.34,
+   "sqm": 227.83
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2451.8,
+   "sqm": 227.78
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2837.79,
+   "sqm": 263.64
+  }
+ },
+ "Oakley": {
+  "4-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2680.64,
+   "sqm": 249.04
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 2444.05,
+   "sqm": 227.06
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 8,
+   "sqft": 2444.05,
+   "sqm": 227.06
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 9,
+   "sqft": 2680.64,
+   "sqm": 249.04
+  }
+ },
+ "_source": {
+  "document": "ELEA_floorplan.pdf",
+  "note": "one sheet per 4-plex position TH01-TH04 and style (Slate p.2-5, Oakley p.6-9); BUILT UP AREA"
+ }
+}

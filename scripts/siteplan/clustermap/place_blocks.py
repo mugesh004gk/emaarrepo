@@ -60,7 +60,15 @@ def main():
             tp = cv2.GaussianBlur(tp, (blur, blur), 0)
         return tp, mn
 
-    if keep:
+    aff = os.environ.get('AFFINE')  # a project not built yet: map px -> ground from a georef.json (masterplan)
+    if aff:
+        g = json.load(open(aff)); A = np.array(g['A'])
+        sc = float(np.hypot(A[0, 0], A[1, 0])); bear = (-math.degrees(math.atan2(A[1, 0], A[0, 0]))) % 360; v = 0.0
+        e, nn = A @ np.array([PM[0], PM[1], 1.0])
+        lat_c = g['lat0'] + nn / KY; lng_c = g['lng0'] + e / (111320.0 * math.cos(math.radians(g['lat0'])))
+        keep = True
+        print(f"{proj}: placed from {os.path.basename(aff)}: {sc:.4f} m/px, map-up {bear:.1f} deg")
+    elif keep:
         old = json.load(open(os.path.join(APP, 'data', 'siteplans', f'{proj}.json')))['georeference']
         sc, bear, v = old['scale_m_per_pt'], old['map_up_bearing_deg'], old.get('correlation', 0)
         lat_c, lng_c = old['anchor']['lat'], old['anchor']['lng']
@@ -146,6 +154,13 @@ def main():
         if not q:
             return {'plan': None, 'page': None, 'sqft': None, 'sqm': None}
         return {'plan': q['plan'], 'page': q['page'], 'pages': q.get('pages'), 'sqft': q['sqft'], 'sqm': q['sqm'], 'plan_by': 'bedroom count'}
+    pbd = cfg.get('plans_by_design', {})
+
+    def plan_by_design(dz):
+        q = pbd.get(dz)
+        if not q:
+            return {'plan': None, 'page': None, 'sqft': None, 'sqm': None}
+        return {'plan': q['plan'], 'page': q['page'], 'pages': q.get('pages'), 'sqft': q['sqft'], 'sqm': q['sqm'], 'plan_by': 'style'}
     rows, agree, disagree, by_map = [], 0, 0, 0
     widened = []
     face_report = []
@@ -191,7 +206,8 @@ def main():
         rows.append({'lat': round(la, 7), 'lng': round(lo, 7), 'L': round(unit_w * nu, 2), 'D': round(Dm, 2), 'frontBearing': round(fb, 2),
                      'kind': 'villa', 'units': nu, 'unitWidths': [round(unit_w, 2)] * nu, 'project': proj, 'source': 'siteplan',
                      'placement': 'verified-siteplan', 'block': i, 'unitNumbers': order,
-                     'unitPlans': [{'no': u, 'design': b['design'], 'beds': b['beds'], **plan_of(b['beds']),
+                     'unitPlans': [{'no': u, 'design': b['design'], 'beds': b['beds'] if b['beds'] is not None else (pbd.get(b['design']) or {}).get('beds'),
+                                    **(plan_of(b['beds']) if b['beds'] is not None or not pbd else plan_by_design(b['design'])),
                                     'position': 'twin' if nu == 2 else 'villa', 'pair': [x for x in order if x != u][0] if nu == 2 else None,
                                     'type_source': 'map legend colour', 'map_page': B['source']['page']} for u in order]})
         face_report.append({'units': b['units'], 'how': how, 'street_m': [t1, t2], 'map_agrees': side == map_side})
@@ -222,7 +238,7 @@ def main():
            'source': {'document': B['source']['document'], 'page': B['source']['page'], 'priority': 2,
                       'note': f"Emaar brochure cluster map: {len(nums)} units in {len(rows)} twin villas, type from the map legend"},
            'georeference': {'scale_m_per_pt': round(float(sc), 5), 'map_up_bearing_deg': round(float(bear), 2), 'correlation': round(float(v), 3),
-                            'method': 'map building blocks matched to satellite roofs (coarse-to-fine)' + ('; kept from the earlier run' if keep else ''),
+                            'method': (json.load(open(aff)).get('method') if aff else 'map building blocks matched to satellite roofs (coarse-to-fine)' + ('; kept from the earlier run' if keep else '')),
                             'anchor': {'plan_pt': [round(float(PM[0]), 2), round(float(PM[1]), 2)], 'lat': round(lat_c, 7), 'lng': round(lng_c, 7)},
                             'boundary_status': 'blocks hull + 20 m; DDA GIS boundary pending'},
            'checks': {'units': len(nums) + unnumbered, 'numbered': len(nums), 'placed_without_number': unnumbered,

@@ -75,8 +75,10 @@ def main():
         return tp, mn
     scales = [unit_w / pitch * f for f in np.arange(0.8, 1.21, 0.04)] if unit_w else [m / pitch for m in np.arange(12, 30, 1.5)]
     keep = os.environ.get('KEEP') == '1'
+    aff = os.environ.get('AFFINE')  # a project not built yet: map px -> ground from a georef.json (masterplan anchor)
     best = None
-    for bear in ([] if keep else np.arange(316.5, 328.6, 1.0)):
+    b0 = float(os.environ.get('BEAR', 322.5))  # map-up bearing to search around (+/- 6 deg); Valley brochure maps: 322.5
+    for bear in ([] if keep or aff else np.arange(b0 - 6, b0 + 6.1, 1.0)):
         for sc in scales:
             tp, mn = template(sc, bear)
             if tp.shape[0] >= roof.shape[0] or tp.shape[1] >= roof.shape[1]:
@@ -86,7 +88,7 @@ def main():
             r = cv2.matchTemplate(roof, tp, cv2.TM_CCOEFF_NORMED); _, v, _, loc = cv2.minMaxLoc(r)
             if best is None or v > best[0]:
                 best = (v, bear, sc, loc, mn)
-    if keep:
+    if keep and not aff:
         # re-run with more units read: the earlier placement (scale, map-up, position) is kept exactly, so the
         # homes already placed do not move; the anchor comes from the rows of the earlier output
         old = json.load(open(os.path.join(APP, 'data', 'siteplans', f'{proj}.json')))
@@ -106,6 +108,14 @@ def main():
         spx = np.array([gx - x0, gy - y0])
         print(f"{proj}: earlier placement kept (scale {sc} m/pt, map-up {bear} deg; anchor from {len(est)} rows)")
         best = None
+    if aff:
+        g = json.load(open(aff)); A = np.array(g['A'])
+        sc = float(np.hypot(A[0, 0], A[1, 0])); bear = -math.degrees(math.atan2(A[1, 0], A[0, 0])); v = 0.0
+        e, nn = A @ np.array([PM[0], PM[1], 1.0])
+        lat_c = g['lat0'] + nn / KY; lng_c = g['lng0'] + e / (111320.0 * math.cos(math.radians(g['lat0'])))
+        px = lambda la, lo: ((lo + 180) / 360 * npx, (1 - math.log(math.tan(math.radians(la)) + 1 / math.cos(math.radians(la))) / math.pi) / 2 * npx)
+        gx, gy = px(lat_c, lng_c); spx = np.array([gx - x0, gy - y0]); keep = True; best = None
+        print(f"{proj}: placed from {os.path.basename(aff)} ({g.get('method', '')}): {sc:.4f} m/px, map-up {bear % 360:.1f} deg")
     if best is not None:
         v, bear, sc, loc, mn = best
     for bear2 in ([] if keep else np.arange(bear - 0.8, bear + 0.81, 0.2)):
@@ -191,7 +201,7 @@ def main():
            'source': {'document': lay['source']['document'], 'page': lay['source']['page'], 'priority': 2,
                       'note': f"Emaar brochure cluster map: unit numbers 1-{lay['count']}"},
            'georeference': {'scale_m_per_pt': round(sc, 5), 'map_up_bearing_deg': round(bear, 2), 'correlation': round(v, 3),
-                            'method': 'map homes matched to satellite roofs' + ('; kept from the earlier run (more units read)' if keep else ''),
+                            'method': (json.load(open(aff)).get('method', 'masterplan anchor') if aff else 'map homes matched to satellite roofs' + ('; kept from the earlier run (more units read)' if keep else '')),
                             'anchor': {'plan_pt': [round(float(PM[0]), 2), round(float(PM[1]), 2)], 'lat': round(lat_c, 7), 'lng': round(lng_c, 7)},
                             'boundary_status': 'homes hull + 20 m; DDA GIS boundary pending'},
            'checks': {'units': sum(r['units'] for r in rows), 'official_count': lay['count'], 'read': lay['read'],

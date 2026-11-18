@@ -59,7 +59,10 @@ def ocr_tile(td, tile, k):
         txt = parts[0]; bx, by, bw, bh = map(float, parts[1:5])
         toks = re.findall(r'\d{1,3}', txt.replace('O', '0').replace('o', '0'))
         for i, t in enumerate(toks):  # a run of numbers read as one line: split it evenly along the box
-            out.append((int(t), bx + bw * (i + 0.5) / len(toks), by + bh / 2))
+            if len(toks) > 1 and bh > 1.5 * bw:  # a stack of labels, one above another
+                out.append((int(t), bx + bw / 2, by + bh * (i + 0.5) / len(toks)))
+            else:
+                out.append((int(t), bx + bw * (i + 0.5) / len(toks), by + bh / 2))
     return out
 
 
@@ -103,6 +106,43 @@ def from_image(pdf, page, index, passes=((400, (0, 90, -90)), (600, (0,)), (500,
         for r in ex.map(run, enumerate(jobs)):
             hits += r
     return hits, ('pdf-points', [W * 72 / dpi, H * 72 / dpi])
+
+
+def from_raster(png, scales=(3,), angles=(0,), tile=(300, 200), step=(200, 120)):
+    """a map given as an image (not a PDF): small overlapping tiles, each enlarged (Lanczos) and read;
+    positions in image pixels (= page points of the one-page PDF made from the image at 72 dpi)"""
+    from PIL import Image
+    import math
+    from concurrent.futures import ThreadPoolExecutor
+    td = tempfile.mkdtemp()
+    im = Image.open(png).convert('RGB')
+    W, H = im.size
+    jobs = []
+    for s in scales:
+        for y in range(0, H, step[1]):
+            for x in range(0, W, step[0]):
+                for a in angles:
+                    jobs.append((s, x, y, a))
+
+    def run(j):
+        k, (s, x, y, a) = j
+        t = im.crop((x, y, min(x + tile[0], W), min(y + tile[1], H)))
+        w, h = t.size
+        t = t.resize((w * s, h * s), Image.LANCZOS)
+        if a:
+            t = t.rotate(a, expand=True, resample=Image.BICUBIC, fillcolor=(255, 255, 255))
+        out = []
+        cw, ch = t.size; ar = math.radians(a)
+        for n, px, py in ocr_tile(td, t, f'r{k}'):
+            dx, dy = px - cw / 2, py - ch / 2
+            tx = w * s / 2 + dx * math.cos(ar) - dy * math.sin(ar); ty = h * s / 2 + dx * math.sin(ar) + dy * math.cos(ar)
+            out.append((n, x + tx / s, y + ty / s))
+        return out
+    hits = []
+    with ThreadPoolExecutor(6) as ex:
+        for r in ex.map(run, enumerate(jobs)):
+            hits += r
+    return hits, ('pdf-points', [float(W), float(H)])
 
 
 def from_embedded(pdf, page):
@@ -284,8 +324,16 @@ def main():
         print(f"{proj}: second look found {sorted(found)}; still missing {raw['missing']}")
         return
     index = int(sys.argv[sys.argv.index('--image') + 1]) if '--image' in sys.argv else None
-    hits, frame = from_text(pdf, page)
-    if len([h for h in hits if h[0] > 0]) < 20:
+    if '--raster' in sys.argv:  # the map is an image: <pdf> is the image file (a one-page PDF of it at 72 dpi
+        # has the same coordinates); RASTER_ANGLES="0,40,-40" for turned labels
+        ang = tuple(int(a) for a in os.environ.get('RASTER_ANGLES', '0').split(','))
+        sc = tuple(int(a) for a in os.environ.get('RASTER_SCALES', '2,3,4').split(','))
+        hits, frame = from_raster(pdf, scales=sc, angles=ang)
+        h2, _ = from_raster(pdf, scales=sc, angles=ang, tile=(420, 280), step=(310, 170))  # a second, offset tile grid
+        hits += h2
+    else:
+        hits, frame = from_text(pdf, page)
+    if '--raster' not in sys.argv and len([h for h in hits if h[0] > 0]) < 20:
         # OCR_PASSES="400:0;600:0" reads upright labels only (rotated passes invent numbers on maps
         # whose labels are all upright, e.g. Alana)
         ps = os.environ.get('OCR_PASSES')

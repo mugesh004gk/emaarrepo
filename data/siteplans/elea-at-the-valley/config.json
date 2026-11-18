@@ -1,0 +1,122 @@
+{
+ "count": 128,
+ "plex": 4,
+ "plot_hsv": [
+  [
+   95,
+   115,
+   30,
+   255,
+   90,
+   255
+  ]
+ ],
+ "crop": [
+  160,
+  205,
+  1220,
+  820
+ ],
+ "note": "Elea cluster map (client image, 1380 x 995 px): 32 four-home terraces; plots light blue (OAKLEY) / blue (SLATE)",
+ "aspect": [
+  1.1,
+  4
+ ],
+ "ring_plot": 0.3,
+ "group_fixes": [
+  {
+   "near": [
+    740,
+    584
+   ],
+   "first": 1,
+   "why": "labels read by eye on the map: the five buildings of the arm run 001-004 (by gate A) to 017-020 (toward the roundabout); the text reader confused these small turned labels"
+  },
+  {
+   "near": [
+    806,
+    537
+   ],
+   "first": 5,
+   "why": "labels read by eye on the map: the five buildings of the arm run 001-004 (by gate A) to 017-020 (toward the roundabout); the text reader confused these small turned labels"
+  },
+  {
+   "near": [
+    856,
+    490
+   ],
+   "first": 9,
+   "why": "labels read by eye on the map: the five buildings of the arm run 001-004 (by gate A) to 017-020 (toward the roundabout); the text reader confused these small turned labels"
+  },
+  {
+   "near": [
+    916,
+    434
+   ],
+   "first": 13,
+   "why": "labels read by eye on the map: the five buildings of the arm run 001-004 (by gate A) to 017-020 (toward the roundabout); the text reader confused these small turned labels"
+  },
+  {
+   "near": [
+    966,
+    381
+   ],
+   "first": 17,
+   "why": "labels read by eye on the map: the five buildings of the arm run 001-004 (by gate A) to 017-020 (toward the roundabout); the text reader confused these small turned labels"
+  }
+ ],
+ "first_at": {
+  "1": [
+   719,
+   584
+  ],
+  "5": [
+   786,
+   550
+  ],
+  "9": [
+   837,
+   506
+  ],
+  "13": [
+   894,
+   447
+  ],
+  "17": [
+   944,
+   394
+  ],
+  "33": [
+   990,
+   451
+  ],
+  "89": [
+   539,
+   741
+  ],
+  "93": [
+   421,
+   775
+  ]
+ },
+ "first_at_why": "position of the first label of these buildings read by eye on the map (their readings were too few to give the order)",
+ "styles": {
+  "Oakley": "OAKLEY",
+  "Slate": "SLATE"
+ },
+ "swatches": {
+  "Oakley": [
+   560,
+   908
+  ],
+  "Slate": [
+   560,
+   933
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "map_beds_win": true
+}

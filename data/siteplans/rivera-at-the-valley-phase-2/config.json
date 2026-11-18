@@ -1,0 +1,64 @@
+{
+ "count": 378,
+ "kind": "twin",
+ "pairs": "odd-even",
+ "legend": [
+  {
+   "design": "Magnolia",
+   "beds": null,
+   "rgb": [
+    157,
+    229,
+    228
+   ]
+  },
+  {
+   "design": "Lotus",
+   "beds": null,
+   "rgb": [
+    194,
+    181,
+    240
+   ]
+  },
+  {
+   "design": "Lavender",
+   "beds": null,
+   "rgb": [
+    243,
+    192,
+    248
+   ]
+  }
+ ],
+ "note": "Rivera cluster map shared by the client (homeland.ae copy, 1920 x 1183 px, watermarked): styles Magnolia (teal) / Lotus (purple) / Lavender (pink); the map gives no bedroom count per unit. Twin villas (2k-1, 2k).",
+ "pitch": 19.32,
+ "plans_by_design": {
+  "Magnolia": {
+   "beds": 4,
+   "plan": "4 bedroom Magnolia twin villa (A / B)",
+   "page": 2,
+   "pages": "2-3",
+   "sqft": 3693.52,
+   "sqm": 343.14
+  },
+  "Lotus": {
+   "beds": 4,
+   "plan": "4 bedroom Lotus twin villa (A / B)",
+   "page": 4,
+   "pages": "4-5",
+   "sqft": 3688.25,
+   "sqm": 342.65
+  },
+  "Lavender": {
+   "beds": 4,
+   "plan": "4 bedroom Lavender twin villa (A / B)",
+   "page": 6,
+   "pages": "6-7",
+   "sqft": 3714.08,
+   "sqm": 345.05
+  }
+ },
+ "plans_note": "RIVERA_floorplan.pdf: all homes 4 bedrooms; one plan per style, A and B are the two halves of a twin (p.2-3 Magnolia, 4-5 Lotus, 6-7 Lavender - the last two sheets carry no style name, Lavender by order); TOTAL AREA",
+ "clash": 1.0
+}

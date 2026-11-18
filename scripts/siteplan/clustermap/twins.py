@@ -34,7 +34,7 @@ def main():
     raw = json.load(open(os.path.join(d, 'units_raw.json')))
     N = cfg['count']
     P = {int(k): np.array(v, float) for k, v in raw['units'].items() if int(k) <= N}
-    pitch = raw['pitch']
+    pitch = cfg.get('pitch', raw['pitch'])  # config 'pitch': twin label spacing where the auto value misleads
     td = tempfile.mkdtemp()
     subprocess.run(['pdftoppm', '-q', '-r', str(DPI), '-png', '-f', str(page), '-l', str(page), pdf, os.path.join(td, 'p')], check=True)
     im = cv2.imread(os.path.join(td, [f for f in os.listdir(td) if f.endswith('.png')][0]))
@@ -372,6 +372,24 @@ def main():
                 opp = [j for j in nb if np.dot(blocks[j]['front'], f) < 0]
                 if len(opp) == len(nb) and bk['front_conf'] < min(blocks[j]['front_conf'] for j in opp):
                     bk['front'] = (-f).round(4).tolist(); bk['front_smoothed'] = True
+    # two blocks on one spot (centres closer than 0.8 block length): one reading is wrong; the block whose
+    # numbers continue its neighbours (block n-2 / n+2 within 3 lengths) stays, the other is dropped
+    if not single:
+        byfirst = {bk['units'][0]: bk for bk in blocks}
+        def fits(bk):
+            c = np.array(bk['c'])
+            return min((np.hypot(*(np.array(byfirst[q]['c']) - c)) for q in (bk['units'][0] - 2, bk['units'][0] + 2) if q in byfirst), default=1e9)
+        drop = set()
+        for i, a_ in enumerate(blocks):
+            for b_ in blocks[i + 1:]:
+                if np.hypot(*(np.array(a_["c"]) - b_["c"])) < cfg.get("clash", 0.8) * max(a_["L"], b_["L"]):
+                    loser = a_ if fits(a_) > fits(b_) else b_
+                    drop.add(loser['units'][0])
+        if drop:
+            blocks = [bk for bk in blocks if bk['units'][0] not in drop]
+            for n in sorted(drop):
+                problems.append({'pair': [n, n + 1], 'why': 'reading lay on another twin (clash); not placed'})
+            print(f'  clashing readings dropped: twins starting {sorted(drop)}')
     out = {'project': proj, 'kind': 'twin', 'count': N, 'pitch': pitch, 'source': raw['source'], 'blocks': blocks, 'problems': problems,
            'legend': leg, 'colour_calibration': calib, 'partner_inferred': sorted(inferred), 'misread_dropped': sorted(misread), 'manual_fixes': fixes, 'plot_legend': plot_leg, 'plot_colour_calibration': plot_calib}
     json.dump(out, open(os.path.join(d, 'blocks.json'), 'w'), indent=0)

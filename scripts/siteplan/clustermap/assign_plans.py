@@ -80,8 +80,32 @@ def main():
     def px(p):
         return int(round(p[0] * k)), int(round(p[1] * k))
 
+    def cell_v(n):
+        x, y = px(U[n]['p']); r = int(0.28 * pitch * k)
+        h = hsv[max(0, y - r):y + r, max(0, x - r):x + r].reshape(-1, 3)
+        h = h[(h[:, 2] > 130) & (h[:, 1] < 35)]
+        return float(np.percentile(h[:, 2], 80)) if len(h) else None
+
+    rel_kind = {}
+    if cfg.get('cell_mode') == 'relative':
+        # a low-resolution map: grey and white cells differ by brightness within their own terrace (the
+        # absolute level varies with the image): a cell more than 'cell_gap' below the terrace's lightest is grey
+        gap = cfg.get('cell_gap', 9)
+        for r in sp['rows']:
+            vs = {n: cell_v(n) for n in r['unitNumbers']}
+            top = max([v for v in vs.values() if v is not None] or [0])
+            for n, v in vs.items():
+                rel_kind[n] = None if v is None else ('grey' if v < top - gap else 'white')
+
     def cell_kind(n):
+        if rel_kind:
+            return rel_kind.get(n)
         # the home's own cell around its number: grey fill (4 BR) or white (3 BR); dark text left out
+        if cfg.get('cell_offset'):  # a small map: the label covers the cell, so read the fill just beside it
+            ox, oy = cfg['cell_offset']; x, y = px([U[n]['p'][0] + ox, U[n]['p'][1] + oy])
+            h = hsv[max(0, y - 6):y + 7, max(0, x - 8):x + 9].reshape(-1, 3)
+            v = float(np.median(h[:, 2])); s_ = float(np.median(h[:, 1]))
+            return None if s_ >= 35 else 'grey' if v < 225 else 'white'
         x, y = px(U[n]['p']); r = int(0.28 * pitch * k)
         h = hsv[max(0, y - r):y + r, max(0, x - r):x + r].reshape(-1, 3)
         h = h[h[:, 2] > 130]
@@ -172,6 +196,10 @@ def main():
                 plan_count[f"{dz} {pl['beds']} BR {pl['plan']}"] += 1
                 if mb is not None and mb != pl['beds']:
                     mism.append({'no': no, 'map_beds': mb, 'plan_beds': pl['beds'], 'th': th, 'plex': n})
+                    if cfg.get('map_beds_win'):
+                        # the map shows another type than the sheet published for this position: the map's
+                        # bedrooms are kept and no plan is linked (no sheet for that type at that position)
+                        up.update({'beds': mb, 'plan': None, 'page': None, 'sqft': None, 'sqm': None, 'note': 'type on the map differs from the published position sheet'})
             else:
                 up.update({'beds': mb, 'plan': None, 'page': None, 'sqft': None, 'sqm': None})
                 unplanned.append({'no': no, 'plex': n, 'th': th, 'design': dz})

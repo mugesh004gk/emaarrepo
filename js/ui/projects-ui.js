@@ -486,7 +486,7 @@ export function initProjectsUI(app) {
   // a home with its official unit number and floor plan (traced from the developer's cluster map)
   function showUnit(el, h, d, p, file) {
     const up = h.unitPlan;
-    if (!up.th) { showTypeUnit(el, h, d, p, file); return; } // a villa: no terrace position
+    if (!up.th || !up.page) { showTypeUnit(el, h, d, p, file); return; } // a villa, or a home with no published sheet
     const facts = [
       ['Unit', `${up.no}`, `TH${String(up.th).padStart(2, '0')} of ${up.plex}`],
       ['Bedrooms', `${up.beds}`, 'floor plan'],
@@ -517,7 +517,7 @@ export function initProjectsUI(app) {
   function showTypeUnit(el, h, d, p, file) {
     const up = h.unitPlan;
     const total = p.unitCount?.total;
-    const kind = up.position === 'twin' ? 'twin villa' : 'villa';
+    const kind = up.position === 'twin' ? 'twin villa' : up.th ? 'townhouse' : 'villa';
     const map = p.brochures?.[0];
     el.innerHTML = `
       <div class="ph-head">
@@ -525,7 +525,7 @@ export function initProjectsUI(app) {
         <button type="button" class="btn-text ph-clear" title="Clear the selection (Esc)">Clear</button>
       </div>
       <h3 class="ph-title">${up.no == null ? '' : `Unit ${esc(String(up.no))} · `}${esc(up.design)} ${up.beds} BR ${kind}</h3>
-      <p class="ph-sub">in <b>${esc(p.name)}</b> · ${esc(communities.find((c) => c.id === p.communityId)?.name || '')}${up.pair ? ` · shares its twin villa with unit ${esc(String(up.pair))}` : ''}</p>
+      <p class="ph-sub">in <b>${esc(p.name)}</b> · ${esc(communities.find((c) => c.id === p.communityId)?.name || '')}${up.pair ? ` · shares its twin villa with unit ${esc(String(up.pair))}` : ''}${up.th ? ` · TH${String(up.th).padStart(2, '0')} of ${up.plex}, ${esc(up.position)} unit` : ''}</p>
       <div class="ph-facts">
         <div><span>Unit</span><b>${up.no == null ? '—' : esc(String(up.no))}</b><small>${up.no == null ? 'number not legible on the map' : total ? `of ${total}` : 'cluster map'}</small></div>
         <div><span>Bedrooms</span><b>${up.beds}</b><small>map legend</small></div>

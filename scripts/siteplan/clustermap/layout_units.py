@@ -155,6 +155,20 @@ def main():
                         break
                 if changed:
                     break
+    # a terrace one home short of a valid size (PLEX) whose next / previous number is missing: that home is
+    # at the open end, one pitch on along the terrace (flagged as interpolated)
+    if kind == 'terrace' and plex:
+        for i, r in enumerate(rows):
+            if len(r) in plex or len(r) + 1 not in plex or len(r) < 2:
+                continue
+            for n, a, b in ((r[-1] + 1, r[-1], r[-2]), (r[0] - 1, r[0], r[1])):
+                if n < 1 or n > N or n in units:
+                    continue
+                pa, pb = np.array(units[a]['p']), np.array(units[b]['p'])
+                units[n] = dict(units[a], p=(pa + (pa - pb)).tolist(), interp=True, conf=0.0)
+                interp.append(n)
+                rows[i] = sorted(r + [n])
+                break
     out = dict(project=proj, kind=kind, count=N, pitch=pitch, read=raw['read'], interpolated=interp,
                missing=[n for n in range(1, N + 1) if n not in units], units={str(k): v for k, v in units.items()}, rows=rows,
                source=raw['source'])

@@ -1,0 +1,4649 @@
+{
+"project": "rivera-at-the-valley-phase-2",
+"kind": "twin",
+"count": 378,
+"pitch": 19.32,
+"source": {
+"document": "rivera_cluster_map_client.png",
+"page": 1
+},
+"blocks": [
+{
+"units": [
+1,
+2
+],
+"c": [
+897.45,
+504.65
+],
+"axis": [
+0.1009,
+-0.9949
+],
+"front": [
+-0.9949,
+-0.1009
+],
+"L": 19.27,
+"D": 14.55,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.89,
+"front_conf": 0.091,
+"traced": false,
+"dab": 10.12,
+"axis_from_neighbours": true,
+"front_scores": [
+-0.469,
+-0.378
+]
+},
+{
+"units": [
+3,
+4
+],
+"c": [
+906.45,
+462.6
+],
+"axis": [
+0.2007,
+-0.9796
+],
+"front": [
+-0.9796,
+-0.2007
+],
+"L": 23.71,
+"D": 17.9,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.79,
+"front_conf": 0.456,
+"traced": false,
+"dab": 12.45,
+"front_scores": [
+-0.5,
+-0.044
+]
+},
+{
+"units": [
+5,
+6
+],
+"c": [
+919.44,
+418.63
+],
+"axis": [
+0.2007,
+-0.9796
+],
+"front": [
+-0.9796,
+-0.2007
+],
+"L": 25.48,
+"D": 20.95,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.64,
+"front_conf": 0.602,
+"traced": true,
+"dab": 12.45,
+"front_scores": [
+-0.491,
+0.111
+]
+},
+{
+"units": [
+9,
+10
+],
+"c": [
+925.3,
+327.5
+],
+"axis": [
+-0.2499,
+-0.9683
+],
+"front": [
+-0.9683,
+0.2499
+],
+"L": 24.4,
+"D": 18.42,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.52,
+"front_conf": 0.313,
+"traced": false,
+"dab": 12.81,
+"front_scores": [
+-0.491,
+-0.178
+]
+},
+{
+"units": [
+11,
+12
+],
+"c": [
+912.76,
+283.5
+],
+"axis": [
+-0.2499,
+-0.9683
+],
+"front": [
+-0.9683,
+0.2499
+],
+"L": 23.36,
+"D": 15.76,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.75,
+"front_conf": 0.487,
+"traced": true,
+"dab": 12.81,
+"front_scores": [
+-0.464,
+0.022
+]
+},
+{
+"units": [
+13,
+14
+],
+"c": [
+895.1,
+242.84
+],
+"axis": [
+-0.1939,
+-0.981
+],
+"front": [
+-0.981,
+0.1939
+],
+"L": 23.31,
+"D": 16.81,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.82,
+"front_conf": 0.616,
+"traced": true,
+"dab": 12.02,
+"axis_from_neighbours": true,
+"front_scores": [
+-0.482,
+0.133
+]
+},
+{
+"units": [
+15,
+16
+],
+"c": [
+850.45,
+194.4
+],
+"axis": [
+-0.9163,
+-0.4004
+],
+"front": [
+-0.4004,
+0.9163
+],
+"L": 24.74,
+"D": 18.68,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.553,
+"traced": false,
+"dab": 12.99,
+"front_scores": [
+-0.487,
+0.067
+]
+},
+{
+"units": [
+17,
+18
+],
+"c": [
+822.24,
+175.47
+],
+"axis": [
+-0.9163,
+-0.4004
+],
+"front": [
+-0.4004,
+0.9163
+],
+"L": 23.26,
+"D": 16.73,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.76,
+"front_conf": 0.584,
+"traced": true,
+"dab": 12.99,
+"front_scores": [
+-0.496,
+0.089
+]
+},
+{
+"units": [
+19,
+20
+],
+"c": [
+778.19,
+159.91
+],
+"axis": [
+-0.9027,
+-0.4303
+],
+"front": [
+-0.4303,
+0.9027
+],
+"L": 23.3,
+"D": 18.57,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.51,
+"front_conf": 0.118,
+"traced": true,
+"dab": 11.85,
+"front_scores": [
+-0.451,
+-0.333
+]
+},
+{
+"units": [
+23,
+24
+],
+"c": [
+686.95,
+163.55
+],
+"axis": [
+-0.8641,
+0.5034
+],
+"front": [
+0.5034,
+0.8641
+],
+"L": 25.35,
+"D": 19.14,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.78,
+"front_conf": 0.673,
+"traced": false,
+"dab": 13.31,
+"front_scores": [
+-0.496,
+0.178
+]
+},
+{
+"units": [
+25,
+26
+],
+"c": [
+640.79,
+168.15
+],
+"axis": [
+-0.928,
+0.3726
+],
+"front": [
+0.3726,
+0.928
+],
+"L": 22.78,
+"D": 18.9,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.56,
+"front_conf": 0.567,
+"traced": true,
+"dab": 14.22,
+"front_scores": [
+-0.478,
+0.089
+]
+},
+{
+"units": [
+29,
+30
+],
+"c": [
+543.52,
+167.85
+],
+"axis": [
+-0.9118,
+0.4107
+],
+"front": [
+0.4107,
+0.9118
+],
+"L": 23.78,
+"D": 22.35,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.56,
+"front_conf": 0.558,
+"traced": true,
+"dab": 14.37,
+"front_scores": [
+-0.491,
+0.067
+]
+},
+{
+"units": [
+31,
+32
+],
+"c": [
+502.75,
+165.55
+],
+"axis": [
+-0.9118,
+0.4107
+],
+"front": [
+0.4107,
+0.9118
+],
+"L": 27.37,
+"D": 20.66,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.68,
+"front_conf": 0.38,
+"traced": false,
+"dab": 14.37,
+"front_scores": [
+-0.491,
+-0.111
+]
+},
+{
+"units": [
+33,
+34
+],
+"c": [
+458.2,
+161.75
+],
+"axis": [
+-0.948,
+0.3183
+],
+"front": [
+0.3183,
+0.948
+],
+"L": 26.93,
+"D": 20.33,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.62,
+"front_conf": 0.638,
+"traced": false,
+"dab": 14.14,
+"front_scores": [
+-0.46,
+0.178
+]
+},
+{
+"units": [
+37,
+38
+],
+"c": [
+357.6,
+182.5
+],
+"axis": [
+-0.8245,
+0.5658
+],
+"front": [
+0.5658,
+0.8245
+],
+"L": 23.56,
+"D": 17.79,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.88,
+"front_conf": 0.58,
+"traced": false,
+"dab": 12.37,
+"front_scores": [
+-0.491,
+0.089
+]
+},
+{
+"units": [
+39,
+40
+],
+"c": [
+318.16,
+206.53
+],
+"axis": [
+-0.8245,
+0.5658
+],
+"front": [
+0.5658,
+0.8245
+],
+"L": 23.56,
+"D": 17.72,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.7,
+"front_conf": 0.327,
+"traced": true,
+"dab": 12.37,
+"front_scores": [
+-0.482,
+-0.156
+]
+},
+{
+"units": [
+45,
+46
+],
+"c": [
+612.85,
+892.95
+],
+"axis": [
+-0.2407,
+-0.9706
+],
+"front": [
+0.9706,
+-0.2407
+],
+"L": 24.53,
+"D": 18.52,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.57,
+"front_conf": 0.678,
+"traced": false,
+"dab": 12.88,
+"front_scores": [
+0.178,
+-0.5
+]
+},
+{
+"units": [
+47,
+48
+],
+"c": [
+248.35,
+376.4
+],
+"axis": [
+0.087,
+0.9962
+],
+"front": [
+0.9962,
+-0.087
+],
+"L": 24.09,
+"D": 18.19,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.83,
+"front_conf": 0.362,
+"traced": false,
+"dab": 12.65,
+"front_scores": [
+-0.496,
+-0.133
+]
+},
+{
+"units": [
+49,
+50
+],
+"c": [
+257.55,
+421.6
+],
+"axis": [
+0.2541,
+0.9672
+],
+"front": [
+0.9672,
+-0.2541
+],
+"L": 23.24,
+"D": 17.54,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.79,
+"front_conf": 0.584,
+"traced": false,
+"dab": 12.2,
+"front_scores": [
+-0.496,
+0.089
+]
+},
+{
+"units": [
+51,
+52
+],
+"c": [
+277.8,
+463.45
+],
+"axis": [
+0.4566,
+0.8897
+],
+"front": [
+0.8897,
+-0.4566
+],
+"L": 24.19,
+"D": 18.26,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.53,
+"front_conf": 0.34,
+"traced": false,
+"dab": 12.7,
+"front_scores": [
+-0.496,
+-0.156
+]
+},
+{
+"units": [
+53,
+54
+],
+"c": [
+308.25,
+502.85
+],
+"axis": [
+0.6568,
+0.7541
+],
+"front": [
+0.7541,
+-0.6568
+],
+"L": 23.48,
+"D": 17.73,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.85,
+"front_conf": 0.336,
+"traced": false,
+"dab": 12.33,
+"front_scores": [
+-0.491,
+-0.156
+]
+},
+{
+"units": [
+59,
+60
+],
+"c": [
+381.1,
+606.1
+],
+"axis": [
+0.5194,
+0.8545
+],
+"front": [
+0.8545,
+-0.5194
+],
+"L": 22.74,
+"D": 17.17,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.74,
+"front_conf": 0.411,
+"traced": false,
+"dab": 11.94,
+"front_scores": [
+-0.5,
+-0.089
+]
+},
+{
+"units": [
+91,
+92
+],
+"c": [
+839.55,
+971.6
+],
+"axis": [
+0.673,
+-0.7396
+],
+"front": [
+-0.7396,
+-0.673
+],
+"L": 25.75,
+"D": 19.44,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.75,
+"front_conf": 0.478,
+"traced": false,
+"dab": 13.52,
+"front_scores": [
+-0.478,
+0.0
+]
+},
+{
+"units": [
+93,
+94
+],
+"c": [
+870.99,
+939.25
+],
+"axis": [
+0.673,
+-0.7396
+],
+"front": [
+-0.7396,
+-0.673
+],
+"L": 23.72,
+"D": 17.24,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.86,
+"front_conf": 0.553,
+"traced": true,
+"dab": 13.52,
+"front_scores": [
+-0.487,
+0.067
+]
+},
+{
+"units": [
+95,
+96
+],
+"c": [
+902.05,
+896.6
+],
+"axis": [
+0.673,
+-0.7396
+],
+"front": [
+0.7396,
+0.673
+],
+"L": 25.75,
+"D": 19.44,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.7,
+"front_conf": 0.004,
+"traced": false,
+"dab": 13.52,
+"front_scores": [
+-0.46,
+-0.464
+]
+},
+{
+"units": [
+97,
+98
+],
+"c": [
+843.4,
+743.8
+],
+"axis": [
+0.1159,
+-0.9933
+],
+"front": [
+0.9933,
+0.1159
+],
+"L": 23.01,
+"D": 17.37,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.76,
+"front_conf": 0.024,
+"traced": false,
+"dab": 12.08,
+"front_scores": [
+-0.378,
+-0.402
+]
+},
+{
+"units": [
+115,
+116
+],
+"c": [
+891.0,
+688.25
+],
+"axis": [
+-0.1079,
+0.9942
+],
+"front": [
+0.9942,
+0.1079
+],
+"L": 24.72,
+"D": 18.67,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.009,
+"traced": false,
+"dab": 12.98,
+"front_scores": [
+-0.5,
+-0.491
+]
+},
+{
+"units": [
+121,
+122
+],
+"c": [
+811.67,
+593.02
+],
+"axis": [
+-0.3993,
+-0.9168
+],
+"front": [
+-0.9168,
+0.3993
+],
+"L": 25.33,
+"D": 16.83,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.73,
+"front_conf": 0.456,
+"traced": true,
+"dab": 13.52,
+"front_scores": [
+-0.5,
+-0.044
+]
+},
+{
+"units": [
+123,
+124
+],
+"c": [
+890.43,
+767.47
+],
+"axis": [
+-0.1079,
+0.9942
+],
+"front": [
+-0.9942,
+-0.1079
+],
+"L": 23.17,
+"D": 16.97,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.078,
+"traced": true,
+"dab": 12.98,
+"front_scores": [
+-0.356,
+-0.433
+]
+},
+{
+"units": [
+125,
+126
+],
+"c": [
+880.97,
+810.71
+],
+"axis": [
+-0.1079,
+0.9942
+],
+"front": [
+0.9942,
+0.1079
+],
+"L": 25.46,
+"D": 17.27,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.87,
+"front_conf": 0.013,
+"traced": true,
+"dab": 12.98,
+"front_scores": [
+-0.5,
+-0.487
+]
+},
+{
+"units": [
+127,
+128
+],
+"c": [
+596.27,
+169.91
+],
+"axis": [
+-0.928,
+0.3726
+],
+"front": [
+0.3726,
+0.928
+],
+"L": 23.96,
+"D": 19.28,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.89,
+"front_conf": 0.869,
+"traced": true,
+"dab": 14.22,
+"front_scores": [
+-0.491,
+0.378
+]
+},
+{
+"units": [
+129,
+130
+],
+"c": [
+840.43,
+894.47
+],
+"axis": [
+-0.7441,
+0.668
+],
+"front": [
+0.668,
+0.7441
+],
+"L": 23.24,
+"D": 17.1,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.84,
+"front_conf": 0.58,
+"traced": true,
+"dab": 11.83,
+"front_scores": [
+-0.447,
+0.133
+]
+},
+{
+"units": [
+131,
+132
+],
+"c": [
+809.57,
+927.66
+],
+"axis": [
+-0.7441,
+0.668
+],
+"front": [
+0.668,
+0.7441
+],
+"L": 23.56,
+"D": 17.29,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.83,
+"front_conf": 0.489,
+"traced": true,
+"dab": 11.83,
+"front_scores": [
+-0.556,
+-0.067
+]
+},
+{
+"units": [
+133,
+134
+],
+"c": [
+772.74,
+953.67
+],
+"axis": [
+-0.8402,
+0.5423
+],
+"front": [
+0.5423,
+0.8402
+],
+"L": 23.29,
+"D": 16.83,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.82,
+"front_conf": 0.233,
+"traced": true,
+"dab": 13.09,
+"front_scores": [
+-0.667,
+-0.433
+]
+},
+{
+"units": [
+135,
+136
+],
+"c": [
+732.25,
+971.05
+],
+"axis": [
+-0.8402,
+0.5423
+],
+"front": [
+0.5423,
+0.8402
+],
+"L": 23.71,
+"D": 18.34,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.84,
+"front_conf": 0.022,
+"traced": true,
+"dab": 13.09,
+"front_scores": [
+-0.451,
+-0.429
+]
+},
+{
+"units": [
+139,
+140
+],
+"c": [
+620.58,
+963.25
+],
+"axis": [
+-0.711,
+-0.7032
+],
+"front": [
+-0.7032,
+0.711
+],
+"L": 23.81,
+"D": 18.36,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.79,
+"front_conf": 0.031,
+"traced": true,
+"dab": 12.8,
+"front_scores": [
+-0.5,
+-0.469
+]
+},
+{
+"units": [
+151,
+152
+],
+"c": [
+754.5,
+892.45
+],
+"axis": [
+-0.8402,
+0.5423
+],
+"front": [
+-0.5423,
+-0.8402
+],
+"L": 24.93,
+"D": 18.82,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.56,
+"front_conf": 0.289,
+"traced": false,
+"dab": 13.09,
+"front_scores": [
+-0.111,
+-0.4
+]
+},
+{
+"units": [
+169,
+170
+],
+"c": [
+498.15,
+614.35
+],
+"axis": [
+-0.487,
+-0.8734
+],
+"front": [
+0.8734,
+-0.487
+],
+"L": 24.65,
+"D": 18.61,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.73,
+"front_conf": 0.444,
+"traced": false,
+"dab": 12.94,
+"front_scores": [
+-0.244,
+-0.689
+]
+},
+{
+"units": [
+171,
+172
+],
+"c": [
+448.5,
+620.52
+],
+"axis": [
+0.5194,
+0.8545
+],
+"front": [
+-0.8545,
+0.5194
+],
+"L": 23.83,
+"D": 17.17,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.71,
+"front_conf": 0.22,
+"traced": true,
+"dab": 11.94,
+"front_scores": [
+-0.469,
+-0.689
+]
+},
+{
+"units": [
+173,
+174
+],
+"c": [
+433.1,
+589.8
+],
+"axis": [
+0.5194,
+0.8545
+],
+"front": [
+-0.8545,
+0.5194
+],
+"L": 22.74,
+"D": 17.17,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.78,
+"front_conf": 0.489,
+"traced": false,
+"dab": 11.94,
+"front_scores": [
+-0.133,
+-0.622
+]
+},
+{
+"units": [
+175,
+176
+],
+"c": [
+468.09,
+559.54
+],
+"axis": [
+-0.4626,
+-0.8866
+],
+"front": [
+0.8866,
+-0.4626
+],
+"L": 23.63,
+"D": 16.92,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.62,
+"front_conf": 0.511,
+"traced": true,
+"dab": 12.97,
+"front_scores": [
+0.0,
+-0.511
+]
+},
+{
+"units": [
+183,
+184
+],
+"c": [
+549.5,
+730.7
+],
+"axis": [
+0.1789,
+0.9839
+],
+"front": [
+0.9839,
+-0.1789
+],
+"L": 21.29,
+"D": 16.08,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.5,
+"traced": false,
+"dab": 11.18,
+"front_scores": [
+-0.5,
+0.0
+]
+},
+{
+"units": [
+185,
+186
+],
+"c": [
+569.4,
+780.95
+],
+"axis": [
+-0.3292,
+-0.9443
+],
+"front": [
+0.9443,
+-0.3292
+],
+"L": 21.98,
+"D": 16.59,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.81,
+"front_conf": 0.558,
+"traced": false,
+"dab": 11.54,
+"front_scores": [
+0.089,
+-0.469
+]
+},
+{
+"units": [
+189,
+190
+],
+"c": [
+381.65,
+511.0
+],
+"axis": [
+-0.6145,
+-0.7889
+],
+"front": [
+-0.7889,
+0.6145
+],
+"L": 25.1,
+"D": 18.95,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.51,
+"front_conf": 0.051,
+"traced": false,
+"dab": 13.18,
+"front_scores": [
+-0.489,
+-0.438
+]
+},
+{
+"units": [
+191,
+192
+],
+"c": [
+350.65,
+472.33
+],
+"axis": [
+-0.6145,
+-0.7889
+],
+"front": [
+-0.7889,
+0.6145
+],
+"L": 23.54,
+"D": 16.27,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.76,
+"front_conf": 0.533,
+"traced": true,
+"dab": 13.18,
+"front_scores": [
+-0.733,
+-0.2
+]
+},
+{
+"units": [
+193,
+194
+],
+"c": [
+323.85,
+436.45
+],
+"axis": [
+-0.5657,
+-0.8246
+],
+"front": [
+-0.8246,
+0.5657
+],
+"L": 27.94,
+"D": 21.1,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.88,
+"front_conf": 0.378,
+"traced": false,
+"dab": 14.67,
+"front_scores": [
+-0.511,
+-0.133
+]
+},
+{
+"units": [
+195,
+196
+],
+"c": [
+305.5,
+380.9
+],
+"axis": [
+0.13,
+-0.9915
+],
+"front": [
+-0.9915,
+-0.13
+],
+"L": 23.43,
+"D": 17.69,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.79,
+"front_conf": 0.356,
+"traced": false,
+"dab": 12.3,
+"front_scores": [
+-0.578,
+-0.222
+]
+},
+{
+"units": [
+197,
+198
+],
+"c": [
+300.93,
+344.36
+],
+"axis": [
+0.13,
+-0.9915
+],
+"front": [
+0.9915,
+0.13
+],
+"L": 23.53,
+"D": 16.2,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.54,
+"front_conf": 0.073,
+"traced": true,
+"dab": 12.3,
+"front_scores": [
+-0.378,
+-0.451
+]
+},
+{
+"units": [
+199,
+200
+],
+"c": [
+320.24,
+285.0
+],
+"axis": [
+0.7029,
+-0.7113
+],
+"front": [
+-0.7113,
+-0.7029
+],
+"L": 23.48,
+"D": 18.24,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.61,
+"front_conf": 0.211,
+"traced": true,
+"dab": 11.81,
+"front_scores": [
+-0.667,
+-0.456
+]
+},
+{
+"units": [
+201,
+202
+],
+"c": [
+347.53,
+250.35
+],
+"axis": [
+0.7029,
+-0.7113
+],
+"front": [
+-0.7113,
+-0.7029
+],
+"L": 23.78,
+"D": 19.08,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.67,
+"front_conf": 0.844,
+"traced": true,
+"dab": 11.81,
+"front_scores": [
+-0.8,
+0.044
+]
+},
+{
+"units": [
+203,
+204
+],
+"c": [
+387.2,
+226.9
+],
+"axis": [
+0.7962,
+-0.6051
+],
+"front": [
+-0.6051,
+-0.7962
+],
+"L": 23.92,
+"D": 18.06,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.81,
+"front_conf": 0.6,
+"traced": false,
+"dab": 12.56,
+"front_scores": [
+-0.533,
+0.067
+]
+},
+{
+"units": [
+205,
+206
+],
+"c": [
+443.4,
+210.8
+],
+"axis": [
+0.9658,
+-0.2595
+],
+"front": [
+-0.2595,
+-0.9658
+],
+"L": 26.44,
+"D": 19.96,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.616,
+"traced": false,
+"dab": 13.88,
+"front_scores": [
+-0.46,
+0.156
+]
+},
+{
+"units": [
+207,
+208
+],
+"c": [
+473.26,
+214.32
+],
+"axis": [
+0.9658,
+-0.2595
+],
+"front": [
+-0.2595,
+-0.9658
+],
+"L": 24.56,
+"D": 18.28,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.61,
+"front_conf": 0.267,
+"traced": true,
+"dab": 13.88,
+"front_scores": [
+-0.133,
+0.133
+]
+},
+{
+"units": [
+209,
+210
+],
+"c": [
+517.2,
+221.65
+],
+"axis": [
+0.8817,
+0.4718
+],
+"front": [
+0.4718,
+-0.8817
+],
+"L": 24.63,
+"D": 18.59,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.66,
+"front_conf": 0.8,
+"traced": false,
+"dab": 12.93,
+"front_scores": [
+-0.756,
+0.044
+]
+},
+{
+"units": [
+211,
+212
+],
+"c": [
+561.99,
+222.25
+],
+"axis": [
+0.8514,
+0.5245
+],
+"front": [
+0.5245,
+-0.8514
+],
+"L": 24.4,
+"D": 19.75,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.73,
+"front_conf": 0.422,
+"traced": true,
+"dab": 14.68,
+"front_scores": [
+-0.556,
+-0.133
+]
+},
+{
+"units": [
+213,
+214
+],
+"c": [
+564.42,
+273.16
+],
+"axis": [
+-0.8732,
+0.4874
+],
+"front": [
+0.4874,
+0.8732
+],
+"L": 24.42,
+"D": 15.81,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.72,
+"front_conf": 0.511,
+"traced": true,
+"dab": 14.77,
+"front_scores": [
+-0.311,
+0.2
+]
+},
+{
+"units": [
+215,
+216
+],
+"c": [
+517.65,
+270.46
+],
+"axis": [
+-0.9449,
+0.3274
+],
+"front": [
+0.3274,
+0.9449
+],
+"L": 24.15,
+"D": 19.28,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.83,
+"front_conf": 0.644,
+"traced": true,
+"dab": 13.44,
+"front_scores": [
+-0.4,
+0.244
+]
+},
+{
+"units": [
+219,
+220
+],
+"c": [
+422.19,
+269.05
+],
+"axis": [
+0.7962,
+-0.6051
+],
+"front": [
+0.6051,
+0.7962
+],
+"L": 24.16,
+"D": 19.68,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.64,
+"front_conf": 0.578,
+"traced": true,
+"dab": 12.56,
+"front_scores": [
+-0.044,
+-0.622
+]
+},
+{
+"units": [
+221,
+222
+],
+"c": [
+372.2,
+295.45
+],
+"axis": [
+-0.7029,
+0.7113
+],
+"front": [
+0.7113,
+0.7029
+],
+"L": 23.43,
+"D": 17.69,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.8,
+"front_conf": 0.247,
+"traced": false,
+"dab": 12.3,
+"axis_from_neighbours": true,
+"front_scores": [
+-0.667,
+-0.42
+]
+},
+{
+"units": [
+223,
+224
+],
+"c": [
+353.5,
+357.35
+],
+"axis": [
+0.0163,
+0.9999
+],
+"front": [
+0.9999,
+-0.0163
+],
+"L": 23.43,
+"D": 17.69,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.89,
+"front_conf": 0.349,
+"traced": false,
+"dab": 12.3,
+"front_scores": [
+-0.8,
+-0.451
+]
+},
+{
+"units": [
+225,
+226
+],
+"c": [
+375.55,
+418.65
+],
+"axis": [
+0.4794,
+0.8776
+],
+"front": [
+0.8776,
+-0.4794
+],
+"L": 25.83,
+"D": 19.5,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.63,
+"front_conf": 0.251,
+"traced": false,
+"dab": 13.56,
+"front_scores": [
+-0.711,
+-0.46
+]
+},
+{
+"units": [
+227,
+228
+],
+"c": [
+396.93,
+446.9
+],
+"axis": [
+0.4794,
+0.8776
+],
+"front": [
+0.8776,
+-0.4794
+],
+"L": 24.97,
+"D": 17.31,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.6,
+"front_conf": 0.224,
+"traced": true,
+"dab": 13.56,
+"front_scores": [
+-0.689,
+-0.464
+]
+},
+{
+"units": [
+229,
+230
+],
+"c": [
+424.25,
+486.35
+],
+"axis": [
+0.5729,
+0.8196
+],
+"front": [
+0.8196,
+-0.5729
+],
+"L": 21.62,
+"D": 16.32,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.74,
+"front_conf": 0.024,
+"traced": false,
+"dab": 11.35,
+"front_scores": [
+-0.467,
+-0.442
+]
+},
+{
+"units": [
+231,
+232
+],
+"c": [
+642.37,
+220.5
+],
+"axis": [
+0.9324,
+0.3614
+],
+"front": [
+0.3614,
+-0.9324
+],
+"L": 24.06,
+"D": 19.7,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.82,
+"front_conf": 0.711,
+"traced": true,
+"dab": 13.84,
+"front_scores": [
+-0.556,
+0.156
+]
+},
+{
+"units": [
+233,
+234
+],
+"c": [
+687.95,
+217.0
+],
+"axis": [
+0.9324,
+0.3614
+],
+"front": [
+0.3614,
+-0.9324
+],
+"L": 26.36,
+"D": 19.9,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.58,
+"front_conf": 0.578,
+"traced": false,
+"dab": 13.84,
+"front_scores": [
+-0.689,
+-0.111
+]
+},
+{
+"units": [
+235,
+236
+],
+"c": [
+733.15,
+211.55
+],
+"axis": [
+0.774,
+0.6332
+],
+"front": [
+0.6332,
+-0.774
+],
+"L": 24.36,
+"D": 18.39,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.74,
+"front_conf": 0.289,
+"traced": false,
+"dab": 12.79,
+"front_scores": [
+-0.289,
+0.0
+]
+},
+{
+"units": [
+237,
+238
+],
+"c": [
+784.05,
+218.35
+],
+"axis": [
+0.774,
+0.6332
+],
+"front": [
+0.6332,
+-0.774
+],
+"L": 24.36,
+"D": 18.39,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.57,
+"front_conf": 0.778,
+"traced": false,
+"dab": 12.79,
+"front_scores": [
+-0.733,
+0.044
+]
+},
+{
+"units": [
+239,
+240
+],
+"c": [
+825.79,
+238.21
+],
+"axis": [
+0.5891,
+0.8081
+],
+"front": [
+0.8081,
+-0.5891
+],
+"L": 30.73,
+"D": 19.67,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.79,
+"front_conf": 0.6,
+"traced": true,
+"dab": 13.24,
+"front_scores": [
+-0.533,
+0.067
+]
+},
+{
+"units": [
+241,
+242
+],
+"c": [
+861.01,
+294.14
+],
+"axis": [
+0.1372,
+0.9905
+],
+"front": [
+0.9905,
+-0.1372
+],
+"L": 23.85,
+"D": 18.11,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.7,
+"front_conf": 0.473,
+"traced": true,
+"dab": 13.12,
+"front_scores": [
+-0.496,
+-0.022
+]
+},
+{
+"units": [
+243,
+244
+],
+"c": [
+871.6,
+340.0
+],
+"axis": [
+0.1372,
+0.9905
+],
+"front": [
+0.9905,
+-0.1372
+],
+"L": 24.99,
+"D": 18.87,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.71,
+"front_conf": 0.322,
+"traced": false,
+"dab": 13.12,
+"front_scores": [
+-0.478,
+-0.156
+]
+},
+{
+"units": [
+245,
+246
+],
+"c": [
+870.69,
+381.36
+],
+"axis": [
+-0.0291,
+0.9996
+],
+"front": [
+0.9996,
+0.0291
+],
+"L": 18.67,
+"D": 15.79,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.76,
+"front_conf": 0.0,
+"traced": true,
+"dab": 10.3,
+"front_scores": [
+-0.5,
+-0.5
+]
+},
+{
+"units": [
+247,
+248
+],
+"c": [
+860.45,
+428.15
+],
+"axis": [
+-0.0291,
+0.9996
+],
+"front": [
+0.9996,
+0.0291
+],
+"L": 19.62,
+"D": 14.81,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.64,
+"front_conf": 0.691,
+"traced": false,
+"dab": 10.3,
+"front_scores": [
+-0.469,
+0.222
+]
+},
+{
+"units": [
+249,
+250
+],
+"c": [
+851.7,
+470.3
+],
+"axis": [
+0.0,
+1.0
+],
+"front": [
+1.0,
+-0.0
+],
+"L": 22.47,
+"D": 16.97,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.81,
+"front_conf": 0.438,
+"traced": false,
+"dab": 11.8,
+"front_scores": [
+-0.482,
+-0.044
+]
+},
+{
+"units": [
+251,
+252
+],
+"c": [
+847.37,
+517.83
+],
+"axis": [
+0.0,
+1.0
+],
+"front": [
+1.0,
+-0.0
+],
+"L": 26.33,
+"D": 20.08,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.467,
+"traced": true,
+"dab": 11.8,
+"front_scores": [
+-0.444,
+0.022
+]
+},
+{
+"units": [
+253,
+254
+],
+"c": [
+797.25,
+521.1
+],
+"axis": [
+-0.0423,
+-0.9991
+],
+"front": [
+-0.9991,
+0.0423
+],
+"L": 22.49,
+"D": 16.98,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.667,
+"traced": false,
+"dab": 11.81,
+"front_scores": [
+-0.422,
+0.244
+]
+},
+{
+"units": [
+255,
+256
+],
+"c": [
+733.85,
+268.5
+],
+"axis": [
+0.908,
+0.4191
+],
+"front": [
+-0.4191,
+0.908
+],
+"L": 30.0,
+"D": 22.65,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.61,
+"front_conf": 0.867,
+"traced": false,
+"dab": 15.75,
+"front_scores": [
+0.133,
+-0.733
+]
+},
+{
+"units": [
+257,
+258
+],
+"c": [
+684.27,
+265.87
+],
+"axis": [
+0.908,
+0.4191
+],
+"front": [
+-0.4191,
+0.908
+],
+"L": 22.68,
+"D": 21.27,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.77,
+"front_conf": 0.356,
+"traced": true,
+"dab": 15.75,
+"front_scores": [
+-0.067,
+-0.422
+]
+},
+{
+"units": [
+261,
+262
+],
+"c": [
+671.46,
+319.61
+],
+"axis": [
+0.908,
+0.4191
+],
+"front": [
+0.4191,
+-0.908
+],
+"L": 24.53,
+"D": 19.34,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.61,
+"front_conf": 0.667,
+"traced": true,
+"dab": 15.75,
+"front_scores": [
+-0.644,
+0.022
+]
+},
+{
+"units": [
+263,
+264
+],
+"c": [
+781.85,
+273.54
+],
+"axis": [
+0.5891,
+0.8081
+],
+"front": [
+-0.8081,
+0.5891
+],
+"L": 28.4,
+"D": 22.92,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.58,
+"front_conf": 0.756,
+"traced": true,
+"dab": 13.24,
+"front_scores": [
+0.178,
+-0.578
+]
+},
+{
+"units": [
+269,
+270
+],
+"c": [
+639.22,
+269.26
+],
+"axis": [
+0.8958,
+0.4445
+],
+"front": [
+-0.4445,
+0.8958
+],
+"L": 23.53,
+"D": 21.7,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.62,
+"front_conf": 0.711,
+"traced": true,
+"dab": 14.85,
+"front_scores": [
+-0.089,
+-0.8
+]
+},
+{
+"units": [
+271,
+272
+],
+"c": [
+457.7,
+319.64
+],
+"axis": [
+0.8362,
+0.5484
+],
+"front": [
+0.5484,
+-0.8362
+],
+"L": 23.85,
+"D": 19.46,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.75,
+"front_conf": 0.478,
+"traced": true,
+"dab": 14.59,
+"front_scores": [
+-0.478,
+0.0
+]
+},
+{
+"units": [
+273,
+274
+],
+"c": [
+503.26,
+322.22
+],
+"axis": [
+0.8362,
+0.5484
+],
+"front": [
+0.5484,
+-0.8362
+],
+"L": 24.56,
+"D": 20.91,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.83,
+"front_conf": 0.624,
+"traced": true,
+"dab": 14.59,
+"front_scores": [
+-0.491,
+0.133
+]
+},
+{
+"units": [
+275,
+276
+],
+"c": [
+545.36,
+322.74
+],
+"axis": [
+0.8362,
+0.5484
+],
+"front": [
+0.5484,
+-0.8362
+],
+"L": 23.84,
+"D": 18.71,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.83,
+"front_conf": 0.611,
+"traced": true,
+"dab": 14.59,
+"front_scores": [
+-0.456,
+0.156
+]
+},
+{
+"units": [
+277,
+278
+],
+"c": [
+587.47,
+323.23
+],
+"axis": [
+0.8958,
+0.4445
+],
+"front": [
+0.4445,
+-0.8958
+],
+"L": 24.29,
+"D": 18.6,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.78,
+"front_conf": 0.756,
+"traced": true,
+"dab": 14.85,
+"front_scores": [
+-0.4,
+0.356
+]
+},
+{
+"units": [
+279,
+280
+],
+"c": [
+628.61,
+322.28
+],
+"axis": [
+0.8958,
+0.4445
+],
+"front": [
+0.4445,
+-0.8958
+],
+"L": 23.4,
+"D": 20.48,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.68,
+"front_conf": 0.622,
+"traced": true,
+"dab": 14.85,
+"front_scores": [
+-0.556,
+0.067
+]
+},
+{
+"units": [
+283,
+284
+],
+"c": [
+716.85,
+317.0
+],
+"axis": [
+0.908,
+0.4191
+],
+"front": [
+-0.4191,
+0.908
+],
+"L": 30.0,
+"D": 22.65,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.8,
+"front_conf": 0.089,
+"traced": false,
+"dab": 15.75,
+"front_scores": [
+0.022,
+-0.067
+]
+},
+{
+"units": [
+289,
+290
+],
+"c": [
+659.74,
+369.15
+],
+"axis": [
+-0.8354,
+0.5496
+],
+"front": [
+0.5496,
+0.8354
+],
+"L": 24.93,
+"D": 19.6,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.63,
+"front_conf": 0.4,
+"traced": true,
+"dab": 13.65,
+"front_scores": [
+-0.444,
+-0.044
+]
+},
+{
+"units": [
+291,
+292
+],
+"c": [
+614.6,
+372.75
+],
+"axis": [
+-0.8354,
+0.5496
+],
+"front": [
+0.5496,
+0.8354
+],
+"L": 26.0,
+"D": 19.63,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.78,
+"front_conf": 0.4,
+"traced": false,
+"dab": 13.65,
+"front_scores": [
+-0.6,
+-0.2
+]
+},
+{
+"units": [
+293,
+294
+],
+"c": [
+569.71,
+373.62
+],
+"axis": [
+0.8848,
+0.466
+],
+"front": [
+-0.466,
+0.8848
+],
+"L": 23.7,
+"D": 20.35,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.79,
+"front_conf": 0.533,
+"traced": true,
+"dab": 14.81,
+"front_scores": [
+0.178,
+-0.356
+]
+},
+{
+"units": [
+299,
+300
+],
+"c": [
+648.15,
+420.65
+],
+"axis": [
+0.3387,
+0.9409
+],
+"front": [
+0.9409,
+-0.3387
+],
+"L": 25.31,
+"D": 19.11,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.58,
+"front_conf": 0.489,
+"traced": false,
+"dab": 13.29,
+"front_scores": [
+-0.444,
+0.044
+]
+},
+{
+"units": [
+301,
+302
+],
+"c": [
+559.17,
+425.3
+],
+"axis": [
+0.8848,
+0.466
+],
+"front": [
+0.466,
+-0.8848
+],
+"L": 24.55,
+"D": 19.7,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.72,
+"front_conf": 0.704,
+"traced": true,
+"dab": 14.81,
+"front_scores": [
+-0.46,
+0.244
+]
+},
+{
+"units": [
+307,
+308
+],
+"c": [
+698.7,
+420.25
+],
+"axis": [
+-0.8354,
+0.5496
+],
+"front": [
+-0.5496,
+-0.8354
+],
+"L": 26.0,
+"D": 19.63,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.53,
+"front_conf": 0.42,
+"traced": false,
+"dab": 13.65,
+"front_scores": [
+-0.044,
+-0.464
+]
+},
+{
+"units": [
+315,
+316
+],
+"c": [
+746.26,
+547.56
+],
+"axis": [
+0.206,
+0.9785
+],
+"front": [
+0.9785,
+-0.206
+],
+"L": 23.01,
+"D": 16.62,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.7,
+"front_conf": 0.4,
+"traced": true,
+"dab": 11.65,
+"front_scores": [
+-0.533,
+-0.133
+]
+},
+{
+"units": [
+317,
+318
+],
+"c": [
+755.96,
+590.28
+],
+"axis": [
+0.206,
+0.9785
+],
+"front": [
+0.9785,
+-0.206
+],
+"L": 22.58,
+"D": 15.38,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.83,
+"front_conf": 0.644,
+"traced": true,
+"dab": 11.65,
+"front_scores": [
+-0.622,
+0.022
+]
+},
+{
+"units": [
+325,
+326
+],
+"c": [
+791.78,
+771.8
+],
+"axis": [
+0.1159,
+-0.9933
+],
+"front": [
+0.9933,
+0.1159
+],
+"L": 23.57,
+"D": 17.27,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.58,
+"front_conf": 0.489,
+"traced": true,
+"dab": 12.08,
+"front_scores": [
+-0.044,
+-0.533
+]
+},
+{
+"units": [
+329,
+330
+],
+"c": [
+740.79,
+845.24
+],
+"axis": [
+-0.8682,
+0.4961
+],
+"front": [
+0.4961,
+0.8682
+],
+"L": 29.54,
+"D": 20.22,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.8,
+"front_conf": 0.467,
+"traced": true,
+"dab": 12.9,
+"front_scores": [
+-0.489,
+-0.022
+]
+},
+{
+"units": [
+331,
+332
+],
+"c": [
+693.3,
+860.8
+],
+"axis": [
+-0.8682,
+0.4961
+],
+"front": [
+0.4961,
+0.8682
+],
+"L": 24.57,
+"D": 18.55,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.67,
+"front_conf": 0.176,
+"traced": false,
+"dab": 12.9,
+"front_scores": [
+-0.6,
+-0.424
+]
+},
+{
+"units": [
+333,
+334
+],
+"c": [
+637.95,
+825.75
+],
+"axis": [
+-0.2407,
+-0.9706
+],
+"front": [
+-0.9706,
+0.2407
+],
+"L": 24.53,
+"D": 18.52,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.75,
+"front_conf": 0.033,
+"traced": false,
+"dab": 12.88,
+"front_scores": [
+-0.444,
+-0.411
+]
+},
+{
+"units": [
+335,
+336
+],
+"c": [
+625.93,
+781.85
+],
+"axis": [
+-0.2407,
+-0.9706
+],
+"front": [
+-0.9706,
+0.2407
+],
+"L": 23.02,
+"D": 22.93,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.63,
+"front_conf": 0.689,
+"traced": true,
+"dab": 12.88,
+"front_scores": [
+-0.622,
+0.067
+]
+},
+{
+"units": [
+337,
+338
+],
+"c": [
+609.8,
+744.15
+],
+"axis": [
+-0.3292,
+-0.9443
+],
+"front": [
+-0.9443,
+0.3292
+],
+"L": 21.98,
+"D": 16.59,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.76,
+"front_conf": 0.289,
+"traced": false,
+"dab": 11.54,
+"front_scores": [
+-0.4,
+-0.111
+]
+},
+{
+"units": [
+339,
+340
+],
+"c": [
+591.7,
+693.6
+],
+"axis": [
+0.1789,
+0.9839
+],
+"front": [
+0.9839,
+-0.1789
+],
+"L": 21.29,
+"D": 16.08,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.69,
+"front_conf": 0.158,
+"traced": false,
+"dab": 11.18,
+"front_scores": [
+-0.447,
+-0.289
+]
+},
+{
+"units": [
+341,
+342
+],
+"c": [
+562.5,
+631.41
+],
+"axis": [
+-0.4284,
+-0.9036
+],
+"front": [
+-0.9036,
+0.4284
+],
+"L": 23.33,
+"D": 16.81,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.72,
+"front_conf": 0.022,
+"traced": true,
+"dab": 12.84,
+"front_scores": [
+-0.464,
+-0.442
+]
+},
+{
+"units": [
+343,
+344
+],
+"c": [
+545.15,
+592.35
+],
+"axis": [
+-0.487,
+-0.8734
+],
+"front": [
+-0.8734,
+0.487
+],
+"L": 24.65,
+"D": 18.61,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.57,
+"front_conf": 0.322,
+"traced": false,
+"dab": 12.94,
+"front_scores": [
+-0.5,
+-0.178
+]
+},
+{
+"units": [
+345,
+346
+],
+"c": [
+519.9,
+543.45
+],
+"axis": [
+-0.4626,
+-0.8866
+],
+"front": [
+-0.8866,
+0.4626
+],
+"L": 24.7,
+"D": 18.65,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.62,
+"front_conf": 0.844,
+"traced": false,
+"dab": 12.97,
+"front_scores": [
+-0.778,
+0.067
+]
+},
+{
+"units": [
+347,
+348
+],
+"c": [
+503.53,
+518.72
+],
+"axis": [
+-0.4626,
+-0.8866
+],
+"front": [
+-0.8866,
+0.4626
+],
+"L": 23.57,
+"D": 17.07,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.65,
+"front_conf": 0.38,
+"traced": true,
+"dab": 12.97,
+"front_scores": [
+-0.469,
+-0.089
+]
+},
+{
+"units": [
+349,
+350
+],
+"c": [
+636.45,
+587.2
+],
+"axis": [
+0.3493,
+0.937
+],
+"front": [
+0.937,
+-0.3493
+],
+"L": 22.36,
+"D": 16.88,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.78,
+"front_conf": 0.433,
+"traced": false,
+"dab": 11.74,
+"front_scores": [
+-0.5,
+-0.067
+]
+},
+{
+"units": [
+351,
+352
+],
+"c": [
+688.05,
+575.5
+],
+"axis": [
+0.3493,
+0.937
+],
+"front": [
+-0.937,
+0.3493
+],
+"L": 22.36,
+"D": 16.88,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.82,
+"front_conf": 0.6,
+"traced": false,
+"dab": 11.74,
+"front_scores": [
+-0.111,
+-0.711
+]
+},
+{
+"units": [
+353,
+354
+],
+"c": [
+600.05,
+518.35
+],
+"axis": [
+-0.4915,
+-0.8709
+],
+"front": [
+0.8709,
+-0.4915
+],
+"L": 22.09,
+"D": 16.68,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.78,
+"front_conf": 0.044,
+"traced": false,
+"dab": 11.6,
+"front_scores": [
+-0.467,
+-0.511
+]
+},
+{
+"units": [
+355,
+356
+],
+"c": [
+621.75,
+460.95
+],
+"axis": [
+0.3387,
+0.9409
+],
+"front": [
+-0.9409,
+0.3387
+],
+"L": 25.31,
+"D": 19.11,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.73,
+"front_conf": 0.193,
+"traced": false,
+"dab": 13.29,
+"front_scores": [
+-0.451,
+-0.644
+]
+},
+{
+"units": [
+357,
+358
+],
+"c": [
+665.35,
+490.25
+],
+"axis": [
+0.3387,
+0.9409
+],
+"front": [
+-0.9409,
+0.3387
+],
+"L": 25.31,
+"D": 19.11,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.92,
+"front_conf": 0.1,
+"traced": false,
+"dab": 13.29,
+"front_scores": [
+-0.4,
+-0.5
+]
+},
+{
+"units": [
+359,
+360
+],
+"c": [
+671.95,
+534.5
+],
+"axis": [
+0.3493,
+0.937
+],
+"front": [
+-0.937,
+0.3493
+],
+"L": 22.36,
+"D": 16.88,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.6,
+"front_conf": 0.04,
+"traced": false,
+"dab": 11.74,
+"front_scores": [
+-0.46,
+-0.5
+]
+},
+{
+"units": [
+365,
+366
+],
+"c": [
+715.9,
+667.95
+],
+"axis": [
+-0.2597,
+-0.9657
+],
+"front": [
+-0.9657,
+0.2597
+],
+"L": 23.46,
+"D": 17.72,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.74,
+"front_conf": 0.522,
+"traced": false,
+"dab": 12.32,
+"front_scores": [
+-0.5,
+0.022
+]
+},
+{
+"units": [
+369,
+370
+],
+"c": [
+750.05,
+764.2
+],
+"axis": [
+-0.3511,
+-0.9363
+],
+"front": [
+-0.9363,
+0.3511
+],
+"L": 24.42,
+"D": 18.44,
+"design": "Lotus",
+"beds": null,
+"type_share": 0.68,
+"front_conf": 0.356,
+"traced": false,
+"dab": 12.82,
+"front_scores": [
+-0.311,
+0.044
+]
+},
+{
+"units": [
+371,
+372
+],
+"c": [
+718.45,
+806.5
+],
+"axis": [
+-0.3511,
+-0.9363
+],
+"front": [
+0.9363,
+-0.3511
+],
+"L": 24.42,
+"D": 18.44,
+"design": "Lavender",
+"beds": null,
+"type_share": 0.75,
+"front_conf": 0.533,
+"traced": false,
+"dab": 12.82,
+"front_scores": [
+0.022,
+-0.511
+]
+},
+{
+"units": [
+373,
+374
+],
+"c": [
+677.55,
+771.25
+],
+"axis": [
+-0.2737,
+-0.9618
+],
+"front": [
+0.9618,
+-0.2737
+],
+"L": 24.36,
+"D": 18.39,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.9,
+"front_conf": 0.111,
+"traced": false,
+"dab": 12.79,
+"front_scores": [
+-0.4,
+-0.511
+]
+},
+{
+"units": [
+375,
+376
+],
+"c": [
+676.86,
+720.17
+],
+"axis": [
+-0.2597,
+-0.9657
+],
+"front": [
+-0.9657,
+0.2597
+],
+"L": 21.77,
+"D": 18.34,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.68,
+"front_conf": 0.082,
+"traced": true,
+"dab": 12.32,
+"front_scores": [
+-0.416,
+-0.333
+]
+},
+{
+"units": [
+377,
+378
+],
+"c": [
+665.19,
+678.49
+],
+"axis": [
+-0.2597,
+-0.9657
+],
+"front": [
+0.9657,
+-0.2597
+],
+"L": 25.3,
+"D": 17.0,
+"design": "Magnolia",
+"beds": null,
+"type_share": 0.84,
+"front_conf": 0.222,
+"traced": true,
+"dab": 12.32,
+"front_scores": [
+-0.067,
+-0.289
+]
+}
+],
+"problems": [
+{
+"pair": [
+21,
+22
+],
+"why": "number not read"
+},
+{
+"pair": [
+27,
+28
+],
+"why": "number not read"
+},
+{
+"pair": [
+35,
+36
+],
+"why": "number not read"
+},
+{
+"pair": [
+41,
+42
+],
+"why": "number not read"
+},
+{
+"pair": [
+43,
+44
+],
+"why": "number not read"
+},
+{
+"pair": [
+55,
+56
+],
+"why": "number not read"
+},
+{
+"pair": [
+57,
+58
+],
+"why": "number not read"
+},
+{
+"pair": [
+61,
+62
+],
+"why": "number not read"
+},
+{
+"pair": [
+63,
+64
+],
+"why": "number not read"
+},
+{
+"pair": [
+65,
+66
+],
+"why": "number not read"
+},
+{
+"pair": [
+67,
+68
+],
+"why": "number not read"
+},
+{
+"pair": [
+69,
+70
+],
+"why": "number not read"
+},
+{
+"pair": [
+71,
+72
+],
+"why": "number not read"
+},
+{
+"pair": [
+73,
+74
+],
+"why": "number not read"
+},
+{
+"pair": [
+75,
+76
+],
+"why": "number not read"
+},
+{
+"pair": [
+77,
+78
+],
+"why": "number not read"
+},
+{
+"pair": [
+79,
+80
+],
+"why": "number not read"
+},
+{
+"pair": [
+81,
+82
+],
+"why": "number not read"
+},
+{
+"pair": [
+83,
+84
+],
+"why": "number not read"
+},
+{
+"pair": [
+85,
+86
+],
+"why": "number not read"
+},
+{
+"pair": [
+87,
+88
+],
+"why": "number not read"
+},
+{
+"pair": [
+89,
+90
+],
+"why": "number not read"
+},
+{
+"pair": [
+99,
+100
+],
+"why": "number not read"
+},
+{
+"pair": [
+101,
+102
+],
+"why": "number not read"
+},
+{
+"pair": [
+103,
+104
+],
+"why": "number not read"
+},
+{
+"pair": [
+105,
+106
+],
+"why": "number not read"
+},
+{
+"pair": [
+107,
+108
+],
+"why": "number not read"
+},
+{
+"pair": [
+109,
+110
+],
+"why": "number not read"
+},
+{
+"pair": [
+111,
+112
+],
+"why": "number not read"
+},
+{
+"pair": [
+113,
+114
+],
+"why": "number not read"
+},
+{
+"pair": [
+117,
+118
+],
+"why": "number not read"
+},
+{
+"pair": [
+119,
+120
+],
+"why": "number not read"
+},
+{
+"pair": [
+137,
+138
+],
+"why": "number not read"
+},
+{
+"pair": [
+141,
+142
+],
+"why": "number not read"
+},
+{
+"pair": [
+143,
+144
+],
+"why": "number not read"
+},
+{
+"pair": [
+145,
+146
+],
+"why": "number not read"
+},
+{
+"pair": [
+147,
+148
+],
+"why": "number not read"
+},
+{
+"pair": [
+149,
+150
+],
+"why": "number not read"
+},
+{
+"pair": [
+155,
+156
+],
+"why": "number not read"
+},
+{
+"pair": [
+157,
+158
+],
+"why": "number not read"
+},
+{
+"pair": [
+161,
+162
+],
+"why": "number not read"
+},
+{
+"pair": [
+163,
+164
+],
+"why": "number not read"
+},
+{
+"pair": [
+165,
+166
+],
+"why": "number not read"
+},
+{
+"pair": [
+167,
+168
+],
+"why": "number not read"
+},
+{
+"pair": [
+177,
+178
+],
+"why": "number not read"
+},
+{
+"pair": [
+179,
+180
+],
+"why": "number not read"
+},
+{
+"pair": [
+181,
+182
+],
+"why": "number not read"
+},
+{
+"pair": [
+217,
+218
+],
+"why": "number not read"
+},
+{
+"pair": [
+259,
+260
+],
+"why": "number not read"
+},
+{
+"pair": [
+265,
+266
+],
+"why": "number not read"
+},
+{
+"pair": [
+267,
+268
+],
+"why": "number not read"
+},
+{
+"pair": [
+281,
+282
+],
+"why": "number not read"
+},
+{
+"pair": [
+285,
+286
+],
+"why": "number not read"
+},
+{
+"pair": [
+287,
+288
+],
+"why": "number not read"
+},
+{
+"pair": [
+295,
+296
+],
+"why": "number not read"
+},
+{
+"pair": [
+297,
+298
+],
+"why": "number not read"
+},
+{
+"pair": [
+303,
+304
+],
+"why": "number not read"
+},
+{
+"pair": [
+305,
+306
+],
+"why": "number not read"
+},
+{
+"pair": [
+309,
+310
+],
+"why": "number not read"
+},
+{
+"pair": [
+311,
+312
+],
+"why": "number not read"
+},
+{
+"pair": [
+319,
+320
+],
+"why": "number not read"
+},
+{
+"pair": [
+321,
+322
+],
+"why": "number not read"
+},
+{
+"pair": [
+323,
+324
+],
+"why": "number not read"
+},
+{
+"pair": [
+327,
+328
+],
+"why": "number not read"
+},
+{
+"pair": [
+361,
+362
+],
+"why": "number not read"
+},
+{
+"pair": [
+363,
+364
+],
+"why": "number not read"
+},
+{
+"pair": [
+367,
+368
+],
+"why": "number not read"
+},
+{
+"pair": [
+3,
+4
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+9,
+10
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+31,
+32
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+37,
+38
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+45,
+46
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+47,
+48
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+49,
+50
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+51,
+52
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+59,
+60
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+91,
+92
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+97,
+98
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+153,
+154
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+159,
+160
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+169,
+170
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+173,
+174
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+183,
+184
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+185,
+186
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+187,
+188
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+189,
+190
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+193,
+194
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+195,
+196
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+221,
+222
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+225,
+226
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+233,
+234
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+255,
+256
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+307,
+308
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+333,
+334
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+337,
+338
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+339,
+340
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+343,
+344
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+345,
+346
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+351,
+352
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+353,
+354
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+355,
+356
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+357,
+358
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+359,
+360
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+369,
+370
+],
+"why": "block outline not traced (pale colour); median block size used"
+},
+{
+"pair": [
+1,
+2
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+15,
+16
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+23,
+24
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+33,
+34
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+53,
+54
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+95,
+96
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+115,
+116
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+151,
+152
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+203,
+204
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+205,
+206
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+209,
+210
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+223,
+224
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+229,
+230
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+235,
+236
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+237,
+238
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+243,
+244
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+247,
+248
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+249,
+250
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+253,
+254
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+283,
+284
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+291,
+292
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+299,
+300
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+313,
+314
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+331,
+332
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+349,
+350
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+365,
+366
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+371,
+372
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+373,
+374
+],
+"why": "block outline merged with a neighbour; median block size used"
+},
+{
+"pair": [
+7,
+8
+],
+"why": "reading lay on another twin (clash); not placed"
+},
+{
+"pair": [
+153,
+154
+],
+"why": "reading lay on another twin (clash); not placed"
+},
+{
+"pair": [
+159,
+160
+],
+"why": "reading lay on another twin (clash); not placed"
+},
+{
+"pair": [
+187,
+188
+],
+"why": "reading lay on another twin (clash); not placed"
+},
+{
+"pair": [
+313,
+314
+],
+"why": "reading lay on another twin (clash); not placed"
+}
+],
+"legend": [
+{
+"design": "Magnolia",
+"beds": null,
+"rgb": [
+157,
+229,
+228
+]
+},
+{
+"design": "Lotus",
+"beds": null,
+"rgb": [
+194,
+181,
+240
+]
+},
+{
+"design": "Lavender",
+"beds": null,
+"rgb": [
+243,
+192,
+248
+]
+}
+],
+"colour_calibration": [
+{
+"legend": "Lavender None BR",
+"printed_lab": [
+212.89999389648438,
+129.10000610351562,
+126.5
+],
+"distance_to_swatch": 32.4,
+"blocks": 58
+},
+{
+"legend": "Lotus None BR",
+"printed_lab": [
+194.10000610351562,
+129.60000610351562,
+123.0999984741211
+],
+"distance_to_swatch": 27.2,
+"blocks": 13
+},
+{
+"legend": "Magnolia None BR",
+"printed_lab": [
+223.3000030517578,
+125.9000015258789,
+127.4000015258789
+],
+"distance_to_swatch": 21.2,
+"blocks": 51
+}
+],
+"partner_inferred": [
+6,
+9,
+16,
+25,
+29,
+40,
+45,
+91,
+95,
+97,
+115,
+126,
+129,
+135,
+151,
+154,
+169,
+171,
+174,
+176,
+185,
+188,
+189,
+196,
+200,
+206,
+220,
+221,
+226,
+233,
+236,
+242,
+247,
+250,
+256,
+258,
+261,
+263,
+269,
+271,
+276,
+277,
+292,
+294,
+299,
+307,
+315,
+325,
+329,
+336,
+339,
+346,
+349,
+355,
+360,
+366,
+369,
+371,
+376
+],
+"misread_dropped": [
+21,
+22,
+25,
+27,
+35,
+36,
+40,
+41,
+42,
+45,
+63,
+64,
+65,
+83,
+84,
+85,
+90,
+95,
+100,
+145,
+146,
+154,
+155,
+185,
+188,
+196,
+200,
+220,
+226,
+265,
+268,
+315,
+349,
+355,
+360,
+366
+],
+"manual_fixes": {},
+"plot_legend": null,
+"plot_colour_calibration": null
+}
