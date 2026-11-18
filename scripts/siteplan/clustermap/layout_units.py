@@ -52,6 +52,7 @@ def main():
     road = ((hsv[..., 1] < 28) & (hsv[..., 2] > 150) & (hsv[..., 2] < 238)).astype(np.uint8)
     green = ((hsv[..., 0] > 30) & (hsv[..., 0] < 90) & (hsv[..., 1] > 50)).astype(np.uint8)
     blue = ((hsv[..., 0] > 90) & (hsv[..., 0] < 130) & (hsv[..., 1] > 50)).astype(np.uint8)
+    plotc = ((((hsv[..., 0] >= 78) & (hsv[..., 0] <= 102) & (hsv[..., 1] >= 45)) | ((hsv[..., 0] >= 15) & (hsv[..., 0] <= 34) & (hsv[..., 1] >= 30) & (hsv[..., 2] >= 200)))).astype(np.uint8)
 
     def frac(mask, x, y, ux, uy, d0, d1, half):
         cnt = tot = 0
@@ -77,6 +78,11 @@ def main():
         # road on which side: road share near the house (0.6-2.2 pitch out), green/water count against
         s1 = frac(road, P[n][0], P[n][1], nx, ny, 0.6 * pitch, 2.2 * pitch, 0.3 * pitch) - 0.5 * frac(green + blue, P[n][0], P[n][1], nx, ny, 0.6 * pitch, 2.2 * pitch, 0.3 * pitch)
         s2 = frac(road, P[n][0], P[n][1], -nx, -ny, 0.6 * pitch, 2.2 * pitch, 0.3 * pitch) - 0.5 * frac(green + blue, P[n][0], P[n][1], -nx, -ny, 0.6 * pitch, 2.2 * pitch, 0.3 * pitch)
+        if os.environ.get('FACE') == 'plot':
+            # villas on coloured plots: the rear garden is plot colour, the front opens onto the road
+            q1 = frac(plotc, P[n][0], P[n][1], nx, ny, 0.45 * pitch, 1.1 * pitch, 0.25 * pitch)
+            q2 = frac(plotc, P[n][0], P[n][1], -nx, -ny, 0.45 * pitch, 1.1 * pitch, 0.25 * pitch)
+            s1, s2 = q2, q1
         f = (nx, ny) if s1 >= s2 else (-nx, -ny)
         units[n] = dict(p=P[n].tolist(), axis=ax.tolist(), front=list(f), conf=round(abs(s1 - s2), 3), interp=n in interp)
     # facing agreement along a row: neighbours in a terrace face the same way

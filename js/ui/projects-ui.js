@@ -286,8 +286,9 @@ export function initProjectsUI(app) {
     ];
     // official home count vs homes in 3D, with where the number comes from
     if (!p.detectedBuildings || in3d) stats.push(official
-      ? ['Homes', `${official.toLocaleString('en-US')}`, fromMap >= official ? 'all placed from the cluster map' : fromMap ? `${fromMap.toLocaleString('en-US')} placed from the cluster map` : 'per cluster map · 3D layout in progress']
-      : ['Homes in 3D', in3d ? in3d.toLocaleString('en-US') : '—', in3d ? 'from satellite · official total awaited' : 'none placed yet']);
+      ? ['Homes', `${official.toLocaleString('en-US')}`, fromMap >= official ? 'all placed from the cluster map' : fromMap ? `${fromMap.toLocaleString('en-US')} placed from the cluster map` : `per cluster map · 3D shows ${p.buildStatus && p.buildStatus.built === false ? 'a sample layout' : 'satellite homes'} for now`]
+      : ['Homes in 3D', in3d ? in3d.toLocaleString('en-US') : '—', !in3d ? 'none placed yet'
+        : p.buildStatus && p.buildStatus.built === false ? 'sample layout, not the real plan · cluster map awaited' : 'from satellite · official total awaited']);
     const near = p.distances || [];
     const lm = p.landmarks || [];
     const fp = p.floorplans || [];

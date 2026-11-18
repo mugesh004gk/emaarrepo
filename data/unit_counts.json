@@ -102,9 +102,9 @@
   "farm-gardens-2": {
    "community": "the-valley",
    "name": "Farm Gardens 2",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 256,
+   "source": "Farm Gardens 2 brochure p.25 cluster map (units 001-256)",
+   "clusterMap": "numbered"
   },
   "the-farm-gardens": {
    "community": "the-valley",
