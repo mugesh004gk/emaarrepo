@@ -775,3 +775,19 @@ body.picker-open .explore-bar { display: none; }
   .explore-bar button { height: 40px; padding: 0 12px; font-size: 12.5px; }
 }
 .hidden#minimap-container, #btn-street-gate.hidden, #btn-enter-nearest-home.hidden { display: none !important; }
+
+/* ---- find a unit (projects placed from a cluster map) ------------------------------------------- */
+.unit-finder { display: grid; gap: 8px; margin: 14px 0 4px; padding: 12px; border: 1px solid var(--line, #e2e8f0); border-radius: 12px; background: var(--surface-2, #f8fafc); }
+.uf-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.uf-head b { font-size: 14px; }
+.uf-head span { font-size: 12px; color: var(--muted, #64748b); }
+.uf-form { display: flex; gap: 8px; }
+.uf-form input { flex: 1; min-width: 0; height: 36px; padding: 0 10px; border: 1px solid var(--line, #cbd5e1); border-radius: 8px; font: inherit; font-variant-numeric: tabular-nums; }
+.uf-msg { margin: 0; font-size: 12px; color: #b45309; }
+.uf-all summary { cursor: pointer; font-size: 12.5px; font-weight: 600; color: var(--accent, #0e8577); }
+.uf-grid { display: grid; gap: 6px; margin-top: 8px; max-height: 260px; overflow: auto; padding-right: 4px; }
+.uf-row { display: flex; flex-wrap: wrap; gap: 3px; padding-bottom: 6px; border-bottom: 1px dashed var(--line, #e2e8f0); }
+.uf-u { min-width: 34px; height: 26px; padding: 0 4px; border: 1px solid transparent; border-radius: 6px; font: 600 11.5px/1 var(--font-ui, system-ui, sans-serif); font-variant-numeric: tabular-nums; cursor: pointer; background: #e2e8f0; color: #1e293b; }
+.uf-u.b3 { background: #d1fae5; } .uf-u.b4 { background: #dbeafe; } .uf-u.b5 { background: #ede9fe; }
+.uf-u:hover { border-color: #0f172a; }
+.uf-u.sel { background: #0f172a; color: #fff; }

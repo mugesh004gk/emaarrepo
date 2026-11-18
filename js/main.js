@@ -306,6 +306,31 @@ async function boot() {
     ...naraEntries.values(),
   ];
   const pickIndex = createPickIndex(pickEntries);
+  // homes numbered from a developer cluster map: project -> unit no. -> pick entry (rows in map order)
+  const mapUnits = new Map();
+  for (const e of pickEntries) {
+    const no = e.home?.unitNo;
+    if (no == null) continue;
+    if (!mapUnits.has(e.project)) mapUnits.set(e.project, new Map());
+    mapUnits.get(e.project).set(no, e);
+  }
+  app.mapUnits = (pid) => {
+    const m = mapUnits.get(pid);
+    if (!m) return null;
+    const rows = new Map();
+    for (const e of m.values()) { const r = e.home.row; if (!rows.has(r)) rows.set(r, []); rows.get(r).push(e.home.unitNo); }
+    const groups = [...rows.values()].map((ns) => ns.sort((a, b) => a - b)).sort((a, b) => a[0] - b[0]);
+    return { count: m.size, groups, beds: (no) => m.get(no)?.home.beds, has: (no) => m.has(no) };
+  };
+  app.selectMapUnit = (pid, no) => {
+    const e = mapUnits.get(pid)?.get(Number(no));
+    if (!e) return false;
+    selectHome(e);
+    const p = new THREE.Vector3(0, 0.5, 0).applyMatrix4(e.matrix);
+    const pose = currentPose();
+    flyTo({ target: panelOffsetTarget(p.setY(2), 110, pose.azimuth), dist: 110, polar: Math.min(pose.polar, 0.95), azimuth: pose.azimuth, duration: 0.9 });
+    return true;
+  };
   state.home = null;
 
   // ---- camera poses & flights -------------------------------------------------------------------
@@ -1018,7 +1043,11 @@ async function boot() {
     const input = document.getElementById('unit-search-input');
     const v = input.value.trim();
     const n = Number(v);
-    if (Number.isInteger(n) && n >= 1 && n <= 372) { openNaraHomes(); selectUnit(n, { flyTo: true }); input.value = ''; input.blur(); }
+    const m = v.match(/^(.*?)[\s#-]*(\d{1,3})$/);
+    const named = m && m[1] ? [...projectsUI.byId.values()].find((p) => p.name.toLowerCase().startsWith(m[1].trim().toLowerCase())) : null;
+    const pid = named ? named.id : state.projectId;
+    if (m && pid && pid !== 'nara' && app.selectMapUnit(pid, Number(m[2]))) { input.value = ''; input.blur(); }
+    else if (Number.isInteger(n) && n >= 1 && n <= 372) { openNaraHomes(); selectUnit(n, { flyTo: true }); input.value = ''; input.blur(); }
     else if (projectsUI.search(v)) input.blur();
   });
   // a project picked from the suggestions goes straight there (no extra Enter / Go)
@@ -1278,9 +1307,9 @@ async function boot() {
     const vis = tagV.z < 1 && Math.abs(tagV.x) < 1.05 && Math.abs(tagV.y) < 1.05;
     elTag.classList.toggle('hidden', !vis);
     if (!vis) return;
-    if (elTag.dataset.for !== String(state.home.unitNo ?? state.home.home?.id ?? '')) {
+    if (elTag.dataset.for !== String(state.home.unitNo ?? (state.home.home?.unitNo != null ? `${state.home.project}#${state.home.home.unitNo}` : state.home.home?.id) ?? '')) {
       const d = describeHome(state.home);
-      elTag.dataset.for = String(state.home.unitNo ?? state.home.home?.id ?? '');
+      elTag.dataset.for = String(state.home.unitNo ?? (state.home.home?.unitNo != null ? `${state.home.project}#${state.home.home.unitNo}` : state.home.home?.id) ?? '');
       elTag.innerHTML = `<b>${escapeHtml(d.short)}</b><span>${escapeHtml(d.title)}</span>`;
     }
     elTag.style.transform = `translate(${Math.round((tagV.x + 1) / 2 * window.innerWidth)}px, ${Math.round((1 - tagV.y) / 2 * window.innerHeight)}px) translate(-50%, -100%)`;

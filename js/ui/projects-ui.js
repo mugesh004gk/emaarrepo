@@ -318,6 +318,7 @@ export function initProjectsUI(app) {
         </div>
         ${p.pinFlag ? `<div class="notice warn"><svg class="icon"><use href="#i-info" /></svg><span>${esc(p.pinFlag.note)} Published pin: ${p.pinFlag.publishedLat.toFixed(5)}, ${p.pinFlag.publishedLng.toFixed(5)}.</span></div>` : ''}
         <div class="key-stats">${stats.map(([l, v, sub]) => `<div class="stat"><span class="stat-label">${l}</span><span class="stat-value${String(v).replace(/<[^>]+>/g, '').length > 8 ? ' sm' : ''}">${v}</span>${sub ? `<span class="stat-sub">${sub}</span>` : ''}</div>`).join('')}</div>
+        ${unitFinder(p)}
         <div class="primary-actions">
           ${p.modelled ? `<div class="action-row">
             <button class="btn btn-primary" data-act="homes" title="List, filter and open any of the 372 Nara homes"><svg class="icon"><use href="#i-search" /></svg>Find a Nara home</button>
@@ -375,6 +376,7 @@ export function initProjectsUI(app) {
     heroImg.addEventListener('click', () => openImages(p.name, gallery, galleryIdx));
     elContent.querySelectorAll('.thumb').forEach((t) => t.addEventListener('click', () => openImages(p.name, gallery, Number(t.dataset.img))));
     elContent.querySelectorAll('.plan-row').forEach((b) => b.addEventListener('click', () => openPdf(`${p.name} · Floor plans · page ${b.dataset.page}`, fp[0].src, Number(b.dataset.page))));
+    wireUnitFinder(elContent);
     elContent.querySelectorAll('[data-act]').forEach((b) => b.addEventListener('click', () => {
       const a = b.dataset.act;
       if (a === 'fly') app.flyToProject(p.id);
@@ -426,6 +428,34 @@ export function initProjectsUI(app) {
     const op = el.querySelector('.ph-open-plans');
     if (op) op.onclick = () => openPdf(`${p.name} · Floor plans`, file.src, file.startPage);
     elContent.scrollTop = 0;
+  }
+
+  // find a unit: number box + every unit of the cluster map, terrace by terrace, as on the map
+  function unitFinder(p) {
+    const mu = app.mapUnits?.(p.id);
+    if (!mu || !mu.count) return '';
+    const total = p.unitCount?.total || mu.count;
+    return `<div class="unit-finder" data-pid="${esc(p.id)}">
+      <div class="uf-head"><b>Find a unit</b><span>${mu.count.toLocaleString('en-US')} of ${total.toLocaleString('en-US')} units numbered as on the cluster map</span></div>
+      <form class="uf-form"><input type="number" inputmode="numeric" min="1" max="${total}" placeholder="Unit no., e.g. ${mu.groups[0]?.[0] ?? 1}" aria-label="Unit number" /><button type="submit" class="btn btn-primary">Go</button></form>
+      <p class="uf-msg" hidden></p>
+      <details class="uf-all"><summary>All units, terrace by terrace</summary>
+        <div class="uf-grid">${mu.groups.map((g) => `<div class="uf-row" title="Units ${g[0]}–${g[g.length - 1]}">${g.map((n) => `<button type="button" class="uf-u b${Math.min(5, mu.beds(n) || 3)}" data-no="${n}">${n}</button>`).join('')}</div>`).join('')}</div>
+      </details>
+    </div>`;
+  }
+  function wireUnitFinder(root) {
+    const uf = root.querySelector('.unit-finder');
+    if (!uf) return;
+    const pid = uf.dataset.pid, msg = uf.querySelector('.uf-msg');
+    const go = (no) => {
+      const ok = app.selectMapUnit?.(pid, no);
+      msg.hidden = ok; if (!ok) msg.textContent = `Unit ${no} is not in the 3D yet (not placed from the map).`;
+      uf.querySelectorAll('.uf-u.sel').forEach((b) => b.classList.remove('sel'));
+      if (ok) uf.querySelector(`.uf-u[data-no="${no}"]`)?.classList.add('sel');
+    };
+    uf.querySelector('.uf-form').onsubmit = (e) => { e.preventDefault(); const v = Number(e.target.querySelector('input').value); if (v) go(v); };
+    uf.querySelectorAll('.uf-u').forEach((b) => (b.onclick = () => go(Number(b.dataset.no))));
   }
 
   // a home placed from the developer's cluster map: its unit number; floor plans of the project
