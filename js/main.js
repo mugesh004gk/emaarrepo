@@ -256,8 +256,12 @@ async function boot() {
   // homes actually standing in 3D per project (after the road / overlap checks), for the project panel
   if (valleyDetail) {
     const placed = new Map();
-    for (const u of valleyDetail.units) placed.set(u.project, (placed.get(u.project) || 0) + 1);
-    for (const c of communities) for (const p of c.projects) if (!p.modelled && placed.has(p.id)) p.homesPlaced = placed.get(p.id);
+    const fromMap = new Map();
+    for (const u of valleyDetail.units) {
+      placed.set(u.project, (placed.get(u.project) || 0) + 1);
+      if (u.row.placement === 'verified-siteplan') fromMap.set(u.project, (fromMap.get(u.project) || 0) + 1);
+    }
+    for (const c of communities) for (const p of c.projects) if (!p.modelled && placed.has(p.id)) { p.homesPlaced = placed.get(p.id); p.mapPlaced = fromMap.get(p.id) || 0; }
   }
   // official unit numbers (from the developer's cluster map) on the houses when close
   if (valleyDetail) {
@@ -1144,6 +1148,10 @@ async function boot() {
       return { title: `Nara · Unit ${e.unitNo}`, line: `${e.beds} bedroom townhouse · ${e.design} ${e.plan}`, short: `Unit ${e.unitNo}`, color: BED_COLORS_JS[e.beds] };
     }
     const h = e.home;
+    if (h.unitPlan && !h.unitPlan.design) {
+      const n = h.row?.units || 1;
+      return { title: `${name} · Unit ${h.unitPlan.no}`, line: `${h.beds} bedroom ${h.kind === 'villa' ? 'villa' : n > 1 ? 'townhouse' : 'home'} · cluster map unit ${h.unitPlan.no}`, short: `Unit ${h.unitPlan.no}`, color: BED_COLORS_JS[Math.min(6, h.beds)] };
+    }
     if (h.unitPlan) {
       const up = h.unitPlan;
       return { title: `${name} · Unit ${up.no}`, line: `${up.beds} bedroom ${up.design} ${up.plan} · ${up.position} unit`, short: `Unit ${up.no}`, color: BED_COLORS_JS[Math.min(6, up.beds)] };

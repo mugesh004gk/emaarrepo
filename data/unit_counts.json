@@ -109,23 +109,23 @@
   "the-farm-gardens": {
    "community": "the-valley",
    "name": "THE FARM GARDENS",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 146,
+   "source": "FARM-GARDENS_brochure.pdf p.24 cluster map (units 1-146)",
+   "clusterMap": "numbered"
   },
   "alana": {
    "community": "the-valley",
    "name": "Alana",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 322,
+   "source": "Alana brochure p.16 cluster map (units 1-322)",
+   "clusterMap": "numbered"
   },
   "orania-at-the-valley": {
    "community": "the-valley",
    "name": "ORANIA",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 308,
+   "source": "ORANIA_brochure.pdf p.19 cluster map (units 1-308)",
+   "clusterMap": "numbered"
   },
   "talia": {
    "community": "the-valley",
@@ -158,9 +158,9 @@
   "rivana": {
    "community": "the-valley",
    "name": "Rivana",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 486,
+   "source": "Rivana brochure p.8 cluster map (units 1-486)",
+   "clusterMap": "numbered"
   },
   "elora": {
    "community": "the-valley",

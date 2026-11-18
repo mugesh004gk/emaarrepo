@@ -275,6 +275,7 @@ export function initProjectsUI(app) {
     const sizes = p.figures?.Sizes;
     const in3d = p.modelled ? 372 : p.homesPlaced ?? p.detectedHomes ?? 0;
     const official = p.unitCount?.total ?? null;
+    const fromMap = p.modelled ? 372 : p.mapPlaced || 0;
     const stats = [
       ['Bedrooms', `${esc(p.bedsLabel || '—')}`, bedRange(p).length ? `<span class="pin-beds big">${bedSwatches(p)}</span>` : ''],
       ['Price from', p.priceFrom ? formatAED(p.priceFrom) : 'On request', p.priceFrom ? formatAED(p.priceFrom, false) : 'ask Emaar'],
@@ -285,7 +286,7 @@ export function initProjectsUI(app) {
     ];
     // official home count vs homes in 3D, with where the number comes from
     if (!p.detectedBuildings || in3d) stats.push(official
-      ? ['Homes', `${official.toLocaleString('en-US')}`, in3d === official ? 'all placed from the cluster map' : `${in3d.toLocaleString('en-US')} in 3D`]
+      ? ['Homes', `${official.toLocaleString('en-US')}`, fromMap >= official ? 'all placed from the cluster map' : fromMap ? `${fromMap.toLocaleString('en-US')} placed from the cluster map` : 'per cluster map · 3D layout in progress']
       : ['Homes in 3D', in3d ? in3d.toLocaleString('en-US') : '—', in3d ? 'from satellite · official total awaited' : 'none placed yet']);
     const near = p.distances || [];
     const lm = p.landmarks || [];
@@ -311,7 +312,7 @@ export function initProjectsUI(app) {
           <h2>${esc(p.name)}</h2>
           <div class="unit-badge-row">
             ${p.unitsLeft > 0 ? `<span class="badge st-badge st-available">${p.unitsLeft} for sale</span>` : st === 'new' ? `<span class="badge st-badge st-new">New launch</span>` : ''}
-            ${in3d || p.detectedBuildings ? `<span class="badge badge-3d">${in3d ? `${in3d.toLocaleString('en-US')}${official ? ` of ${official.toLocaleString('en-US')}` : ''} homes in 3D` : `${p.detectedBuildings} buildings in 3D`}</span>` : ''}
+            ${in3d || p.detectedBuildings ? `<span class="badge badge-3d">${in3d ? `${in3d.toLocaleString('en-US')}${official && fromMap ? ` of ${official.toLocaleString('en-US')}` : ''} homes in 3D` : `${p.detectedBuildings} buildings in 3D`}</span>` : ''}
           </div>
         </div>
         ${p.pinFlag ? `<div class="notice warn"><svg class="icon"><use href="#i-info" /></svg><span>${esc(p.pinFlag.note)} Published pin: ${p.pinFlag.publishedLat.toFixed(5)}, ${p.pinFlag.publishedLng.toFixed(5)}.</span></div>` : ''}
@@ -395,7 +396,8 @@ export function initProjectsUI(app) {
     const p = byId.get(h.project);
     const fp = app.floorplans?.[p.id];
     const file = p.floorplans?.[0];
-    if (h.unitPlan) { showUnit(el, h, d, p, file); return; }
+    if (h.unitPlan && h.unitPlan.design) { showUnit(el, h, d, p, file); return; }
+    if (h.unitPlan) { showMapUnit(el, h, d, p, file); return; }
     const plans = (fp?.plans || []).map((pl) => ({ pl, area: planArea(pl) })).filter((x) => x.area && !h.apartment && x.pl.beds === h.beds);
     const facts = h.apartment
       ? [['Bedrooms', `${esc(p.bedsLabel || '—')} BR`, 'per project'], ['Height', `G+P+${h.row?.storeys ?? 8}`, h.row?.storeysPrinted ? 'as printed' : 'representative']]
@@ -420,6 +422,31 @@ export function initProjectsUI(app) {
     el.classList.remove('hidden');
     el.querySelector('.ph-clear').onclick = () => app.clearHome?.();
     el.querySelectorAll('.ph-plan').forEach((b) => (b.onclick = () => openPdf(`${p.name} · Floor plans · page ${b.dataset.page}`, file.src, Number(b.dataset.page))));
+    const op = el.querySelector('.ph-open-plans');
+    if (op) op.onclick = () => openPdf(`${p.name} · Floor plans`, file.src, file.startPage);
+    elContent.scrollTop = 0;
+  }
+
+  // a home placed from the developer's cluster map: its unit number; floor plans of the project
+  function showMapUnit(el, h, d, p, file) {
+    const no = h.unitPlan.no;
+    const total = p.unitCount?.total;
+    el.innerHTML = `
+      <div class="ph-head">
+        <span class="ph-eyebrow"><i style="background:${d.color || '#999'}"></i>Selected home</span>
+        <button type="button" class="btn-text ph-clear" title="Clear the selection (Esc)">Clear</button>
+      </div>
+      <h3 class="ph-title">Unit ${esc(String(no))}</h3>
+      <p class="ph-sub">in <b>${esc(p.name)}</b> · ${esc(communities.find((c) => c.id === p.communityId)?.name || '')}</p>
+      <div class="ph-facts">
+        <div><span>Unit</span><b>${esc(String(no))}</b><small>${total ? `of ${total}` : 'cluster map'}</small></div>
+        <div><span>Home</span><b>${h.kind === 'villa' ? 'Villa' : 'Townhouse'}</b><small>${esc((p.bedsLabel || '') + ' BR in project')}</small></div>
+        <div><span>Price from</span><b>${p.priceFrom ? formatAED(p.priceFrom) : 'On request'}</b><small>project</small></div>
+      </div>
+      ${file ? `<button type="button" class="btn btn-primary btn-block ph-open-plans"><svg class="icon"><use href="#i-plan" /></svg>Open the ${esc(p.name)} floor plans</button>` : ''}
+      <p class="ph-note">Placed and numbered from Emaar's ${esc(p.name)} cluster map. The floor plan of each unit number will be linked when Emaar's unit list is available.</p>`;
+    el.classList.remove('hidden');
+    el.querySelector('.ph-clear').onclick = () => app.clearHome?.();
     const op = el.querySelector('.ph-open-plans');
     if (op) op.onclick = () => openPdf(`${p.name} · Floor plans`, file.src, file.startPage);
     elContent.scrollTop = 0;

@@ -60,7 +60,7 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
   const cars = createCarTemplates(mats);
 
   // ---- 1. variant templates: house shell + plot, merged per material in the unit frame ------------
-  let droppedOverlaps = 0, gardensTrimmed = 0, slid = 0;
+  let droppedOverlaps = 0, gardensTrimmed = 0, slid = 0, steppedBack = 0;
   const flagged = []; // homes on official plots that need a look (on a road / touching), never moved
   const variants = []; // { key, plan, pdata, perMat: Map(matKey -> {material, geometry, cast, receive}) }
   const variantIndex = new Map(); // `${planKey}#${k}` -> variant
@@ -229,8 +229,22 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
     for (const list of byRow.values()) {
       if (!list.some((u) => plotHits(u, 0))) continue;
       if (list[0].row.placement === 'verified-siteplan') {
-        // a home on its official plot is never moved: flag it for review instead
-        for (const u of list) if (plotHits(u, 0)) flagged.push({ why: 'road', project: u.project, block: u.row.block, pos: [+u.pos.x.toFixed(1), +u.pos.z.toFixed(1)] });
+        // a row from an official plan keeps its line: it may step back as one (up to 4 m) into its own rear
+        // garden, which it then gives up (compact model); a home that still reaches a road is listed for review
+        let b = 0.5;
+        while (b <= 4 && list.some((u) => plotHits(u, b))) b += 0.5;
+        if (b > 4) {
+          for (const u of list) if (plotHits(u, 0)) flagged.push({ why: 'road', project: u.project, block: u.row.block, pos: [+u.pos.x.toFixed(1), +u.pos.z.toFixed(1)] });
+          continue;
+        }
+        const shv = new THREE.Matrix4();
+        for (const u of list) {
+          shv.makeTranslation(-u.fdir.x * b, 0, -u.fdir.z * b);
+          u.matrix.premultiply(shv); u.overlayMatrix.premultiply(shv);
+          u.pos.addScaledVector(u.fdir, -b); u.cell = cellKey(u.pos.x, u.pos.z);
+          if (!u.variant.key.endsWith('c')) u.variant = variantIndex.get(u.variant.key + 'c') || u.variant;
+          steppedBack++;
+        }
         continue;
       }
       let back = 0.5;
@@ -666,7 +680,7 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
     collide,
     unitFromHit: (hit) => hit.object.userData.units?.[hit.instanceId ?? hit.batchId],
     communityId,
-    get stats() { return { community: communityId, units: units.length, droppedOverlaps, gardensTrimmed, slid, verified: units.filter((u) => u.row.placement === 'verified-siteplan').length, flagged, offRoad, droppedOnRoad, variants: variants.length, batches: batches.length, cells: cells.size, nearCells: nearCount, streets: streets.length }; },
+    get stats() { return { community: communityId, units: units.length, droppedOverlaps, gardensTrimmed, slid, steppedBack, verified: units.filter((u) => u.row.placement === 'verified-siteplan').length, flagged, offRoad, droppedOnRoad, variants: variants.length, batches: batches.length, cells: cells.size, nearCells: nearCount, streets: streets.length }; },
   };
 }
 
