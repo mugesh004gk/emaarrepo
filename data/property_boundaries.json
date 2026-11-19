@@ -1272,100 +1272,176 @@
    "community": "the-valley",
    "boundary": [
     [
-     55.443638,
-     25.0017841
+     55.4379525,
+     25.0018722
     ],
     [
-     55.4416282,
-     25.0048323
+     55.4412462,
+     25.0001394
     ],
     [
-     55.4414964,
-     25.0049357
+     55.4414012,
+     25.0000784
     ],
     [
-     55.4412409,
-     25.0051139
+     55.4415533,
+     25.0000293
     ],
     [
-     55.4409815,
-     25.0052664
+     55.4418524,
+     24.999968
     ],
     [
-     55.4406171,
-     25.0053457
+     55.4421734,
+     24.9999764
     ],
     [
-     55.4403719,
-     25.0053399
+     55.4424908,
+     25.0000111
     ],
     [
-     55.4402093,
-     25.0053147
+     55.4427871,
+     25.0001162
     ],
     [
-     55.4398875,
-     25.00525
+     55.4429955,
+     25.0002936
     ],
     [
-     55.4381019,
-     25.0041391
+     55.4432086,
+     25.0005153
     ],
     [
-     55.4375848,
-     25.003641
+     55.4433632,
+     25.0007411
     ],
     [
-     55.4374541,
-     25.0033705
+     55.4435252,
+     25.0010184
     ],
     [
-     55.437396,
-     25.0032297
+     55.4435968,
+     25.001299
     ],
     [
-     55.4376341,
-     25.0021468
+     55.4436284,
+     25.0014555
     ],
     [
-     55.4377373,
-     25.0020251
+     55.4436134,
+     25.0018055
     ],
     [
-     55.4378588,
-     25.001919
+     55.4435979,
+     25.0019486
     ],
     [
-     55.4379782,
-     25.0018181
+     55.4435671,
+     25.0020934
     ],
     [
-     55.4382749,
-     25.0016628
+     55.4434653,
+     25.0023766
     ],
     [
-     55.4421052,
-     25.0003171
+     55.4434095,
+     25.0025157
     ],
     [
-     55.4422645,
-     25.0002939
+     55.4432396,
+     25.0028118
     ],
     [
-     55.4428909,
-     25.0006313
+     55.4431421,
+     25.0029398
     ],
     [
-     55.4435278,
-     25.0010163
+     55.4415532,
+     25.0048381
     ],
     [
-     55.4435825,
-     25.0013007
+     55.4414403,
+     25.0049479
     ],
     [
-     55.4436091,
-     25.0014478
+     55.4413349,
+     25.0050413
+    ],
+    [
+     55.4412032,
+     25.005133
+    ],
+    [
+     55.44106,
+     25.0052122
+    ],
+    [
+     55.4406855,
+     25.0053176
+    ],
+    [
+     55.4405241,
+     25.005337
+    ],
+    [
+     55.4403428,
+     25.0053446
+    ],
+    [
+     55.4401707,
+     25.005316
+    ],
+    [
+     55.4398637,
+     25.0052137
+    ],
+    [
+     55.4396564,
+     25.0051395
+    ],
+    [
+     55.4381128,
+     25.004136
+    ],
+    [
+     55.4378376,
+     25.0039458
+    ],
+    [
+     55.4375918,
+     25.0036481
+    ],
+    [
+     55.4374517,
+     25.0033806
+    ],
+    [
+     55.4373812,
+     25.0030887
+    ],
+    [
+     55.4373729,
+     25.0029449
+    ],
+    [
+     55.4373759,
+     25.0027932
+    ],
+    [
+     55.4374108,
+     25.0026436
+    ],
+    [
+     55.4374872,
+     25.0024254
+    ],
+    [
+     55.4376276,
+     25.0021761
+    ],
+    [
+     55.4377276,
+     25.0020566
     ]
    ],
    "boundaryMethod": "Outline around the placed villas + 20 m",
@@ -1373,25 +1449,25 @@
     "kind": "masterplan",
     "text": "Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)"
    },
-   "placementDetail": "4 matching points between the Rivera cluster map and the heart-shaped Rivera on the Valley masterplan (entrance road, west edge, top of the west lobe, south tip; similarity fit, residual 9.9 masterplan px); masterplan fitted to the placed homes (corr 0.32)",
+   "placementDetail": "4 matching points between the Rivera cluster map and the heart-shaped Rivera on the Valley masterplan (entrance road, west edge, top of the west lobe, south tip; similarity fit, residual 9.9 masterplan px); masterplan fitted to the placed homes (corr 0.32); carried over to the agent-pack map RIVERA_TV_CLUSTER_MAP.pdf through the 175 unit numbers shared with the client image (similarity fit, median residual 0.37 px)",
    "clusterMap": {
-    "document": "rivera_cluster_map_client.png",
+    "document": "RIVERA_TV_CLUSTER_MAP.pdf",
     "page": 1,
     "image": "media/research/the-valley/properties/rivera-at-the-valley-phase-2/clustermap/rivera_cluster_map_client.png"
    },
    "units": {
     "official": 378,
-    "placed": 234,
-    "numbered": 234,
-    "missingNumbers": 144
+    "placed": 378,
+    "numbered": 378,
+    "missingNumbers": 0
    },
    "floorPlan": {
     "document": "RIVERA_floorplan.pdf",
     "url": "media/research/the-valley/properties/rivera-at-the-valley-phase-2/floorplans/RIVERA_floorplan.pdf",
-    "linkedUnits": 234,
-    "note": "144 homes not placed yet (the full numbered map has now arrived in the agent pack)"
+    "linkedUnits": 378,
+    "note": null
    },
-   "status": "partial",
+   "status": "complete",
    "ddaBoundary": null,
    "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
   }

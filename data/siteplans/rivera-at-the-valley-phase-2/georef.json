@@ -1,20 +1,20 @@
 {
- "image": "rivera_cluster_map_client.png",
+ "image": "RIVERA_TV_CLUSTER_MAP.pdf",
  "lat0": 25.006,
  "lng0": 55.447,
  "A": [
   [
-   0.548947,
-   0.369272,
-   -1191.591747
+   0.77141,
+   0.519055,
+   -1191.428923
   ],
   [
-   0.369272,
-   -0.548947,
-   -307.119322
+   0.519055,
+   -0.77141,
+   -307.436778
   ]
  ],
- "scale_m_per_px": 0.6616,
- "method": "4 matching points between the Rivera cluster map and the heart-shaped Rivera on the Valley masterplan (entrance road, west edge, top of the west lobe, south tip; similarity fit, residual 9.9 masterplan px); masterplan fitted to the placed homes (corr 0.32)",
+ "scale_m_per_px": 0.92978,
+ "method": "4 matching points between the Rivera cluster map and the heart-shaped Rivera on the Valley masterplan (entrance road, west edge, top of the west lobe, south tip; similarity fit, residual 9.9 masterplan px); masterplan fitted to the placed homes (corr 0.32); carried over to the agent-pack map RIVERA_TV_CLUSTER_MAP.pdf through the 175 unit numbers shared with the client image (similarity fit, median residual 0.37 px)",
  "accuracy": "provisional: Rivera is not built yet; position from the masterplan (graded heart-shaped site visible in the satellite photo), estimated within about 30-50 m"
 }

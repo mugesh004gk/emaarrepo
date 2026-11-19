@@ -212,30 +212,58 @@ def main():
     plot_calib = None
     if plot_leg:
         PL = np.array([lab_of(x['rgb']) for x in plot_leg])
-        rc = []
+        g_lo, g_hi = cfg.get('plot_tree_hue', [35, 95])  # trees and lawns left out of the plot colour (OpenCV hue)
+        rc, samples = [], []
         for bk in blocks:
             c = np.array(bk['c']); half = max(bk['L'], bk['D']) / 2
             got = []
-            for ang in np.linspace(0, 2 * np.pi, 48, endpoint=False):
-                for rr in np.linspace(half + 1.5, half + 0.22 * pitch, 4):
-                    q = c + rr * np.array([np.cos(ang), np.sin(ang)])
+            if cfg.get('plot_sample') == 'front_back':
+                # only in front of and behind the house, within its own width: on curved rows the plots are narrow
+                # wedges side by side, so a ring around the house reaches into the neighbours' plots
+                ax_ = np.array(bk['axis']); nn_ = np.array([-ax_[1], ax_[0]])
+                pts_ = [c + sd * nn_ * (bk['D'] / 2 + dd) + ax_ * t * bk['L'] / 2
+                        for sd in (-1, 1) for dd in np.linspace(1.0, 0.45 * pitch, 6) for t in np.linspace(-0.7, 0.7, 8)]
+            else:
+                pts_ = [c + rr * np.array([np.cos(ang), np.sin(ang)])
+                        for ang in np.linspace(0, 2 * np.pi, 48, endpoint=False) for rr in np.linspace(half + 1.5, half + 0.22 * pitch, 4)]
+            for q in pts_:
+                if True:
                     x, y = int(q[0] * k), int(q[1] * k)
                     if 0 <= x < W and 0 <= y < H:
                         hh = hsv[y, x]
-                        if hh[1] > 15 and hh[2] > 120 and not (35 < hh[0] < 95 and hh[1] > 60):
+                        if hh[1] > 15 and hh[2] > 120 and not (g_lo < hh[0] < g_hi and hh[1] > 60):
                             got.append(lab[y, x])
             rc.append(np.median(got, 0) if len(got) > 10 else None)
+            samples.append(np.float32(got))
         ok = [i for i, c in enumerate(rc) if c is not None]
         Zp = np.float32([rc[i] for i in ok])
         _, lp, cp = cv2.kmeans(Zp, len(PL), None, (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.2), 20, cv2.KMEANS_PP_CENTERS)
         r2, c2 = linear_sum_assignment(np.linalg.norm(cp[:, None, :] - PL[None, :, :], axis=2))
         m2 = dict(zip(r2, c2))
-        for i, c in zip(ok, lp.ravel()):
-            blocks[i]['beds'] = plot_leg[m2[c]]['beds']
+        labels = dict(zip(ok, lp.ravel()))
+        if cfg.get('plot_vote'):
+            # each sampled pixel votes for the nearest calibrated plot colour (within plot_vote units): a plot that
+            # borders another style's plot is not averaged with it (the median would fall between the two)
+            for i in ok:
+                dd = np.linalg.norm(samples[i][:, None, :] - cp[None, :, :], axis=2)
+                near = dd.argmin(1)[dd.min(1) < cfg['plot_vote']]
+                if len(near) >= 8:
+                    cnt = np.bincount(near, minlength=len(cp))
+                    labels[i] = int(cnt.argmax()); blocks[i]['plot_share'] = round(float(cnt.max() / cnt.sum()), 2)
+        for i, c in labels.items():
+            x = plot_leg[m2[c]]
+            if 'beds' in x:
+                blocks[i]['beds'] = x['beds']
+            if 'design' in x:  # maps whose houses are drawn white and the style is the plot colour (Rivera agent-pack map)
+                blocks[i]['design'] = x['design']
         for i in range(len(blocks)):
             if rc[i] is None:
-                blocks[i]['beds'] = None; problems.append({'pair': blocks[i]['units'], 'why': 'plot colour not read'})
-        plot_calib = [{'legend': f"{plot_leg[m2[c]]['beds']} BR", 'printed_lab': cp[c].round(1).tolist(),
+                if any('beds' in x for x in plot_leg):
+                    blocks[i]['beds'] = None
+                if any('design' in x for x in plot_leg):
+                    blocks[i]['design'] = None
+                problems.append({'pair': blocks[i]['units'], 'why': 'plot colour not read'})
+        plot_calib = [{'legend': ' '.join(str(v) for v in (plot_leg[m2[c]].get('design'), f"{plot_leg[m2[c]]['beds']} BR" if 'beds' in plot_leg[m2[c]] else None) if v), 'printed_lab': cp[c].round(1).tolist(),
                        'distance_to_swatch': round(float(np.linalg.norm(cp[c] - PL[m2[c]])), 1), 'blocks': int((lp == c).sum())} for c in range(len(PL))]
     # blocks whose outline was not traced: the median size of the traced blocks (relative to the number
     # spacing), centred on the pair; facing as measured

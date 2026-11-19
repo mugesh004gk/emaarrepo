@@ -31,8 +31,8 @@
    ]
   }
  ],
- "note": "Rivera cluster map shared by the client (homeland.ae copy, 1920 x 1183 px, watermarked): styles Magnolia (teal) / Lotus (purple) / Lavender (pink); the map gives no bedroom count per unit. Twin villas (2k-1, 2k).",
- "pitch": 19.32,
+ "note": "Rivera cluster map from the client's agent pack (RIVERA_TV_CLUSTER_MAP.pdf, unit numbers 1-378 as PDF text): styles Magnolia (teal) / Lotus (purple) / Lavender (pink); the map gives no bedroom count per unit. Twin villas (2k-1, 2k). Earlier built from the client's homeland.ae image (234 legible).",
+ "pitch": 13.75,
  "plans_by_design": {
   "Magnolia": {
    "beds": 4,
@@ -60,5 +60,39 @@
   }
  },
  "plans_note": "RIVERA_floorplan.pdf: all homes 4 bedrooms; one plan per style, A and B are the two halves of a twin (p.2-3 Magnolia, 4-5 Lotus, 6-7 Lavender - the last two sheets carry no style name, Lavender by order); TOTAL AREA",
- "clash": 1.0
+ "clash": 1.0,
+ "plot_legend": [
+  {
+   "design": "Magnolia",
+   "rgb": [
+    157,
+    229,
+    228
+   ]
+  },
+  {
+   "design": "Lotus",
+   "rgb": [
+    194,
+    181,
+    240
+   ]
+  },
+  {
+   "design": "Lavender",
+   "rgb": [
+    243,
+    192,
+    248
+   ]
+  }
+ ],
+ "plot_legend_note": "agent-pack map: houses are drawn white, the style is the colour of the plot around them (legend Magnolia / Lotus / Lavender)",
+ "plot_tree_hue": [
+  30,
+  80
+ ],
+ "plot_tree_hue_note": "trees hue 31-60, the Magnolia (teal) plots hue 89: keep teal",
+ "plot_vote": 18,
+ "plot_sample": "front_back"
 }

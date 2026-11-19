@@ -25,7 +25,6 @@ FLOOR_NOTES = {
     'farm-gardens-2': 'broker copy of the Emaar floor plans; which villa uses the mirrored sheet is not stated',
     'the-farm-gardens': 'floor plan by bedroom count; which villas use the mirrored plan is not stated',
     'elea-at-the-valley': '10 homes without a plan: bedroom count to confirm (34, 35, 50, 51, 54, 55, 58, 59, 94, 110)',
-    'rivera-at-the-valley-phase-2': '144 homes not placed yet (the full numbered map has now arrived in the agent pack)',
 }
 
 
