@@ -13,6 +13,7 @@ Output: data/siteplans/<project>/plans.json
 import json, os, re, subprocess, sys
 
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+POS_SPACED = re.compile(r'(?<![\d.])(\d(?: ?\d)?)\s*P\s*L\s*E\s*X\s*(\d)?\s*-\s*T\s*H\s*(\d\s?\d?)\s+(\d[\d ]*\.\s?\d[\d ]*?)\s*S\s*Q\s*\.?\s*F\s*T\s*(\d[\d ]*\.\s?\d[\d ]*?)\s*S\s*Q')
 POS = re.compile(r'(\d+)\s*PLEX\s*(\d)?\s*-\s*TH\s*(\d+)\s+([\d.]+)\s*S\s*Q\s*F\s*T\s*([\d.]+)\s*S\s*Q\s*M')
 
 
@@ -54,6 +55,15 @@ def main():
             for x in POS.finditer(t):
                 plex = x.group(1) + (f'.{x.group(2)}' if x.group(2) else '')
                 pos.setdefault(f'{plex}-{int(x.group(3))}', (float(x.group(4)), float(x.group(5))))
+            # sheets whose text is set letter by letter ('1 0 P L E X - T H 02 186 4.20 S Q FT 1 73.1 9 SQM', Talia)
+            for x in POS_SPACED.finditer(t):
+                g = [re.sub(r'\s+', '', v) if v else v for v in x.groups()]
+                try:
+                    plex = str(int(g[0])) + (f'.{g[1]}' if g[1] else ''); sqft, sqm = float(g[3]), float(g[4])
+                except ValueError:
+                    continue
+                if 2 <= int(g[0]) <= 12 and 500 < sqft < 20000 and abs(sqft * 0.09290304 - sqm) < 1.5:
+                    pos.setdefault(f'{plex}-{int(g[2])}', (sqft, sqm))
         pages[pg] = {'design': design, 'beds': beds, 'plan': letter, 'mirrored': mirrored, 'positions': sorted(pos)}
         for k, (sqft, sqm) in pos.items():
             if k in table.get(design, {}):

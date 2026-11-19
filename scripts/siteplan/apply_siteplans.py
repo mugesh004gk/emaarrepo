@@ -144,6 +144,24 @@ def main():
         site['communities'][cid]['streets'] = kept + new
         print(f"{cid}/{pid}: rows {removed} detected inside the plan -> {len(sp['rows'])} from the site plan; {untagged} rows outside it untagged (kept) ({sum(r['units'] for r in sp['rows'])} homes); "
               f"streets: {replaced} mapped replaced by {len(new)} plan centre lines ({joined} ends joined), {dropped_derived} derived removed")
+    # derived access streets that no longer serve a home (their homes were replaced by a cluster map placed
+    # elsewhere, e.g. a sample layout of an unbuilt project): dropped in the communities with traced plans
+    for cid in {sp['community'] for sp in plans if sp['community'] == 'the-valley'}:
+        KX = 111320.0 * math.cos(math.radians(25.0))
+        homes = [(r['lng'] * KX, r['lat'] * KY) for r in hd['communities'][cid]]
+        kept, orphan = [], 0
+        for st_ in site['communities'][cid]['streets']:
+            if st_.get('source') == 'derived':
+                P = [(lo * KX, la * KY) for lo, la in st_['pts']]
+                samp = [(P[i][0] + (P[i + 1][0] - P[i][0]) * t, P[i][1] + (P[i + 1][1] - P[i][1]) * t)
+                        for i in range(len(P) - 1) for t in (0, 0.2, 0.4, 0.6, 0.8, 1.0)]
+                ds = sorted(min(math.hypot(x - hx, y - hy) for hx, hy in homes) for x, y in samp)
+                if ds[len(ds) // 2] > 45:
+                    orphan += 1
+                    continue
+            kept.append(st_)
+        site['communities'][cid]['streets'] = kept
+        print(f'{cid}: {orphan} derived streets without a home within 45 m removed')
     # provenance labels and counts
     prov = {}
     for cid, rows in hd['communities'].items():

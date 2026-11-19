@@ -1,0 +1,385 @@
+{
+ "Cyrus": {
+  "4-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2097.03,
+   "sqm": 194.82
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 3,
+   "sqft": 2099.61,
+   "sqm": 195.06
+  },
+  "4-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2217.37,
+   "sqm": 206.0
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2247.72,
+   "sqm": 208.82
+  }
+ },
+ "Elio": {
+  "8-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 1864.2,
+   "sqm": 173.19
+  },
+  "8-4": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 1864.85,
+   "sqm": 173.25
+  },
+  "8-6": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 1864.2,
+   "sqm": 173.19
+  },
+  "10-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 1890.47,
+   "sqm": 175.63
+  },
+  "10-4": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 1897.03,
+   "sqm": 176.24
+  },
+  "10-8": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 1891.33,
+   "sqm": 175.71
+  },
+  "8-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 1864.63,
+   "sqm": 173.23
+  },
+  "8-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 1865.71,
+   "sqm": 173.33
+  },
+  "8-7": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 1862.37,
+   "sqm": 173.02
+  },
+  "10-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 1895.42,
+   "sqm": 176.09
+  },
+  "10-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 1920.82,
+   "sqm": 178.45
+  },
+  "10-9": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 1891.11,
+   "sqm": 175.69
+  },
+  "8-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 8,
+   "sqft": 2210.05,
+   "sqm": 205.32
+  },
+  "8-8": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 9,
+   "sqft": 2209.83,
+   "sqm": 205.3
+  }
+ },
+ "Pharo": {
+  "10-6": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 10,
+   "sqft": 2089.71,
+   "sqm": 194.14
+  },
+  "10-7": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 11,
+   "sqft": 2063.76,
+   "sqm": 191.73
+  },
+  "6-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 12,
+   "sqft": 2035.24,
+   "sqm": 189.08
+  },
+  "6-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 12,
+   "sqft": 2039.22,
+   "sqm": 189.45
+  },
+  "6-2": {
+   "beds": 3,
+   "plan": "C",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2040.19,
+   "sqm": 189.54
+  },
+  "6-4": {
+   "beds": 3,
+   "plan": "C",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2036.42,
+   "sqm": 189.19
+  },
+  "6-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 14,
+   "sqft": 2186.58,
+   "sqm": 203.14
+  },
+  "10-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 14,
+   "sqft": 2187.23,
+   "sqm": 203.2
+  },
+  "10-10": {
+   "beds": 4,
+   "plan": "D",
+   "mirrored": false,
+   "page": 15,
+   "sqft": 2189.06,
+   "sqm": 203.37
+  },
+  "6-6": {
+   "beds": 4,
+   "plan": "E",
+   "mirrored": false,
+   "page": 16,
+   "sqft": 2188.95,
+   "sqm": 203.36
+  }
+ },
+ "_pages": {
+  "2": {
+   "design": "Cyrus",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "3": {
+   "design": "Cyrus",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "4": {
+   "design": "Cyrus",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "5": {
+   "design": "Cyrus",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "6": {
+   "design": "Elio",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "10-2",
+    "10-4",
+    "10-8",
+    "8-2",
+    "8-4",
+    "8-6"
+   ]
+  },
+  "7": {
+   "design": "Elio",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "10-3",
+    "10-5",
+    "10-9",
+    "8-3",
+    "8-5",
+    "8-7"
+   ]
+  },
+  "8": {
+   "design": "Elio",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "8-1"
+   ]
+  },
+  "9": {
+   "design": "Elio",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "8-8"
+   ]
+  },
+  "10": {
+   "design": "Pharo",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "10-6"
+   ]
+  },
+  "11": {
+   "design": "Pharo",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "10-7"
+   ]
+  },
+  "12": {
+   "design": "Pharo",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "6-3",
+    "6-5"
+   ]
+  },
+  "13": {
+   "design": "Pharo",
+   "beds": 3,
+   "plan": "C",
+   "mirrored": false,
+   "positions": [
+    "6-2",
+    "6-4"
+   ]
+  },
+  "14": {
+   "design": "Pharo",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "10-1",
+    "6-1"
+   ]
+  },
+  "15": {
+   "design": "Pharo",
+   "beds": 4,
+   "plan": "D",
+   "mirrored": false,
+   "positions": [
+    "10-10"
+   ]
+  },
+  "16": {
+   "design": "Pharo",
+   "beds": 4,
+   "plan": "E",
+   "mirrored": false,
+   "positions": [
+    "6-6"
+   ]
+  }
+ },
+ "_source": {
+  "document": "TV_TALIA_FLOOR_PLANS.pdf"
+ }
+}

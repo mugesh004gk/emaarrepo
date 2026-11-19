@@ -1,1 +1,39 @@
-{}
+{
+ "count": 330,
+ "styles": {
+  "Cyrus": "CYRUS",
+  "Pharo": "PHARO",
+  "Elio": "ELIO"
+ },
+ "swatches": {
+  "Cyrus": [
+   2364,
+   2384
+  ],
+  "Pharo": [
+   2364,
+   2496
+  ],
+  "Elio": [
+   2364,
+   2616
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "note": "Talia cluster map from the client's agent pack (TALIA_CLUSTER_MAP.pdf, units 1-330 as PDF text): STYLES CYRUS (pink plots) / PHARO (yellow) / ELIO (red-brown), swatch centres in page points; TYPES white = 3 BR, grey = 4 BR. Floor plans TV_TALIA_FLOOR_PLANS.pdf: sheets per style: CYRUS p.2-5 (4-home terraces), ELIO p.6-9 (8-home and the 3 BR middles of 10-home terraces), PHARO p.10-16 (6-home terraces and the 10-home TH01/06/07/10); style read per home.",
+ "rows_force": [
+  [
+   9,
+   18
+  ],
+  [
+   75,
+   84
+  ]
+ ],
+ "rows_force_why": "10-home terraces (grey 4 BR cells at the two ends only), split by the reader into 6 + 4",
+ "design_per_unit": true
+}

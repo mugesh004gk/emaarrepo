@@ -328,6 +328,16 @@ def main():
                 interp.append(n)
                 rows[i] = sorted(r + [n])
                 break
+    # terraces checked by eye on the map (config 'rows_force': [[first, last], ...]): one terrace from first to last
+    for fl in (manual_rows := (json.load(open(cfgp)).get('rows_force', []) if os.path.exists(cfgp) else [])):
+        a0, a1 = fl[0], fl[1]
+        rows = [r for r in rows if not (set(r) & set(range(a0, a1 + 1)))] + [list(range(a0, a1 + 1))]
+        ref = units.get(a0) or units.get(a1)
+        A0, A1 = np.array(units[a0]['p']), np.array(units[a1]['p']); ax = (A1 - A0) / (np.hypot(*(A1 - A0)) or 1)
+        for n in range(a0, a1 + 1):
+            if n in units:
+                units[n]['axis'] = ax.tolist()
+    rows.sort(key=lambda r: r[0])
     out = dict(project=proj, kind=kind, count=N, pitch=pitch, read=raw['read'], interpolated=interp,
                missing=[n for n in range(1, N + 1) if n not in units], units={str(k): v for k, v in units.items()}, rows=rows,
                source=raw['source'])

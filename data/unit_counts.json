@@ -130,9 +130,9 @@
   "talia": {
    "community": "the-valley",
    "name": "TALIA",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 330,
+   "source": "Talia cluster map (client agent pack, units 1-330)",
+   "clusterMap": "numbered"
   },
   "nara": {
    "community": "the-valley",
