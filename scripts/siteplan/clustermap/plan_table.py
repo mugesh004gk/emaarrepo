@@ -40,9 +40,14 @@ def main():
             m = re.search(r'([3-6])\s*BEDROOM\s*I?\s*([A-F])\b', t)
             if m:
                 break
+        if not m:  # titles without a plan letter ('4 BEDROOM UNIT', Venera): one sheet per position
+            for t in texts:
+                m = re.search(r'([3-6])\s*BEDROOM\s*(UNIT)\b', t)
+                if m:
+                    break
         if not m:
             print(f'  page {pg}: no plan title found'); continue
-        beds, letter = int(m.group(1)), m.group(2)
+        beds, letter = int(m.group(1)), ('' if m.group(2) == 'UNIT' else m.group(2))
         mirrored = any('MIRRORED' in t for t in texts)
         pos = {}
         for t in texts:  # union of the readings: one text mode can drop a line another keeps

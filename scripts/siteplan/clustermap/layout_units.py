@@ -24,6 +24,12 @@ def main():
     d = os.path.join(APP, 'data', 'siteplans', proj)
     raw = json.load(open(os.path.join(d, 'units_raw.json')))
     P = {int(k): np.array(v, float) for k, v in raw['units'].items()}
+    # numbers read by eye on the map where the reader missed or misplaced them: config 'manual_units' {no: [x, y]}
+    cfgp = os.path.join(d, 'config.json')
+    manual = json.load(open(cfgp)).get('manual_units', {}) if os.path.exists(cfgp) else {}
+    for kk, v in manual.items():
+        if not kk.startswith('_'):
+            P[int(kk)] = np.array(v, float)
     # the total: the highest number with a well-read run below it (a stray high number is not a unit)
     N = max([n for n in P if sum(1 for k in range(n - 9, n + 1) if k in P) >= 6] or [raw['count']])
     P = {n: v for n, v in P.items() if n <= N}
@@ -107,8 +113,161 @@ def main():
         cur.append(n)
     if cur:
         rows.append(cur)
+    # GROUP=<n>: every terrace holds n homes numbered n*k+1 .. n*k+n (Venera: 4-home terraces only). The row is
+    # that number run; one axis (line fitted through its read homes, in number order) and one facing (the
+    # members' readings, weighted by confidence) for the whole terrace; a reading far off the run's line
+    # (misread number) is dropped and, like an unread number, placed on the line at its position in the run.
+    grp = int(os.environ.get('GROUP', '0') or 0)
+    if kind == 'terrace' and grp:
+        rows, regrouped = [], []
+        for k0 in range(1, N + 1, grp):
+            ns = [n for n in range(k0, min(k0 + grp, N + 1))]
+            have = [n for n in ns if n in units]
+            if len(have) >= 2:
+                med = np.median([units[n]['p'] for n in have], 0)
+                far = [n for n in have if np.hypot(*(np.array(units[n]['p']) - med)) > 0.75 * grp * pitch]
+                for n in far:
+                    units.pop(n); have.remove(n); regrouped.append(n)
+            if len(have) < 2:
+                rows.append(have) if have else None
+                continue
+            X = np.array([units[n]['p'] for n in have]); t = np.array(have, float)
+            # position = a + b * number (least squares per coordinate): gives the axis and the spacing
+            A_ = np.vstack([np.ones_like(t), t]).T
+            coef, *_ = np.linalg.lstsq(A_, X, rcond=None)
+            step = coef[1]; ax = step / (np.hypot(*step) or 1)
+            nrm = np.array([-ax[1], ax[0]])
+            vote = sum(np.sign(np.dot(units[n]['front'], nrm)) * (units[n]['conf'] + 0.02) for n in have)
+            fr = nrm if vote >= 0 else -nrm
+            if abs(np.hypot(*step) / pitch - 1) > 0.35:
+                step = ax * pitch
+            for n in ns:
+                if n not in units:
+                    units[n] = dict(p=(coef[0] + coef[1] * n).tolist() if len(have) >= 2 else units[have[0]]['p'], axis=ax.tolist(), front=fr.tolist(), conf=0.0, interp=True)
+                    interp.append(n)
+                else:
+                    units[n].update(axis=ax.tolist(), front=fr.tolist())
+            rows.append(ns)
+        print(f'  GROUP={grp}: {len(rows)} terraces by number run; misread positions re-placed on their run: {regrouped}')
+        if os.environ.get('SHAPE'):
+            # direction of each terrace from its drawn building (white / grey roofs around its labels): the outline's
+            # long side, when the outline has a terrace's size; the labels alone can tilt the fitted line
+            roofm = ((hsv[..., 1] < 30) & (hsv[..., 2] > 165)).astype(np.uint8)
+            roofm = cv2.morphologyEx(roofm, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
+            nlab, lab_, st_, _ = cv2.connectedComponentsWithStats(roofm, 8)
+            shaped = 0; done_rows = set()
+            for r in rows:
+                if len(r) != grp:
+                    continue
+                cen = np.mean([units[n]['p'] for n in r], 0)
+                cx, cy = int(cen[0] * k), int(cen[1] * k)
+                win = lab_[max(0, cy - 6):cy + 7, max(0, cx - 6):cx + 7].ravel()
+                win = win[win > 0]
+                if not len(win):
+                    continue
+                cid = np.bincount(win).argmax()
+                ys, xs = np.where(lab_ == cid)
+                if len(xs) > 40000:
+                    continue
+                (rx, ry), (rw, rh), ang = cv2.minAreaRect(np.column_stack([xs, ys]).astype(np.float32))
+                L_, D_ = max(rw, rh) / k, min(rw, rh) / k
+                if not (0.6 * grp * pitch < L_ < 1.6 * grp * pitch and D_ < 0.8 * L_):
+                    continue
+                th = np.radians(ang if rw >= rh else ang + 90)
+                ax = np.array([np.cos(th), np.sin(th)])
+                if np.dot(ax, np.array(units[r[-1]]['p']) - units[r[0]]['p']) < 0:
+                    ax = -ax
+                nrm = np.array([-ax[1], ax[0]])
+                fr = nrm if np.dot(units[r[0]]['front'], nrm) >= 0 else -nrm
+                c2 = np.array([rx, ry]) / k; mid = np.mean(r)
+                # the outline gives the direction and the line; along it the homes are equally spaced, in number order,
+                # at the place the readings give (robust fit: one misplaced label does not move the terrace)
+                rd = [n for n in r if n in P and n not in regrouped]
+                if len(rd) >= 2:
+                    tt = np.array([np.dot(P[n] - c2, ax) for n in rd]); nn_ = np.array(rd, float)
+                    b_ = float(np.median([(tt[j] - tt[i]) / (nn_[j] - nn_[i]) for i in range(len(rd)) for j in range(i + 1, len(rd))]))
+                    a_ = float(np.median(tt - b_ * nn_))
+                    if b_ < 0:  # numbers run the other way along the outline
+                        ax = -ax; nrm = -nrm; tt = -tt; b_, a_ = -b_, -a_
+                    if abs(b_ / pitch - 1) > 0.4:
+                        a_, b_ = float(np.mean(tt) - pitch * np.mean(nn_)), pitch
+                    pos_ = {n: c2 + ax * (a_ + b_ * n) for n in r}
+                else:
+                    pos_ = {n: c2 + ax * pitch * (n - mid) for n in r}
+                fr = nrm if np.dot(units[r[0]]['front'], nrm) >= 0 else -nrm
+                for n in r:
+                    units[n].update(p=pos_[n].tolist(), axis=ax.tolist(), front=fr.tolist())
+                shaped += 1; done_rows.add(r[0])
+            print(f'  SHAPE: {shaped} of {len(rows)} terraces set from their drawn building outline')
+            # a terrace without a clean outline: the direction of the nearest outlined terraces (3, within 8 homes'
+            # length) when it is within 35 deg of its own - the streets run in a few local directions
+            ref = [(np.mean([units[n]['p'] for n in r], 0), np.array(units[r[0]]['axis'])) for r in rows if r and r[0] in done_rows]
+            borrowed = 0
+            for r in rows:
+                if len(r) != grp or r[0] in done_rows:
+                    continue
+                cen = np.mean([units[n]['p'] for n in r], 0)
+                near = sorted(ref, key=lambda q: np.hypot(*(q[0] - cen)))[:3]
+                near = [q for q in near if np.hypot(*(q[0] - cen)) < 8 * grp * pitch]
+                if not near:
+                    continue
+                a0 = np.array(units[r[0]]['axis'])
+                angs = [np.degrees(np.arctan2(q[1][1], q[1][0])) % 180 for q in near]
+                m = np.degrees(np.arctan2(np.mean(np.sin(np.radians(2 * np.array(angs)))), np.mean(np.cos(np.radians(2 * np.array(angs)))))) / 2
+                ax = np.array([np.cos(np.radians(m)), np.sin(np.radians(m))])
+                if np.dot(ax, a0) < 0:
+                    ax = -ax
+                if np.degrees(np.arccos(min(1, abs(np.dot(ax, a0))))) > 35:
+                    continue
+                rd = [n for n in r if n in P and n not in regrouped]
+                if len(rd) >= 2:
+                    cen = np.mean([P[n] for n in rd], 0) + ax * pitch * (np.mean(r) - np.mean(rd))
+                    tt = np.array([np.dot(P[n] - cen, ax) for n in rd]); nn_ = np.array(rd, float)
+                    b_ = float(np.median([(tt[j] - tt[i]) / (nn_[j] - nn_[i]) for i in range(len(rd)) for j in range(i + 1, len(rd))]))
+                    a_ = float(np.median(tt - b_ * nn_))
+                    if b_ < 0:
+                        ax = -ax; tt = -tt; b_, a_ = -b_, -a_
+                    if abs(b_ / pitch - 1) > 0.4:
+                        a_, b_ = float(np.mean(tt) - pitch * np.mean(rd)), pitch
+                    pos_ = {n: cen + ax * (a_ + b_ * n) for n in r}
+                else:
+                    pos_ = {n: cen + ax * pitch * (n - np.mean(r)) for n in r}
+                nrm = np.array([-ax[1], ax[0]]); fr = nrm if np.dot(units[r[0]]['front'], nrm) >= 0 else -nrm
+                for n in r:
+                    units[n].update(p=pos_[n].tolist(), axis=ax.tolist(), front=fr.tolist())
+                borrowed += 1
+            print(f'  SHAPE: {borrowed} terraces without an outline took the direction of their outlined neighbours')
+        if os.environ.get('SNAP'):
+            # terraces of a planned layout run in a few directions only: a terrace whose fitted axis is within
+            # 25 deg of a direction shared by many terraces takes that direction (4 label positions with one off by
+            # a little turn the fitted line); its homes are re-spaced along it from the run's centre
+            angs = np.array([np.degrees(np.arctan2(units[r[0]]['axis'][1], units[r[0]]['axis'][0])) % 180 for r in rows if len(r) == grp])
+            hist = np.zeros(180)
+            for a_ in angs:
+                for dd in range(-2, 3):
+                    hist[int(round(a_ + dd)) % 180] += 1
+            modes = [m for m in range(180) if hist[m] >= max(0.05 * len(angs) * 5, 5) and hist[m] == max(hist[(m + j) % 180] for j in range(-12, 13))]
+            snapped = 0
+            for r in rows:
+                if len(r) != grp:
+                    continue
+                a0 = np.degrees(np.arctan2(units[r[0]]['axis'][1], units[r[0]]['axis'][0]))
+                best = min(modes, key=lambda m: abs(((a0 - m + 90) % 180) - 90), default=None)
+                if best is None or abs(((a0 - best + 90) % 180) - 90) > 25:
+                    continue
+                d0 = a0 + (((best - a0 + 90) % 180) - 90)
+                ax = np.array([np.cos(np.radians(d0)), np.sin(np.radians(d0))])
+                nrm = np.array([-ax[1], ax[0]])
+                fr = nrm if np.dot(units[r[0]]['front'], nrm) >= 0 else -nrm
+                cen = np.mean([units[n]['p'] for n in r], 0); mid = np.mean(r)
+                sp = np.mean([np.hypot(*(np.array(units[r[i + 1]]['p']) - units[r[i]]['p'])) for i in range(grp - 1)])
+                sp = sp if abs(sp / pitch - 1) < 0.35 else pitch
+                for n in r:
+                    units[n].update(p=(cen + ax * sp * (n - mid)).tolist(), axis=ax.tolist(), front=fr.tolist())
+                snapped += 1
+            print(f'  SNAP: directions {modes}; {snapped} terraces set to the nearest one')
     # a short run (1-2 homes) next to a terrace with consecutive numbers belongs to it (its facing was misread)
-    if kind == 'terrace':
+    if kind == 'terrace' and not grp:
         changed = True
         while changed:
             changed = False

@@ -17,7 +17,7 @@ APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 MEDIA = 'media/research/the-valley/properties'
 KY = 110574.0
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley']
 # floor-plan facts that are not in the data files (checked by hand on the PDFs)
 FLOOR_NOTES = {
     'rivana': 'broker copy with 5 of the 12 sheets (no Kai 4 BR); scanned, areas not readable',

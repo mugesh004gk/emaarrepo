@@ -1,0 +1,187 @@
+{
+ "styles": {
+  "Slate": "SLATE",
+  "Oakley": "OAKLEY",
+  "Ravine": "RAVINE",
+  "Serene": "SERENE",
+  "Nash": "NASH",
+  "Vale": "VALE",
+  "Dale": "DALE"
+ },
+ "swatches": {
+  "Slate": [
+   661,
+   696.1
+  ],
+  "Oakley": [
+   661,
+   713.1
+  ],
+  "Ravine": [
+   661,
+   730.1
+  ],
+  "Serene": [
+   661,
+   747.1
+  ],
+  "Nash": [
+   661,
+   764.1
+  ],
+  "Vale": [
+   661,
+   781.1
+  ],
+  "Dale": [
+   661,
+   798.1
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "note": "Venera cluster map from the client's agent pack (VENERA_TV_CLUSTERMAP.pdf, numbers in the map image): STYLES SLATE / OAKLEY / RAVINE / SERENE / NASH / VALE / DALE (plot colours), swatch centres in page points left of the legend words; TYPES white = 3 BR, grey = 4 BR. Floor plans VENERA_THE_VALLEY_FLOORPLAN.pdf: 4 pages per style, one per 4-plex position (p.2-5 SLATE ... p.26-29 DALE).",
+ "count": 696,
+ "manual_units": {
+  "_why": "label centres read by eye on the map (page points): terraces 001-004 (001-002 beyond the crop edge, placed at the pitch of 003-008), 009-012, 057-060, 066-068, 605-608 not read by the text reader; 012 was read at a wrong place; 365-368 and 421-424 re-read by eye (the reader placed their labels off the terrace line)",
+  "1": [
+   773.0,
+   478.8
+  ],
+  "2": [
+   778.5,
+   480.2
+  ],
+  "3": [
+   784.0,
+   481.7
+  ],
+  "4": [
+   789.5,
+   483.0
+  ],
+  "9": [
+   835.83,
+   497.17
+  ],
+  "10": [
+   841.17,
+   498.33
+  ],
+  "11": [
+   846.67,
+   500.0
+  ],
+  "12": [
+   852.5,
+   502.67
+  ],
+  "57": [
+   772.67,
+   316.67
+  ],
+  "58": [
+   766.33,
+   316.67
+  ],
+  "59": [
+   760.17,
+   316.67
+  ],
+  "60": [
+   754.17,
+   316.67
+  ],
+  "66": [
+   708.67,
+   309.67
+  ],
+  "67": [
+   702.83,
+   309.67
+  ],
+  "68": [
+   696.67,
+   309.67
+  ],
+  "605": [
+   463.33,
+   466.5
+  ],
+  "606": [
+   469.17,
+   468.83
+  ],
+  "607": [
+   474.67,
+   470.17
+  ],
+  "608": [
+   480.33,
+   472.33
+  ],
+  "365": [
+   429.5,
+   576.2
+  ],
+  "366": [
+   435.3,
+   579.3
+  ],
+  "367": [
+   440.0,
+   582.3
+  ],
+  "368": [
+   445.0,
+   585.7
+  ],
+  "424": [
+   479.7,
+   303.5
+  ],
+  "423": [
+   485.2,
+   305.2
+  ],
+  "422": [
+   490.7,
+   306.8
+  ],
+  "421": [
+   496.5,
+   308.2
+  ]
+ },
+ "plot_min_sat": 30,
+ "plot_tree_hue": [
+  30,
+  85
+ ],
+ "plot_note": "legend swatches (OpenCV HSV): SERENE pale blue S 36, NASH teal hue 94, RAVINE hue 101: trees/lawns kept out by hue 30-85 only",
+ "end_cell_out": 0.2,
+ "map_beds_rechecked": {
+  "units": [
+   219,
+   217,
+   260,
+   276,
+   274,
+   280,
+   476,
+   480,
+   620,
+   618,
+   4,
+   37,
+   185,
+   365,
+   368,
+   421,
+   424
+  ],
+  "why": "looked at on the map by eye: grey (4 BR) cells at both terrace ends and white (3 BR) in the middle, as the floor-plan sheets give; the automatic cell reading missed these cells (end homes are wider than the middle ones)"
+ }
+}

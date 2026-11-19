@@ -1,14 +1,14 @@
 {
  "the-valley": {
   "homes_by_placement": {
-   "estimated-satellite": 2462,
+   "estimated-satellite": 1834,
    "estimated-planned": 434,
-   "verified-siteplan": 3370
+   "verified-siteplan": 4066
   },
   "streets_by_source": {
    "osm": 198,
-   "derived": 237,
-   "siteplan": 259
+   "derived": 199,
+   "siteplan": 287
   }
  },
  "arabian-ranches-3": {

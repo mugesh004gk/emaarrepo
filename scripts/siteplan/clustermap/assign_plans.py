@@ -80,8 +80,29 @@ def main():
     def px(p):
         return int(round(p[0] * k)), int(round(p[1] * k))
 
+    # cell_at_label: read a home's cell colour at its number label (units_raw) rather than at the evenly spaced
+    # layout position - terraces whose end homes are wider than the middle ones (Venera)
+    raw_lab = {}
+    if cfg.get('cell_at_label'):
+        raw_lab = {int(k_): v for k_, v in json.load(open(os.path.join(APP, 'data', 'siteplans', proj, 'units_raw.json')))['units'].items()}
+        raw_lab.update({int(k_): v for k_, v in cfg.get('manual_units', {}).items() if not k_.startswith('_')})
+
+    # end_cell_out: the end homes of a terrace are wider than the middle ones; on an evenly spaced layout their
+    # cell colour is read this fraction of a pitch further out along the terrace (Venera)
+    ends = {}
+    if cfg.get('end_cell_out'):
+        for r_ in lay['rows']:
+            if len(r_) >= 2:
+                a0, a1 = np.array(U[r_[0]]['p']), np.array(U[r_[-1]]['p']); ax_ = (a1 - a0) / (np.hypot(*(a1 - a0)) or 1)
+                ends[r_[0]] = -ax_; ends[r_[-1]] = ax_
+
+    def cpos(n):
+        if n in ends:
+            return (np.array(U[n]['p']) + ends[n] * cfg['end_cell_out'] * pitch).tolist()
+        return raw_lab.get(n, U[n]['p'])
+
     def cell_v(n):
-        x, y = px(U[n]['p']); r = int(0.28 * pitch * k)
+        x, y = px(cpos(n)); r = int(0.28 * pitch * k)
         h = hsv[max(0, y - r):y + r, max(0, x - r):x + r].reshape(-1, 3)
         h = h[(h[:, 2] > 130) & (h[:, 1] < 35)]
         return float(np.percentile(h[:, 2], 80)) if len(h) else None
@@ -106,7 +127,7 @@ def main():
             h = hsv[max(0, y - 6):y + 7, max(0, x - 8):x + 9].reshape(-1, 3)
             v = float(np.median(h[:, 2])); s_ = float(np.median(h[:, 1]))
             return None if s_ >= 35 else 'grey' if v < 225 else 'white'
-        x, y = px(U[n]['p']); r = int(0.28 * pitch * k)
+        x, y = px(cpos(n)); r = int(0.28 * pitch * k)
         h = hsv[max(0, y - r):y + r, max(0, x - r):x + r].reshape(-1, 3)
         h = h[h[:, 2] > 130]
         if not len(h):
@@ -119,6 +140,12 @@ def main():
             return 'white'
         return None
 
+    # plot colours kept for the style vote: saturation above plot_min_sat, hue outside the trees' range
+    # (plot_tree_hue); Venera's legend has a pale blue (SERENE, S 36) and a teal (NASH, hue 94) style
+    min_sat = cfg.get('plot_min_sat', 40); tree_lo, tree_hi = cfg.get('plot_tree_hue', [30, 95])
+
+    rechecked = set(cfg.get('map_beds_rechecked', {}).get('units', []))
+
     def row_design(nums):
         # coloured plot area around the terrace (gardens, driveways): every coloured pixel within ~1.3 pitch
         # of the row votes for the nearest legend colour
@@ -127,7 +154,7 @@ def main():
             x, y = px(U[n]['p']); r = int(1.3 * pitch * k)
             sub_h = hsv[max(0, y - r):y + r, max(0, x - r):x + r].reshape(-1, 3)
             sub_l = lab[max(0, y - r):y + r, max(0, x - r):x + r].reshape(-1, 3)
-            keep = (sub_h[:, 1] > 40) & (sub_h[:, 2] > 120) & ~((sub_h[:, 0] > 30) & (sub_h[:, 0] < 95))  # not trees / grass
+            keep = (sub_h[:, 1] > min_sat) & (sub_h[:, 2] > 120) & ~((sub_h[:, 0] > tree_lo) & (sub_h[:, 0] < tree_hi))  # not trees / grass
             c = sub_l[keep]
             if not len(c):
                 continue
@@ -194,6 +221,10 @@ def main():
                 up.update({'beds': pl['beds'], 'plan': pl['plan'] + (' mirrored' if pl['mirrored'] else ''), 'page': pl['page'],
                            'sqft': pl['sqft'], 'sqm': pl['sqm']})
                 plan_count[f"{dz} {pl['beds']} BR {pl['plan']}"] += 1
+                if mb is not None and mb != pl['beds'] and no in rechecked:
+                    # cell colour looked at by eye on the map (config map_beds_rechecked): it shows the sheet's type;
+                    # the automatic reading missed the cell
+                    up['map_beds_auto'] = mb; mb = pl['beds']
                 if mb is not None and mb != pl['beds']:
                     mism.append({'no': no, 'map_beds': mb, 'plan_beds': pl['beds'], 'th': th, 'plex': n})
                     if cfg.get('map_beds_win'):

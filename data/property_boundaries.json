@@ -1595,9 +1595,106 @@
     "missingNumbers": 0
    },
    "floorPlan": {
-    "document": null,
-    "url": null,
+    "document": "LILLIA_TV_FLOOR_PLANS.pdf",
+    "url": "media/research/the-valley/properties/lillia/floorplans/LILLIA_TV_FLOOR_PLANS.pdf",
     "linkedUnits": 406,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "venera-at-the-valley",
+   "name": "Venera",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.448557,
+     25.0018934
+    ],
+    [
+     55.4406901,
+     24.9987934
+    ],
+    [
+     55.4406281,
+     24.9984192
+    ],
+    [
+     55.4402565,
+     24.9957842
+    ],
+    [
+     55.440265,
+     24.9956712
+    ],
+    [
+     55.4429324,
+     24.9955538
+    ],
+    [
+     55.4441054,
+     24.9955063
+    ],
+    [
+     55.4442596,
+     24.9955015
+    ],
+    [
+     55.4446332,
+     24.9954913
+    ],
+    [
+     55.4453885,
+     24.995483
+    ],
+    [
+     55.4496445,
+     24.9995378
+    ],
+    [
+     55.4500699,
+     25.0000335
+    ],
+    [
+     55.4499322,
+     25.0002887
+    ],
+    [
+     55.4498762,
+     25.0003795
+    ],
+    [
+     55.4491969,
+     25.0012502
+    ],
+    [
+     55.4489254,
+     25.0015796
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.15)"
+   },
+   "placementDetail": "map homes matched to satellite roofs",
+   "clusterMap": {
+    "document": "VENERA_TV_CLUSTERMAP.pdf",
+    "page": 1,
+    "image": "media/research/the-valley/properties/venera-at-the-valley/clustermap/venera-at-the-valley_cluster_map_p22.png"
+   },
+   "units": {
+    "official": 696,
+    "placed": 696,
+    "numbered": 696,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "VENERA_THE_VALLEY_FLOORPLAN.pdf",
+    "url": "media/research/the-valley/properties/venera-at-the-valley/floorplans/VENERA_THE_VALLEY_FLOORPLAN.pdf",
+    "linkedUnits": 696,
     "note": null
    },
    "status": "complete",

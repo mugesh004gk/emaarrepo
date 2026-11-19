@@ -60,9 +60,9 @@
   "venera-at-the-valley": {
    "community": "the-valley",
    "name": "Venera",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 696,
+   "source": "Venera cluster map (client agent pack, units 1-696; 174 four-home terraces)",
+   "clusterMap": "numbered"
   },
   "velora-at-the-valley": {
    "community": "the-valley",
