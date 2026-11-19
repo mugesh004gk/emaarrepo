@@ -1,0 +1,20 @@
+{
+ "image": "VELORA2_CLUSTERMAP_TV.pdf (page points)",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   0.55067,
+   0.519385,
+   -1787.4309
+  ],
+  [
+   0.519385,
+   -0.55067,
+   -701.8846
+  ]
+ ],
+ "scale_m_per_px": 0.757,
+ "method": "Velora 2 is under construction: its walled site is visible in the satellite photo (Esri). The map's site corners - north-west and south-west on the highway, north-east (rounded) - matched by eye to the wall corners; similarity fit, residuals [17.0, 12.0, 12.0] m",
+ "accuracy": "site walls matched: about 10-15 m"
+}

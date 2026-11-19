@@ -1,0 +1,51 @@
+{
+ "count": 312,
+ "count_source": "Velora 2 fact sheet: 156 x 3 BR + 156 x 4 BR = 312",
+ "styles": {
+  "Ravine": "RAVINE",
+  "Serene": "SERENE",
+  "Nash": "NASH"
+ },
+ "swatches": {
+  "Ravine": [
+   653,
+   702
+  ],
+  "Serene": [
+   653,
+   719
+  ],
+  "Nash": [
+   653,
+   736
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "plot_min_sat": 30,
+ "plot_tree_hue": [
+  30,
+  85
+ ],
+ "note": "Velora 2 cluster map from the client's agent pack (VELORA2_CLUSTERMAP_TV.pdf, numbers in the map picture): STYLES RAVINE / SERENE / NASH (plot colours); TYPES white = 3 BR, grey = 4 BR; 4-home terraces. Floor plans VELORA2_FLOORPLAN_TV.pdf: RAVINE p.3-6, SERENE p.8-11, NASH p.13-16, one per 4-plex position.",
+ "first_at": {
+  "_why": "terrace order read by eye where the per-terrace re-reading conflicted: 213 at the west end of 213-216",
+  "213": [
+   633.0447775507604,
+   261.29460096580834
+  ]
+ },
+ "map_beds_rechecked": {
+  "units": [
+   8,
+   124,
+   132,
+   149,
+   221,
+   233
+  ],
+  "why": "looked at on the map by eye: grey (4 BR) end cells, as the floor-plan sheets give; the automatic cell reading missed them"
+ }
+}

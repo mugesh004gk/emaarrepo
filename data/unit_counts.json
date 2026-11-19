@@ -53,9 +53,9 @@
   "velora-2-at-the-valley-phase-2": {
    "community": "the-valley",
    "name": "Velora 2",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 312,
+   "source": "Velora 2 cluster map (client agent pack) and fact sheet (156 x 3 BR + 156 x 4 BR)",
+   "clusterMap": "numbered"
   },
   "venera-at-the-valley": {
    "community": "the-valley",

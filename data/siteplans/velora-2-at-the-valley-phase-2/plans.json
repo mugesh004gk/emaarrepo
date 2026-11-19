@@ -1,0 +1,217 @@
+{
+ "Ravine": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 3,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  }
+ },
+ "Serene": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 8,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 9,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 10,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 11,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  }
+ },
+ "Nash": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2695.28,
+   "sqm": 250.4
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 14,
+   "sqft": 2460.41,
+   "sqm": 228.58
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 15,
+   "sqft": 2456.86,
+   "sqm": 228.25
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 16,
+   "sqft": 2697.86,
+   "sqm": 250.64
+  }
+ },
+ "_pages": {
+  "3": {
+   "design": "Ravine",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "4": {
+   "design": "Ravine",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "5": {
+   "design": "Ravine",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "6": {
+   "design": "Ravine",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "8": {
+   "design": "Serene",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "9": {
+   "design": "Serene",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "10": {
+   "design": "Serene",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "11": {
+   "design": "Serene",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "13": {
+   "design": "Nash",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "14": {
+   "design": "Nash",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "15": {
+   "design": "Nash",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "16": {
+   "design": "Nash",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  }
+ },
+ "_source": {
+  "document": "VELORA2_FLOORPLAN_TV.pdf"
+ }
+}

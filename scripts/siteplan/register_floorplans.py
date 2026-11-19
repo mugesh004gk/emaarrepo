@@ -22,6 +22,7 @@ FLOORPLANS = {
     'lillia': f'{P}/lillia/floorplans/LILLIA_TV_FLOOR_PLANS.pdf',
     'venera-at-the-valley': f'{P}/venera-at-the-valley/floorplans/VENERA_THE_VALLEY_FLOORPLAN.pdf',
     'talia': f'{P}/talia/floorplans/TV_TALIA_FLOOR_PLANS.pdf',
+    'velora-2-at-the-valley-phase-2': f'{P}/velora-2-at-the-valley-phase-2/floorplans/VELORA2_FLOORPLAN_TV.pdf',
 }
 
 
