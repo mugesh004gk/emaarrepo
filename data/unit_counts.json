@@ -32,9 +32,9 @@
   "elva-at-the-valley": {
    "community": "the-valley",
    "name": "Elva",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 244,
+   "source": "Elva cluster map (client agent pack) and fact sheet (122 x 3 BR + 122 x 4 BR)",
+   "clusterMap": "numbered"
   },
   "elea-at-the-valley": {
    "community": "the-valley",

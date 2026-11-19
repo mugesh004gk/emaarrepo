@@ -1,0 +1,145 @@
+{
+ "_pages": {
+  "2": {
+   "design": "Ravine",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "3": {
+   "design": "Ravine",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "4": {
+   "design": "Ravine",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "5": {
+   "design": "Ravine",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "6": {
+   "design": "Nash",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "7": {
+   "design": "Nash",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "8": {
+   "design": "Nash",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "9": {
+   "design": "Nash",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  }
+ },
+ "_note": "ELVA_TV_FLOORPLAN.pdf: one sheet per 4-plex position; p.5 (Ravine 4 BR end) prints TH03, read as TH04 (the end home; TH03 is p.4)",
+ "Ravine": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2704.81,
+   "sqm": 251.75
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 3,
+   "sqft": 2418.33,
+   "sqm": 224.67
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2418.33,
+   "sqm": 224.67
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2709.81,
+   "sqm": 251.75
+  }
+ },
+ "Nash": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2706.26,
+   "sqm": 251.42
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 2415.63,
+   "sqm": 224.42
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 8,
+   "sqft": 2415.63,
+   "sqm": 224.42
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 9,
+   "sqft": 2710.57,
+   "sqm": 251.82
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "image": "ELVA_TV_CLUSTERMAP.pdf (page points)",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   0.783277,
+   0.583837,
+   290.947227
+  ],
+  [
+   0.583837,
+   -0.783277,
+   -262.448279
+  ]
+ ],
+ "scale_m_per_px": 0.9769,
+ "method": "Elva map (page points) -> Valley masterplan: the straight first row of homes (213-216 ... 013-016, 585 pt) = the masterplan's row along the strip (196 masterplan px), same orientation; terrace 213-216 at masterplan px (646.3, 977.5); check: the strip's west tip lands within 3.6 masterplan px (about 10 m). Masterplan fitted to the placed homes (corr 0.32).",
+ "accuracy": "provisional: Elva is not built yet; position from the Valley masterplan, estimated within about 30-50 m"
+}

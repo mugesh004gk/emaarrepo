@@ -1,0 +1,489 @@
+{
+ "Canna": {
+  "4-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2232.65,
+   "sqm": 207.42
+  },
+  "8-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2234.48,
+   "sqm": 207.59
+  },
+  "8-4": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2237.6,
+   "sqm": 207.88
+  },
+  "8-6": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2237.49,
+   "sqm": 207.87
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 3,
+   "sqft": 2232.76,
+   "sqm": 207.43
+  },
+  "8-3": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 3,
+   "sqft": 2244.06,
+   "sqm": 208.48
+  },
+  "8-5": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 4,
+   "sqft": 2237.6,
+   "sqm": 207.88
+  },
+  "8-7": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 4,
+   "sqft": 2234.48,
+   "sqm": 207.59
+  },
+  "6-2": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2442.22,
+   "sqm": 226.89
+  },
+  "6-4": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2442.22,
+   "sqm": 226.89
+  },
+  "6-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 6,
+   "sqft": 2442.22,
+   "sqm": 226.89
+  },
+  "6-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 6,
+   "sqft": 2442.22,
+   "sqm": 226.89
+  },
+  "4-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 2683.33,
+   "sqm": 249.29
+  },
+  "8-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 2683.33,
+   "sqm": 249.29
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": true,
+   "page": 8,
+   "sqft": 2683.33,
+   "sqm": 249.29
+  },
+  "8-8": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": true,
+   "page": 8,
+   "sqft": 2683.33,
+   "sqm": 249.29
+  },
+  "6-1": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 9,
+   "sqft": 2546.95,
+   "sqm": 236.62
+  },
+  "6-6": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 10,
+   "sqft": 2546.95,
+   "sqm": 236.62
+  }
+ },
+ "Cedar": {
+  "4-2": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 11,
+   "sqft": 2363.75,
+   "sqm": 219.6
+  },
+  "10-4": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 11,
+   "sqft": 2377.21,
+   "sqm": 220.85
+  },
+  "10-8": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "page": 11,
+   "sqft": 2377.21,
+   "sqm": 220.85
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 12,
+   "sqft": 2363.75,
+   "sqm": 219.6
+  },
+  "10-5": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 12,
+   "sqft": 2420.59,
+   "sqm": 224.88
+  },
+  "10-9": {
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "page": 12,
+   "sqft": 2377.75,
+   "sqm": 220.9
+  },
+  "6-2": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2347.93,
+   "sqm": 218.13
+  },
+  "6-4": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2347.39,
+   "sqm": 218.08
+  },
+  "10-2": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2345.99,
+   "sqm": 217.95
+  },
+  "10-6": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2390.45,
+   "sqm": 222.08
+  },
+  "6-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 14,
+   "sqft": 2347.39,
+   "sqm": 218.08
+  },
+  "6-5": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 14,
+   "sqft": 2347.93,
+   "sqm": 218.13
+  },
+  "10-3": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 14,
+   "sqft": 2346.85,
+   "sqm": 218.03
+  },
+  "10-7": {
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "page": 14,
+   "sqft": 2346.85,
+   "sqm": 218.03
+  },
+  "4-1": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "page": 15,
+   "sqft": 2635.86,
+   "sqm": 244.88
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "A",
+   "mirrored": true,
+   "page": 16,
+   "sqft": 2635.86,
+   "sqm": 244.88
+  },
+  "6-1": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 17,
+   "sqft": 2600.13,
+   "sqm": 241.56
+  },
+  "10-1": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "page": 17,
+   "sqft": 2598.94,
+   "sqm": 241.45
+  },
+  "6-6": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 18,
+   "sqft": 2600.13,
+   "sqm": 241.56
+  },
+  "10-10": {
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "page": 18,
+   "sqft": 2600.56,
+   "sqm": 241.6
+  }
+ },
+ "_pages": {
+  "2": {
+   "design": "Canna",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4-2",
+    "8-2",
+    "8-4",
+    "8-6"
+   ]
+  },
+  "3": {
+   "design": "Canna",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "positions": [
+    "4-3",
+    "8-3"
+   ]
+  },
+  "4": {
+   "design": "Canna",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "positions": [
+    "8-5",
+    "8-7"
+   ]
+  },
+  "5": {
+   "design": "Canna",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "6-2",
+    "6-4"
+   ]
+  },
+  "6": {
+   "design": "Canna",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "6-3",
+    "6-5"
+   ]
+  },
+  "7": {
+   "design": "Canna",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4-1",
+    "8-1"
+   ]
+  },
+  "8": {
+   "design": "Canna",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": true,
+   "positions": [
+    "4-4",
+    "8-8"
+   ]
+  },
+  "9": {
+   "design": "Canna",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "6-1"
+   ]
+  },
+  "10": {
+   "design": "Canna",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "6-6"
+   ]
+  },
+  "11": {
+   "design": "Cedar",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "10-4",
+    "10-8",
+    "4-2"
+   ]
+  },
+  "12": {
+   "design": "Cedar",
+   "beds": 3,
+   "plan": "A",
+   "mirrored": true,
+   "positions": [
+    "10-5",
+    "10-9",
+    "4-3"
+   ]
+  },
+  "13": {
+   "design": "Cedar",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "10-2",
+    "10-6",
+    "6-2",
+    "6-4"
+   ]
+  },
+  "14": {
+   "design": "Cedar",
+   "beds": 3,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "10-3",
+    "10-7",
+    "6-3",
+    "6-5"
+   ]
+  },
+  "15": {
+   "design": "Cedar",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "16": {
+   "design": "Cedar",
+   "beds": 4,
+   "plan": "A",
+   "mirrored": true,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "17": {
+   "design": "Cedar",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": false,
+   "positions": [
+    "10-1",
+    "6-1"
+   ]
+  },
+  "18": {
+   "design": "Cedar",
+   "beds": 4,
+   "plan": "B",
+   "mirrored": true,
+   "positions": [
+    "10-10",
+    "6-6"
+   ]
+  }
+ },
+ "_source": {
+  "document": "NIMA_MARKETING_PLAN.pdf"
+ }
+}

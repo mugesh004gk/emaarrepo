@@ -1,0 +1,62 @@
+{
+ "styles": {
+  "Ravine": "RAVINE",
+  "Nash": "NASH"
+ },
+ "swatches": {
+  "Ravine": [
+   478,
+   701
+  ],
+  "Nash": [
+   478,
+   725
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "plot_min_sat": 30,
+ "plot_tree_hue": [
+  30,
+  85
+ ],
+ "note": "Elva cluster map from the client's agent pack (ELVA_TV_CLUSTERMAP.pdf, numbers in the map picture): STYLES RAVINE (orange plots) / NASH (red plots); TYPES white = 3 BR, grey = 4 BR; 4-home terraces only. Floor plans ELVA_TV_FLOORPLAN.pdf: one sheet per 4-plex position, RAVINE p.2-5, NASH p.6-9.",
+ "count": 244,
+ "count_source": "Elva fact sheet: total 244 units",
+ "first_at": {
+  "_why": "first label read by eye: the reader returned these terraces numbers mirrored along the row",
+  "1": [
+   634,
+   406
+  ],
+  "13": [
+   776,
+   406
+  ],
+  "229": [
+   407,
+   406
+  ]
+ },
+ "manual_units": {
+  "_why": "109-112: vertical terrace beside 105-108 (read by eye); the reader put these numbers at the compass",
+  "109": [
+   529.1,
+   453.2
+  ],
+  "110": [
+   529.1,
+   461.4
+  ],
+  "111": [
+   529.1,
+   469.6
+  ],
+  "112": [
+   529.1,
+   477.8
+  ]
+ }
+}

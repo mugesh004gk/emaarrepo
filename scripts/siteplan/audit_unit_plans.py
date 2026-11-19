@@ -22,8 +22,10 @@ import json, os, re, subprocess
 
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley']
 NO_PDF = {}  # every built Valley project now has a floor-plan PDF (19 Nov 2026: agent packs + broker copies)
+# printing errors on a sheet, checked on its key plan: (pdf, page) -> the TH the sheet is for
+SHEET_TYPOS = {('ELVA_TV_FLOORPLAN.pdf', 5): {4}}  # Ravine 4 BR end home: printed 'TH03' (TH03 is p.4, 3 BR)
 NOTES = {
     'rivana': 'Broker copy (tanamiproperties.com) with 5 of the 12 sheets, scanned: no Kai 4-bedroom sheet; areas not readable',
     'alana': 'Broker copy (tanamiproperties.com) of the Emaar floor plans; which home of a twin uses the mirrored sheet is not stated',
@@ -143,7 +145,7 @@ def audit_unit(u, pdf, plans_by_page, designs, plexes):
     # position + area on the page's table
     rows = [(parse_pos(r['unit']), r.get('sqft')) for p in pages for r in (plans_by_page.get(p, {}).get('rows') or [])]
     rows = [(q, a) for q, a in rows if q]
-    ths = set().union(*(sheet_ths(page_text(pdf, p)) for p in pages))
+    ths = set().union(*(sheet_ths(page_text(pdf, p)) | SHEET_TYPOS.get((os.path.basename(pdf), p), set()) for p in pages))
     # a sheet that names its own TH under TOTAL AREA (Elea) is read that way; its key plan lists every TH
     text_pos = set().union(*(page_positions(pdf, p, plexes) for p in pages)) if u.get('plex') and u.get('th') and not ths else set()
     if (rows or text_pos) and u.get('plex') and u.get('th'):

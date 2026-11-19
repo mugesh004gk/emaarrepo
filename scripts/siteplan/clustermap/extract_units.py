@@ -48,7 +48,7 @@ def from_text(pdf, page):
     return hits, ('pdf-points', [float(pm.group(1)), float(pm.group(2))])
 
 
-def ocr_tile(td, tile, k):
+def ocr_tile(td, tile, k, single_only=False):
     p = os.path.join(td, f't{k}.png'); tile.save(p)
     res = subprocess.run([os.path.join(HERE, 'ocr'), p], capture_output=True, text=True).stdout
     out = []
@@ -58,6 +58,8 @@ def ocr_tile(td, tile, k):
             continue
         txt = parts[0]; bx, by, bw, bh = map(float, parts[1:5])
         toks = re.findall(r'\d{1,3}', txt.replace('O', '0').replace('o', '0'))
+        if single_only and len(toks) > 1:
+            continue  # a line of several numbers read on a turned copy: spreading them along its box misplaces them
         for i, t in enumerate(toks):  # a run of numbers read as one line: split it evenly along the box
             if len(toks) > 1 and bh > 1.5 * bw:  # a stack of labels, one above another
                 out.append((int(t), bx + bw / 2, by + bh * (i + 0.5) / len(toks)))
@@ -91,7 +93,7 @@ def from_image(pdf, page, index, passes=((400, (0, 90, -90)), (600, (0,)), (500,
         k, (dpi, x, y, tile, ang) = j
         w, h = tile.size
         img = tile.rotate(ang, expand=True, resample=Image.BICUBIC, fillcolor=(255, 255, 255)) if ang else tile
-        res = ocr_tile(td, img, k)
+        res = ocr_tile(td, img, k, single_only=os.environ.get('ANGLED_SINGLE') is not None and ang % 90 != 0)
         out = []
         cw, ch = img.size
         a = math.radians(ang)

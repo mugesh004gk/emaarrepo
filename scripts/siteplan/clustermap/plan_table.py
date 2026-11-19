@@ -13,7 +13,7 @@ Output: data/siteplans/<project>/plans.json
 import json, os, re, subprocess, sys
 
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-POS_SPACED = re.compile(r'(?<![\d.])(\d(?: ?\d)?)\s*P\s*L\s*E\s*X\s*(\d)?\s*-\s*T\s*H\s*(\d\s?\d?)\s+(\d[\d ]*\.\s?\d[\d ]*?)\s*S\s*Q\s*\.?\s*F\s*T\s*(\d[\d ]*\.\s?\d[\d ]*?)\s*S\s*Q')
+POS_SPACED = re.compile(r'(?<![\d.])(\d(?: ?\d)?)\s*P\s*L\s*E\s*X\s*(\d)?\s*(?:(?:[A-Z]\s*){3,8}?)?-\s*T\s*H\s*(\d\s?\d?)\s+(\d[\d ]*\.\s?\d[\d ]*?)\s*S\s*Q\s*\.?\s*F\s*T\s*(\d[\d ]*\.\s?\d[\d ]*?)\s*S\s*Q')
 POS = re.compile(r'(\d+)\s*PLEX\s*(\d)?\s*-\s*TH\s*(\d+)\s+([\d.]+)\s*S\s*Q\s*F\s*T\s*([\d.]+)\s*S\s*Q\s*M')
 
 

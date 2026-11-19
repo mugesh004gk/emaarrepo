@@ -106,6 +106,8 @@ def main():
             v = units[cur[-1]]
             dd = np.hypot(*(np.array(u['p']) - v['p']))
             same = n == cur[-1] + 1 and dd < 1.45 * pitch and np.dot(u['front'], v['front']) > 0.7 and np.dot(u['axis'], v['axis']) ** 2 > 0.9
+            if os.environ.get('LOOSE'):  # curved terraces (Nima): consecutive numbers at house spacing, facing unreliable
+                same = n == cur[-1] + 1 and dd < float(os.environ.get('LOOSE_GAP', 1.3)) * pitch
             if not same:
                 rows.append(cur); cur = []
         elif cur:
@@ -118,6 +120,7 @@ def main():
     # members' readings, weighted by confidence) for the whole terrace; a reading far off the run's line
     # (misread number) is dropped and, like an unread number, placed on the line at its position in the run.
     grp = int(os.environ.get('GROUP', '0') or 0)
+    first_at = json.load(open(cfgp)).get('first_at', {}) if os.path.exists(cfgp) else {}
     if kind == 'terrace' and grp:
         rows, regrouped = [], []
         for k0 in range(1, N + 1, grp):
@@ -130,6 +133,35 @@ def main():
                     units.pop(n); have.remove(n); regrouped.append(n)
             if len(have) < 2:
                 rows.append(have) if have else None
+                continue
+            if os.environ.get('GROUP_ROBUST'):
+                # reader positions unreliable inside a terrace (several numbers at one spot): the readings' spread
+                # gives the line, their extent the centre, the rank of numbers along it the order; even spacing
+                X = np.array([units[n]['p'] for n in have])
+                Xc = X - X.mean(0)
+                if np.abs(Xc).max() > 0.6 * pitch:
+                    ev, evec = np.linalg.eigh(Xc.T @ Xc); ax = evec[:, -1]
+                else:
+                    ax = np.array(units[have[0]]['axis'])
+                tt = X @ ax
+                cen_t = (tt.min() + tt.max()) / 2
+                c_ = X.mean(0) + ax * (cen_t - (X.mean(0) @ ax))
+                rk = np.corrcoef(np.argsort(np.argsort(have)), np.argsort(np.argsort(tt)))[0, 1] if len(have) > 1 and tt.std() > 0 else 1
+                if rk < 0:
+                    ax = -ax
+                fa = first_at.get(str(ns[0]))
+                if fa is not None:  # the first home's label, read by eye on the map: the run starts at that end
+                    ax = ax if np.dot(np.array(fa) - c_, ax) < 0 else -ax
+                nrm = np.array([-ax[1], ax[0]])
+                vote = sum(np.sign(np.dot(units[n]['front'], nrm)) * (units[n]['conf'] + 0.02) for n in have)
+                fr = nrm if vote >= 0 else -nrm
+                mid = np.mean(ns)
+                for n in ns:
+                    if n not in units:
+                        interp.append(n)
+                    units[n] = dict(units.get(n, {}), p=(c_ + ax * pitch * (n - mid)).tolist(), axis=ax.tolist(), front=fr.tolist(),
+                                    conf=units.get(n, {}).get('conf', 0.0), interp=units.get(n, {}).get('interp', True))
+                rows.append(ns)
                 continue
             X = np.array([units[n]['p'] for n in have]); t = np.array(have, float)
             # position = a + b * number (least squares per coordinate): gives the axis and the spacing

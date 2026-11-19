@@ -1,0 +1,51 @@
+{
+ "styles": {
+  "Canna": "CANNA",
+  "Cedar": "CEDAR"
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "note": "Nima cluster map from the client's agent pack (NIMA_THE_VALLEY_CLUSTERMAP.pdf, numbers in the map picture): STYLES CANNA (pink plots) / CEDAR (sand plots); TYPES white = 3 BR, grey = 4 BR. Floor plans NIMA_MARKETING_PLAN.pdf: CANNA p.2-10, CEDAR p.11-18 (the style name is printed in each position: '4 PLEX CANNA - TH 02').",
+ "swatches": {
+  "Canna": [
+   668,
+   652
+  ],
+  "Cedar": [
+   668,
+   703
+  ]
+ },
+ "count": 520,
+ "count_source": "Nima fact sheet: 362 x 3 BR + 158 x 4 BR",
+ "plex_sizes": [
+  4,
+  6,
+  8,
+  10
+ ],
+ "plot_hsv": [
+  [
+   150,
+   175,
+   35,
+   120,
+   180,
+   256
+  ],
+  [
+   10,
+   30,
+   50,
+   140,
+   180,
+   256
+  ]
+ ],
+ "ring_plot": 0.15,
+ "close_px": 9,
+ "aspect_min": 1.4,
+ "home_w_pt": 7.33
+}
