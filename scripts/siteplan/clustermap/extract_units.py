@@ -58,6 +58,9 @@ def ocr_tile(td, tile, k, single_only=False):
             continue
         txt = parts[0]; bx, by, bw, bh = map(float, parts[1:5])
         toks = re.findall(r'\d{1,3}', txt.replace('O', '0').replace('o', '0'))
+        if os.environ.get('LABEL_DIGITS'):  # maps that print every label zero-padded ('004'): a shorter token is a fragment
+            nd = int(os.environ['LABEL_DIGITS'])
+            toks = [t for t in re.findall(r'\d+', txt.replace('O', '0').replace('o', '0')) if len(t) == nd]
         if single_only and len(toks) > 1:
             continue  # a line of several numbers read on a turned copy: spreading them along its box misplaces them
         for i, t in enumerate(toks):  # a run of numbers read as one line: split it evenly along the box

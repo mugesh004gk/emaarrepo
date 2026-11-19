@@ -1,0 +1,151 @@
+{
+ "count": 482,
+ "count_source": "Farm Grove 1 fact sheet: 91 x 4 BR villa + 48 x 5 BR villa + 68 semi-detached + 275 detached = 482",
+ "swatches": {
+  "Ivy": [
+   2063,
+   1553
+  ],
+  "Orchid": [
+   2063,
+   1620
+  ],
+  "Willow": [
+   2063,
+   1686
+  ],
+  "Lavender": [
+   2063,
+   1752
+  ],
+  "Gardenia": [
+   2663,
+   1488
+  ],
+  "Lotus": [
+   2663,
+   1555
+  ],
+  "Marigold": [
+   2663,
+   1688
+  ],
+  "Lily": [
+   2663,
+   1752
+  ]
+ },
+ "kinds": {
+  "Ivy": "villa",
+  "Orchid": "villa",
+  "Willow": "villa",
+  "Lavender": "villa",
+  "Gardenia": "detached",
+  "Lotus": "detached",
+  "Marigold": "semi",
+  "Lily": "semi"
+ },
+ "beds": {
+  "Ivy": 5,
+  "Orchid": 5,
+  "Willow": 4,
+  "Lavender": 4,
+  "Gardenia": 4,
+  "Lotus": 4,
+  "Marigold": 4,
+  "Lily": 4
+ },
+ "note": "Farm Grove 1 cluster map from the client's agent pack (FARMGROVE_TV_CLUSTERMAP.pdf, numbers only in the map picture, read by eye: labels_by_eye.json in the frame of farm_grove_1_map_100dpi.png). STYLE legend: villas Ivy / Orchid (5 BR) and Willow / Lavender (4 BR); detached Gardenia / Lotus; semi-detached Marigold / Lily (plot colours). Floor plans FARMGROVE_TV_FLOORPLAN.pdf: p.2 Willow, p.3 Lavender, p.4 Ivy, p.5 Orchid, p.6 Gardenia, p.7 Lotus, p.8-9 Marigold, p.10-11 Lily.",
+ "design_fixes": [
+  {
+   "units": [
+    33,
+    92,
+    124,
+    248,
+    342
+   ],
+   "design": "Gardenia",
+   "why": "red (Gardenia) plots looked at by eye; the colour reading took them for pale-pink villa or blue semi-detached"
+  },
+  {
+   "units": [
+    104,
+    105,
+    216,
+    217
+   ],
+   "design": "Lily",
+   "why": "dark-blue (Lily) semi-detached pairs looked at by eye"
+  }
+ ],
+ "plans_by_design": {
+  "Willow": {
+   "beds": 4,
+   "plan": "4 bedroom stand-alone villa (Willow)",
+   "page": 2,
+   "pages": null,
+   "sqft": 5580.76,
+   "sqm": 518.47
+  },
+  "Lavender": {
+   "beds": 4,
+   "plan": "4 bedroom stand-alone villa (Lavender)",
+   "page": 3,
+   "pages": null,
+   "sqft": 5580.76,
+   "sqm": 518.47
+  },
+  "Ivy": {
+   "beds": 5,
+   "plan": "5 bedroom stand-alone villa (Ivy)",
+   "page": 4,
+   "pages": null,
+   "sqft": 6078.16,
+   "sqm": 564.68
+  },
+  "Orchid": {
+   "beds": 5,
+   "plan": "5 bedroom stand-alone villa (Orchid)",
+   "page": 5,
+   "pages": null,
+   "sqft": 6078.16,
+   "sqm": 564.68
+  },
+  "Gardenia": {
+   "beds": 4,
+   "plan": "4 bedroom detached villa (Gardenia)",
+   "page": 6,
+   "pages": null,
+   "sqft": 3754.88,
+   "sqm": 348.84
+  },
+  "Lotus": {
+   "beds": 4,
+   "plan": "4 bedroom detached villa (Lotus)",
+   "page": 7,
+   "pages": null,
+   "sqft": 3741.32,
+   "sqm": 347.58
+  },
+  "Marigold": {
+   "beds": 4,
+   "plan": "4 bedroom semi-detached villa (Marigold, A / B)",
+   "page": 8,
+   "pages": "8-9",
+   "sqft": 3764.89,
+   "sqm": 349.77
+  },
+  "Lily": {
+   "beds": 4,
+   "plan": "4 bedroom semi-detached villa (Lily, A / B)",
+   "page": 10,
+   "pages": "10-11",
+   "sqft": 3750.36,
+   "sqm": 348.42
+  }
+ },
+ "pairs": "mixed",
+ "replace_mapped_streets": true,
+ "replace_mapped_streets_why": "an OpenStreetMap track crosses the graded Farm Grove 1 site (a construction track in the satellite photo, not a built street); inside the plan it gives way to the plan streets"
+}

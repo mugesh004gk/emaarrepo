@@ -22,7 +22,7 @@ import json, os, re, subprocess
 
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley', 'farm-grove-at-the-valley']
 NO_PDF = {}  # every built Valley project now has a floor-plan PDF (19 Nov 2026: agent packs + broker copies)
 # printing errors on a sheet, checked on its key plan: (pdf, page) -> the TH the sheet is for
 SHEET_TYPOS = {('ELVA_TV_FLOORPLAN.pdf', 5): {4}}  # Ravine 4 BR end home: printed 'TH03' (TH03 is p.4, 3 BR)

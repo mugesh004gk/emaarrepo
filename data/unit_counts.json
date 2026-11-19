@@ -94,10 +94,10 @@
   },
   "farm-grove-at-the-valley": {
    "community": "the-valley",
-   "name": "Farm Grove",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "name": "Farm Grove 1",
+   "total": 482,
+   "source": "Farm Grove 1 cluster map (client agent pack; all 482 labels read by eye) and fact sheet (91 x 4 BR villa, 48 x 5 BR villa, 275 detached, 68 semi-detached)",
+   "clusterMap": "numbered"
   },
   "farm-gardens-2": {
    "community": "the-valley",

@@ -2173,6 +2173,179 @@
    "status": "complete",
    "ddaBoundary": null,
    "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "farm-grove-at-the-valley",
+   "name": "Farm Grove",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4363983,
+     25.0229084
+    ],
+    [
+     55.4349603,
+     25.0215061
+    ],
+    [
+     55.4349955,
+     25.0204422
+    ],
+    [
+     55.4351604,
+     25.0202818
+    ],
+    [
+     55.4353439,
+     25.0201091
+    ],
+    [
+     55.4354932,
+     25.0199756
+    ],
+    [
+     55.435526,
+     25.0199478
+    ],
+    [
+     55.4356788,
+     25.0198241
+    ],
+    [
+     55.4358766,
+     25.0196775
+    ],
+    [
+     55.436008,
+     25.0195836
+    ],
+    [
+     55.4407598,
+     25.0171666
+    ],
+    [
+     55.4409381,
+     25.0170818
+    ],
+    [
+     55.4412091,
+     25.0170183
+    ],
+    [
+     55.4414716,
+     25.0170205
+    ],
+    [
+     55.4416925,
+     25.0170774
+    ],
+    [
+     55.4418498,
+     25.0171441
+    ],
+    [
+     55.4437646,
+     25.0184599
+    ],
+    [
+     55.4439299,
+     25.0186171
+    ],
+    [
+     55.4440194,
+     25.0187786
+    ],
+    [
+     55.4441057,
+     25.0190171
+    ],
+    [
+     55.4439378,
+     25.0192521
+    ],
+    [
+     55.4430789,
+     25.0203513
+    ],
+    [
+     55.4429175,
+     25.0205593
+    ],
+    [
+     55.4405175,
+     25.0234847
+    ],
+    [
+     55.4403889,
+     25.0236294
+    ],
+    [
+     55.4400828,
+     25.0239725
+    ],
+    [
+     55.4396713,
+     25.0244164
+    ],
+    [
+     55.4394992,
+     25.0245415
+    ],
+    [
+     55.4393407,
+     25.0246171
+    ],
+    [
+     55.4391224,
+     25.0246823
+    ],
+    [
+     55.4389302,
+     25.0247157
+    ],
+    [
+     55.4386322,
+     25.0246995
+    ],
+    [
+     55.4383012,
+     25.0245519
+    ],
+    [
+     55.4382884,
+     25.0245456
+    ],
+    [
+     55.4381491,
+     25.0244493
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed villas + 20 m",
+   "placement": {
+    "kind": "masterplan",
+    "text": "Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)"
+   },
+   "placementDetail": "Farm Grove 1 is not built (graded land in the satellite photo). Boundary-road alignment: the map's east boundary road (x 1640) = the walled service road, its north end = where the diagonal north access road meets it, its south end = the green strip at the north edge of the built Farm Gardens; the angle between the two roads agrees (82 deg on the map, 83 deg on the ground). Estimated, not verified; 2 matching points read by eye on the Esri satellite photo, similarity fit, residuals [0.0, 0.0] m",
+   "clusterMap": {
+    "document": "farm_grove_1_map_100dpi.png",
+    "page": 1,
+    "image": "media/research/the-valley/properties/farm-grove-at-the-valley/clustermap/FARMGROVE 2_TV_CLUSTERMAP.pdf"
+   },
+   "units": {
+    "official": 482,
+    "placed": 482,
+    "numbered": 482,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "FARMGROVE_TV_FLOORPLAN.pdf",
+    "url": "media/research/the-valley/properties/farm-grove-at-the-valley/floorplans/FARMGROVE_TV_FLOORPLAN.pdf",
+    "linkedUnits": 482,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
   }
  ]
 }

@@ -1,0 +1,20 @@
+{
+ "image": "farm-grove-at-the-valley cluster map (page points)",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   0.437608,
+   0.333116,
+   -1783.024
+  ],
+  [
+   0.333116,
+   -0.437608,
+   1934.3861
+  ]
+ ],
+ "scale_m_per_px": 0.55,
+ "method": "Farm Grove 1 is not built (graded land in the satellite photo). Boundary-road alignment: the map's east boundary road (x 1640) = the walled service road, its north end = where the diagonal north access road meets it, its south end = the green strip at the north edge of the built Farm Gardens; the angle between the two roads agrees (82 deg on the map, 83 deg on the ground). Estimated, not verified; 2 matching points read by eye on the Esri satellite photo, similarity fit, residuals [0.0, 0.0] m",
+ "accuracy": "provisional: not built yet; placed by its boundary roads - estimated within about 50 m"
+}
