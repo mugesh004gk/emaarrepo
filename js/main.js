@@ -23,6 +23,7 @@ import { placeNaraInWorld } from './nara-frame.js';
 import { createCommunityPicker, startCommunityRouting } from './ui/community-picker.js';
 import { createScopeMask } from './scope-mask.js';
 import { initProjectsUI } from './ui/projects-ui.js';
+import { createBoundaryReview } from './boundary-review.js';
 import { optimiseNaraWorld, createOcclusionCuller } from './culling.js';
 import { createDetectedHomes } from './detected-homes.js';
 import { createValleyDetail } from './valley-detail.js';
@@ -1011,6 +1012,15 @@ async function boot() {
 
   const projectsUI = initProjectsUI(app);
   app.projectsUI = projectsUI;
+  // boundary review: each built Valley property's outline, cluster map, homes and floor plan (top-bar 'Boundaries')
+  const boundaryReview = createBoundaryReview({
+    scene, groundScene, labels, camera, flyTo, projectsUI, invalidate,
+    currentAzimuth: () => currentPose().azimuth,
+    hideLeft: () => { stopIntro(); intro.panelsHidden = false; toggleLeft(false); }, // the intro tour would fly away and reopen the panel
+    selectProject: (pid) => selectProject(pid),
+    ensureValley: () => { if (state.communityId !== 'the-valley') selectCommunity('the-valley', { fly: false }); },
+  });
+  app.boundaryReview = boundaryReview;
 
   // ---- explorer filters + colour mode on the 3D homes (detected homes and Nara) -----------------------
   const naraProject = projectsById.get('nara');
@@ -1367,6 +1377,7 @@ async function boot() {
     renderer.setPixelRatio(pixelRatio());
     renderer.setSize(window.innerWidth, window.innerHeight);
     districtLayer.setResolution(window.innerWidth, window.innerHeight);
+    boundaryReview.setResolution(window.innerWidth, window.innerHeight);
     showHome.onResize();
     labels.measure();
     applyPanels();

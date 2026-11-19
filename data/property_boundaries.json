@@ -1,0 +1,1399 @@
+{
+ "_about": "Working boundaries of the built Valley properties (hull of the placed homes + margin) with how each was made. Not DDA GIS boundaries. Written by scripts/siteplan/export_boundaries.py.",
+ "properties": [
+  {
+   "id": "nara",
+   "name": "Nara",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4485857,
+     25.01168
+    ],
+    [
+     55.4498674,
+     25.0102262
+    ],
+    [
+     55.4544807,
+     25.0133007
+    ],
+    [
+     55.4545412,
+     25.0133471
+    ],
+    [
+     55.4547165,
+     25.0134805
+    ],
+    [
+     55.4548937,
+     25.0136135
+    ],
+    [
+     55.454665,
+     25.0139316
+    ],
+    [
+     55.4542458,
+     25.0144721
+    ],
+    [
+     55.4529485,
+     25.0146769
+    ],
+    [
+     55.4502767,
+     25.0129399
+    ],
+    [
+     55.449744,
+     25.0125411
+    ]
+   ],
+   "boundaryMethod": "Outline around the 372 surveyed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Official Emaar site plan; every home matched to its roof on the satellite photo"
+   },
+   "clusterMap": {
+    "document": "NARA_floorplan.pdf",
+    "page": 17,
+    "image": "media/research/the-valley/properties/nara/clustermap/nara_cluster_map_p17.png"
+   },
+   "units": {
+    "official": 372,
+    "placed": 372,
+    "numbered": 372,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "NARA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/nara/floorplans/NARA_floorplan.pdf",
+    "linkedUnits": 372,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "eden",
+   "name": "Eden",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4468709,
+     25.0134745
+    ],
+    [
+     55.44692,
+     25.0134136
+    ],
+    [
+     55.4470187,
+     25.0132916
+    ],
+    [
+     55.4472674,
+     25.0129861
+    ],
+    [
+     55.4483522,
+     25.0117008
+    ],
+    [
+     55.4487509,
+     25.011925
+    ],
+    [
+     55.452,
+     25.0139886
+    ],
+    [
+     55.4524266,
+     25.0142988
+    ],
+    [
+     55.4524874,
+     25.0143428
+    ],
+    [
+     55.4528221,
+     25.0146222
+    ],
+    [
+     55.4525743,
+     25.014927
+    ],
+    [
+     55.4523745,
+     25.0151711
+    ],
+    [
+     55.4523243,
+     25.0152322
+    ],
+    [
+     55.4506269,
+     25.0160249
+    ],
+    [
+     55.4482233,
+     25.0145603
+    ],
+    [
+     55.4476515,
+     25.0141732
+    ],
+    [
+     55.4472847,
+     25.0139033
+    ],
+    [
+     55.4471629,
+     25.0138143
+    ]
+   ],
+   "boundaryMethod": "Outline around the plots + 12 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo"
+   },
+   "placementDetail": "plan buildings matched to satellite roofs (normalised correlation 0.29); orientation equals Nara official plan (322.51 deg)",
+   "clusterMap": {
+    "document": "EDEN_floorplan.pdf",
+    "page": 2,
+    "image": "media/research/the-valley/properties/eden/clustermap/eden_cluster_map_p2.png"
+   },
+   "units": {
+    "official": 362,
+    "placed": 362,
+    "numbered": 362,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "EDEN_floorplan.pdf",
+    "url": "media/research/the-valley/properties/eden/floorplans/EDEN_floorplan.pdf",
+    "linkedUnits": 362,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "orania-at-the-valley",
+   "name": "Orania",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.442667,
+     25.0107377
+    ],
+    [
+     55.4440482,
+     25.0089765
+    ],
+    [
+     55.4441182,
+     25.0090128
+    ],
+    [
+     55.4441789,
+     25.0090469
+    ],
+    [
+     55.4455506,
+     25.0098035
+    ],
+    [
+     55.4463352,
+     25.0102586
+    ],
+    [
+     55.4479966,
+     25.0115085
+    ],
+    [
+     55.4480903,
+     25.0115779
+    ],
+    [
+     55.4480418,
+     25.0116422
+    ],
+    [
+     55.4471947,
+     25.0126131
+    ],
+    [
+     55.4471092,
+     25.0127024
+    ],
+    [
+     55.4460437,
+     25.0128426
+    ],
+    [
+     55.4456294,
+     25.0128534
+    ],
+    [
+     55.4434694,
+     25.0113488
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.44)"
+   },
+   "placementDetail": "map homes matched to satellite roofs; kept from the earlier run (more units read)",
+   "clusterMap": {
+    "document": "ORANIA_brochure.pdf",
+    "page": 19,
+    "image": "media/research/the-valley/properties/orania-at-the-valley/clustermap/orania-at-the-valley_cluster_map_p19.png"
+   },
+   "units": {
+    "official": 308,
+    "placed": 308,
+    "numbered": 308,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "ORANIA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/orania-at-the-valley/floorplans/ORANIA_floorplan.pdf",
+    "linkedUnits": 308,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "elora",
+   "name": "Elora",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.445007,
+     25.007071
+    ],
+    [
+     55.4498041,
+     25.0098912
+    ],
+    [
+     55.4492141,
+     25.0109085
+    ],
+    [
+     55.4491798,
+     25.0109646
+    ],
+    [
+     55.4491481,
+     25.0110152
+    ],
+    [
+     55.4489521,
+     25.0113257
+    ],
+    [
+     55.4484286,
+     25.0115288
+    ],
+    [
+     55.448083,
+     25.0113495
+    ],
+    [
+     55.4463703,
+     25.0104086
+    ],
+    [
+     55.4446759,
+     25.0092766
+    ],
+    [
+     55.4437183,
+     25.0085933
+    ],
+    [
+     55.4436682,
+     25.0082966
+    ],
+    [
+     55.4437061,
+     25.0082431
+    ],
+    [
+     55.4437418,
+     25.0081936
+    ],
+    [
+     55.4438138,
+     25.0080946
+    ],
+    [
+     55.4438502,
+     25.0080454
+    ],
+    [
+     55.4438946,
+     25.0079867
+    ],
+    [
+     55.4445559,
+     25.0071673
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.39)"
+   },
+   "placementDetail": "map homes matched to satellite roofs",
+   "clusterMap": {
+    "document": "ELORA_brochure.pdf",
+    "page": 8,
+    "image": "media/research/the-valley/properties/elora/clustermap/elora_cluster_map_p8.png"
+   },
+   "units": {
+    "official": 430,
+    "placed": 430,
+    "numbered": 430,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "ELORA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/elora/floorplans/ELORA_floorplan.pdf",
+    "linkedUnits": 430,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "rivana",
+   "name": "Rivana",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4564555,
+     25.0116062
+    ],
+    [
+     55.4561976,
+     25.0116331
+    ],
+    [
+     55.456034,
+     25.0116117
+    ],
+    [
+     55.4555095,
+     25.0113232
+    ],
+    [
+     55.4552233,
+     25.0111451
+    ],
+    [
+     55.4550993,
+     25.0110653
+    ],
+    [
+     55.4519594,
+     25.0089621
+    ],
+    [
+     55.4516584,
+     25.0086639
+    ],
+    [
+     55.4514812,
+     25.0083248
+    ],
+    [
+     55.4514149,
+     25.0081566
+    ],
+    [
+     55.451379,
+     25.0080171
+    ],
+    [
+     55.4513591,
+     25.0079138
+    ],
+    [
+     55.4513332,
+     25.0077711
+    ],
+    [
+     55.4513257,
+     25.0075198
+    ],
+    [
+     55.4513494,
+     25.0074011
+    ],
+    [
+     55.4513829,
+     25.0072541
+    ],
+    [
+     55.4514103,
+     25.0071519
+    ],
+    [
+     55.4514614,
+     25.0070113
+    ],
+    [
+     55.4515386,
+     25.0068532
+    ],
+    [
+     55.4516114,
+     25.0067261
+    ],
+    [
+     55.4516906,
+     25.0066229
+    ],
+    [
+     55.45177,
+     25.0065233
+    ],
+    [
+     55.4518617,
+     25.0064278
+    ],
+    [
+     55.452502,
+     25.0058568
+    ],
+    [
+     55.4527172,
+     25.0056791
+    ],
+    [
+     55.45307,
+     25.0054815
+    ],
+    [
+     55.4532818,
+     25.0054244
+    ],
+    [
+     55.4534374,
+     25.0053891
+    ],
+    [
+     55.453554,
+     25.0053686
+    ],
+    [
+     55.4537162,
+     25.0053512
+    ],
+    [
+     55.4538361,
+     25.0053455
+    ],
+    [
+     55.453998,
+     25.0053508
+    ],
+    [
+     55.4542672,
+     25.0053774
+    ],
+    [
+     55.458117,
+     25.0064155
+    ],
+    [
+     55.4583976,
+     25.0064994
+    ],
+    [
+     55.45859,
+     25.0066537
+    ],
+    [
+     55.4587587,
+     25.00688
+    ],
+    [
+     55.4588186,
+     25.0070508
+    ],
+    [
+     55.4589162,
+     25.0077064
+    ],
+    [
+     55.4589572,
+     25.0079937
+    ],
+    [
+     55.4589651,
+     25.0081074
+    ],
+    [
+     55.4589763,
+     25.0082932
+    ],
+    [
+     55.4589153,
+     25.00852
+    ],
+    [
+     55.4588073,
+     25.0087349
+    ],
+    [
+     55.4586813,
+     25.0089191
+    ],
+    [
+     55.4574148,
+     25.0105443
+    ],
+    [
+     55.4565842,
+     25.01155
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed villas + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.39)"
+   },
+   "placementDetail": "map building blocks matched to satellite roofs (coarse-to-fine); kept from the earlier run",
+   "clusterMap": {
+    "document": "368091_brochure_File_bd20d234e0_prod.pdf",
+    "page": 8,
+    "image": "media/research/the-valley/properties/rivana/clustermap/rivana_cluster_map_p8.png"
+   },
+   "units": {
+    "official": 486,
+    "placed": 486,
+    "numbered": 486,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": null,
+    "url": null,
+    "linkedUnits": 0,
+    "note": "no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only"
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "alana",
+   "name": "Alana",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4466029,
+     25.0051573
+    ],
+    [
+     55.4465433,
+     25.004817
+    ],
+    [
+     55.44657,
+     25.0047437
+    ],
+    [
+     55.4466892,
+     25.0045635
+    ],
+    [
+     55.4472693,
+     25.0037411
+    ],
+    [
+     55.4499247,
+     25.0024858
+    ],
+    [
+     55.4501867,
+     25.0023756
+    ],
+    [
+     55.4502725,
+     25.0023445
+    ],
+    [
+     55.450508,
+     25.002305
+    ],
+    [
+     55.4505973,
+     25.0023062
+    ],
+    [
+     55.4509445,
+     25.0023233
+    ],
+    [
+     55.4513035,
+     25.0023664
+    ],
+    [
+     55.4517413,
+     25.0025312
+    ],
+    [
+     55.452289,
+     25.0028171
+    ],
+    [
+     55.4525027,
+     25.0029631
+    ],
+    [
+     55.452564,
+     25.0030071
+    ],
+    [
+     55.4527076,
+     25.0031125
+    ],
+    [
+     55.4527724,
+     25.0031616
+    ],
+    [
+     55.4529472,
+     25.003352
+    ],
+    [
+     55.4531213,
+     25.0035683
+    ],
+    [
+     55.4531585,
+     25.0036393
+    ],
+    [
+     55.4532336,
+     25.0038174
+    ],
+    [
+     55.4532573,
+     25.0038892
+    ],
+    [
+     55.4533935,
+     25.004543
+    ],
+    [
+     55.4533611,
+     25.0046102
+    ],
+    [
+     55.4512158,
+     25.0069471
+    ],
+    [
+     55.4511569,
+     25.0069968
+    ],
+    [
+     55.450983,
+     25.0071211
+    ],
+    [
+     55.4509066,
+     25.0071588
+    ],
+    [
+     55.4506992,
+     25.0072349
+    ],
+    [
+     55.4506196,
+     25.0072513
+    ],
+    [
+     55.4500271,
+     25.0072848
+    ],
+    [
+     55.449942,
+     25.0072669
+    ],
+    [
+     55.4494171,
+     25.0070631
+    ],
+    [
+     55.4488045,
+     25.0067322
+    ],
+    [
+     55.447269,
+     25.0056966
+    ],
+    [
+     55.4468073,
+     25.005378
+    ],
+    [
+     55.4466425,
+     25.005223
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed villas + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.26)"
+   },
+   "placementDetail": "map building blocks matched to satellite roofs (coarse-to-fine); kept from the earlier run",
+   "clusterMap": {
+    "document": "375633_brochure_File_7e8a59d98f_prod.pdf",
+    "page": 16,
+    "image": "media/research/the-valley/properties/alana/clustermap/alana_cluster_map_p16.png"
+   },
+   "units": {
+    "official": 322,
+    "placed": 322,
+    "numbered": 322,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": null,
+    "url": null,
+    "linkedUnits": 0,
+    "note": "no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only"
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "the-farm-gardens",
+   "name": "The Farm Gardens",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4393206,
+     25.0149317
+    ],
+    [
+     55.4408948,
+     25.0130243
+    ],
+    [
+     55.4410228,
+     25.0129361
+    ],
+    [
+     55.4412345,
+     25.0128483
+    ],
+    [
+     55.4414046,
+     25.0128874
+    ],
+    [
+     55.4456425,
+     25.0157717
+    ],
+    [
+     55.4457671,
+     25.0158814
+    ],
+    [
+     55.4458286,
+     25.0161081
+    ],
+    [
+     55.4457937,
+     25.0162266
+    ],
+    [
+     55.4440747,
+     25.0183833
+    ],
+    [
+     55.4439604,
+     25.0184481
+    ],
+    [
+     55.4437099,
+     25.0184722
+    ],
+    [
+     55.4435629,
+     25.0184156
+    ],
+    [
+     55.4393941,
+     25.0155362
+    ],
+    [
+     55.4392265,
+     25.0153839
+    ],
+    [
+     55.4391777,
+     25.0152314
+    ],
+    [
+     55.4392431,
+     25.0150389
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed villas + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.25)"
+   },
+   "placementDetail": "map building blocks matched to satellite roofs (coarse-to-fine)",
+   "clusterMap": {
+    "document": "FARM-GARDENS_brochure.pdf",
+    "page": 24,
+    "image": "media/research/the-valley/properties/the-farm-gardens/clustermap/the-farm-gardens_cluster_map_p24.png"
+   },
+   "units": {
+    "official": 146,
+    "placed": 146,
+    "numbered": 146,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "FARM-GARDENS_floorplan.pdf",
+    "url": "media/research/the-valley/properties/the-farm-gardens/floorplans/FARM-GARDENS_floorplan.pdf",
+    "linkedUnits": 146,
+    "note": "floor plan by bedroom count; which villas use the mirrored plan is not stated"
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "farm-gardens-2",
+   "name": "Farm Gardens 2",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4412815,
+     25.0119582
+    ],
+    [
+     55.4412734,
+     25.0120634
+    ],
+    [
+     55.440219,
+     25.0171214
+    ],
+    [
+     55.4401318,
+     25.0172743
+    ],
+    [
+     55.4400726,
+     25.0173638
+    ],
+    [
+     55.4399631,
+     25.0174935
+    ],
+    [
+     55.4396874,
+     25.017767
+    ],
+    [
+     55.4395268,
+     25.0178541
+    ],
+    [
+     55.439388,
+     25.0179241
+    ],
+    [
+     55.4390598,
+     25.0179772
+    ],
+    [
+     55.4387457,
+     25.01794
+    ],
+    [
+     55.4385828,
+     25.0178584
+    ],
+    [
+     55.4385029,
+     25.0178106
+    ],
+    [
+     55.4382184,
+     25.0176307
+    ],
+    [
+     55.4343874,
+     25.0150526
+    ],
+    [
+     55.4342539,
+     25.0149359
+    ],
+    [
+     55.4341706,
+     25.0148444
+    ],
+    [
+     55.4340783,
+     25.0146943
+    ],
+    [
+     55.4340338,
+     25.0145713
+    ],
+    [
+     55.4339969,
+     25.0144013
+    ],
+    [
+     55.4339871,
+     25.0142759
+    ],
+    [
+     55.4340132,
+     25.014106
+    ],
+    [
+     55.4340561,
+     25.0140035
+    ],
+    [
+     55.4341438,
+     25.0138509
+    ],
+    [
+     55.4373959,
+     25.0099808
+    ],
+    [
+     55.4376097,
+     25.009767
+    ],
+    [
+     55.4377833,
+     25.0097022
+    ],
+    [
+     55.4382904,
+     25.0096726
+    ],
+    [
+     55.4384576,
+     25.0096939
+    ],
+    [
+     55.4385734,
+     25.0097305
+    ],
+    [
+     55.4388301,
+     25.0098392
+    ],
+    [
+     55.4407471,
+     25.0111106
+    ],
+    [
+     55.4408954,
+     25.0112139
+    ],
+    [
+     55.4409876,
+     25.0112978
+    ],
+    [
+     55.4411022,
+     25.0114344
+    ],
+    [
+     55.4411662,
+     25.0115255
+    ],
+    [
+     55.4412326,
+     25.0116852
+    ],
+    [
+     55.4412641,
+     25.0117884
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed villas + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.35)"
+   },
+   "placementDetail": "map building blocks matched to satellite roofs (coarse-to-fine); kept from the earlier run",
+   "clusterMap": {
+    "document": "379974_brochure_File_86ddad55b6_prod.pdf",
+    "page": 25,
+    "image": "media/research/the-valley/properties/farm-gardens-2/clustermap/farm-gardens-2_cluster_map_p25.png"
+   },
+   "units": {
+    "official": 256,
+    "placed": 248,
+    "numbered": 204,
+    "missingNumbers": 52
+   },
+   "floorPlan": {
+    "document": null,
+    "url": null,
+    "linkedUnits": 0,
+    "note": "no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only"
+   },
+   "status": "partial",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "kaia-at-the-valley",
+   "name": "Kaia",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4557662,
+     25.0144118
+    ],
+    [
+     55.4557023,
+     25.0143718
+    ],
+    [
+     55.455294,
+     25.0140985
+    ],
+    [
+     55.4549479,
+     25.0138591
+    ],
+    [
+     55.455008,
+     25.0137803
+    ],
+    [
+     55.4560231,
+     25.0124352
+    ],
+    [
+     55.4569213,
+     25.011335
+    ],
+    [
+     55.457156,
+     25.0111025
+    ],
+    [
+     55.4576221,
+     25.0105921
+    ],
+    [
+     55.4576539,
+     25.0105561
+    ],
+    [
+     55.458067,
+     25.0106506
+    ],
+    [
+     55.4584193,
+     25.0109002
+    ],
+    [
+     55.4585355,
+     25.0109856
+    ],
+    [
+     55.4583473,
+     25.0112578
+    ],
+    [
+     55.4582889,
+     25.0113395
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "masterplan",
+    "text": "Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)"
+   },
+   "placementDetail": "anchored on the S-roundabout shared with the Valley masterplan (masterplan fitted to the placed homes, corr 0.32); scale from the strip length on the masterplan, checked by the roundabout diameter (29 m on both maps); then moved 100 m across the strip (toward the desert): the smallest move that takes every Kaia home off the existing homes and the mapped roads; it puts Kaia on the graded strip east of the boundary road seen in the satellite photo",
+   "clusterMap": {
+    "document": "kaia_cluster_map_client.png",
+    "page": 1,
+    "image": "media/research/the-valley/properties/kaia-at-the-valley/clustermap/kaia_cluster_map_client.png"
+   },
+   "units": {
+    "official": 156,
+    "placed": 156,
+    "numbered": 156,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "KAIA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_floorplan.pdf",
+    "linkedUnits": 0,
+    "note": "KAIA_floorplan.pdf holds the Elea sheets, not Kaia (Ava / Vina / Luna): Kaia floor plans awaited"
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "elea-at-the-valley",
+   "name": "Elea",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4579681,
+     25.0102741
+    ],
+    [
+     55.4588092,
+     25.0067534
+    ],
+    [
+     55.4589221,
+     25.0067386
+    ],
+    [
+     55.4596713,
+     25.0067811
+    ],
+    [
+     55.459862,
+     25.0073106
+    ],
+    [
+     55.4598783,
+     25.0074078
+    ],
+    [
+     55.4599278,
+     25.0085338
+    ],
+    [
+     55.4599306,
+     25.0088823
+    ],
+    [
+     55.4599196,
+     25.0089542
+    ],
+    [
+     55.4598697,
+     25.0092013
+    ],
+    [
+     55.459807,
+     25.0093646
+    ],
+    [
+     55.4594899,
+     25.009947
+    ],
+    [
+     55.4592928,
+     25.0101556
+    ],
+    [
+     55.4587057,
+     25.0108007
+    ],
+    [
+     55.4586384,
+     25.0108768
+    ],
+    [
+     55.4583398,
+     25.0106868
+    ],
+    [
+     55.4582845,
+     25.0106487
+    ],
+    [
+     55.4581109,
+     25.0105276
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "masterplan",
+    "text": "Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)"
+   },
+   "placementDetail": "anchored on the S-roundabout shared with the Valley masterplan (masterplan fitted to the placed homes, corr 0.32); scale from the strip length on the masterplan, checked by the roundabout diameter (29 m on both maps); moved with Kaia (100 m across the strip in all) (+72 m east, +54 m north) so the two keep their shared roundabout",
+   "clusterMap": {
+    "document": "elea_cluster_map_client.png",
+    "page": 1,
+    "image": "media/research/the-valley/properties/elea-at-the-valley/clustermap/elea_cluster_map_client.png"
+   },
+   "units": {
+    "official": 128,
+    "placed": 128,
+    "numbered": 128,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "ELEA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/elea-at-the-valley/floorplans/ELEA_floorplan.pdf",
+    "linkedUnits": 118,
+    "note": "10 homes without a plan: bedroom count to confirm (34, 35, 50, 51, 54, 55, 58, 59, 94, 110)"
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "rivera-at-the-valley-phase-2",
+   "name": "Rivera",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.443638,
+     25.0017841
+    ],
+    [
+     55.4416282,
+     25.0048323
+    ],
+    [
+     55.4414964,
+     25.0049357
+    ],
+    [
+     55.4412409,
+     25.0051139
+    ],
+    [
+     55.4409815,
+     25.0052664
+    ],
+    [
+     55.4406171,
+     25.0053457
+    ],
+    [
+     55.4403719,
+     25.0053399
+    ],
+    [
+     55.4402093,
+     25.0053147
+    ],
+    [
+     55.4398875,
+     25.00525
+    ],
+    [
+     55.4381019,
+     25.0041391
+    ],
+    [
+     55.4375848,
+     25.003641
+    ],
+    [
+     55.4374541,
+     25.0033705
+    ],
+    [
+     55.437396,
+     25.0032297
+    ],
+    [
+     55.4376341,
+     25.0021468
+    ],
+    [
+     55.4377373,
+     25.0020251
+    ],
+    [
+     55.4378588,
+     25.001919
+    ],
+    [
+     55.4379782,
+     25.0018181
+    ],
+    [
+     55.4382749,
+     25.0016628
+    ],
+    [
+     55.4421052,
+     25.0003171
+    ],
+    [
+     55.4422645,
+     25.0002939
+    ],
+    [
+     55.4428909,
+     25.0006313
+    ],
+    [
+     55.4435278,
+     25.0010163
+    ],
+    [
+     55.4435825,
+     25.0013007
+    ],
+    [
+     55.4436091,
+     25.0014478
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed villas + 20 m",
+   "placement": {
+    "kind": "masterplan",
+    "text": "Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)"
+   },
+   "placementDetail": "4 matching points between the Rivera cluster map and the heart-shaped Rivera on the Valley masterplan (entrance road, west edge, top of the west lobe, south tip; similarity fit, residual 9.9 masterplan px); masterplan fitted to the placed homes (corr 0.32)",
+   "clusterMap": {
+    "document": "rivera_cluster_map_client.png",
+    "page": 1,
+    "image": "media/research/the-valley/properties/rivera-at-the-valley-phase-2/clustermap/rivera_cluster_map_client.png"
+   },
+   "units": {
+    "official": 378,
+    "placed": 234,
+    "numbered": 234,
+    "missingNumbers": 144
+   },
+   "floorPlan": {
+    "document": "RIVERA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/rivera-at-the-valley-phase-2/floorplans/RIVERA_floorplan.pdf",
+    "linkedUnits": 234,
+    "note": "144 homes not placed yet (numbers not legible on the map received)"
+   },
+   "status": "partial",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  }
+ ]
+}

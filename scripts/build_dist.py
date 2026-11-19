@@ -57,7 +57,7 @@ def collect(o):
     elif isinstance(o, str) and o.startswith('media/research/') and not o.lower().endswith('.pdf'):
         images.add(o)
 
-for f in ['projects.json', 'floorplans.json']:
+for f in ['projects.json', 'floorplans.json', 'property_boundaries.json']:
     p = os.path.join(OUT, 'data', f)
     d = json.load(open(p))
     collect(d)
@@ -74,7 +74,7 @@ for rel in sorted(images):
         shutil.copy2(src, os.path.splitext(dst)[0] + '.thumb.jpg')
         continue
     h, w = img.shape[:2]
-    k = min(1.0, 1600 / max(h, w))
+    k = 1.0 if '/clustermap/' in rel else min(1.0, 1600 / max(h, w))  # cluster maps stay full size: unit numbers must be readable
     if k < 1:
         img = cv2.resize(img, (int(w * k), int(h * k)), interpolation=cv2.INTER_AREA)
     ext = os.path.splitext(dst)[1].lower()
