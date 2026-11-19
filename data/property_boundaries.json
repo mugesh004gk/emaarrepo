@@ -2068,6 +2068,111 @@
    "status": "complete",
    "ddaBoundary": null,
    "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "vindera-at-the-valley",
+   "name": "Vindera",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4398563,
+     24.9999452
+    ],
+    [
+     55.4364447,
+     25.0010447
+    ],
+    [
+     55.4361559,
+     25.0007966
+    ],
+    [
+     55.4356441,
+     25.000164
+    ],
+    [
+     55.4354518,
+     24.9999093
+    ],
+    [
+     55.4348873,
+     24.9991301
+    ],
+    [
+     55.4347776,
+     24.9989727
+    ],
+    [
+     55.4346118,
+     24.9986247
+    ],
+    [
+     55.4371077,
+     24.9968606
+    ],
+    [
+     55.4373988,
+     24.9968297
+    ],
+    [
+     55.438263,
+     24.9969002
+    ],
+    [
+     55.4383387,
+     24.9969082
+    ],
+    [
+     55.4398773,
+     24.9970947
+    ],
+    [
+     55.4399507,
+     24.9974261
+    ],
+    [
+     55.4399783,
+     24.9988935
+    ],
+    [
+     55.4399775,
+     24.9989597
+    ],
+    [
+     55.4399584,
+     24.9995337
+    ],
+    [
+     55.4399549,
+     24.999599
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "masterplan",
+    "text": "Not built yet: placed from its neighbour Velora 2 as drawn on its map (provisional, about 20-30 m)"
+   },
+   "placementDetail": "Vindera is not built (graded site between Velora 2, Rivera and Venera in the satellite photo, as its key map shows). Its map draws Velora 2's southern terraces and the shared highway in the same art as the Velora 2 map: the two map images registered (edge correlation 0.34, rotation 0.0 deg, scale 0.6018); composed with Velora 2's placement on its walled site (Velora 2 is under construction: its walled site is visible i...)",
+   "clusterMap": {
+    "document": "VINDERA_TV_CLUSTER_MAP.pdf",
+    "page": 1,
+    "image": "media/research/the-valley/properties/vindera-at-the-valley/clustermap/vindera-at-the-valley_cluster_map_p6.png"
+   },
+   "units": {
+    "official": 578,
+    "placed": 578,
+    "numbered": 578,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "VINDERA_TH_FLOORPLANS.pdf",
+    "url": "media/research/the-valley/properties/vindera-at-the-valley/floorplans/VINDERA_TH_FLOORPLANS.pdf",
+    "linkedUnits": 578,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
   }
  ]
 }

@@ -335,7 +335,7 @@ def main():
         hits += h2
     else:
         hits, frame = from_text(pdf, page)
-    if '--raster' not in sys.argv and len([h for h in hits if h[0] > 0]) < 20:
+    if '--raster' not in sys.argv and (len([h for h in hits if h[0] > 0]) < 20 or '--ocr' in sys.argv):  # --ocr: text layer split into digits (Vindera)
         # OCR_PASSES="400:0;600:0" reads upright labels only (rotated passes invent numbers on maps
         # whose labels are all upright, e.g. Alana)
         ps = os.environ.get('OCR_PASSES')

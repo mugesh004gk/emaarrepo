@@ -1,0 +1,20 @@
+{
+ "image": "VINDERA_TV_CLUSTER_MAP.pdf (page points)",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   0.331391,
+   0.312564,
+   -1450.126335
+  ],
+  [
+   0.312564,
+   -0.331391,
+   -779.85538
+  ]
+ ],
+ "scale_m_per_px": 0.4555,
+ "method": "Vindera is not built (graded site between Velora 2, Rivera and Venera in the satellite photo, as its key map shows). Its map draws Velora 2's southern terraces and the shared highway in the same art as the Velora 2 map: the two map images registered (edge correlation 0.34, rotation 0.0 deg, scale 0.6018); composed with Velora 2's placement on its walled site (Velora 2 is under construction: its walled site is visible i...)",
+ "accuracy": "provisional: not built yet; placed through Velora 2 (wall fit 12-17 m) - estimated within about 20-30 m"
+}

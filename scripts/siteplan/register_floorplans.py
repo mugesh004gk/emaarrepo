@@ -24,6 +24,7 @@ FLOORPLANS = {
     'talia': f'{P}/talia/floorplans/TV_TALIA_FLOOR_PLANS.pdf',
     'velora-2-at-the-valley-phase-2': f'{P}/velora-2-at-the-valley-phase-2/floorplans/VELORA2_FLOORPLAN_TV.pdf',
     'velora-at-the-valley': f'{P}/velora-at-the-valley/floorplans/VELORA_THE_VALLEY_FLOORPLAN.pdf',
+    'vindera-at-the-valley': f'{P}/vindera-at-the-valley/floorplans/VINDERA_TH_FLOORPLANS.pdf',
 }
 
 

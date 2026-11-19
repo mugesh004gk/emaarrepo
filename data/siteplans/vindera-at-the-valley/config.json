@@ -1,1 +1,30 @@
-{}
+{
+ "count": 578,
+ "count_source": "Vindera fact sheet: 352 x 3 BR + 226 x 4 BR = 578",
+ "styles": {
+  "Style 1": "STYLE",
+  "Style 2": "STYLE"
+ },
+ "swatches": {
+  "Style 1": [
+   1491,
+   934
+  ],
+  "Style 2": [
+   1484,
+   982
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "plot_min_sat": 30,
+ "plot_tree_hue": [
+  30,
+  85
+ ],
+ "note": "Vindera cluster map from the client's agent pack (VINDERA_TV_CLUSTER_MAP.pdf; labels at 0/90/45 deg, read by OCR): STYLE 1 (blue plots) / STYLE 2 (orange plots); TYPES white = 3 BR, grey = 4 BR; 4- and 6-home terraces. Floor plans VINDERA_TH_FLOORPLANS.pdf.",
+ "replace_mapped_streets": true,
+ "replace_mapped_streets_why": "one OpenStreetMap minor street (1.4 km) crosses the graded Vindera site diagonally where the satellite photo shows no paved road; the built ring road (Rivera) runs 40-60 m further north, clear of the homes; the part inside the plan gives way to the plan streets, the rest is kept"
+}

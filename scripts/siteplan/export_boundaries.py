@@ -17,7 +17,7 @@ APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 MEDIA = 'media/research/the-valley/properties'
 KY = 110574.0
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley']
 # floor-plan facts that are not in the data files (checked by hand on the PDFs)
 FLOOR_NOTES = {
     'rivana': 'broker copy with 5 of the 12 sheets (no Kai 4 BR); scanned, areas not readable',
@@ -88,12 +88,12 @@ def main():
             numbered = sum(1 for r in sp['rows'] for n in (r.get('unitNumbers') or []) if n is not None)
             official = ck.get('official_count') or (counts.get(pid) or {}).get('total') or ck.get('units')
             bs = g.get('boundary_status', '')
-            prov = 'provisional' in bs or 'masterplan' in g.get('method', '').lower()
+            prov = 'provisional' in bs or 'masterplan' in g.get('method', '').lower() or 'not built' in g.get('method', '').lower()
             what = bs.split(';')[0].replace('homes hull', 'Outline around the placed homes').replace('blocks hull', 'Outline around the placed villas').replace('plots hull', 'Outline around the plots')
             rec = {
                 'boundary': sp['boundary'],
                 'boundaryMethod': what,
-                'placement': ({'kind': 'masterplan', 'text': 'Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)'} if prov else
+                'placement': (({'kind': 'masterplan', 'text': 'Not built yet: placed from its neighbour Velora 2 as drawn on its map (provisional, about 20-30 m)'} if 'velora 2' in g.get('method', '').lower() and 'not built' in g.get('method', '').lower() else {'kind': 'masterplan', 'text': 'Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)'}) if prov else
                               {'kind': 'satellite', 'text': 'Cluster map matched to the built homes on the satellite photo' + (f" (match score {g['correlation']:.2f})" if g.get('correlation') else '')}),
                 'placementDetail': g.get('method'),
                 'clusterMap': {'document': sp['source']['document'], 'page': sp['source'].get('page'), 'image': cmap},
