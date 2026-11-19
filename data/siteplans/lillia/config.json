@@ -1,0 +1,28 @@
+{
+ "count": 406,
+ "styles": {
+  "Jade": "JADE",
+  "Pearl": "PEARL"
+ },
+ "swatches": {
+  "Jade": [
+   618,
+   699
+  ],
+  "Pearl": [
+   618,
+   738
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "note": "Lillia cluster map from the client's agent pack (LILLIA_TV_CLUSTERMAP.pdf, units 1-406 as PDF text): STYLES legend JADE (brown plots) / PEARL (orange plots), swatch centres in page points; TYPES legend white = 3 BR, grey = 4 BR. Floor plans LILLIA_TV_FLOOR_PLANS.pdf: pages 2-3 and 6-7 JADE, 4-5 and 8-9 PEARL. 4-home terraces: the sheets write the end homes as 4 PLEX 1 - TH 01/04 and the middle ones as 4 PLEX - TH 02/03 (both the same 4-home terrace).",
+ "plex_alias": {
+  "4": [
+   "4",
+   "4.1"
+  ]
+ }
+}

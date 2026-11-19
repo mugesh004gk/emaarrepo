@@ -18,6 +18,8 @@ FLOORPLANS = {
     'farm-gardens-2': f'{P}/farm-gardens-2/floorplans/FARM-GARDENS-2_floorplan_tanami.pdf',
     'rivana': f'{P}/rivana/floorplans/RIVANA_floorplan_tanami.pdf',
     'avena-2-at-the-valley': f'{P}/avena-2-at-the-valley/floorplans/AVENA-2_floorplan_tanami.pdf',
+    # client agent packs (19 Nov 2026)
+    'lillia': f'{P}/lillia/floorplans/LILLIA_TV_FLOOR_PLANS.pdf',
 }
 
 

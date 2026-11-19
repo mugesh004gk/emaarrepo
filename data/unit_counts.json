@@ -26,8 +26,8 @@
    "community": "the-valley",
    "name": "Rivera",
    "total": 378,
-   "source": "Rivera cluster map (client image, units 001-378)",
-   "clusterMap": "numbered (partly legible)"
+   "source": "Rivera cluster map (client agent pack, units 001-378)",
+   "clusterMap": "numbered"
   },
   "elva-at-the-valley": {
    "community": "the-valley",
@@ -47,7 +47,7 @@
    "community": "the-valley",
    "name": "Kaia",
    "total": 156,
-   "source": "Kaia cluster map (client image, units 001-156)",
+   "source": "Kaia cluster map (client) and fact sheet (112 x 3 BR + 44 x 4 BR)",
    "clusterMap": "numbered"
   },
   "velora-2-at-the-valley-phase-2": {
@@ -88,9 +88,9 @@
   "lillia": {
    "community": "the-valley",
    "name": "Lillia",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 406,
+   "source": "Lillia cluster map (client agent pack, units 1-406) and fact sheet (278 x 3 BR + 128 x 4 BR)",
+   "clusterMap": "numbered"
   },
   "farm-grove-at-the-valley": {
    "community": "the-valley",

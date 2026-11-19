@@ -22,7 +22,7 @@ import json, os, re, subprocess
 
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia']
 NO_PDF = {}  # every built Valley project now has a floor-plan PDF (19 Nov 2026: agent packs + broker copies)
 NOTES = {
     'rivana': 'Broker copy (tanamiproperties.com) with 5 of the 12 sheets, scanned: no Kai 4-bedroom sheet; areas not readable',

@@ -1470,6 +1470,139 @@
    "status": "complete",
    "ddaBoundary": null,
    "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "lillia",
+   "name": "Lillia",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4460881,
+     25.0053045
+    ],
+    [
+     55.4463565,
+     25.0050233
+    ],
+    [
+     55.4506234,
+     25.0075969
+    ],
+    [
+     55.4506945,
+     25.0079476
+    ],
+    [
+     55.4503834,
+     25.0084796
+    ],
+    [
+     55.4502798,
+     25.0086532
+    ],
+    [
+     55.4497776,
+     25.0094653
+    ],
+    [
+     55.4497228,
+     25.0095516
+    ],
+    [
+     55.4496549,
+     25.0095187
+    ],
+    [
+     55.4495999,
+     25.0094919
+    ],
+    [
+     55.4480631,
+     25.00878
+    ],
+    [
+     55.4479581,
+     25.008733
+    ],
+    [
+     55.4474315,
+     25.0084804
+    ],
+    [
+     55.4469837,
+     25.0082153
+    ],
+    [
+     55.4468489,
+     25.0081223
+    ],
+    [
+     55.4467895,
+     25.0080792
+    ],
+    [
+     55.4466073,
+     25.0079401
+    ],
+    [
+     55.4453393,
+     25.0069788
+    ],
+    [
+     55.4451768,
+     25.0068631
+    ],
+    [
+     55.4451286,
+     25.0064862
+    ],
+    [
+     55.4452504,
+     25.0063294
+    ],
+    [
+     55.4455163,
+     25.0059949
+    ],
+    [
+     55.4459108,
+     25.0055143
+    ],
+    [
+     55.4459981,
+     25.0054101
+    ],
+    [
+     55.4460377,
+     25.005363
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.42)"
+   },
+   "placementDetail": "map homes matched to satellite roofs",
+   "clusterMap": {
+    "document": "LILLIA_TV_CLUSTERMAP.pdf",
+    "page": 1,
+    "image": "media/research/the-valley/properties/lillia/clustermap/lillia_cluster_map_p11.png"
+   },
+   "units": {
+    "official": 406,
+    "placed": 406,
+    "numbered": 406,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": null,
+    "url": null,
+    "linkedUnits": 406,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
   }
  ]
 }
