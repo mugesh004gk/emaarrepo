@@ -59,6 +59,8 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
   const plans = naraData.plans;
   const cars = createCarTemplates(mats);
 
+  const STEP_BACK_MAX = { 'rivera-at-the-valley-phase-2': 6 }; // metres a map-placed row may move back off a road (default 4)
+
   // ---- 1. variant templates: house shell + plot, merged per material in the unit frame ------------
   let droppedOverlaps = 0, gardensTrimmed = 0, slid = 0, steppedBack = 0;
   const flagged = []; // homes on official plots that need a look (on a road / touching), never moved
@@ -231,9 +233,12 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
       if (list[0].row.placement === 'verified-siteplan') {
         // a row from an official plan keeps its line: it may step back as one (up to 4 m) into its own rear
         // garden, which it then gives up (compact model); a home that still reaches a road is listed for review
+        // per-project limit (STEP_BACK_MAX): Rivera's map plots are shallower than the reference villa plot, so its
+        // twin villas may step back further into their own rear garden (house and exterior unchanged)
+        const maxB = STEP_BACK_MAX[list[0].project] ?? 4;
         let b = 0.5;
-        while (b <= 4 && list.some((u) => plotHits(u, b))) b += 0.5;
-        if (b > 4) {
+        while (b <= maxB && list.some((u) => plotHits(u, b))) b += 0.5;
+        if (b > maxB) {
           for (const u of list) if (plotHits(u, 0)) flagged.push({ why: 'road', project: u.project, block: u.row.block, pos: [+u.pos.x.toFixed(1), +u.pos.z.toFixed(1)] });
           continue;
         }
