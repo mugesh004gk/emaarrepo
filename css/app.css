@@ -860,3 +860,15 @@ body.picker-open .explore-bar { display: none; }
 .ck-bad { color: #b91c1c; font-weight: 600; }
 .bp-link { color: var(--accent); font: inherit; font-weight: 600; text-decoration: underline; padding: 0; background: none; }
 @media (max-width: 720px) { .bp-units { padding: 8px; } .bp-units-card { padding: 12px; } .bp-checks { display: none; } }
+
+/* floor-plan sheet loading / error state (js/nara/details.js loadSheet) */
+.sheet-preview-box, .sheet-modal-body { position: relative; min-height: 120px; }
+.sheet-state { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 13px; color: var(--ink-2); text-align: center; padding: 12px; }
+.sheet-state.hidden { display: none; }
+.sheet-state.error { color: #b91c1c; }
+.sheet-modal-body { min-height: 320px; }
+.doc-viewer img, .sheet-modal-body img { cursor: zoom-in; }
+.doc-viewer.zoomed { overflow: auto; justify-content: flex-start; align-items: flex-start; }
+.doc-viewer.zoomed img { max-width: none !important; max-height: none !important; width: 220%; cursor: zoom-out; }
+.sheet-modal-body.zoomed { overflow: auto; max-height: 78vh; text-align: left; }
+.sheet-modal-body.zoomed img { max-width: none; max-height: none; width: 220%; cursor: zoom-out; }

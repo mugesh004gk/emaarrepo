@@ -626,6 +626,8 @@ export function initProjectsUI(app) {
       <span class="lb-count"></span></div>`;
     const box = elMediaBody.querySelector('.doc-viewer');
     const img = box.querySelector('img'), count = box.querySelector('.lb-count'), loading = box.querySelector('.doc-loading');
+    // click the page to zoom in (scroll to move around), click again to fit
+    img.title = 'Click to zoom'; img.addEventListener('click', () => box.classList.toggle('zoomed'));
     img.onload = () => { loading.style.display = 'none'; };
     let retried = false, slow = 0;
     img.onerror = () => {

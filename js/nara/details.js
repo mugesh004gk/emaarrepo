@@ -103,8 +103,7 @@ export function initDetailsModule(state) {
     elDistGate.textContent = `${u.distGate} m`;
 
     elSheetLabel.textContent = u.planType;
-    elSheetImg.src = pdata.sheetImage;
-    elSheetImg.alt = `Developer Floor Plan Sheet ${u.planType}`;
+    loadSheet(elSheetImg, pdata.sheetImage, `Developer Floor Plan Sheet ${u.planType}`);
 
     renderRoomsBreakdown(u, pdata);
     renderTransactions(u);
@@ -203,13 +202,40 @@ export function initDetailsModule(state) {
     elTransactionsBox.innerHTML = html;
   }
 
+  // Floor-plan sheet image with a loading and an error state. The request is marked high priority: with the map
+  // streaming dozens of tiles it otherwise waits in the queue for several seconds and the viewer looked empty.
+  // The previous sheet is never left on show while another unit's sheet loads.
+  function loadSheet(img, src, alt) {
+    const box = img.parentElement;
+    let note = box.querySelector('.sheet-state');
+    if (!note) { note = document.createElement('div'); note.className = 'sheet-state'; box.appendChild(note); }
+    const token = (img.dataset.token = String(Math.random()));
+    img.style.visibility = 'hidden';
+    note.className = 'sheet-state loading'; note.textContent = 'Loading floor plan…';
+    img.onload = () => { if (img.dataset.token !== token) return; img.style.visibility = ''; note.className = 'sheet-state hidden'; };
+    img.onerror = () => {
+      if (img.dataset.token !== token) return;
+      note.className = 'sheet-state error';
+      note.innerHTML = 'The floor plan could not be loaded. <button type="button" class="btn-text">Retry</button>';
+      note.querySelector('button').onclick = (e) => { e.stopPropagation(); loadSheet(img, src + (src.includes('?') ? '&' : '?') + 'r=' + Date.now(), alt); };
+    };
+    img.setAttribute('fetchpriority', 'high');
+    img.alt = alt;
+    img.removeAttribute('src');
+    img.src = src;
+  }
+
+  elModalSheetImg.title = 'Click to zoom';
+  elModalSheetImg.addEventListener('click', () => elModalSheetImg.parentElement.classList.toggle('zoomed'));
+
   function openSheetModal() {
     const u = unitsByNo.get(state.selectedUnitNo || 233);
     if (!u) return;
     const pdata = data.plans[u.planType];
     elModalSheetTitle.textContent = `Unit ${u.unit} · ${u.planName} (${u.planType}) · ${Math.round(u.buaSqft).toLocaleString()} sq ft built-up`;
-    elModalSheetImg.src = pdata.sheetImage;
+    elModalSheetImg.parentElement.classList.remove('zoomed');
     elSheetModal.classList.remove('hidden');
+    loadSheet(elModalSheetImg, pdata.sheetImage, `Developer floor-plan sheet ${u.planType}`);
   }
 
   function openCommunityModal() {

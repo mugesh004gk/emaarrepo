@@ -56,7 +56,10 @@ export function createProjectsLayer(scene, communities, labels, onSelect) {
     for (const p of c.projects) {
       p.communityId = c.id;
       if (!Number.isFinite(p.lat) || p.pinFlag) continue; // flagged pins are not drawn (see build_data.py)
-      const w = toWorld(p.lat, p.lng);
+      // the label stands on the project's own placed homes (data/projects.json 'anchor', label_anchors.py), not on the
+      // marketing pin, which can lie hundreds of metres away or outside the site
+      const at = p.anchor || p;
+      const w = toWorld(at.lat, at.lng);
       p.world = w;
       p.communityId = c.id;
       const rec = { project: p, community: c, world: w };
