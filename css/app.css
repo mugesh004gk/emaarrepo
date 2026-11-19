@@ -835,3 +835,28 @@ body.picker-open .explore-bar { display: none; }
 .lbl-boundary span small { font-size: 10.5px; opacity: 0.85; }
 .lbl-boundary.selected span { background: #fff; color: #111; }
 @media (max-width: 720px) { .boundary-panel { top: auto; height: 55vh; } }
+.bp-plans { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+.bp-plans h4 { margin: 0 0 6px; font-size: 13px; }
+.bp-plans h4 small { font-weight: 400; color: var(--ink-2); }
+.bp-plan-bar { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 6px; }
+.bp-small { margin: 4px 0; font-size: 11.5px; color: var(--ink-2); line-height: 1.4; }
+.bp-table { width: 100%; border-collapse: collapse; font-size: 12px; margin: 6px 0 8px; }
+.bp-table th, .bp-table td { text-align: left; padding: 4px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.bp-table th { color: var(--ink-3); font-weight: 600; font-size: 11px; position: sticky; top: 0; background: var(--surface-solid); }
+.bp-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.bp-plans .btn { height: 32px; padding: 0 10px; font-size: 12px; }
+.bp-units { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(10, 12, 16, 0.45); }
+.bp-units.hidden { display: none; }
+.bp-units-card { width: min(1100px, 100%); height: min(860px, 100%); display: flex; flex-direction: column; background: var(--surface-solid); color: var(--ink); border-radius: var(--r-panel); box-shadow: var(--shadow-panel); padding: 16px 18px; font-size: 13px; }
+.bp-units-head { display: flex; justify-content: space-between; gap: 10px; }
+.bp-units-head h3 { margin: 0; font-size: 17px; }
+.bp-units-head small { color: var(--ink-2); }
+.bp-units-tools { display: flex; gap: 8px; margin: 10px 0 4px; }
+.bp-search { flex: 1; height: 34px; padding: 0 10px; border-radius: var(--r-ctl); border: 1px solid var(--line-strong); font: inherit; background: var(--surface-solid); color: inherit; }
+.bp-units-tools .btn { height: 34px; }
+.bp-units-scroll { flex: 1; overflow: auto; }
+.bp-checks { display: flex; flex-wrap: wrap; gap: 2px 8px; margin-top: 3px; font-size: 11px; }
+.ck-ok { color: #15803d; }
+.ck-bad { color: #b91c1c; font-weight: 600; }
+.bp-link { color: var(--accent); font: inherit; font-weight: 600; text-decoration: underline; padding: 0; background: none; }
+@media (max-width: 720px) { .bp-units { padding: 8px; } .bp-units-card { padding: 12px; } .bp-checks { display: none; } }

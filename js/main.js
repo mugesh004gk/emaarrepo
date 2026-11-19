@@ -1018,6 +1018,7 @@ async function boot() {
     currentAzimuth: () => currentPose().azimuth,
     hideLeft: () => { stopIntro(); intro.panelsHidden = false; toggleLeft(false); }, // the intro tour would fly away and reopen the panel
     selectProject: (pid) => selectProject(pid),
+    selectUnit: (pid, no) => (pid === 'nara' ? selectUnit(no) : app.selectMapUnit(pid, no)),
     ensureValley: () => { if (state.communityId !== 'the-valley') selectCommunity('the-valley', { fly: false }); },
   });
   app.boundaryReview = boundaryReview;

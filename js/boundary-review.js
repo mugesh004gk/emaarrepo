@@ -17,7 +17,7 @@ import { escapeHtml as esc } from './districts.js';
  */
 const COLORS = { satellite: 0x22d3ee, masterplan: 0xf59e0b };
 
-export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo, currentAzimuth, projectsUI, selectProject, ensureValley, hideLeft, invalidate }) {
+export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo, currentAzimuth, projectsUI, selectProject, selectUnit, ensureValley, hideLeft, invalidate }) {
   const group = new THREE.Group();
   group.name = 'BoundaryReview';
   group.visible = false;
@@ -29,7 +29,7 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
   scene.add(top);
   const materials = [];
   const items = new Map();
-  let data = null, open = false, selected = null;
+  let data = null, audit = null, open = false, selected = null;
 
   const btn = document.getElementById('btn-boundaries');
   const panel = document.createElement('aside');
@@ -38,8 +38,10 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
   panel.setAttribute('aria-label', 'Property boundaries');
   document.body.appendChild(panel);
 
-  const ready = fetch('data/property_boundaries.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null).then((d) => {
+  const getJson = (u) => fetch(u, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  const ready = Promise.all([getJson('data/property_boundaries.json'), getJson('data/unit_plan_audit.json')]).then(([d, a]) => {
     data = d;
+    audit = a?.properties || null;
     if (!d) return;
     for (const p of d.properties) build(p);
     render();
@@ -82,12 +84,99 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
   }
 
   function floorChip(p) {
-    const f = p.floorPlan;
+    const f = p.floorPlan, a = audit?.[p.id];
     if (!f.document) return '<span class="bp-chip bad">No floor plan</span>';
     if (p.id === 'kaia-at-the-valley') return '<span class="bp-chip bad">Wrong file</span>';
+    if (a) {
+      const c = a.counts, ok = c.verified + c['type-match'];
+      if (c.check) return `<span class="bp-chip bad">${c.check} to check</span>`;
+      return `<span class="bp-chip ${ok === a.homes ? 'ok' : 'warn'}" title="Floor plan of each home checked against the PDF">Plans ${ok}/${a.homes} ✓</span>`;
+    }
     if (f.linkedUnits >= p.units.placed) return '<span class="bp-chip ok">Floor plan linked</span>';
     return `<span class="bp-chip warn">Plan ${f.linkedUnits}/${p.units.placed}</span>`;
   }
+
+  const STATUS = {
+    verified: ['ok', 'Matches the PDF', 'the PDF page lists this home\'s terrace position, and its bedrooms, area and design match'],
+    'type-match': ['ok', 'Matches by type', 'the PDF has no unit list: plan chosen by the design and bedrooms on the cluster map; bedrooms, area and design match the PDF sheet'],
+    check: ['bad', 'To check', 'differs from the PDF'],
+    'no-plan': ['warn', 'No plan', 'no floor plan for this home yet'],
+  };
+
+  function planCheck(p) {
+    const a = audit?.[p.id];
+    if (!a) return '';
+    const c = a.counts;
+    const bar = Object.entries(STATUS).filter(([k]) => c[k]).map(([k, [cls, label]]) => `<span class="bp-chip ${cls}">${c[k]} · ${label}</span>`).join(' ');
+    const types = a.types.map((t) => `<tr><td>${esc(t.design || '')}</td><td>${t.beds ?? ''} BR</td><td>${esc(t.plan || '')}</td><td>p.${esc(t.page)}</td><td class="num">${t.homes}</td></tr>`).join('');
+    return `<div class="bp-plans">
+      <h4>Floor plan per home <small>checked against ${esc(a.pdf || 'the PDF')}</small></h4>
+      <div class="bp-plan-bar">${bar}</div>
+      ${a.note ? `<p class="bp-small">${esc(a.note)}</p>` : ''}
+      ${types ? `<table class="bp-table"><thead><tr><th>Design</th><th>Beds</th><th>Plan</th><th>PDF</th><th class="num">Homes</th></tr></thead><tbody>${types}</tbody></table>` : ''}
+      <button type="button" class="btn btn-secondary" data-act="units"><svg class="icon"><use href="#i-layers" /></svg>Every home (${a.homes})</button>
+    </div>`;
+  }
+
+  // ---- every home of a property: plan, PDF page, checks -------------------------------------------
+  const sheet = document.createElement('div');
+  sheet.className = 'bp-units hidden';
+  document.body.appendChild(sheet);
+  let sheetPid = null;
+  const CHECK_NAMES = { position: 'position listed on the page', beds: 'bedrooms', area: 'area', style: 'design', map: 'cluster-map colour' };
+  function unitRow(pid, u) {
+    const [cls, label] = STATUS[u.status];
+    const ck = Object.entries(u.checks || {}).map(([k, v]) => `<span class="${v ? 'ck-ok' : 'ck-bad'}">${v ? '✓' : '✗'} ${CHECK_NAMES[k]}</span>`).join('');
+    return `<tr data-no="${u.no}"><td class="num"><button type="button" class="bp-link" data-act="go">${u.no}</button></td><td>${esc(u.design || '')}</td><td>${u.beds ?? ''}</td><td>${esc(u.position || '')}</td>
+      <td>${esc(u.plan || '—')}</td><td>${u.page ? `<button type="button" class="bp-link" data-act="page" data-page="${esc(String(u.page).split('-')[0])}">p.${esc(u.page)}</button>` : '—'}</td>
+      <td class="num">${u.sqft ? Math.round(u.sqft).toLocaleString() : ''}</td>
+      <td><span class="bp-chip ${cls}">${label}</span>${u.why ? `<div class="bp-small">${esc(u.why)}</div>` : ''}<div class="bp-checks">${ck}</div></td></tr>`;
+  }
+  function openUnits(pid, filter = '') {
+    const a = audit?.[pid], p = items.get(pid)?.p;
+    if (!a || !p) return;
+    sheetPid = pid;
+    const terms = filter.trim().toLowerCase().split(/\s+/).filter(Boolean); // every word must match: 'sleek 4', '10-plex th02'
+    const rows = a.units.filter((u) => {
+      const hay = ` ${[u.no, u.design, u.position, u.plan, STATUS[u.status][1], u.beds && `${u.beds} br ${u.beds}br`, u.page && `p.${u.page}`].join(' ').toLowerCase()} `;
+      return terms.every((t) => (/^\d+$/.test(t) ? new RegExp(`(^|[^\\d.])${t}([^\\d]|$)`).test(hay) : hay.includes(t)));
+    });
+    const c = a.counts;
+    sheet.innerHTML = `<div class="bp-units-card" role="dialog" aria-label="${esc(p.name)} floor plan per home">
+      <div class="bp-units-head"><div><h3>${esc(p.name)} · floor plan of every home</h3>
+        <small>${a.homes} homes · ${c.verified} match the PDF position table · ${c['type-match']} match by type · ${c.check} to check · ${c['no-plan']} without plan${a.pdf ? ` · source ${esc(a.pdf)}` : ''}</small></div>
+        <button type="button" class="btn-icon" data-act="close-units" aria-label="Close"><svg class="icon"><use href="#i-x" /></svg></button></div>
+      <div class="bp-units-tools"><input type="search" class="bp-search" placeholder="Filter: unit no., design, TH, plan, 'to check'…" value="${esc(filter)}" />
+        <button type="button" class="btn btn-secondary" data-act="csv">Download CSV</button></div>
+      <p class="bp-small">${Object.values(STATUS).map(([, l, d]) => `<b>${l}</b>: ${d}`).join(' · ')}</p>
+      <div class="bp-units-scroll"><table class="bp-table bp-table-units"><thead><tr><th class="num">Unit</th><th>Design</th><th>BR</th><th>Position</th><th>Plan</th><th>PDF</th><th class="num">Sq ft</th><th>Check</th></tr></thead>
+      <tbody>${rows.map((u) => unitRow(pid, u)).join('') || '<tr><td colspan="8">No home matches the filter</td></tr>'}</tbody></table></div></div>`;
+    sheet.classList.remove('hidden');
+    const inp = sheet.querySelector('.bp-search');
+    if (filter) { inp.focus(); inp.setSelectionRange(filter.length, filter.length); }
+  }
+  sheet.addEventListener('input', (e) => { if (e.target.classList.contains('bp-search')) openUnits(sheetPid, e.target.value); });
+  sheet.addEventListener('click', (e) => {
+    if (e.target === sheet) return closeUnits();
+    const b = e.target.closest('[data-act]');
+    if (!b) return;
+    const a = audit[sheetPid], p = items.get(sheetPid).p;
+    if (b.dataset.act === 'close-units') return closeUnits();
+    if (b.dataset.act === 'csv') {
+      const head = ['unit', 'design', 'bedrooms', 'terrace_position', 'plan', 'pdf_page', 'area_sqft', 'status', 'reason', ...Object.keys(CHECK_NAMES).map((k) => `check_${k}`)];
+      const lines = [head.join(',')].concat(a.units.map((u) => [u.no, u.design, u.beds, u.position, u.plan, u.page, u.sqft, STATUS[u.status][1], u.why, ...Object.keys(CHECK_NAMES).map((k) => (u.checks?.[k] == null ? '' : u.checks[k] ? 'yes' : 'NO'))]
+        .map((v) => `"${String(v ?? '').replace(/"/g, '""')}"`).join(',')));
+      const url = URL.createObjectURL(new Blob([lines.join('\n')], { type: 'text/csv' }));
+      const link = Object.assign(document.createElement('a'), { href: url, download: `${p.name} - floor plan per home.csv` });
+      document.body.appendChild(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      return;
+    }
+    const no = Number(b.closest('tr')?.dataset.no);
+    if (b.dataset.act === 'page' && a.pdfSrc) return projectsUI.openPdf(`${p.name} · ${a.pdf}`, p.floorPlan.url || a.pdfSrc, Number(b.dataset.page));
+    if (b.dataset.act === 'go') { const pid = sheetPid; closeUnits(); setOpen(false); selectUnit(pid, no); }
+  });
+  function closeUnits() { sheet.classList.add('hidden'); sheet.innerHTML = ''; sheetPid = null; }
 
   function details(p) {
     const u = p.units, f = p.floorPlan, c = p.clusterMap;
@@ -106,6 +195,7 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
         ${f.url ? '<button type="button" class="btn btn-secondary" data-act="plan"><svg class="icon"><use href="#i-plan" /></svg>Floor plan</button>' : ''}
         <button type="button" class="btn btn-secondary" data-act="homes"><svg class="icon"><use href="#i-house" /></svg>Show homes</button>
       </div>
+      ${planCheck(p)}
     </div>`;
   }
 
@@ -146,6 +236,7 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
     if (act === 'map') return projectsUI.openImages(`${p.name} · cluster map (${p.clusterMap.document})`, [{ src: p.clusterMap.image }]);
     if (act === 'plan') return projectsUI.openPdf(`${p.name} · ${p.floorPlan.document}`, p.floorPlan.url, 1);
     if (act === 'homes') { setOpen(false); selectProject(p.id); }
+    if (act === 'units') openUnits(p.id);
   });
 
   function style() {
@@ -206,6 +297,7 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
     invalidate(400);
   }
   btn?.addEventListener('click', () => setOpen(!open));
+  window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && sheetPid && document.getElementById('media-modal')?.classList.contains('hidden')) { closeUnits(); e.stopImmediatePropagation(); return; } }, true);
   window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && open && document.getElementById('media-modal')?.classList.contains('hidden')) setOpen(false); });
 
   return {
@@ -214,6 +306,7 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
     setOpen,
     select,
     isOpen: () => open,
+    openUnits,
     ready,
   };
 }
