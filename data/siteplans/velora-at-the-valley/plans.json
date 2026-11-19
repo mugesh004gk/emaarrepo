@@ -1,0 +1,427 @@
+{
+ "Oakley": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 2,
+   "sqft": 2689.47,
+   "sqm": 249.86
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 3,
+   "sqft": 2477.63,
+   "sqm": 230.18
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 4,
+   "sqft": 2478.93,
+   "sqm": 230.3
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 5,
+   "sqft": 2689.47,
+   "sqm": 249.86
+  }
+ },
+ "Ravine": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 6,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 7,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 8,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 9,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  }
+ },
+ "Serene": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 10,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 11,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 12,
+   "sqft": 2514.34,
+   "sqm": 233.59
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 13,
+   "sqft": 2731.55,
+   "sqm": 253.77
+  }
+ },
+ "Nash": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 14,
+   "sqft": 2695.28,
+   "sqm": 250.4
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 15,
+   "sqft": 2460.41,
+   "sqm": 228.58
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 16,
+   "sqft": 2456.86,
+   "sqm": 228.25
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 17,
+   "sqft": 2697.86,
+   "sqm": 250.64
+  }
+ },
+ "Vale": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 18,
+   "sqft": 2729.29,
+   "sqm": 253.56
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 19,
+   "sqft": 2492.17,
+   "sqm": 231.53
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 20,
+   "sqft": 2492.17,
+   "sqm": 231.53
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 21,
+   "sqft": 2729.29,
+   "sqm": 253.56
+  }
+ },
+ "Dale": {
+  "4-1": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 22,
+   "sqft": 2729.29,
+   "sqm": 253.56
+  },
+  "4-2": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 23,
+   "sqft": 2492.17,
+   "sqm": 231.53
+  },
+  "4-3": {
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "page": 24,
+   "sqft": 2492.17,
+   "sqm": 231.53
+  },
+  "4-4": {
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "page": 25,
+   "sqft": 2729.29,
+   "sqm": 253.56
+  }
+ },
+ "_pages": {
+  "2": {
+   "design": "Oakley",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "3": {
+   "design": "Oakley",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "4": {
+   "design": "Oakley",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "5": {
+   "design": "Oakley",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "6": {
+   "design": "Ravine",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "7": {
+   "design": "Ravine",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "8": {
+   "design": "Ravine",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "9": {
+   "design": "Ravine",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "10": {
+   "design": "Serene",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "11": {
+   "design": "Serene",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "12": {
+   "design": "Serene",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "13": {
+   "design": "Serene",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "14": {
+   "design": "Nash",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "15": {
+   "design": "Nash",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "16": {
+   "design": "Nash",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "17": {
+   "design": "Nash",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "18": {
+   "design": "Vale",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "19": {
+   "design": "Vale",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "20": {
+   "design": "Vale",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "21": {
+   "design": "Vale",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  },
+  "22": {
+   "design": "Dale",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-1"
+   ]
+  },
+  "23": {
+   "design": "Dale",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-2"
+   ]
+  },
+  "24": {
+   "design": "Dale",
+   "beds": 3,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-3"
+   ]
+  },
+  "25": {
+   "design": "Dale",
+   "beds": 4,
+   "plan": "",
+   "mirrored": false,
+   "positions": [
+    "4-4"
+   ]
+  }
+ },
+ "_source": {
+  "document": "VELORA_THE_VALLEY_FLOORPLAN.pdf"
+ }
+}

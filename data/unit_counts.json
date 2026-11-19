@@ -67,9 +67,9 @@
   "velora-at-the-valley": {
    "community": "the-valley",
    "name": "Velora",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 488,
+   "source": "Velora cluster map (client agent pack): units 001-488 (no fact sheet in the pack)",
+   "clusterMap": "numbered"
   },
   "avena-2-at-the-valley": {
    "community": "the-valley",

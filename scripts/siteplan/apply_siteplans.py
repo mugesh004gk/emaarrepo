@@ -46,6 +46,10 @@ def main():
     plans = [json.load(open(f)) for f in sorted(glob.glob(os.path.join(APP, 'data', 'siteplans', '*.json'))) if not f.endswith('.config.json')]
     for sp in plans:
         cid, pid, bnd = sp['community'], sp['project'], sp['boundary']  # boundary [[lng, lat]]
+        cfgp = os.path.join(APP, 'data', 'siteplans', pid, 'config.json')
+        # config 'replace_mapped_streets': mapped (OSM) streets inside the plan give way to the plan's own streets -
+        # used where the mapped streets cross the homes fitted to the built roofs (Velora)
+        proj_cfg = json.load(open(cfgp)) if os.path.exists(cfgp) else {}
         rows = hd['communities'][cid]
         before = len(rows)
         kept_rows, untagged = [], 0
@@ -83,7 +87,28 @@ def main():
             if s.get('source') == 'derived' and share > 0:
                 dropped_derived += 1
                 continue
-            if s['cls'] != 'path' and s.get('source') != 'derived' and share >= 0.6 and not sp.get('keep_mapped_streets'):
+            if proj_cfg.get('replace_mapped_streets') and s['cls'] != 'path' and s.get('source') != 'derived' and 0 < share < 0.6:
+                # clip at the plan boundary: the parts outside are kept, the part inside gives way to the plan's streets
+                dense = []
+                for i in range(len(s['pts']) - 1):
+                    (a0, b0), (a1, b1) = s['pts'][i], s['pts'][i + 1]
+                    n = max(1, int(math.hypot((a1 - a0) * KX, (b1 - b0) * KY) / 2))
+                    dense += [[a0 + (a1 - a0) * j / n, b0 + (b1 - b0) * j / n] for j in range(n)]
+                dense.append(s['pts'][-1])
+                run = []
+                for q in dense:
+                    if inside(q, bnd):
+                        if len(run) > 1:
+                            kept.append(dict(s, pts=[[round(v, 7) for v in w] for w in run]))
+                        run = []
+                    else:
+                        run.append(q)
+                if len(run) > 1:
+                    kept.append(dict(s, pts=[[round(v, 7) for v in w] for w in run]))
+                replaced += 1
+                continue
+            keep_mapped = sp.get('keep_mapped_streets') and not proj_cfg.get('replace_mapped_streets')
+            if s['cls'] != 'path' and s.get('source') != 'derived' and share >= 0.6 and not keep_mapped:
                 replaced += 1
                 continue
             kept.append(s)

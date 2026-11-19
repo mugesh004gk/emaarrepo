@@ -1,0 +1,291 @@
+{
+ "styles": {
+  "Oakley": "OAKLEY",
+  "Ravine": "RAVINE",
+  "Serene": "SERENE",
+  "Nash": "NASH",
+  "Vale": "VALE",
+  "Dale": "DALE"
+ },
+ "swatches": {
+  "Oakley": [
+   1890,
+   2826
+  ],
+  "Ravine": [
+   1890,
+   2895
+  ],
+  "Serene": [
+   1890,
+   2964
+  ],
+  "Nash": [
+   1890,
+   3033
+  ],
+  "Vale": [
+   1890,
+   3102
+  ],
+  "Dale": [
+   1890,
+   3171
+  ]
+ },
+ "cell_beds": {
+  "grey": 4,
+  "white": 3
+ },
+ "plot_min_sat": 30,
+ "plot_tree_hue": [
+  30,
+  85
+ ],
+ "note": "Velora cluster map from the client's agent pack (VELORA_TV_CLUSTER_MAP.pdf, numbers in the map picture): STYLES OAKLEY / RAVINE / SERENE / NASH / VALE / DALE; TYPES white = 3 BR, grey = 4 BR; 4-home terraces. Floor plans VELORA_THE_VALLEY_FLOORPLAN.pdf: 4 pages per style (p.2-5 Oakley ... p.22-25 Dale), one per 4-plex position.",
+ "count": 488,
+ "count_source": "cluster map: labels 001-488 (122 four-home terraces); no fact sheet in the agent pack",
+ "manual_units": {
+  "_why": "label centres read by eye on the map (page points), each label seen: terraces 081-084, 097-100, 149-152, 153-156, 173-176, 177-180, 201-204 (the reader placed their numbers off the terrace); 001-004, 017-020, 085-088, 089-092, 157-160, 169-172, 225-228: the reader dropped a leading digit and put these runs on other terraces (e.g. 185 read as 85) - each label read by eye",
+  "81": [
+   618,
+   1747
+  ],
+  "82": [
+   619,
+   1779
+  ],
+  "83": [
+   619,
+   1812
+  ],
+  "84": [
+   619,
+   1845
+  ],
+  "97": [
+   1028,
+   2194
+  ],
+  "98": [
+   1063,
+   2194
+  ],
+  "99": [
+   1094.5,
+   2194
+  ],
+  "100": [
+   1128,
+   2194
+  ],
+  "149": [
+   3145,
+   1901
+  ],
+  "150": [
+   3145,
+   1868
+  ],
+  "151": [
+   3145,
+   1837
+  ],
+  "152": [
+   3145,
+   1801
+  ],
+  "153": [
+   2980,
+   1715
+  ],
+  "154": [
+   2980,
+   1685
+  ],
+  "155": [
+   2980,
+   1653
+  ],
+  "156": [
+   2980,
+   1617.5
+  ],
+  "173": [
+   2828,
+   1212
+  ],
+  "174": [
+   2828,
+   1248
+  ],
+  "175": [
+   2828,
+   1280.5
+  ],
+  "176": [
+   2828,
+   1312
+  ],
+  "177": [
+   2829.5,
+   1448.5
+  ],
+  "178": [
+   2829.5,
+   1483.5
+  ],
+  "179": [
+   2829.5,
+   1515
+  ],
+  "180": [
+   2829.5,
+   1546.5
+  ],
+  "201": [
+   2514,
+   1051.5
+  ],
+  "202": [
+   2514,
+   1087.5
+  ],
+  "203": [
+   2514,
+   1119.5
+  ],
+  "204": [
+   2514,
+   1151
+  ],
+  "1": [
+   3139.3,
+   1146.7
+  ],
+  "2": [
+   3139.3,
+   1114.3
+  ],
+  "3": [
+   3139.3,
+   1081.7
+  ],
+  "4": [
+   3139.3,
+   1049.3
+  ],
+  "17": [
+   2616.8,
+   884
+  ],
+  "18": [
+   2582.5,
+   884
+  ],
+  "19": [
+   2550,
+   884
+  ],
+  "20": [
+   2516,
+   884
+  ],
+  "85": [
+   618.6,
+   1914
+  ],
+  "86": [
+   618.6,
+   1947
+  ],
+  "87": [
+   618.6,
+   1979
+  ],
+  "88": [
+   618.6,
+   2012
+  ],
+  "89": [
+   678,
+   2115.5
+  ],
+  "90": [
+   705.5,
+   2134
+  ],
+  "91": [
+   732,
+   2152
+  ],
+  "92": [
+   757,
+   2174.5
+  ],
+  "157": [
+   2977,
+   1550
+  ],
+  "158": [
+   2977,
+   1514
+  ],
+  "159": [
+   2977,
+   1482.5
+  ],
+  "160": [
+   2977,
+   1450
+  ],
+  "169": [
+   2828,
+   1050.5
+  ],
+  "170": [
+   2828,
+   1086.5
+  ],
+  "171": [
+   2828,
+   1118
+  ],
+  "172": [
+   2828,
+   1149
+  ],
+  "225": [
+   2353,
+   1316.5
+  ],
+  "226": [
+   2353,
+   1284.5
+  ],
+  "227": [
+   2353,
+   1252
+  ],
+  "228": [
+   2353,
+   1217
+  ]
+ },
+ "map_beds_rechecked": {
+  "units": [
+   12,
+   41,
+   101,
+   133,
+   144,
+   300,
+   409,
+   460,
+   480
+  ],
+  "why": "looked at on the map by eye: grey (4 BR) end cells, as the floor-plan sheets give"
+ },
+ "replace_mapped_streets": true,
+ "replace_mapped_streets_why": "OpenStreetMap streets inside the site run through homes that are fitted to the built roofs (correlation 0.353): they predate the built layout"
+}

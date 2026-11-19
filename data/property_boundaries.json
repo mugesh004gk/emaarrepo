@@ -1959,6 +1959,115 @@
    "status": "complete",
    "ddaBoundary": null,
    "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "velora-at-the-valley",
+   "name": "Velora",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4348363,
+     25.002897
+    ],
+    [
+     55.4350973,
+     25.0027926
+    ],
+    [
+     55.4354,
+     25.0027855
+    ],
+    [
+     55.4356575,
+     25.0028214
+    ],
+    [
+     55.4387649,
+     25.0048574
+    ],
+    [
+     55.4394161,
+     25.0053585
+    ],
+    [
+     55.4398509,
+     25.0057854
+    ],
+    [
+     55.4399232,
+     25.0061232
+    ],
+    [
+     55.4398226,
+     25.0063887
+    ],
+    [
+     55.4397357,
+     25.0065245
+    ],
+    [
+     55.4395548,
+     25.0067516
+    ],
+    [
+     55.4384323,
+     25.0080818
+    ],
+    [
+     55.4381195,
+     25.0083346
+    ],
+    [
+     55.4371841,
+     25.0078004
+    ],
+    [
+     55.4346086,
+     25.0061211
+    ],
+    [
+     55.4332515,
+     25.0050501
+    ],
+    [
+     55.4334243,
+     25.00465
+    ],
+    [
+     55.433594,
+     25.0044199
+    ],
+    [
+     55.4340691,
+     25.0038231
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.35)"
+   },
+   "placementDetail": "map homes matched to satellite roofs",
+   "clusterMap": {
+    "document": "VELORA_TV_CLUSTER_MAP.pdf",
+    "page": 1,
+    "image": "media/research/the-valley/properties/velora-at-the-valley/clustermap/velora-at-the-valley_cluster_map_p21.png"
+   },
+   "units": {
+    "official": 488,
+    "placed": 488,
+    "numbered": 488,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "VELORA_THE_VALLEY_FLOORPLAN.pdf",
+    "url": "media/research/the-valley/properties/velora-at-the-valley/floorplans/VELORA_THE_VALLEY_FLOORPLAN.pdf",
+    "linkedUnits": 488,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
   }
  ]
 }
