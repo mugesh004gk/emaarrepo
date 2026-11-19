@@ -323,6 +323,10 @@
 "dir": "media/docs/the-valley/properties/alana/brochures/375633_brochure_File_7e8a59d98f_prod",
 "pages": 32
 },
+"media/research/the-valley/properties/alana/floorplans/ALANA_floorplan_tanami.pdf": {
+"dir": "media/docs/the-valley/properties/alana/floorplans/ALANA_floorplan_tanami",
+"pages": 14
+},
 "media/research/the-valley/properties/avelia-at-the-valley/brochures/Ovelle_and_Avelia_brochure_62bdfb4140.pdf": {
 "dir": "media/docs/the-valley/properties/avelia-at-the-valley/brochures/Ovelle_and_Avelia_brochure_62bdfb4140",
 "pages": 24
@@ -334,6 +338,10 @@
 "media/research/the-valley/properties/avena-2-at-the-valley/brochures/388793_brochure_File_d043e66dd6_prod.pdf": {
 "dir": "media/docs/the-valley/properties/avena-2-at-the-valley/brochures/388793_brochure_File_d043e66dd6_prod",
 "pages": 27
+},
+"media/research/the-valley/properties/avena-2-at-the-valley/floorplans/AVENA-2_floorplan_tanami.pdf": {
+"dir": "media/docs/the-valley/properties/avena-2-at-the-valley/floorplans/AVENA-2_floorplan_tanami",
+"pages": 7
 },
 "media/research/the-valley/properties/avena-at-the-valley/brochures/388793_brochure_File_d043e66dd6_prod.pdf": {
 "dir": "media/docs/the-valley/properties/avena-at-the-valley/brochures/388793_brochure_File_d043e66dd6_prod",
@@ -375,6 +383,10 @@
 "dir": "media/docs/the-valley/properties/farm-gardens-2/brochures/379974_brochure_File_86ddad55b6_prod",
 "pages": 28
 },
+"media/research/the-valley/properties/farm-gardens-2/floorplans/FARM-GARDENS-2_floorplan_tanami.pdf": {
+"dir": "media/docs/the-valley/properties/farm-gardens-2/floorplans/FARM-GARDENS-2_floorplan_tanami",
+"pages": 9
+},
 "media/research/the-valley/properties/farm-grove-at-the-valley/brochures/FARM-GROVE_brochure.pdf": {
 "dir": "media/docs/the-valley/properties/farm-grove-at-the-valley/brochures/FARM-GROVE_brochure",
 "pages": 22
@@ -387,9 +399,9 @@
 "dir": "media/docs/the-valley/properties/kaia-at-the-valley/brochures/KAIA_brochure",
 "pages": 21
 },
-"media/research/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_floorplan.pdf": {
-"dir": "media/docs/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_floorplan",
-"pages": 9
+"media/research/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_TV_FLOORPLAN.pdf": {
+"dir": "media/docs/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_TV_FLOORPLAN",
+"pages": 21
 },
 "media/research/the-valley/properties/lillia/brochures/382265_brochure_File_48fdffa3aa_prod.pdf": {
 "dir": "media/docs/the-valley/properties/lillia/brochures/382265_brochure_File_48fdffa3aa_prod",
@@ -430,6 +442,10 @@
 "media/research/the-valley/properties/rivana/brochures/368091_brochure_File_bd20d234e0_prod.pdf": {
 "dir": "media/docs/the-valley/properties/rivana/brochures/368091_brochure_File_bd20d234e0_prod",
 "pages": 30
+},
+"media/research/the-valley/properties/rivana/floorplans/RIVANA_floorplan_tanami.pdf": {
+"dir": "media/docs/the-valley/properties/rivana/floorplans/RIVANA_floorplan_tanami",
+"pages": 6
 },
 "media/research/the-valley/properties/rivera-at-the-valley-phase-2/brochures/RIVERA_brochure.pdf": {
 "dir": "media/docs/the-valley/properties/rivera-at-the-valley-phase-2/brochures/RIVERA_brochure",

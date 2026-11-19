@@ -23,11 +23,11 @@ import json, os, re, subprocess
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
          'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2']
-NO_PDF = {
-    'rivana': 'No floor-plan PDF received: design and bedrooms from the cluster-map legend only',
-    'alana': 'No floor-plan PDF received: design and bedrooms from the cluster-map legend only',
-    'farm-gardens-2': 'No floor-plan PDF received: design and bedrooms from the cluster-map legend only',
-    'kaia-at-the-valley': 'KAIA_floorplan.pdf contains the Elea sheets: no Kaia (Ava / Vina / Luna) floor plans yet',
+NO_PDF = {}  # every built Valley project now has a floor-plan PDF (19 Nov 2026: agent packs + broker copies)
+NOTES = {
+    'rivana': 'Broker copy (tanamiproperties.com) with 5 of the 12 sheets, scanned: no Kai 4-bedroom sheet; areas not readable',
+    'alana': 'Broker copy (tanamiproperties.com) of the Emaar floor plans; which home of a twin uses the mirrored sheet is not stated',
+    'farm-gardens-2': 'Broker copy (tanamiproperties.com) of the Emaar floor plans; which villa uses the mirrored sheet is not stated',
 }
 _txt = {}
 
@@ -126,7 +126,9 @@ def sheet_ths(text):
     """villa / townhouse sheets: the TH named right after 'TOTAL AREA' (the key plan lists all of them)"""
     t = re.sub(r'\s+', ' ', text.upper())
     m = re.search(r'TOTAL AREA ((?:TH ?\d+ ?)+)', t)
-    return {int(x) for x in re.findall(r'TH ?0*(\d+)', m.group(1))} if m else set()
+    if m:
+        return {int(x) for x in re.findall(r'TH ?0*(\d+)', m.group(1))}
+    return {int(x) for x in re.findall(r'\bTH ?0*(\d+) ?\d ?BED\b', t)}  # 'TH03 3BED' (Kaia sheets)
 
 
 def audit_unit(u, pdf, plans_by_page, designs, plexes):
@@ -217,8 +219,10 @@ def main():
                 st, ck, why = 'no-plan', {}, NO_PDF.get(pid, 'no floor-plan PDF')
             else:
                 st, ck, why = audit_unit(u, pdf, plans_by_page, designs, plexes)
-                if st == 'no-plan' and u.get('note'):
-                    why = u['note']
+                if st == 'no-plan' and (u.get('plan_note') or u.get('note')):
+                    why = u.get('plan_note') or u['note']
+                elif st != 'no-plan' and u.get('plan_note'):
+                    why = u['plan_note']
             pos = f"{u['plex']}-plex TH{u['th']:02d}" if u.get('plex') and u.get('th') else (u.get('position') or '')
             recs.append({'no': u['no'], 'design': u.get('design'), 'beds': u.get('beds'), 'position': pos,
                          'plan': u.get('plan'), 'page': u.get('pages') or u.get('page'), 'sqft': u.get('sqft'),
@@ -237,7 +241,7 @@ def main():
         tl = [dict(t, sqft=sorted(t['sqft']), positions=sorted(t['positions'])) for t in types.values()]
         tl.sort(key=lambda t: (str(t['design']), int(str(t['page']).split('-')[0])))
         out[pid] = {'pdf': os.path.basename(fp['src']) if fp else None, 'pdfSrc': fp['src'] if fp else None, 'homes': len(recs), 'counts': cnt,
-                    'note': NO_PDF.get(pid), 'types': tl, 'units': recs}
+                    'note': NO_PDF.get(pid) or NOTES.get(pid), 'types': tl, 'units': recs}
         print(f"{pid:30s} homes {len(recs):4d}  " + '  '.join(f'{k} {v}' for k, v in cnt.items()))
         for r in recs:
             if r['status'] == 'check':

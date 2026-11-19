@@ -534,14 +534,16 @@ export function initProjectsUI(app) {
       </div>
       ${file && up.page ? `<div class="ph-plans"><div class="ph-plans-head">Floor plan of this home</div>
         <button type="button" class="ph-plan" data-page="${up.page}" title="Open the developer sheet, page ${up.page}">
-          <span><b>${esc(up.plan)}</b><small>${esc(up.design)} · pages ${esc(up.pages || String(up.page))} (plan and mirrored plan)</small></span>
-          <span class="ph-area">${Math.round(up.sqft).toLocaleString('en-US')} <small>sq ft</small></span>
+          <span><b>${esc(up.plan)}</b><small>${esc(up.design)} · ${up.pages ? `pages ${esc(up.pages)} (plan and mirrored plan)` : `page ${esc(String(up.page))}`}</small></span>
+          ${up.sqft ? `<span class="ph-area">${Math.round(up.sqft).toLocaleString('en-US')} <small>sq ft</small></span>` : ''}
           <svg class="icon"><use href="#i-chevron-right" /></svg></button></div>`
         : file ? `<button type="button" class="btn btn-primary btn-block ph-open-plans"><svg class="icon"><use href="#i-plan" /></svg>Open the ${esc(p.name)} floor plans</button>`
         : map && up.map_page ? `<button type="button" class="btn btn-primary btn-block ph-open-map"><svg class="icon"><use href="#i-plan" /></svg>Open the cluster map (brochure page ${up.map_page})</button>` : ''}
-      <p class="ph-note">Placed from Emaar's ${esc(p.name)} cluster map: unit number and house type (style and bedrooms) as coloured on the map. ${up.page
-        ? `Floor plan by bedroom count: Emaar publishes one ${up.beds}-bedroom plan for ${esc(p.name)} (with a mirrored version; which homes are mirrored is not published).`
-        : `Emaar's published documents give no floor plan or area per unit for ${esc(p.name)}.`}</p>`;
+      <p class="ph-note">Placed from Emaar's ${esc(p.name)} cluster map: unit number and house type (style and bedrooms) as coloured on the map. ${!up.page
+        ? (up.plan_note ? `No floor plan linked: ${esc(up.plan_note)}.` : `Emaar's published documents give no floor plan or area per unit for ${esc(p.name)}.`)
+        : up.plan_by === 'bedroom count'
+          ? `Floor plan by bedroom count: Emaar publishes one ${up.beds}-bedroom plan for ${esc(p.name)} (with a mirrored version; which homes are mirrored is not published).`
+          : `Floor plan matched by its ${up.plan_by === 'style' ? 'style' : 'style and bedrooms'} on the map (the floor-plan PDF has no unit list).${up.plan_note ? ` ${esc(up.plan_note[0].toUpperCase() + up.plan_note.slice(1))}.` : ''}`}</p>`;
     el.classList.remove('hidden');
     el.querySelector('.ph-clear').onclick = () => app.clearHome?.();
     const op = el.querySelector('.ph-open-plans');

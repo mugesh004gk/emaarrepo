@@ -105,4 +105,11 @@ if os.path.exists(dp_path):
 
 json.dump({'headers': [{'source': '/(.*)', 'headers': [{'key': 'Cache-Control', 'value': 'public, max-age=0, must-revalidate'}]}]},
           open(os.path.join(OUT, 'vercel.json'), 'w'), indent=1)
+# PDFs that are not on emaar.com (client agent packs, broker copies): shipped with the site so 'Open' works
+for rel in sorted(set(missing)):
+    src = os.path.realpath(os.path.join(APP, rel))
+    if os.path.exists(src):
+        dst = os.path.join(OUT, rel)
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copy2(src, dst)
 print(f'images: {n}, pdf links remapped (missing: {len(missing)})', missing[:5])

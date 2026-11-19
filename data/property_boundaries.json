@@ -588,10 +588,10 @@
     "missingNumbers": 0
    },
    "floorPlan": {
-    "document": null,
-    "url": null,
-    "linkedUnits": 0,
-    "note": "no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only"
+    "document": "RIVANA_floorplan_tanami.pdf",
+    "url": "media/research/the-valley/properties/rivana/floorplans/RIVANA_floorplan_tanami.pdf",
+    "linkedUnits": 340,
+    "note": "broker copy with 5 of the 12 sheets (no Kai 4 BR); scanned, areas not readable"
    },
    "status": "complete",
    "ddaBoundary": null,
@@ -773,10 +773,10 @@
     "missingNumbers": 0
    },
    "floorPlan": {
-    "document": null,
-    "url": null,
-    "linkedUnits": 0,
-    "note": "no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only"
+    "document": "ALANA_floorplan_tanami.pdf",
+    "url": "media/research/the-valley/properties/alana/floorplans/ALANA_floorplan_tanami.pdf",
+    "linkedUnits": 322,
+    "note": "broker copy of the Emaar floor plans; which twin uses the mirrored sheet is not stated"
    },
    "status": "complete",
    "ddaBoundary": null,
@@ -1059,10 +1059,10 @@
     "missingNumbers": 52
    },
    "floorPlan": {
-    "document": null,
-    "url": null,
-    "linkedUnits": 0,
-    "note": "no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only"
+    "document": "FARM-GARDENS-2_floorplan_tanami.pdf",
+    "url": "media/research/the-valley/properties/farm-gardens-2/floorplans/FARM-GARDENS-2_floorplan_tanami.pdf",
+    "linkedUnits": 248,
+    "note": "broker copy of the Emaar floor plans; which villa uses the mirrored sheet is not stated"
    },
    "status": "partial",
    "ddaBoundary": null,
@@ -1152,10 +1152,10 @@
     "missingNumbers": 0
    },
    "floorPlan": {
-    "document": "KAIA_floorplan.pdf",
-    "url": "media/research/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_floorplan.pdf",
-    "linkedUnits": 0,
-    "note": "KAIA_floorplan.pdf holds the Elea sheets, not Kaia (Ava / Vina / Luna): Kaia floor plans awaited"
+    "document": "KAIA_TV_FLOORPLAN.pdf",
+    "url": "media/research/the-valley/properties/kaia-at-the-valley/floorplans/KAIA_TV_FLOORPLAN.pdf",
+    "linkedUnits": 156,
+    "note": null
    },
    "status": "complete",
    "ddaBoundary": null,
@@ -1389,7 +1389,7 @@
     "document": "RIVERA_floorplan.pdf",
     "url": "media/research/the-valley/properties/rivera-at-the-valley-phase-2/floorplans/RIVERA_floorplan.pdf",
     "linkedUnits": 234,
-    "note": "144 homes not placed yet (numbers not legible on the map received)"
+    "note": "144 homes not placed yet (the full numbered map has now arrived in the agent pack)"
    },
    "status": "partial",
    "ddaBoundary": null,

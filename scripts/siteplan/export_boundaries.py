@@ -20,13 +20,12 @@ ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'th
          'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2']
 # floor-plan facts that are not in the data files (checked by hand on the PDFs)
 FLOOR_NOTES = {
-    'kaia-at-the-valley': 'KAIA_floorplan.pdf holds the Elea sheets, not Kaia (Ava / Vina / Luna): Kaia floor plans awaited',
-    'rivana': 'no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only',
-    'alana': 'no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only',
-    'farm-gardens-2': 'no floor-plan PDF received: type (style, bedrooms) from the cluster-map legend only',
+    'rivana': 'broker copy with 5 of the 12 sheets (no Kai 4 BR); scanned, areas not readable',
+    'alana': 'broker copy of the Emaar floor plans; which twin uses the mirrored sheet is not stated',
+    'farm-gardens-2': 'broker copy of the Emaar floor plans; which villa uses the mirrored sheet is not stated',
     'the-farm-gardens': 'floor plan by bedroom count; which villas use the mirrored plan is not stated',
     'elea-at-the-valley': '10 homes without a plan: bedroom count to confirm (34, 35, 50, 51, 54, 55, 58, 59, 94, 110)',
-    'rivera-at-the-valley-phase-2': '144 homes not placed yet (numbers not legible on the map received)',
+    'rivera-at-the-valley-phase-2': '144 homes not placed yet (the full numbered map has now arrived in the agent pack)',
 }
 
 
@@ -105,8 +104,6 @@ def main():
         f = fp.get(pid)
         rec['floorPlan'] = {'document': os.path.basename(f['src']) if f else None, 'url': f['src'] if f and os.path.exists(os.path.join(APP, f['src'])) else None,
                             'linkedUnits': rec.pop('linked'), 'note': FLOOR_NOTES.get(pid)}
-        if pid == 'kaia-at-the-valley':
-            rec['floorPlan']['linkedUnits'] = 0
         u = rec['units']
         rec['status'] = 'complete' if u['official'] and u['numbered'] >= u['official'] else 'partial'
         out.append({'id': pid, 'name': names.get(pid, pid), 'community': 'the-valley', **rec,

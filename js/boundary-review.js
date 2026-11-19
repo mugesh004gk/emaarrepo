@@ -86,7 +86,6 @@ export function createBoundaryReview({ scene, groundScene, labels, camera, flyTo
   function floorChip(p) {
     const f = p.floorPlan, a = audit?.[p.id];
     if (!f.document) return '<span class="bp-chip bad">No floor plan</span>';
-    if (p.id === 'kaia-at-the-valley') return '<span class="bp-chip bad">Wrong file</span>';
     if (a) {
       const c = a.counts, ok = c.verified + c['type-match'];
       if (c.check) return `<span class="bp-chip bad">${c.check} to check</span>`;
