@@ -109,5 +109,6 @@
    ],
    "why": "the text reader took the '295'/'296' labels for 205/206; read by eye on the map: twin 205/206 is the orange twin below the yellow utility marker, after 203/204"
   }
- }
+ },
+ "replace_mapped_streets": true
 }

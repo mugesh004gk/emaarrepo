@@ -63,5 +63,6 @@
    "suite_sqm": 419.95
   }
  },
- "plans_note": "FARM-GARDENS_floorplan.pdf: one plan per bedroom count, each with a mirrored sheet (p.2/3 4 BR, p.4/5 5 BR); TOTAL AREA (suite + garage + balcony) used as built-up area; which villas are mirrored is not published."
+ "plans_note": "FARM-GARDENS_floorplan.pdf: one plan per bedroom count, each with a mirrored sheet (p.2/3 4 BR, p.4/5 5 BR); TOTAL AREA (suite + garage + balcony) used as built-up area; which villas are mirrored is not published.",
+ "replace_mapped_streets": true
 }

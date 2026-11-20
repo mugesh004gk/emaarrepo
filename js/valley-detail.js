@@ -59,7 +59,7 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
   const plans = naraData.plans;
   const cars = createCarTemplates(mats);
 
-  const STEP_BACK_MAX = { 'rivera-at-the-valley-phase-2': 6 }; // metres a map-placed row may move back off a road (default 4)
+  const STEP_BACK_MAX = { 'rivera-at-the-valley-phase-2': 6, 'avena-at-the-valley': 6, nima: 6, rivana: 6, 'velora-at-the-valley': 6 }; // metres a map-placed row may move back off a road (default 4)
   // not built yet (bare desert on the satellite): no landscaped grass pad around their rows - the homes keep their
   // own plots (garden, driveway) and the satellite ground shows around them
   const NO_GROUND = new Set(['avelia-at-the-valley', 'ovelle-at-the-valley', 'avena-at-the-valley', 'avena-2-at-the-valley']);
