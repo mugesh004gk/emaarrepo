@@ -272,31 +272,55 @@
 }
 },
 "rivana": {
-"pdf": "RIVANA_floorplan_tanami.pdf",
+"pdf": "RIVANA_floorplan_binayah.pdf",
 "pages": {
 "1": {
-"maid": null,
-"how": "room names not readable"
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
 },
 "2": {
 "maid": true,
-"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
 },
 "3": {
 "maid": true,
-"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
 },
 "4": {
 "maid": true,
-"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
 },
 "5": {
 "maid": true,
-"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
 },
 "6": {
 "maid": true,
-"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
+},
+"7": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
+},
+"8": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
+},
+"9": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
+},
+"10": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
+},
+"11": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
+},
+"12": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor"
 }
 }
 },

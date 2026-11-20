@@ -29,9 +29,10 @@ DESIGN_SHEETS = {
     'farm-gardens-2': {'kind': 'villa', 'pages': {
         ('Horizon', 5): (2, 3), ('Oren', 5): (4, 5), ('Horizon', 4): (6, 7), ('Oren', 4): (8, 9)}},
     # Rivana: broker copy with 5 of the 12 sheets, scanned (titles read by eye; areas not reliably readable)
-    'rivana': {'kind': 'townhouse', 'scan': True, 'pages': {
-        ('Kai', 3): (None, 2), ('Clara', 5): (3, None), ('Clara', 4): (None, 4), ('Clara', 3): (5, None), ('Kai', 5): (None, 6),
-        ('Kai', 4): (None, None)}},
+    # RIVANA_floorplan_binayah.pdf: the 12 Emaar sheets (binayah.com images, 20 Nov 2026), normal + mirrored per type;
+    # replaces the 5-page scanned tanami copy that had no Kai 4 BR sheet
+    'rivana': {'kind': 'townhouse', 'pages': {
+        ('Kai', 3): (1, 2), ('Kai', 4): (3, 4), ('Kai', 5): (5, 6), ('Clara', 3): (7, 8), ('Clara', 4): (9, 10), ('Clara', 5): (11, 12)}},
 }
 POSITION_SHEETS = {'kaia-at-the-valley': {
     'designs': ['Ava', 'Vina', 'Luna'],

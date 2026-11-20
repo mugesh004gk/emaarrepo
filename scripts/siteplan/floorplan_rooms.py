@@ -68,7 +68,8 @@ def deep(src, pg, td):
 
 # (project, page) -> (maid, what was seen)
 BY_EYE = {
-    **{('rivana', p): (True, "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)") for p in (2, 3, 4, 5, 6)},
+    # RIVANA_floorplan_binayah.pdf (12 sheets, Kai / Clara 3-5 BR, normal + mirrored): all checked by eye 20 Nov 2026
+    **{('rivana', p): (True, "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH, ground floor") for p in range(1, 13)},
     ('farm-gardens-2', 4): (True, "read by eye: MAID'S ROOM + MAID'S BATH, ground floor"),
     ('talia', 13): (None, 'read by eye: Pharo 3 BR C - ground-floor room with a single bed drawn and its own WC, but NOT named '
                           'on the sheet (no label, no size) - maid room or not: client to confirm'),
