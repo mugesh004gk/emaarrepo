@@ -17,7 +17,7 @@ APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))
 MEDIA = 'media/research/the-valley/properties'
 KY = 110574.0
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley', 'farm-grove-at-the-valley', 'nima']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley', 'farm-grove-at-the-valley', 'nima', 'avena-at-the-valley']
 # floor-plan facts that are not in the data files (checked by hand on the PDFs)
 FLOOR_NOTES = {
     'rivana': 'broker copy with 5 of the 12 sheets (no Kai 4 BR); scanned, areas not readable',
@@ -93,8 +93,10 @@ def main():
             rec = {
                 'boundary': sp['boundary'],
                 'boundaryMethod': what,
-                'placement': (({'kind': 'masterplan', 'text': 'Not built yet: placed from its neighbour Velora 2 as drawn on its map (provisional, about 20-30 m)'} if 'velora 2' in g.get('method', '').lower() and 'not built' in g.get('method', '').lower() else {'kind': 'masterplan', 'text': 'Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)'}) if prov else
-                              {'kind': 'satellite', 'text': 'Cluster map matched to the built homes on the satellite photo' + (f" (match score {g['correlation']:.2f})" if g.get('correlation') else '')}),
+                'placement': ({'kind': 'landmarks', 'text': 'Under construction: placed by two road landmarks drawn on its map (S-roundabout, south roundabout), matching the foundations on the satellite (provisional, about 10-15 m)'}
+                              if 'road landmarks' in g.get('method', '').lower() else
+                              (({'kind': 'masterplan', 'text': 'Not built yet: placed from its neighbour Velora 2 as drawn on its map (provisional, about 20-30 m)'} if 'velora 2' in g.get('method', '').lower() and 'not built' in g.get('method', '').lower() else {'kind': 'masterplan', 'text': 'Not built yet: placed from the Valley masterplan (provisional, about 30-50 m)'}) if prov else
+                              {'kind': 'satellite', 'text': 'Cluster map matched to the built homes on the satellite photo' + (f" (match score {g['correlation']:.2f})" if g.get('correlation') else '')})),
                 'placementDetail': g.get('method'),
                 'clusterMap': {'document': sp['source']['document'], 'page': sp['source'].get('page'), 'image': cmap},
                 'units': {'official': official, 'placed': placed, 'numbered': numbered, 'missingNumbers': max(0, (official or 0) - numbered)},
@@ -105,6 +107,8 @@ def main():
                             'linkedUnits': rec.pop('linked'), 'note': FLOOR_NOTES.get(pid)}
         u = rec['units']
         rec['status'] = 'complete' if u['official'] and u['numbered'] >= u['official'] else 'partial'
+        if rec['status'] == 'complete' and not rec['floorPlan']['linkedUnits']:
+            rec['status'] = 'partial'  # numbered and placed, but no floor plan linked (no floor-plan PDF)
         out.append({'id': pid, 'name': names.get(pid, pid), 'community': 'the-valley', **rec,
                     'ddaBoundary': None, 'ddaNote': 'DDA GIS plot boundary not received yet: when it arrives it replaces this outline'})
         print(f"{pid:32s} {rec['status']:9s} placed {u['placed']:4d} numbered {u['numbered']:4d} / {u['official']}  plan-linked {rec['floorPlan']['linkedUnits']:4d}  {rec['placement']['kind']}")

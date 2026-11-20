@@ -1,0 +1,52 @@
+{
+ "image": "AVENA_TV_CLUSTERMAP.pdf (page points)",
+ "lat0": 25.006,
+ "lng0": 55.447,
+ "A": [
+  [
+   0.838012,
+   0.633067,
+   -1147.85645
+  ],
+  [
+   0.633067,
+   -0.838012,
+   264.784151
+  ]
+ ],
+ "scale_m_per_px": 1.0503,
+ "control_points": [
+  {
+   "what": "S-shaped roundabout (map top-right corner)",
+   "map_px_150dpi": [
+    1413.8,
+    217.3
+   ],
+   "map_pt": [
+    678.6,
+    104.3
+   ],
+   "satellite": {
+    "lat": 25.0114895,
+    "lng": 55.4419137
+   }
+  },
+  {
+   "what": "roundabout at the south end of the dual road (map right edge)",
+   "map_px_150dpi": [
+    1273.8,
+    1384.3
+   ],
+   "map_pt": [
+    611.4,
+    664.5
+   ],
+   "satellite": {
+    "lat": 25.0068594,
+    "lng": 55.4448706
+   }
+  }
+ ],
+ "method": "two road landmarks drawn on the Avena cluster map matched to the same built roads on Esri imagery (z17): the S-shaped roundabout and the roundabout at the south end of the dual road; similarity transform (scale, rotation, shift). Independent checks: map-up 322.9 deg vs the Valley brochure maps 322.5 deg; scale 1.050 m/pt vs Nima 1.003 / Elva 0.977; map north arrow up-right",
+ "accuracy": "provisional: two control points (no redundancy); estimated within about 10-15 m (landmark centres +/-3 m, rotation +/-0.6 deg over 600 m)"
+}

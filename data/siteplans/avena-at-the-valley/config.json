@@ -1,1 +1,36 @@
-{}
+{
+ "count": 322,
+ "kind": "twin",
+ "pairs": "odd-even",
+ "legend": [
+  {
+   "design": "Gardenia",
+   "beds": 4,
+   "rgb": [
+    236,
+    157,
+    146
+   ]
+  },
+  {
+   "design": "Lotus",
+   "beds": 4,
+   "rgb": [
+    197,
+    176,
+    241
+   ]
+  },
+  {
+   "design": "Lily",
+   "beds": 4,
+   "rgb": [
+    236,
+    117,
+    177
+   ]
+  }
+ ],
+ "_legend": "STYLES legend of AVENA_TV_CLUSTERMAP.pdf (Gardenia / Lotus / Lily plot colours). Bedrooms 4 for all: official Avena brochure (emaar.com 388793_brochure_File_d043e66dd6_prod.pdf p.16, \"Our villas, each boasting four bedrooms\"); no Avena floor plans received",
+ "replace_mapped_streets": true
+}

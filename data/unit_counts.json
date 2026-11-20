@@ -81,9 +81,9 @@
   "avena-at-the-valley": {
    "community": "the-valley",
    "name": "Avena",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 322,
+   "source": "Avena cluster map (AVENA_TV_CLUSTERMAP.pdf: title \"avena\", units 001-322 as PDF text, 161 twin villas)",
+   "clusterMap": "numbered"
   },
   "lillia": {
    "community": "the-valley",

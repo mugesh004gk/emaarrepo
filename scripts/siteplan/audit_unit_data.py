@@ -50,6 +50,7 @@ NUMBER_SOURCE = {  # how the numbers of properties without a per-home 'number' f
     'the-farm-gardens': 'OCR of the cluster map (brochure p.24)', 'farm-gardens-2': 'OCR of the cluster map (brochure p.25)',
     'rivera-at-the-valley-phase-2': 'OCR of the cluster map (RIVERA_TV_CLUSTER_MAP.pdf)',
     'farm-grove-at-the-valley': 'read by eye on the cluster map (all 482 labels, OCR cross-check)',
+    'avena-at-the-valley': 'PDF text layer of the cluster map (all 322 labels)',
     'nima': 'read by eye on the cluster map (79 terrace number runs, OCR cross-check)',
 }
 

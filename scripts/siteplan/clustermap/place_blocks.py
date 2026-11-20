@@ -206,7 +206,7 @@ def main():
         rows.append({'lat': round(la, 7), 'lng': round(lo, 7), 'L': round(unit_w * nu, 2), 'D': round(Dm, 2), 'frontBearing': round(fb, 2),
                      'kind': 'villa', 'units': nu, 'unitWidths': [round(unit_w, 2)] * nu, 'project': proj, 'source': 'siteplan',
                      'placement': 'verified-siteplan', 'block': i, 'unitNumbers': order,
-                     'unitPlans': [{'no': u, 'design': b['design'], 'beds': b['beds'] if b['beds'] is not None else (pbd.get(b['design']) or {}).get('beds'),
+                     'unitPlans': [{'no': u, 'design': cfg.get('unit_design', {}).get(str(u), b['design']), 'beds': b['beds'] if b['beds'] is not None else (pbd.get(b['design']) or {}).get('beds'),
                                     **(plan_of(b['beds']) if b['beds'] is not None or not pbd else plan_by_design(b['design'])),
                                     'position': 'twin' if nu == 2 else 'villa', 'pair': [x for x in order if x != u][0] if nu == 2 else None,
                                     'type_source': 'map legend colour', 'map_page': B['source']['page']} for u in order]})
