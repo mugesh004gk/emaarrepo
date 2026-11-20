@@ -1,0 +1,30 @@
+# After every push to main: screenshot the pushed version of the 3D app (Playwright) and attach the images to the
+# commit's update on the client progress tracker (https://emaar-progress-tracker.vercel.app).
+name: Tracker screenshots
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: tracker-screenshots
+  cancel-in-progress: false
+jobs:
+  capture:
+    if: ${{ !contains(github.event.head_commit.message, '[skip tracker]') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install the app's libraries and Playwright
+        run: |
+          npm ci --omit=dev --no-audit --no-fund
+          npm install --no-save --no-audit --no-fund playwright@1.49.1
+          npx playwright install --with-deps chromium
+      - name: Capture and attach
+        env:
+          TRACKER_UPLOAD_SECRET: ${{ secrets.TRACKER_UPLOAD_SECRET }}
+          COMMITS: ${{ join(github.event.commits.*.id, ' ') || github.sha }}
+        run: node .github/tracker/capture.mjs
