@@ -1,0 +1,1193 @@
+{
+"nara": {
+"pdf": "NARA_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": true,
+"how": "text layer"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": true,
+"how": "text layer"
+},
+"13": {
+"maid": true,
+"how": "text layer"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+},
+"15": {
+"maid": true,
+"how": "text layer"
+},
+"16": {
+"maid": true,
+"how": "text layer"
+},
+"17": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"eden": {
+"pdf": "EDEN_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": null,
+"how": "room names not readable"
+},
+"3": {
+"maid": null,
+"how": "room names not readable"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": null,
+"how": "room names not readable"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": true,
+"how": "text layer"
+},
+"13": {
+"maid": true,
+"how": "text layer"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+},
+"15": {
+"maid": true,
+"how": "text layer"
+},
+"16": {
+"maid": null,
+"how": "room names not readable"
+},
+"17": {
+"maid": true,
+"how": "text layer"
+},
+"18": {
+"maid": true,
+"how": "text layer"
+},
+"19": {
+"maid": true,
+"how": "text layer"
+},
+"20": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"orania-at-the-valley": {
+"pdf": "ORANIA_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": true,
+"how": "text layer"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": true,
+"how": "text layer"
+},
+"13": {
+"maid": true,
+"how": "text layer"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+},
+"15": {
+"maid": true,
+"how": "text layer"
+},
+"16": {
+"maid": true,
+"how": "text layer"
+},
+"17": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"elora": {
+"pdf": "ELORA_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": false,
+"how": "read by eye: Moon 3 BR - ground floor has STORE ROOM 2.2 x 2.2 M, no maid room"
+},
+"4": {
+"maid": false,
+"how": "read by eye: Mysk 3 BR A - ground floor has STORE ROOM 2.2 x 2.2 M, no maid room"
+},
+"5": {
+"maid": false,
+"how": "read by eye: Mysk 3 BR B (mirrored) - STORE ROOM 2.2 x 2.2 M, no maid room"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"rivana": {
+"pdf": "RIVANA_floorplan_tanami.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+},
+"3": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+},
+"4": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+},
+"5": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+},
+"6": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.2 x 2.6 M + MAID'S BATH on the ground floor (scanned sheet)"
+}
+}
+},
+"alana": {
+"pdf": "ALANA_floorplan_tanami.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": null,
+"how": "room names not readable"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": true,
+"how": "text layer"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": true,
+"how": "text layer"
+},
+"13": {
+"maid": true,
+"how": "text layer"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"the-farm-gardens": {
+"pdf": "FARM-GARDENS_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"farm-gardens-2": {
+"pdf": "FARM-GARDENS-2_floorplan_tanami.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "OCR"
+},
+"3": {
+"maid": true,
+"how": "OCR"
+},
+"4": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM + MAID'S BATH, ground floor"
+},
+"5": {
+"maid": true,
+"how": "OCR"
+},
+"6": {
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.8 x 2.1 M + MAID'S BATH, ground floor (also DRIVER ROOM)"
+},
+"7": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"8": {
+"maid": true,
+"how": "OCR"
+},
+"9": {
+"maid": true,
+"how": "OCR"
+}
+}
+},
+"kaia-at-the-valley": {
+"pdf": "KAIA_TV_FLOORPLAN.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "OCR"
+},
+"3": {
+"maid": true,
+"how": "OCR"
+},
+"4": {
+"maid": true,
+"how": "OCR"
+},
+"5": {
+"maid": true,
+"how": "OCR"
+},
+"6": {
+"maid": true,
+"how": "OCR"
+},
+"7": {
+"maid": true,
+"how": "OCR"
+},
+"8": {
+"maid": true,
+"how": "OCR"
+},
+"9": {
+"maid": true,
+"how": "OCR"
+},
+"10": {
+"maid": true,
+"how": "OCR"
+},
+"11": {
+"maid": true,
+"how": "OCR"
+},
+"12": {
+"maid": true,
+"how": "OCR"
+},
+"13": {
+"maid": true,
+"how": "OCR"
+},
+"14": {
+"maid": true,
+"how": "OCR"
+},
+"15": {
+"maid": true,
+"how": "OCR"
+},
+"16": {
+"maid": true,
+"how": "OCR"
+},
+"17": {
+"maid": true,
+"how": "OCR"
+},
+"18": {
+"maid": true,
+"how": "OCR"
+},
+"19": {
+"maid": true,
+"how": "OCR"
+},
+"20": {
+"maid": true,
+"how": "OCR"
+},
+"21": {
+"maid": true,
+"how": "OCR"
+}
+}
+},
+"elea-at-the-valley": {
+"pdf": "ELEA_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "OCR"
+},
+"3": {
+"maid": true,
+"how": "OCR"
+},
+"4": {
+"maid": true,
+"how": "OCR"
+},
+"5": {
+"maid": true,
+"how": "OCR"
+},
+"6": {
+"maid": true,
+"how": "OCR"
+},
+"7": {
+"maid": true,
+"how": "OCR"
+},
+"8": {
+"maid": true,
+"how": "OCR"
+},
+"9": {
+"maid": true,
+"how": "OCR"
+}
+}
+},
+"rivera-at-the-valley-phase-2": {
+"pdf": "RIVERA_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"lillia": {
+"pdf": "LILLIA_TV_FLOOR_PLANS.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"venera-at-the-valley": {
+"pdf": "VENERA_THE_VALLEY_FLOORPLAN.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"3": {
+"maid": true,
+"how": "OCR"
+},
+"4": {
+"maid": true,
+"how": "OCR"
+},
+"5": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"6": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"7": {
+"maid": true,
+"how": "OCR"
+},
+"8": {
+"maid": true,
+"how": "OCR"
+},
+"9": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"10": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"11": {
+"maid": true,
+"how": "OCR"
+},
+"12": {
+"maid": true,
+"how": "OCR"
+},
+"13": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"14": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"15": {
+"maid": true,
+"how": "OCR"
+},
+"16": {
+"maid": true,
+"how": "OCR"
+},
+"17": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"18": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"19": {
+"maid": true,
+"how": "OCR"
+},
+"20": {
+"maid": true,
+"how": "OCR"
+},
+"21": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"22": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"23": {
+"maid": true,
+"how": "OCR"
+},
+"24": {
+"maid": true,
+"how": "OCR"
+},
+"25": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"26": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"27": {
+"maid": true,
+"how": "OCR"
+},
+"28": {
+"maid": true,
+"how": "OCR"
+},
+"29": {
+"maid": true,
+"how": "OCR at 600 dpi"
+}
+}
+},
+"talia": {
+"pdf": "TV_TALIA_FLOOR_PLANS.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": true,
+"how": "text layer"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": true,
+"how": "text layer"
+},
+"13": {
+"maid": null,
+"how": "read by eye: Pharo 3 BR C - ground-floor room with a single bed drawn and its own WC, but NOT named on the sheet (no label, no size) - maid room or not: client to confirm"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+},
+"15": {
+"maid": true,
+"how": "text layer"
+},
+"16": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"elva-at-the-valley": {
+"pdf": "ELVA_TV_FLOORPLAN.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "OCR"
+},
+"3": {
+"maid": true,
+"how": "OCR"
+},
+"4": {
+"maid": true,
+"how": "OCR"
+},
+"5": {
+"maid": true,
+"how": "OCR"
+},
+"6": {
+"maid": true,
+"how": "OCR"
+},
+"7": {
+"maid": true,
+"how": "OCR"
+},
+"8": {
+"maid": true,
+"how": "OCR"
+},
+"9": {
+"maid": true,
+"how": "OCR"
+}
+}
+},
+"velora-2-at-the-valley-phase-2": {
+"pdf": "VELORA2_FLOORPLAN_TV.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": null,
+"how": "room names not readable"
+},
+"3": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"4": {
+"maid": true,
+"how": "OCR"
+},
+"5": {
+"maid": true,
+"how": "OCR"
+},
+"6": {
+"maid": null,
+"how": "room names not readable"
+},
+"7": {
+"maid": null,
+"how": "room names not readable"
+},
+"8": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"9": {
+"maid": true,
+"how": "OCR"
+},
+"10": {
+"maid": true,
+"how": "OCR"
+},
+"11": {
+"maid": null,
+"how": "room names not readable"
+},
+"12": {
+"maid": null,
+"how": "room names not readable"
+},
+"13": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"14": {
+"maid": true,
+"how": "OCR"
+},
+"15": {
+"maid": true,
+"how": "OCR"
+},
+"16": {
+"maid": null,
+"how": "room names not readable"
+}
+}
+},
+"velora-at-the-valley": {
+"pdf": "VELORA_THE_VALLEY_FLOORPLAN.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"3": {
+"maid": true,
+"how": "OCR"
+},
+"4": {
+"maid": true,
+"how": "OCR"
+},
+"5": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"6": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"7": {
+"maid": true,
+"how": "OCR"
+},
+"8": {
+"maid": true,
+"how": "OCR"
+},
+"9": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"10": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"11": {
+"maid": true,
+"how": "OCR"
+},
+"12": {
+"maid": true,
+"how": "OCR"
+},
+"13": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"14": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"15": {
+"maid": true,
+"how": "OCR"
+},
+"16": {
+"maid": true,
+"how": "OCR"
+},
+"17": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"18": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"19": {
+"maid": true,
+"how": "OCR"
+},
+"20": {
+"maid": true,
+"how": "OCR"
+},
+"21": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"22": {
+"maid": true,
+"how": "OCR at 600 dpi"
+},
+"23": {
+"maid": true,
+"how": "OCR"
+},
+"24": {
+"maid": true,
+"how": "OCR"
+},
+"25": {
+"maid": true,
+"how": "OCR at 600 dpi"
+}
+}
+},
+"vindera-at-the-valley": {
+"pdf": "VINDERA_TH_FLOORPLANS.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": null,
+"how": "room names not readable"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": null,
+"how": "room names not readable"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": true,
+"how": "text layer"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": null,
+"how": "room names not readable"
+},
+"13": {
+"maid": true,
+"how": "text layer"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+},
+"15": {
+"maid": true,
+"how": "text layer"
+},
+"16": {
+"maid": true,
+"how": "text layer"
+},
+"17": {
+"maid": true,
+"how": "text layer"
+},
+"18": {
+"maid": true,
+"how": "text layer"
+},
+"19": {
+"maid": null,
+"how": "room names not readable"
+},
+"20": {
+"maid": true,
+"how": "text layer"
+},
+"21": {
+"maid": true,
+"how": "text layer"
+},
+"22": {
+"maid": true,
+"how": "text layer"
+},
+"23": {
+"maid": true,
+"how": "text layer"
+},
+"24": {
+"maid": true,
+"how": "text layer"
+},
+"25": {
+"maid": true,
+"how": "text layer"
+}
+}
+},
+"farm-grove-at-the-valley": {
+"pdf": "FARMGROVE_TV_FLOORPLAN.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": null,
+"how": "room names read, no maid room found by text / OCR - to check by eye"
+},
+"7": {
+"maid": null,
+"how": "room names read, no maid room found by text / OCR - to check by eye"
+},
+"8": {
+"maid": null,
+"how": "room names read, no maid room found by text / OCR - to check by eye"
+},
+"9": {
+"maid": null,
+"how": "room names read, no maid room found by text / OCR - to check by eye"
+},
+"10": {
+"maid": null,
+"how": "room names read, no maid room found by text / OCR - to check by eye"
+},
+"11": {
+"maid": null,
+"how": "room names read, no maid room found by text / OCR - to check by eye"
+}
+}
+}
+}
