@@ -13,7 +13,7 @@ import json, math, os
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KY = 110574.0
 # planned projects shown on bare ground (not built yet, desert on the satellite): no landscaped lawn base
-NO_BASE = {'avelia-at-the-valley', 'ovelle-at-the-valley'}
+NO_BASE = {'avelia-at-the-valley', 'ovelle-at-the-valley', 'avena-at-the-valley', 'avena-2-at-the-valley'}
 
 
 def plot_front(r):

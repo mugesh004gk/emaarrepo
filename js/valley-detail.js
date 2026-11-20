@@ -62,7 +62,7 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
   const STEP_BACK_MAX = { 'rivera-at-the-valley-phase-2': 6 }; // metres a map-placed row may move back off a road (default 4)
   // not built yet (bare desert on the satellite): no landscaped grass pad around their rows - the homes keep their
   // own plots (garden, driveway) and the satellite ground shows around them
-  const NO_GROUND = new Set(['avelia-at-the-valley', 'ovelle-at-the-valley']);
+  const NO_GROUND = new Set(['avelia-at-the-valley', 'ovelle-at-the-valley', 'avena-at-the-valley', 'avena-2-at-the-valley']);
 
   // ---- 1. variant templates: house shell + plot, merged per material in the unit frame ------------
   let droppedOverlaps = 0, gardensTrimmed = 0, slid = 0, steppedBack = 0;

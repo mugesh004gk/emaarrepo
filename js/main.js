@@ -66,6 +66,12 @@ async function boot() {
     fetch('data/floorplans.json', { cache: 'no-store' }).then((r) => r.json()),
   ]);
   const homesDetected = await fetch('data/homes_detected.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
+  // The Valley: roofs found on the satellite photo that belong to no project (site cabins, labour camps, the
+  // Town Centre, half-built structures - all outside every property) are not drawn as homes. Every Valley home
+  // shown comes from a property's own map (or is a marked placeholder of a property still to be built).
+  if (homesDetected?.communities?.['the-valley']) {
+    homesDetected.communities['the-valley'] = homesDetected.communities['the-valley'].filter((r) => r.project || r.placement !== 'estimated-satellite');
+  }
   const siteData = await fetch('data/site.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   const greensData = await fetch('data/greens.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
   const projectStatus = await fetch('data/project_status.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}));
