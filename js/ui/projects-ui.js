@@ -219,8 +219,35 @@ export function initProjectsUI(app) {
     const fp = app.floorplans?.[p.id];
     if (!fp) return '';
     if (!fp.plans.length) {
-      return `<section class="detail-section"><h4 class="section-label">Floor-plan types</h4>
-        <div class="notice"><svg class="icon"><use href="#i-info" /></svg><span>This floor-plan file is ${fp.pages} pages of images without readable text; open the sheets to read each plan's printed sizes.</span></div></section>`;
+      // scanned sheets (no text to read areas from): the plan types from the homes linked to each sheet page
+      const types = new Map();
+      for (const r of app.homesDetected?.communities?.[p.communityId] || []) {
+        if (r.project !== p.id) continue;
+        for (const u of r.unitPlans || []) {
+          const k = `${u.design}|${u.beds}|${u.page ?? ''}`;
+          if (!types.has(k)) types.set(k, { design: u.design, beds: u.beds, page: u.page, n: 0 });
+          types.get(k).n++;
+        }
+      }
+      const list = [...types.values()].sort((a, b) => (a.beds - b.beds) || String(a.design).localeCompare(String(b.design)));
+      if (!list.length) {
+        return `<section class="detail-section"><h4 class="section-label">Floor-plan types</h4>
+          <div class="notice"><svg class="icon"><use href="#i-info" /></svg><span>This floor-plan file is ${fp.pages} scanned pages; open the sheets to read each plan's printed sizes.</span></div></section>`;
+      }
+      return `<section class="detail-section">
+        <div class="section-title-row"><h4 class="section-label">Floor-plan types · ${list.filter((t) => t.page).length}</h4><span class="section-hint">scanned sheets</span></div>
+        ${list.map((t) => t.page ? `
+          <button type="button" class="plan-row" data-page="${t.page}" title="Open the developer sheet, page ${t.page}">
+            <span class="plr-main"><strong>${esc(t.design)} · ${t.beds} bedroom</strong><small>${t.n} homes</small></span>
+            <span class="plr-area"><small>sizes on the sheet</small></span>
+            <span class="plr-page">p.${t.page}</span>
+          </button>` : `
+          <div class="plan-row plan-row-missing">
+            <span class="plr-main"><strong>${esc(t.design)} · ${t.beds} bedroom</strong><small>${t.n} homes · sheet not in the floor plans received</small></span>
+            <span class="plr-area"></span><span class="plr-page">—</span>
+          </div>`).join('')}
+        <p class="source-note">The floor-plan file is a scanned copy (${fp.pages} pages): areas are not machine-readable, so each plan's printed sizes are read on its sheet. Select a plan to open it.</p>
+      </section>`;
     }
     const plans = fp.plans.map((pl) => ({ pl, area: planArea(pl), units: planUnits(pl) })).filter((x) => x.area);
     const byBeds = new Map();
@@ -375,7 +402,7 @@ export function initProjectsUI(app) {
     elContent.querySelector('.hero-nav.next')?.addEventListener('click', () => step(1));
     heroImg.addEventListener('click', () => openImages(p.name, gallery, galleryIdx));
     elContent.querySelectorAll('.thumb').forEach((t) => t.addEventListener('click', () => openImages(p.name, gallery, Number(t.dataset.img))));
-    elContent.querySelectorAll('.plan-row').forEach((b) => b.addEventListener('click', () => openPdf(`${p.name} · Floor plans · page ${b.dataset.page}`, fp[0].src, Number(b.dataset.page))));
+    elContent.querySelectorAll('button.plan-row').forEach((b) => b.addEventListener('click', () => openPdf(`${p.name} · Floor plans · page ${b.dataset.page}`, fp[0].src, Number(b.dataset.page))));
     wireUnitFinder(elContent);
     elContent.querySelectorAll('[data-act]').forEach((b) => b.addEventListener('click', () => {
       const a = b.dataset.act;
@@ -505,10 +532,12 @@ export function initProjectsUI(app) {
           <span><b>${esc(up.design)} · ${up.beds} bedroom ${esc(up.plan)}</b><small>${up.plex} PLEX - TH ${String(up.th).padStart(2, '0')} · page ${up.page}</small></span>
           <span class="ph-area">${up.sqft ? Math.round(up.sqft).toLocaleString('en-US') : '—'} <small>sq ft</small></span>
           <svg class="icon"><use href="#i-chevron-right" /></svg></button></div>` : ''}
+      ${file ? sheetSection(up) : ''}
       <p class="ph-note">Placed from Emaar's ${esc(p.name)} cluster map: unit number, house type and floor plan as published by the developer.</p>`;
     el.classList.remove('hidden');
     el.querySelector('.ph-clear').onclick = () => app.clearHome?.();
     el.querySelectorAll('.ph-plan').forEach((b) => (b.onclick = () => openPdf(`${p.name} · Unit ${up.no} · floor plan`, file.src, Number(b.dataset.page))));
+    if (file) wireSheet(el, p, up, file);
     elContent.scrollTop = 0;
   }
 
@@ -539,6 +568,7 @@ export function initProjectsUI(app) {
           <svg class="icon"><use href="#i-chevron-right" /></svg></button></div>`
         : file ? `<button type="button" class="btn btn-primary btn-block ph-open-plans"><svg class="icon"><use href="#i-plan" /></svg>Open the ${esc(p.name)} floor plans</button>`
         : map && up.map_page ? `<button type="button" class="btn btn-primary btn-block ph-open-map"><svg class="icon"><use href="#i-plan" /></svg>Open the cluster map (brochure page ${up.map_page})</button>` : ''}
+      ${file && up.page ? sheetSection(up) : ''}
       <p class="ph-note">Placed from Emaar's ${esc(p.name)} cluster map: unit number and house type (style and bedrooms) as coloured on the map. ${!up.page
         ? (up.plan_note ? `No floor plan linked: ${esc(up.plan_note)}.` : `Emaar's published documents give no floor plan or area per unit for ${esc(p.name)}.`)
         : up.plan_by === 'bedroom count'
@@ -551,6 +581,7 @@ export function initProjectsUI(app) {
     const om = el.querySelector('.ph-open-map');
     if (om) om.onclick = () => openPdf(`${p.name} · Cluster map`, map.src, up.map_page);
     el.querySelectorAll('.ph-plan').forEach((b) => (b.onclick = () => openPdf(`${p.name} · Unit ${up.no} · floor plan`, file.src, Number(b.dataset.page))));
+    if (file && up.page) wireSheet(el, p, up, file);
     elContent.scrollTop = 0;
   }
 
@@ -589,6 +620,51 @@ export function initProjectsUI(app) {
   let docPages = null;
   const docPagesReady = fetch('data/doc_pages.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}))
     .then((d) => { docPages = d || {}; });
+  // printed room sizes per floor-plan page (scripts/siteplan/floorplan_room_sizes.py)
+  let roomSizes = null;
+  const roomSizesReady = fetch('data/floorplan_room_sizes.json', { cache: 'no-store' }).then((r) => (r.ok ? r.json() : {})).catch(() => ({}))
+    .then((d) => { roomSizes = d || {}; });
+  // a home's own floor-plan sheet in its panel, as for Nara: the page image, Enlarge, and the printed room sizes
+  function sheetSection(up) {
+    return `<section class="ph-sheet">
+      <div class="section-title-row"><h4 class="section-label">Floor plan · ${esc(up.plan || `${up.design} ${up.beds} BR`)}</h4>
+        <button type="button" class="btn-text ph-sheet-open"><svg class="icon"><use href="#i-expand" /></svg>Enlarge</button></div>
+      <div class="sheet-preview-box ph-sheet-box" title="Open the developer floor-plan sheet"><img alt="Developer floor-plan sheet" decoding="async" fetchpriority="high" /><div class="sheet-state">Loading floor plan…</div></div>
+      ${up.pages ? `<p class="section-hint ph-sheet-note">Page ${esc(String(up.page))}; the mirrored plan is the next page (which homes are mirrored is not published).</p>` : ''}
+      <div class="rooms-dimensions-block ph-rooms"></div>
+    </section>`;
+  }
+  function wireSheet(el, p, up, file) {
+    const sec = el.querySelector('.ph-sheet');
+    if (!sec) return;
+    const page = Number(up.page);
+    const img = sec.querySelector('img'), state = sec.querySelector('.sheet-state');
+    const open = () => openPdf(`${p.name} · Unit ${up.no ?? ''} · floor plan`, file.src, page);
+    sec.querySelector('.ph-sheet-box').onclick = open;
+    sec.querySelector('.ph-sheet-open').onclick = open;
+    const key = `${up.no}|${page}`; sec.dataset.key = key;
+    docPagesReady.then(() => {
+      if (sec.dataset.key !== key) return;
+      const doc = docPages?.[file.src];
+      if (!doc) { state.textContent = 'Select to open the floor plans'; return; }
+      img.onload = () => state.classList.add('hidden');
+      img.onerror = () => { state.textContent = 'Floor plan could not be loaded — select to open it'; state.classList.add('error'); };
+      img.src = `${encodeURI(doc.dir)}/${page}.jpg`;
+    });
+    const box = sec.querySelector('.ph-rooms');
+    roomSizesReady.then(() => {
+      const r = roomSizes?.[p.id]?.pages?.[String(page)];
+      if (!r || !r.floors.some((f) => f.rooms.length)) {
+        box.innerHTML = '<div class="section-hint">The room sizes are printed on the sheet above (not machine-readable in this file).</div>';
+        return;
+      }
+      box.innerHTML = `<div class="section-hint">${r.source === 'ocr'
+        ? 'Room sizes (m) read from the sheet image · labels that do not read clearly are left out; the sheet shows every room'
+        : 'Printed room sizes (m), as on the developer sheet'}</div>`
+        + r.floors.filter((f) => f.rooms.length).map((f) => `<div class="floor-rooms-group"><div class="floor-group-label">${esc(f.name)}</div>
+          <div class="floor-rooms-chips">${f.rooms.map((rm) => `<div class="room-dim-chip"><span class="r-name">${esc(rm.name)}</span><span class="r-dim">${esc(rm.dims)} m</span></div>`).join('')}</div></div>`).join('');
+    });
+  }
   let docKey = null; // arrow-key paging while a document is open
   window.addEventListener('keydown', (e) => {
     if (!docKey || elMedia.classList.contains('hidden')) return;

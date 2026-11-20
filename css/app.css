@@ -872,3 +872,11 @@ body.picker-open .explore-bar { display: none; }
 .doc-viewer.zoomed img { max-width: none !important; max-height: none !important; width: 220%; cursor: zoom-out; }
 .sheet-modal-body.zoomed { overflow: auto; max-height: 78vh; text-align: left; }
 .sheet-modal-body.zoomed img { max-width: none; max-height: none; width: 220%; cursor: zoom-out; }
+/* a home's own floor-plan sheet in the selected-home panel (as in Nara's panel) */
+.ph-sheet { margin-top: 14px; }
+.ph-sheet .section-title-row { margin-bottom: 6px; }
+.ph-sheet .room-dim-chip { cursor: default; }
+.ph-sheet .room-dim-chip:hover { background: none; }
+.ph-sheet .r-dim { font-variant-numeric: tabular-nums; color: var(--ink-2); white-space: nowrap; }
+.ph-sheet-note { margin-top: 6px; }
+.plan-row-missing { opacity: 0.7; cursor: default; }
