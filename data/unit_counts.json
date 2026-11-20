@@ -151,9 +151,9 @@
   "nima": {
    "community": "the-valley",
    "name": "Nima",
-   "total": null,
-   "source": null,
-   "clusterMap": "awaited"
+   "total": 520,
+   "source": "Nima cluster map (client agent pack, units 1-520 read by eye, 79 terraces) and fact sheet (362 x 3 BR + 158 x 4 BR)",
+   "clusterMap": "numbered"
   },
   "rivana": {
    "community": "the-valley",

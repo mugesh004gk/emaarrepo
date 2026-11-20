@@ -1784,48 +1784,48 @@
    "community": "the-valley",
    "boundary": [
     [
-     55.4591493,
-     25.0067369
+     55.4592382,
+     25.0066281
     ],
     [
-     55.453714,
-     25.0018473
+     55.4538029,
+     25.0017385
     ],
     [
-     55.4537965,
-     25.0017484
+     55.4538854,
+     25.0016396
     ],
     [
-     55.4542437,
-     25.0012466
+     55.4543326,
+     25.0011378
     ],
     [
-     55.4551476,
-     25.0009405
+     55.4552365,
+     25.0008317
     ],
     [
-     55.4593871,
-     25.0036981
+     55.459476,
+     25.0035893
     ],
     [
-     55.459976,
-     25.0041511
+     55.4600649,
+     25.0040423
     ],
     [
-     55.4602725,
-     25.0061625
+     55.4603614,
+     25.0060537
     ],
     [
-     55.4603112,
-     25.0066008
+     55.4604001,
+     25.006492
     ],
     [
-     55.4599734,
-     25.0066594
+     55.4600623,
+     25.0065506
     ],
     [
-     55.4592865,
-     25.0067367
+     55.4593754,
+     25.0066279
     ]
    ],
    "boundaryMethod": "Outline around the placed homes + 20 m",
@@ -2341,6 +2341,163 @@
     "document": "FARMGROVE_TV_FLOORPLAN.pdf",
     "url": "media/research/the-valley/properties/farm-grove-at-the-valley/floorplans/FARMGROVE_TV_FLOORPLAN.pdf",
     "linkedUnits": 482,
+    "note": null
+   },
+   "status": "complete",
+   "ddaBoundary": null,
+   "ddaNote": "DDA GIS plot boundary not received yet: when it arrives it replaces this outline"
+  },
+  {
+   "id": "nima",
+   "name": "Nima",
+   "community": "the-valley",
+   "boundary": [
+    [
+     55.4503069,
+     24.9999257
+    ],
+    [
+     55.4507112,
+     24.9998432
+    ],
+    [
+     55.4535418,
+     25.0014958
+    ],
+    [
+     55.4538258,
+     25.0016637
+    ],
+    [
+     55.4538888,
+     25.0017008
+    ],
+    [
+     55.454185,
+     25.0018774
+    ],
+    [
+     55.4542603,
+     25.0019235
+    ],
+    [
+     55.456714,
+     25.0037203
+    ],
+    [
+     55.4578935,
+     25.0046181
+    ],
+    [
+     55.4580408,
+     25.0047794
+    ],
+    [
+     55.4580834,
+     25.0048272
+    ],
+    [
+     55.4581267,
+     25.0048758
+    ],
+    [
+     55.4583828,
+     25.0051623
+    ],
+    [
+     55.458514,
+     25.0055092
+    ],
+    [
+     55.4585405,
+     25.0059919
+    ],
+    [
+     55.4573304,
+     25.0061985
+    ],
+    [
+     55.4570532,
+     25.0062227
+    ],
+    [
+     55.4564773,
+     25.006156
+    ],
+    [
+     55.4559817,
+     25.0059912
+    ],
+    [
+     55.4555348,
+     25.005816
+    ],
+    [
+     55.4550746,
+     25.0055495
+    ],
+    [
+     55.4497041,
+     25.0019147
+    ],
+    [
+     55.4495291,
+     25.0017922
+    ],
+    [
+     55.4494749,
+     25.0017543
+    ],
+    [
+     55.4492415,
+     25.0015914
+    ],
+    [
+     55.4491249,
+     25.0015102
+    ],
+    [
+     55.4493377,
+     25.0011486
+    ],
+    [
+     55.4498331,
+     25.0005125
+    ],
+    [
+     55.4499766,
+     25.0003339
+    ],
+    [
+     55.4501685,
+     25.0000962
+    ],
+    [
+     55.4502107,
+     25.0000442
+    ]
+   ],
+   "boundaryMethod": "Outline around the placed homes + 20 m",
+   "placement": {
+    "kind": "satellite",
+    "text": "Cluster map matched to the built homes on the satellite photo (match score 0.20)"
+   },
+   "placementDetail": "map homes matched to satellite roofs; kept from the earlier run (more units read)",
+   "clusterMap": {
+    "document": "NIMA_THE_VALLEY_CLUSTERMAP.pdf",
+    "page": 1,
+    "image": "media/research/the-valley/properties/nima/clustermap/nima_cluster_map_p8.png"
+   },
+   "units": {
+    "official": 520,
+    "placed": 520,
+    "numbered": 520,
+    "missingNumbers": 0
+   },
+   "floorPlan": {
+    "document": "NIMA_floorplan.pdf",
+    "url": "media/research/the-valley/properties/nima/floorplans/NIMA_floorplan.pdf",
+    "linkedUnits": 520,
     "note": null
    },
    "status": "complete",

@@ -1189,5 +1189,82 @@
 "how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 }
 }
+},
+"nima": {
+"pdf": "NIMA_floorplan.pdf",
+"pages": {
+"1": {
+"maid": null,
+"how": "room names not readable"
+},
+"2": {
+"maid": true,
+"how": "text layer"
+},
+"3": {
+"maid": true,
+"how": "text layer"
+},
+"4": {
+"maid": true,
+"how": "text layer"
+},
+"5": {
+"maid": true,
+"how": "text layer"
+},
+"6": {
+"maid": true,
+"how": "text layer"
+},
+"7": {
+"maid": true,
+"how": "text layer"
+},
+"8": {
+"maid": true,
+"how": "text layer"
+},
+"9": {
+"maid": true,
+"how": "text layer"
+},
+"10": {
+"maid": true,
+"how": "text layer"
+},
+"11": {
+"maid": true,
+"how": "text layer"
+},
+"12": {
+"maid": true,
+"how": "text layer"
+},
+"13": {
+"maid": true,
+"how": "text layer"
+},
+"14": {
+"maid": true,
+"how": "text layer"
+},
+"15": {
+"maid": true,
+"how": "text layer"
+},
+"16": {
+"maid": true,
+"how": "text layer"
+},
+"17": {
+"maid": true,
+"how": "text layer"
+},
+"18": {
+"maid": true,
+"how": "text layer"
+}
+}
 }
 }

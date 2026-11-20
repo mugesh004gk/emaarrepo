@@ -22,7 +22,7 @@ import json, os, re, subprocess
 
 APP = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ORDER = ['nara', 'eden', 'orania-at-the-valley', 'elora', 'rivana', 'alana', 'the-farm-gardens', 'farm-gardens-2',
-         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley', 'farm-grove-at-the-valley']
+         'kaia-at-the-valley', 'elea-at-the-valley', 'rivera-at-the-valley-phase-2', 'lillia', 'venera-at-the-valley', 'talia', 'elva-at-the-valley', 'velora-2-at-the-valley-phase-2', 'velora-at-the-valley', 'vindera-at-the-valley', 'farm-grove-at-the-valley', 'nima']
 NO_PDF = {}  # every built Valley project now has a floor-plan PDF (19 Nov 2026: agent packs + broker copies)
 # printing errors on a sheet, checked on its key plan: (pdf, page) -> the TH the sheet is for
 SHEET_TYPOS = {('ELVA_TV_FLOORPLAN.pdf', 5): {4}}  # Ravine 4 BR end home: printed 'TH03' (TH03 is p.4, 3 BR)
@@ -32,6 +32,7 @@ NOTES = {
     'farm-gardens-2': 'Broker copy (tanamiproperties.com) of the Emaar floor plans; which villa uses the mirrored sheet is not stated',
 }
 _txt = {}
+STYLED = {}  # (pdf, page) -> {(plex, th, STYLE)} where the sheet prints the style in each position
 
 
 def page_text(pdf, page, mode=None):
@@ -41,7 +42,7 @@ def page_text(pdf, page, mode=None):
     return _txt[k]
 
 
-POS_RE = re.compile(r'(?<!\d)(\d{1,2})\s*P\s*L\s*E\s*X\s*([A-Z0-9]?)\s*-?\s*T\s*H\s*(\d)\s*(\d)')
+POS_RE = re.compile(r'(?<!\d)(\d{1,2})\s*P\s*L\s*E\s*X\s*([A-Z0-9]?|[A-Z]{3,12})\s*-?\s*T\s*H\s*(\d)\s*(\d)')
 
 
 def page_positions(pdf, page, plexes):
@@ -51,6 +52,8 @@ def page_positions(pdf, page, plexes):
         for m in POS_RE.finditer(page_text(pdf, page, mode).upper()):
             if int(m.group(1)) in plexes:
                 out.add((int(m.group(1)), int(m.group(3) + m.group(4))))
+                if len(m.group(2)) >= 3:  # the style printed in the position ('4 PLEX CANNA - TH 02', Nima)
+                    STYLED.setdefault((pdf, page), set()).add((int(m.group(1)), int(m.group(3) + m.group(4)), m.group(2)))
     return out
 
 
@@ -167,7 +170,12 @@ def audit_unit(u, pdf, plans_by_page, designs, plexes):
     pb = [b for b in pb if b]
     if pb and u.get('beds'):
         ck['beds'] = u['beds'] in pb
-    if u.get('design') and len(designs) > 1:
+    styled = set().union(*(STYLED.get((pdf, p), set()) for p in pages)) if pages else set()
+    if styled and u.get('plex') and u.get('th') and u.get('design'):
+        # the sheet names the style with each position: the home's (plex, TH, style) must be printed on its page
+        ok = (u['plex'], u['th'], u['design'].upper()) in styled
+        ck['position'] = ok; ck['style'] = ok; listed = ok
+    elif u.get('design') and len(designs) > 1:
         named = [names_design(page_text(pdf, p), u['design'], designs) for p in pages]
         any_named = any(page_design(page_text(pdf, p), designs) for p in pages)
         if any_named:

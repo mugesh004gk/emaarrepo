@@ -221,6 +221,9 @@ def main():
                 up.update({'beds': pl['beds'], 'plan': pl['plan'] + (' mirrored' if pl['mirrored'] else ''), 'page': pl['page'],
                            'sqft': pl['sqft'], 'sqm': pl['sqm']})
                 plan_count[f"{dz} {pl['beds']} BR {pl['plan']}"] += 1
+                if mb is None and no in rechecked and cfg.get('map_beds_rechecked', {}).get('covers_unread'):
+                    # the automatic reader found no cell colour; the cell was looked at by eye (map_beds_rechecked)
+                    up['map_beds_auto'] = None; mb = pl['beds']
                 if mb is not None and mb != pl['beds'] and no in rechecked:
                     # cell colour looked at by eye on the map (config map_beds_rechecked): it shows the sheet's type;
                     # the automatic reading missed the cell

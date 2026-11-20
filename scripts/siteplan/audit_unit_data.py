@@ -32,6 +32,7 @@ import audit_unit_plans as aup  # noqa: E402
 
 FS = 'media/research/the-valley/properties/{}/factsheet/{}'
 FACT = {  # bedroom mix printed on the developer fact sheet
+    'nima': ({3: 362, 4: 158}, FS.format('nima', 'NIMA_THE_VALLEY_FACTSHEET.pdf')),
     'vindera-at-the-valley': ({3: 352, 4: 226}, FS.format('vindera-at-the-valley', 'VINDERA_THE_VALLEY_FACT_SHEET.pdf')),
     'elva-at-the-valley': ({3: 122, 4: 122}, FS.format('elva-at-the-valley', 'ELVA_THE_VALLEY_FACTSHEET.pdf')),
     'velora-2-at-the-valley-phase-2': ({3: 156, 4: 156}, FS.format('velora-2-at-the-valley-phase-2', 'VELORA2_TV_FACT_SHEET.pdf')),
@@ -49,6 +50,7 @@ NUMBER_SOURCE = {  # how the numbers of properties without a per-home 'number' f
     'the-farm-gardens': 'OCR of the cluster map (brochure p.24)', 'farm-gardens-2': 'OCR of the cluster map (brochure p.25)',
     'rivera-at-the-valley-phase-2': 'OCR of the cluster map (RIVERA_TV_CLUSTER_MAP.pdf)',
     'farm-grove-at-the-valley': 'read by eye on the cluster map (all 482 labels, OCR cross-check)',
+    'nima': 'read by eye on the cluster map (79 terrace number runs, OCR cross-check)',
 }
 
 
