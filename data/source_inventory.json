@@ -1,0 +1,942 @@
+{
+ "arabian-ranches-3": {
+  "anya": {
+   "name": "Anya",
+   "docs": [
+    "brochures/Anya_brochure.pdf",
+    "floorplans/Anya_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Anya_floorplan.pdf",
+    "pages": 29,
+    "pages_with_area": 28
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 431,
+    "placement": {
+     "estimated-satellite": 88
+    }
+   }
+  },
+  "anya-2": {
+   "name": "Anya 2",
+   "docs": [
+    "brochures/Anya-2_brochure.pdf",
+    "floorplans/Anya-2_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Anya-2_floorplan.pdf",
+    "pages": 24,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 80,
+    "placement": {
+     "estimated-planned": 8
+    }
+   }
+  },
+  "bliss": {
+   "name": "Bliss",
+   "docs": [
+    "brochures/Bliss_brochure.pdf",
+    "floorplans/Bliss_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Bliss_floorplan.pdf",
+    "pages": 21,
+    "pages_with_area": 20
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "bliss-2": {
+   "name": "BLISS 2",
+   "docs": [
+    "brochures/Bliss-2_brochure.pdf",
+    "floorplans/Bliss-2_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Bliss-2_floorplan.pdf",
+    "pages": 22,
+    "pages_with_area": 20
+   },
+   "fact_sheet_total": null,
+   "official_total": 269,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "caya-2": {
+   "name": "Caya",
+   "docs": [
+    "brochures/Caya-II_brochure.pdf",
+    "floorplans/Caya-II_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Caya-II_floorplan.pdf",
+    "pages": 4,
+    "pages_with_area": 3
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 1582,
+    "placement": {
+     "estimated-satellite": 579
+    }
+   }
+  },
+  "elie-saab-at-arabian-ranches-iii": {
+   "name": "Elie Saab",
+   "docs": [
+    "brochures/ELIE-SAAB_brochure.pdf",
+    "floorplans/ELIE-SAAB_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/ELIE-SAAB_floorplan.pdf",
+    "pages": 6,
+    "pages_with_area": 5
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 628,
+    "placement": {
+     "estimated-satellite": 393
+    }
+   }
+  },
+  "joy": {
+   "name": "Joy",
+   "docs": [
+    "brochures/1602_brochure_File_0fd29ec78c_prod.pdf",
+    "floorplans/Joy_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Joy_floorplan.pdf",
+    "pages": 8,
+    "pages_with_area": 6
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "june": {
+   "name": "JUNE",
+   "docs": [
+    "brochures/June_brochure.pdf",
+    "floorplans/June_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/June_floorplan.pdf",
+    "pages": 6,
+    "pages_with_area": 5
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 80,
+    "placement": {
+     "estimated-planned": 8
+    }
+   }
+  },
+  "may": {
+   "name": "May",
+   "docs": [
+    "brochures/MAY_ARIII_brochure.pdf",
+    "floorplans/May_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/May_floorplan.pdf",
+    "pages": 15,
+    "pages_with_area": 12
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 80,
+    "placement": {
+     "estimated-planned": 8
+    }
+   }
+  },
+  "raya": {
+   "name": "RAYA",
+   "docs": [
+    "brochures/Raya_brochure.pdf",
+    "clustermap/raya_cluster_map_original_image.png",
+    "clustermap/raya_cluster_map_p18.png",
+    "floorplans/Raya_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [
+    "clustermap/raya_cluster_map_p18.png",
+    "clustermap/raya_cluster_map_original_image.png"
+   ],
+   "floor_plans": {
+    "file": "floorplans/Raya_floorplan.pdf",
+    "pages": 25,
+    "pages_with_area": 24
+   },
+   "fact_sheet_total": null,
+   "official_total": 240,
+   "app": {
+    "homes": 240,
+    "placement": {
+     "verified-siteplan": 36
+    }
+   }
+  },
+  "ruba": {
+   "name": "Ruba",
+   "docs": [
+    "brochures/Ruba_brochure.pdf",
+    "floorplans/Ruba_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Ruba_floorplan.pdf",
+    "pages": 10,
+    "pages_with_area": 9
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 621,
+    "placement": {
+     "estimated-satellite": 152
+    }
+   }
+  },
+  "spring": {
+   "name": "Spring",
+   "docs": [
+    "brochures/1600_brochure_File_1653236f6c_prod.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": null,
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "sun": {
+   "name": "Sun",
+   "docs": [
+    "brochures/1284_brochure_File_3384dc4cbc_prod.pdf",
+    "floorplans/Sun_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Sun_floorplan.pdf",
+    "pages": 6,
+    "pages_with_area": 4
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  }
+ },
+ "emaar-south": {
+  "expo-golf-villas-6": {
+   "name": "EXPO GOLF VILLAS 6",
+   "docs": [
+    "brochures/Expo-Golf-Villas-6_brochure.pdf",
+    "floorplans/Expo-Golf-Villas-6_floorplan.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/Expo-Golf-Villas-6_brochure.pdf",
+    "page": 16,
+    "numbered_text": 241,
+    "max_label": 241
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Expo-Golf-Villas-6_floorplan.pdf",
+    "pages": 5,
+    "pages_with_area": 4
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 645,
+    "placement": {
+     "estimated-satellite": 200
+    }
+   }
+  },
+  "expo-golf-villas-phase-iii": {
+   "name": "Expo Golf Villas - Phase III",
+   "docs": [
+    "brochures/1260_brochure_File_e026e7fa39_prod.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": null,
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "expo-golf-villas-phase-iv": {
+   "name": "Expo Golf Villas - Phase IV",
+   "docs": [
+    "brochures/Expo-Golf-Villas-4_brochure.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/Expo-Golf-Villas-4_brochure.pdf",
+    "page": 5,
+    "numbered_text": 286,
+    "max_label": 286
+   },
+   "cluster_map_images": [],
+   "floor_plans": null,
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "expo-golf-villas-phase-v": {
+   "name": "Expo Golf Villas - Phase V",
+   "docs": [
+    "brochures/Expo-Golf-Villas-5_brochure.pdf",
+    "floorplans/Expo-Golf-Villas-5_floorplan.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/Expo-Golf-Villas-5_brochure.pdf",
+    "page": 11,
+    "numbered_text": 292,
+    "max_label": 292
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Expo-Golf-Villas-5_floorplan.pdf",
+    "pages": 7,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 76,
+    "placement": {
+     "estimated-satellite": 27
+    }
+   }
+  },
+  "fairway-villas": {
+   "name": "Fairway Villas",
+   "docs": [
+    "brochures/Fairway-Villas_brochure.pdf",
+    "floorplans/Fairway-Villas_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Fairway-Villas_floorplan.pdf",
+    "pages": 3,
+    "pages_with_area": 2
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 110,
+    "placement": {
+     "estimated-satellite": 83
+    }
+   }
+  },
+  "fairway-villas-2": {
+   "name": "Fairway Villas 2",
+   "docs": [
+    "brochures/Fairway-Villas-II_brochure.pdf",
+    "floorplans/Fairway-Villas-II_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Fairway-Villas-II_floorplan.pdf",
+    "pages": 9,
+    "pages_with_area": 8
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 595,
+    "placement": {
+     "estimated-satellite": 299
+    }
+   }
+  },
+  "fairway-villas-3": {
+   "name": "Fairway Villas 3",
+   "docs": [
+    "brochures/Fairway-Villas-III_brochure.pdf",
+    "floorplans/Fairway-Villas-III_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Fairway-Villas-III_floorplan.pdf",
+    "pages": 5,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 680,
+    "placement": {
+     "estimated-satellite": 281
+    }
+   }
+  },
+  "golf-acres-at-emaar-south": {
+   "name": "Golf Acres",
+   "docs": [
+    "brochures/396136_brochure_File_8a89119089_prod.pdf",
+    "floorplans/Golf-Acres_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Acres_floorplan.pdf",
+    "pages": 1,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 50,
+    "placement": {
+     "estimated-planned": 5
+    }
+   }
+  },
+  "golf-dale-at-emaar-south": {
+   "name": "Golf Dale",
+   "docs": [
+    "brochures/Golf-Dale_brochure.pdf",
+    "floorplans/Golf-Dale_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Dale_floorplan.pdf",
+    "pages": 32,
+    "pages_with_area": 31
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 50,
+    "placement": {
+     "estimated-planned": 5
+    }
+   }
+  },
+  "golf-edge-at-emaar-south": {
+   "name": "Golf Edge",
+   "docs": [
+    "brochures/397817_brochure_File_2166e8a7ea_prod.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": null,
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 84,
+    "placement": {
+     "estimated-satellite": 32
+    }
+   }
+  },
+  "golf-fields-at-emaar-south": {
+   "name": "Golf Fields",
+   "docs": [
+    "brochures/GOLF_FIELDS_ES_BROCHURE_87a572c574.pdf",
+    "floorplans/GOLF_FIELDS_ES_FLOOR_PLANS_e97fc88cb2.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/GOLF_FIELDS_ES_FLOOR_PLANS_e97fc88cb2.pdf",
+    "pages": 22,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 378,
+    "placement": {
+     "estimated-satellite": 156
+    }
+   }
+  },
+  "golf-hills-2-at-emaar-south": {
+   "name": "Golf Hills 2",
+   "docs": [
+    "brochures/Gollf_Hills_and_Golf_Hills_2_brochure_09b56d3a55.pdf",
+    "floorplans/Gollf_Hills_and_Golf_Hills_2_floorplan_61f35817ff.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/Gollf_Hills_and_Golf_Hills_2_brochure_09b56d3a55.pdf",
+    "page": 6,
+    "numbered_text": 28,
+    "max_label": 28
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Gollf_Hills_and_Golf_Hills_2_floorplan_61f35817ff.pdf",
+    "pages": 20,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "golf-hills-at-emaar-south": {
+   "name": "Golf Hills",
+   "docs": [
+    "brochures/Gollf-Hills-Golf-Hills-2_brochure.pdf",
+    "floorplans/Gollf-Hills-Golf-Hills-2_floorplan.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/Gollf-Hills-Golf-Hills-2_brochure.pdf",
+    "page": 6,
+    "numbered_text": 28,
+    "max_label": 28
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Gollf-Hills-Golf-Hills-2_floorplan.pdf",
+    "pages": 20,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "golf-lane-at-emaar-south": {
+   "name": "Golf Lane",
+   "docs": [
+    "brochures/Golf-Lane_brochure.pdf",
+    "floorplans/Golf-Lane_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Lane_floorplan.pdf",
+    "pages": 13,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 42,
+    "placement": {
+     "estimated-planned": 7
+    }
+   }
+  },
+  "golf-links": {
+   "name": "Golf Links",
+   "docs": [
+    "brochures/Golf-Links_brochure.pdf",
+    "floorplans/Golf-Links_floorplan.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/Golf-Links_brochure.pdf",
+    "page": 8,
+    "numbered_text": 192,
+    "max_label": 196
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Links_floorplan.pdf",
+    "pages": 6,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 208,
+    "placement": {
+     "estimated-satellite": 67
+    }
+   }
+  },
+  "golf-meadow-at-emaar-south": {
+   "name": "Golf Meadow",
+   "docs": [
+    "brochures/Golf-Meadow_brochure.pdf",
+    "floorplans/Golf-Meadow_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Meadow_floorplan.pdf",
+    "pages": 15,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "golf-point-at-emaar-south": {
+   "name": "Golf Point",
+   "docs": [
+    "brochures/Golf-Point_brochure.pdf",
+    "floorplans/Golf-Point_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Point_floorplan.pdf",
+    "pages": 37,
+    "pages_with_area": 36
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 105,
+    "placement": {
+     "estimated-satellite": 62
+    }
+   }
+  },
+  "golf-trails-at-emaar-south": {
+   "name": "Golf Trails",
+   "docs": [
+    "brochures/Golf-Trails_brochure.pdf",
+    "floorplans/Golf-Trails_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Trails_floorplan.pdf",
+    "pages": 17,
+    "pages_with_area": 15
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 60,
+    "placement": {
+     "estimated-planned": 6
+    }
+   }
+  },
+  "golf-vale-at-emaar-south": {
+   "name": "Golf Vale",
+   "docs": [
+    "brochures/GOLF_VALE_ES_BROCHURE_be87237895.pdf",
+    "floorplans/Golf-Vale_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Vale_floorplan.pdf",
+    "pages": 22,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 60,
+    "placement": {
+     "estimated-planned": 6
+    }
+   }
+  },
+  "golf-verge-at-emaar-south": {
+   "name": "Golf Verge",
+   "docs": [
+    "brochures/Golf-Verge_brochure.pdf",
+    "floorplans/Golf-Verge_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Golf-Verge_floorplan.pdf",
+    "pages": 9,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "golf-views": {
+   "name": "Golf Views",
+   "docs": [
+    "brochures/Golf-Views_brochure.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": null,
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 200,
+    "placement": {
+     "estimated-satellite": 94
+    }
+   }
+  },
+  "greenridge-at-emaar-south": {
+   "name": "Greenridge",
+   "docs": [
+    "brochures/Greenridge_brochure.pdf",
+    "floorplans/Greenridge_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Greenridge_floorplan.pdf",
+    "pages": 11,
+    "pages_with_area": 8
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "greenspoint-at-emaar-south": {
+   "name": "Greenspoint",
+   "docs": [
+    "brochures/398425_brochure_File_fbffb6d51f_prod.pdf",
+    "floorplans/Greenspoint_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Greenspoint_floorplan.pdf",
+    "pages": 9,
+    "pages_with_area": 8
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 60,
+    "placement": {
+     "estimated-planned": 6
+    }
+   }
+  },
+  "greenville-at-emaar-south": {
+   "name": "Greenville",
+   "docs": [
+    "brochures/GreenVille_brochure.pdf",
+    "floorplans/GreenVille_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/GreenVille_floorplan.pdf",
+    "pages": 11,
+    "pages_with_area": 8
+   },
+   "fact_sheet_total": null,
+   "official_total": 140,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "greenway-2-at-emaar-south": {
+   "name": "Greenway 2",
+   "docs": [
+    "brochures/Greenway-2_brochure.pdf",
+    "floorplans/Greenway-2_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Greenway-2_floorplan.pdf",
+    "pages": 11,
+    "pages_with_area": 8
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "greenway-at-emaar-south": {
+   "name": "Greenway",
+   "docs": [
+    "brochures/Greenway_brochure.pdf",
+    "floorplans/Greenway_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Greenway_floorplan.pdf",
+    "pages": 10,
+    "pages_with_area": 0
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 892,
+    "placement": {
+     "estimated-satellite": 400
+    }
+   }
+  },
+  "grove-ridge-at-emaar-south": {
+   "name": "Grove Ridge",
+   "docs": [
+    "brochures/GROVE_RIDGE_ES_BROCHURE.pdf",
+    "floorplans/Grove-Ridge_floorplan.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/GROVE_RIDGE_ES_BROCHURE.pdf",
+    "page": 6,
+    "numbered_text": 32,
+    "max_label": 32
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Grove-Ridge_floorplan.pdf",
+    "pages": 42,
+    "pages_with_area": 37
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 0,
+    "placement": {}
+   }
+  },
+  "urbana": {
+   "name": "Urbana",
+   "docs": [
+    "brochures/Urbana_brochure.pdf",
+    "floorplans/Urbana_floorplan.pdf"
+   ],
+   "cluster_map": null,
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Urbana_floorplan.pdf",
+    "pages": 7,
+    "pages_with_area": 5
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 286,
+    "placement": {
+     "estimated-satellite": 119
+    }
+   }
+  },
+  "urbana-iii": {
+   "name": "Urbana III",
+   "docs": [
+    "brochures/2282_brochure_File_f6f7793c62_prod.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/2282_brochure_File_f6f7793c62_prod.pdf",
+    "page": 10,
+    "numbered_text": 55,
+    "max_label": 55
+   },
+   "cluster_map_images": [],
+   "floor_plans": null,
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 240,
+    "placement": {
+     "estimated-satellite": 108
+    }
+   }
+  },
+  "vista-ridge-at-emaar-south": {
+   "name": "Vista Ridge",
+   "docs": [
+    "brochures/VISTA_RIDGE_ES_BROCHURE_7925818a68.pdf",
+    "floorplans/Vista-Ridge_floorplan.pdf"
+   ],
+   "cluster_map": {
+    "file": "brochures/VISTA_RIDGE_ES_BROCHURE_7925818a68.pdf",
+    "page": 6,
+    "numbered_text": 32,
+    "max_label": 32
+   },
+   "cluster_map_images": [],
+   "floor_plans": {
+    "file": "floorplans/Vista-Ridge_floorplan.pdf",
+    "pages": 41,
+    "pages_with_area": 36
+   },
+   "fact_sheet_total": null,
+   "official_total": null,
+   "app": {
+    "homes": 814,
+    "placement": {
+     "estimated-satellite": 299
+    }
+   }
+  }
+ }
+}
