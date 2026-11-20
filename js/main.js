@@ -1528,7 +1528,7 @@ async function boot() {
   // Public API for checks and automation
   // what lies on the ground at a point (checks and automation)
   const groundProbe = (x, z) => { const rc = new THREE.Raycaster(new THREE.Vector3(x, 50, z), new THREE.Vector3(0, -1, 0), 0, 60); return rc.intersectObjects(scene.children, true).slice(0, 4).map((h) => `${h.object.name || h.object.parent?.name || h.object.type}@${h.point.y.toFixed(2)}`); };
-  window.EMAAR_APP = { groundProbe, valleyDetail, intro, app, state, pickAt, selectHome, selectProject, selectCommunity, selectUnit, setCameraMode, flyTo, ground, labels, naraOpt, occlusion, renderer, camera, controls, stats: () => ({ fps, drawCalls, tris, ground: ground.stats, occlusion: occlusion.stats, valley: valleyDetail?.stats }) };
+  window.EMAAR_APP = { scene, THREE, groundProbe, valleyDetail, intro, app, state, pickAt, selectHome, selectProject, selectCommunity, selectUnit, setCameraMode, flyTo, ground, labels, naraOpt, occlusion, renderer, camera, controls, stats: () => ({ fps, drawCalls, tris, ground: ground.stats, occlusion: occlusion.stats, valley: valleyDetail?.stats }) };
   window.NARA_APP = { state, selectUnit, setCameraMode, updateSunUI, filtersModule, detailsModule, navModule, minimapModule, showHome };
 
   // ---- loop ------------------------------------------------------------------------------------------

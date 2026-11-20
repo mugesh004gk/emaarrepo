@@ -60,6 +60,9 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
   const cars = createCarTemplates(mats);
 
   const STEP_BACK_MAX = { 'rivera-at-the-valley-phase-2': 6 }; // metres a map-placed row may move back off a road (default 4)
+  // not built yet (bare desert on the satellite): no landscaped grass pad around their rows - the homes keep their
+  // own plots (garden, driveway) and the satellite ground shows around them
+  const NO_GROUND = new Set(['avelia-at-the-valley', 'ovelle-at-the-valley']);
 
   // ---- 1. variant templates: house shell + plot, merged per material in the unit frame ------------
   let droppedOverlaps = 0, gardensTrimmed = 0, slid = 0, steppedBack = 0;
@@ -476,6 +479,7 @@ export function createValleyDetail(scene, { naraData, mats, rows, streets, massi
   {
     const pads = [];
     for (const r of rows) {
+      if (NO_GROUND.has(r.project)) continue;
       const t = THREE.MathUtils.degToRad(r.frontBearing);
       const f = [Math.sin(t), -Math.cos(t)], u = [-Math.cos(t), -Math.sin(t)];
       const c = toWorld(r.lat, r.lng);

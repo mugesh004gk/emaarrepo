@@ -12,6 +12,8 @@ import json, math, os
 
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 KY = 110574.0
+# planned projects shown on bare ground (not built yet, desert on the satellite): no landscaped lawn base
+NO_BASE = {'avelia-at-the-valley', 'ovelle-at-the-valley'}
 
 
 def plot_front(r):
@@ -111,7 +113,7 @@ def main():
         gl = [g for g in greens['communities'].get(cid, []) if g.get('source') != 'planned']
         by_proj = {}
         for r in rows:
-            if r.get('source') == 'planned':
+            if r.get('source') == 'planned' and r['project'] not in NO_BASE:
                 by_proj.setdefault(r['project'], []).append(r)
         for pid, rs in by_proj.items():
             pts = []

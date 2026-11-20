@@ -204,6 +204,10 @@ export function createGround(renderer, groundScene, scene, onChange) {
   const tmp = new THREE.Vector3();
   let stats = { drawn: 0, leaves: 0, maxZ: 0 };
   let clip = null; // (x0, x1, z0, z1) => false when that area is covered (js/scope-mask.js): tile not needed
+  // z18 tiles whose z19 imagery is an older capture than z18 (scripts/satellite/stale_z19.py): the satellite
+  // stops at z18 there, so zooming in never swaps the current photo for the old one (hard-edged bare-sand patches)
+  let staleZ19 = new Set();
+  fetch('data/stale_z19.json').then((r) => (r.ok ? r.json() : null)).then((d) => { if (d?.z18) { staleZ19 = new Set(d.z18); onChange?.(); } }).catch(() => {});
   let fading = false;
 
   function update(camera, viewportH, quality = 1) {
@@ -228,7 +232,7 @@ export function createGround(renderer, groundScene, scene, onChange) {
       box.clampPoint(cam, tmp);
       const d = Math.max(1, tmp.distanceTo(cam));
       const screen = ((b.x1 - b.x0) * k) / d;
-      if (screen > threshold && z < set.p.maxZoom) {
+      if (screen > threshold && z < set.p.maxZoom && !(z === 18 && base === 'satellite' && staleZ19.has(`${x}/${y}`))) {
         stack.push([z + 1, 2 * x, 2 * y], [z + 1, 2 * x + 1, 2 * y], [z + 1, 2 * x, 2 * y + 1], [z + 1, 2 * x + 1, 2 * y + 1]);
       } else {
         leaves.push({ z, x, y, screen });
