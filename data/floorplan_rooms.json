@@ -886,8 +886,8 @@
 "how": "OCR"
 },
 "6": {
-"maid": null,
-"how": "room names not readable"
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.40 x 2.10 m + MAID'S BATHROOM, ground floor (TH04 4 BR)"
 },
 "7": {
 "maid": null,
@@ -906,8 +906,8 @@
 "how": "OCR"
 },
 "11": {
-"maid": null,
-"how": "room names not readable"
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.40 x 2.10 m + MAID'S BATHROOM, ground floor (TH04 4 BR)"
 },
 "12": {
 "maid": null,
@@ -926,8 +926,8 @@
 "how": "OCR"
 },
 "16": {
-"maid": null,
-"how": "room names not readable"
+"maid": true,
+"how": "read by eye: MAID'S ROOM 2.40 x 2.10 m + MAID'S BATHROOM, ground floor (TH04 4 BR)"
 }
 }
 },
@@ -1165,28 +1165,28 @@
 "how": "text layer"
 },
 "6": {
-"maid": null,
-"how": "room names read, no maid room found by text / OCR - to check by eye"
+"maid": false,
+"how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 },
 "7": {
-"maid": null,
-"how": "room names read, no maid room found by text / OCR - to check by eye"
+"maid": false,
+"how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 },
 "8": {
-"maid": null,
-"how": "room names read, no maid room found by text / OCR - to check by eye"
+"maid": false,
+"how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 },
 "9": {
-"maid": null,
-"how": "room names read, no maid room found by text / OCR - to check by eye"
+"maid": false,
+"how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 },
 "10": {
-"maid": null,
-"how": "room names read, no maid room found by text / OCR - to check by eye"
+"maid": false,
+"how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 },
 "11": {
-"maid": null,
-"how": "room names read, no maid room found by text / OCR - to check by eye"
+"maid": false,
+"how": "read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room"
 }
 }
 }

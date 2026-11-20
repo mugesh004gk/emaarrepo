@@ -72,6 +72,9 @@ BY_EYE = {
     ('farm-gardens-2', 4): (True, "read by eye: MAID'S ROOM + MAID'S BATH, ground floor"),
     ('talia', 13): (None, 'read by eye: Pharo 3 BR C - ground-floor room with a single bed drawn and its own WC, but NOT named '
                           'on the sheet (no label, no size) - maid room or not: client to confirm'),
+    **{('velora-2-at-the-valley-phase-2', p): (True, "read by eye: MAID'S ROOM 2.40 x 2.10 m + MAID'S BATHROOM, ground floor (TH04 4 BR)") for p in (6, 11, 16)},
+    **{('farm-grove-at-the-valley', p): (False, 'read by eye: detached / semi-detached 4 BR - ground floor has GUEST BEDROOM, LINEN ROOM, STORE; no maid room')
+       for p in (6, 7, 8, 9, 10, 11)},
     ('elora', 3): (False, 'read by eye: Moon 3 BR - ground floor has STORE ROOM 2.2 x 2.2 M, no maid room'),
     ('elora', 4): (False, 'read by eye: Mysk 3 BR A - ground floor has STORE ROOM 2.2 x 2.2 M, no maid room'),
     ('elora', 5): (False, 'read by eye: Mysk 3 BR B (mirrored) - STORE ROOM 2.2 x 2.2 M, no maid room'),

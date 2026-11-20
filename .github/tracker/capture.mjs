@@ -24,9 +24,8 @@ if (!COMMITS.length) { console.log('no commits'); process.exit(0); }
 async function updateFor(sha) {
   for (let i = 0; i < 24; i++) {
     try {
-      const d = await (await fetch(`${TRACKER}/api/data`, { cache: 'no-store' })).json();
-      const u = d.updates.find((x) => x.commit && sha.startsWith(x.commit.slice(0, 7)));
-      if (u) return u;
+      const r = await fetch(`${TRACKER}/api/attach`, { method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${SECRET}` }, body: JSON.stringify({ commit: sha.slice(0, 12), lookup: true }) });
+      if (r.ok) return await r.json();
     } catch { /* retry */ }
     await sleep(5000);
   }
