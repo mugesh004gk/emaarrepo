@@ -60,6 +60,17 @@ def total_of(plan):
     return None, None
 
 
+def sheet_total(plan):
+    """a design sheet (one home per page): its TOTAL AREA is the largest TOTAL on the page - the table reader
+    can label another row TOTAL (Alana p.2: balcony 838.94 sq ft read as TOTAL beside the real 3,742.29)"""
+    v = [((g.get('areas') or {}).get('TOTAL') or {}) for g in plan.get('groups') or []]
+    v = [x for x in v if x.get('sqft')]
+    if not v:
+        return total_of(plan)
+    t = max(v, key=lambda x: x['sqft'])
+    return t['sqft'], t.get('sqm')
+
+
 def position_sheets(pid, fp, units):
     pdf = os.path.realpath(os.path.join(APP, fp['src']))
     designs = POSITION_SHEETS[pid]['designs']
@@ -119,7 +130,7 @@ def design_sheets(pid, fp, units):
             u.update(plan=None, page=None, sqft=None, sqm=None, plan_note=f"no {u.get('design')} {u.get('beds')}-bedroom sheet in the floor plan received")
             stats['no_sheet'].append(u.get('no')); continue
         pages = [p for p in (normal, mirrored) if p]
-        areas = [total_of(by_page.get(p, {})) for p in pages] if not cfg.get('scan') else []
+        areas = [sheet_total(by_page.get(p, {})) for p in pages] if not cfg.get('scan') else []
         same = len(areas) == len(pages) and all(a[0] for a in areas) and len({a[0] for a in areas}) == 1
         which = 'normal / mirrored' if len(pages) == 2 else ('mirrored sheet only' if mirrored else 'normal sheet only')
         u.update(plan=f"{u['design']} {u['beds']} bedroom {cfg['kind']} ({which})", page=pages[0],
