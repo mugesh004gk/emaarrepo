@@ -9,7 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const TRACKER = process.env.TRACKER_URL || 'https://emaar-progress-tracker.vercel.app';
-const SECRET = process.env.TRACKER_UPLOAD_SECRET || '';
+// the upload key: GitHub Actions secret, or on this computer ~/.emaar-tracker/upload-secret
+const SECRET = process.env.TRACKER_UPLOAD_SECRET || (() => { try { return fs.readFileSync(path.join(process.env.HOME || '', '.emaar-tracker', 'upload-secret'), 'utf8').trim(); } catch { return ''; } })();
 const ROOT = path.resolve(process.env.APP_ROOT || '.');
 const COMMITS = (process.env.COMMITS || '').split(/\s+/).filter(Boolean).slice(-5);
 const { chromium } = await import(process.env.PW_MODULE || 'playwright');
@@ -95,7 +96,6 @@ for (const { sha, u } of jobs) {
     if (box) {
       const views = [
         ['3D app · property view', [box.cx + box.ext * 0.9 + 60, box.ext * 0.8 + 70, box.cz + box.ext * 0.9 + 60], [box.cx, 0, box.cz], true],
-        ['3D app · homes close-up', [box.ux + box.fx * 55 + box.fz * 25, 30, box.uz + box.fz * 55 - box.fx * 25], [box.ux, 3, box.uz], true],
       ];
       for (const [caption, pos, tgt, clean] of views) {
         await hidePanels(clean);
